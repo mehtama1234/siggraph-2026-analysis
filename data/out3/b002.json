@@ -1,0 +1,77 @@
+[
+  {
+    "gid": 30,
+    "math_tags": ["smart random sampling", "filling in smoothly between known points"],
+    "math_plain": "Ray tracing needs sample points scattered strategically across pixel coordinates so light integrates accurately without aliasing. NILE interleaves local low-dimensional samplers (clustered within pixels) with global high-dimensional sequences (uniform across many pixels), letting you control both."
+  },
+  {
+    "gid": 31,
+    "math_tags": ["adding up infinitely many tiny contributions", "following the slope downhill to improve"],
+    "math_plain": "Solving Poisson equations with random rays is slow because the answer wiggles wildly. Instead of estimating the solution itself, estimate how it changes locally (its slope), then reconstruct the answer more stably from those differences."
+  },
+  {
+    "gid": 32,
+    "math_tags": ["learning a function from examples", "solving a big system of equations"],
+    "math_plain": "Neural networks make everything smooth, but some shapes need sharp corners. SharpNet solves Poisson's equation (the same way fluids diffuse heat) on prescribed edges to inject prescribed sharp features, keeping smooth curves everywhere else."
+  },
+  {
+    "gid": 33,
+    "math_tags": ["finding the arrangement with least energy", "constraints that must all hold at once"],
+    "math_plain": "Composite strength depends on how fabric layers are oriented and partially placed. Optimize which regions get material and how those layers angle to maximize stiffness while respecting manufacturing limits—many constraints pulling at once."
+  },
+  {
+    "gid": 34,
+    "math_tags": ["evolving a system step by step over time", "solving a big system of equations"],
+    "math_plain": "Fluids evolve as billions of jostling gas molecules; simulating each is impossible. Track instead the aggregate statistics (momentum, energy) at each point via kinetic theory, advancing those aggregates forward in time via the Boltzmann equation."
+  },
+  {
+    "gid": 35,
+    "math_tags": ["learning a function from examples", "probability and likelihood"],
+    "math_plain": "Piano hands need low-level muscle precision and high-level musical timing. Train muscle-control policies, compress their learned behaviors into a smooth latent space (VAE), then learn note-driven coordination policies that work in that condensed space."
+  },
+  {
+    "gid": 36,
+    "math_tags": ["learning a function from examples", "filling in smoothly between known points"],
+    "math_plain": "Generate 3D roof geometry by iteratively denoising random vertex coordinates using a diffusion model (like reverse diffusion in image generation), guided by predicted face counts, then enforce topological consistency."
+  },
+  {
+    "gid": 37,
+    "math_tags": ["adding up infinitely many tiny contributions", "solving a big system of equations"],
+    "math_plain": "Interpolate between two probability distributions by finding the smoothest path between them via entropy-regularized transport. The heat equation reveals this path; apply Sinkhorn iterations (alternating local averaging and scaling) to enforce boundary constraints."
+  },
+  {
+    "gid": 38,
+    "math_tags": ["smart random sampling", "finding the arrangement with least energy"],
+    "math_plain": "Merging tens of image model adapters creates a huge parameter space. Use Bayesian optimization—predict which coefficient settings will please a user based on past preference feedback, then strategically sample promising regions."
+  },
+  {
+    "gid": 39,
+    "math_tags": ["distances and nearest matches", "transformations and coordinate changes"],
+    "math_plain": "Moving one character's motion to another requires matching spatial relationships (like hand-to-face proximity). Adaptively reposition anchor points on the target body via learned prediction, then retarget motion to preserve those adaptive relationships."
+  },
+  {
+    "gid": 40,
+    "math_tags": ["adding up infinitely many tiny contributions", "smart random sampling"],
+    "math_plain": "Rendering smoke requires summing light arriving along rays, but computing how that sum changes with smoke density is noisy. Evaluate both scattering and transmission effects at matching sample points along the same ray segment to cancel out their wild swings."
+  },
+  {
+    "gid": 41,
+    "math_tags": ["measuring how a surface curves", "finding the arrangement with least energy"],
+    "math_plain": "Knit structures need singularities positioned to avoid helical twists. Use power diagrams (regions of equal generalized distance) on mesh surfaces to optimally place singularities by iteratively moving each toward the curl center of its region."
+  },
+  {
+    "gid": 42,
+    "math_tags": ["adding up infinitely many tiny contributions", "smart random sampling"],
+    "math_plain": "Time-gated imaging traces light bounces that arrive within a narrow time window; simulating all bounces is expensive. Reuse previously computed bounces by warping them (via Newton's method) to satisfy the time constraints, then resample intelligently."
+  },
+  {
+    "gid": 43,
+    "math_tags": ["evolving a system step by step over time", "solving a big system of equations"],
+    "math_plain": "Two-phase flows (oil-water) require tracking both fluid momentum and phase boundary motion simultaneously. Couple gas-kinetic moment evolution with a phase-field equation that diffuses the interface, advancing both forward stably over time."
+  },
+  {
+    "gid": 44,
+    "math_tags": ["learning a function from examples", "transformations and coordinate changes"],
+    "math_plain": "Generating point clouds means learning curved paths in high-dimensional space. Exploit particle permutation symmetry and embed geometric structure in the flow's final velocity so the model learns simpler, straighter paths that produce normals as a byproduct."
+  }
+]

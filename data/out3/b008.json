@@ -1,0 +1,77 @@
+[
+  {
+    "gid": 120,
+    "math_tags": ["solving a big system of equations", "smart random sampling"],
+    "math_plain": "The algorithm breaks a huge deformation problem into smaller pieces and uses smart point-placement (Gaussian quadrature) to integrate their effects without needing expensive training data. Each local piece's shape-change is predicted analytically by reading it as a smooth polynomial."
+  },
+  {
+    "gid": 121,
+    "math_tags": ["evolving a system step by step over time", "solving a big system of equations"],
+    "math_plain": "Simulating jiggly volumetric materials at multiple detail levels simultaneously: coarse motion captures bulk deformation, while high-frequency detail is split and recombined with finer resolutions to add bouncy wrinkles without multiplying the number of time-steps needed."
+  },
+  {
+    "gid": 122,
+    "math_tags": ["probability and likelihood", "distances and nearest matches"],
+    "math_plain": "The system learns to recognize face identity in stylized portraits by matching human perception: it observes human same-different judgments on diverse art styles and trains encoders to rank face similarities the same way humans do, learning which features truly signal the same person."
+  },
+  {
+    "gid": 123,
+    "math_tags": ["finding the arrangement with least energy", "measuring how a surface curves"],
+    "math_plain": "A porous material's internal structure is designed so its effective mechanical properties (how it bends and stretches as a whole) are uniform in all directions, while its visual appearance halftones a target image. Balancing visual appearance against uniform stiffness is the core constraint."
+  },
+  {
+    "gid": 124,
+    "math_tags": ["solving a big system of equations", "following the slope downhill to improve"],
+    "math_plain": "High-resolution shape-optimization problems are solved by building Newton's method atop a block-accelerated sparse linear solver that exploits the fact that unknowns cluster naturally into dense d-by-d blocks. This structure speeds up every phase: assembly, factorization, and back-solve."
+  },
+  {
+    "gid": 125,
+    "math_tags": ["transformations and coordinate changes", "filling in smoothly between known points"],
+    "math_plain": "3D spatial data (meshes, volumes, light fields) is compressed by recognizing that many regions are similar up to a geometric transformation; store only one copy of each unique piece plus the transformations between copies, using octree subdivision and rotation groups for compactness."
+  },
+  {
+    "gid": 126,
+    "math_tags": ["solving a big system of equations", "constraints that must all hold at once"],
+    "math_plain": "Fluid flow around complex boundaries requires solving for pressure that keeps fluid incompressible; the method uses a special discretization (Virtual Element Method) that robustly handles irregular grids and accelerates the pressure solve with multigrid iteration that avoids densifying coarse-level equations."
+  },
+  {
+    "gid": 127,
+    "math_tags": ["solving a big system of equations", "adding up infinitely many tiny contributions"],
+    "math_plain": "Rendering smooth vector graphics with a fourth-order equation (biharmonic) by treating it as a randomized inverse problem: formulate unknown boundary conditions as an energy to minimize, then estimate gradients stochastically by sampling random walks on two coupled second-order equations."
+  },
+  {
+    "gid": 128,
+    "math_tags": ["learning a function from examples", "filling in smoothly between known points"],
+    "math_plain": "A diffusion model for 3D shapes is fine-tuned efficiently by recognizing the natural temporal structure of detail-generation in flow-based models: learn coarse structure first, then details, and combine predictions from multiple viewing angles to resolve the ambiguity that single views introduce."
+  },
+  {
+    "gid": 129,
+    "math_tags": ["networks and connections", "learning a function from examples"],
+    "math_plain": "Text-guided image editing in diffusion transformers works by discovering which attention heads respond to which visual semantics, then routing text tokens selectively to the heads that control the regions you want to edit. The system learns head sensitivity without retraining."
+  },
+  {
+    "gid": 130,
+    "math_tags": ["finding the arrangement with least energy", "evolving a system step by step over time"],
+    "math_plain": "Noisy multi-human hand-object interaction captures are refined in two stages: first solve an optimization to find hand grasps that are both physically valid and match the body pose, then evolve the full-body motion forward in time using a diffusion model guided by single-person motion priors."
+  },
+  {
+    "gid": 131,
+    "math_tags": ["learning a function from examples", "distances and nearest matches"],
+    "math_plain": "A pretrained 3D generative model encodes an object and predicts colored labels on its reconstructed surface; these colors act as part indicators. The system learns part segmentation by repurposing the model's internal structure knowledge without annotated training data for the segmentation task itself."
+  },
+  {
+    "gid": 132,
+    "math_tags": ["adding up infinitely many tiny contributions", "smart random sampling"],
+    "math_plain": "Light bouncing many times through dense hair is expensive to track; instead, treat the hair as a participating medium that scatters light, and stochastically sample one scattering event to approximate higher-order bounces while using explicit fiber geometry for direct lighting detail."
+  },
+  {
+    "gid": 133,
+    "math_tags": ["learning a function from examples", "constraints that must all hold at once"],
+    "math_plain": "Users sketch how articulated parts should move (arrows, strokes), and the system infers movable parts and their motion parameters by learning to map 2D sketch intention to 3D part discovery and motion constraints, without needing object category labels."
+  },
+  {
+    "gid": 134,
+    "math_tags": ["following the slope downhill to improve", "smart random sampling"],
+    "math_plain": "Recovering material and lighting from images is a high-variance, brittle optimization problem; a spatial blending field interpolates locally between cached radiance estimates and standard unbiased samplers, reducing variance while keeping gradients well-behaved for reliable parameter recovery."
+  }
+]

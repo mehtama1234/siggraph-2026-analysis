@@ -1,0 +1,29 @@
+[
+  {
+    "gid": 150,
+    "math_tags": [
+      "learning a function from examples",
+      "networks and connections",
+      "distances and nearest matches"
+    ],
+    "math_plain": "The system learns to predict hand pose and motion by identifying patterns in image data, using relationships between the two hands to reason about their interaction. It builds these relationships through attention—finding which hand parts matter most for predicting each other's position."
+  },
+  {
+    "gid": 151,
+    "math_tags": [
+      "evolving a system step by step over time",
+      "learning a function from examples",
+      "transformations and coordinate changes"
+    ],
+    "math_plain": "The method evolves an image step-by-step from noise toward a realistic material by learning patterns from training examples. It uses depth and lighting information as constraints that guide the transformation, ensuring the output matches the target material's appearance under different conditions."
+  },
+  {
+    "gid": 152,
+    "math_tags": [
+      "finding a shape's natural modes of vibration",
+      "learning a function from examples",
+      "solving a big system of equations"
+    ],
+    "math_plain": "The method discovers how a deformable object naturally evolves over time by finding its fundamental vibration patterns, then uses those patterns to skip ahead through time instead of solving step-by-step equations. This trades slow sequential solving for fast repeated multiplications."
+  }
+]

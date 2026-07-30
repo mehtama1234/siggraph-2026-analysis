@@ -1,0 +1,77 @@
+[
+  {
+    "gid": 90,
+    "math_tags": ["learning a function from examples", "following the slope downhill to improve"],
+    "math_plain": "A neural network learns to predict surface distance at any point in space, but only needs high precision near the surface and low precision far away. The method assigns different network sizes to different regions, using only the computational depth needed for each location."
+  },
+  {
+    "gid": 91,
+    "math_tags": ["constraints that must all hold at once", "distances and nearest matches"],
+    "math_plain": "The printer must follow specified direction fields (like a compass at every point) while keeping extrusion width constant and avoiding collisions. The algorithm breaks this into layered slices that satisfy all these constraints simultaneously without changing the specified fields."
+  },
+  {
+    "gid": 92,
+    "math_tags": ["evolving a system step by step over time", "probability and likelihood"],
+    "math_plain": "A diffusion model gradually adds and removes noise from scene configurations, refining object placement in stages. Each stage solves a simpler problem, reducing uncertainty until realistic room layouts emerge that obey walls, doors, and semantic relationships."
+  },
+  {
+    "gid": 93,
+    "math_tags": ["finding the arrangement with least energy", "transformations and coordinate changes"],
+    "math_plain": "Maps between shapes live in a high-dimensional space; the method finds the one with minimum stretching energy by optimizing a physics-inspired model. This treats distortion-minimization as a minimal-area surface problem, solvable without mesh combinatorics."
+  },
+  {
+    "gid": 94,
+    "math_tags": ["solving a big system of equations", "evolving a system step by step over time"],
+    "math_plain": "Stiff elastic materials resist deformation; the solver must advance time accurately without requiring impossibly small steps. It reformulates the problem as a saddle-point equation where forces and deformations are solved together implicitly."
+  },
+  {
+    "gid": 95,
+    "math_tags": ["probability and likelihood", "adding up infinitely many tiny contributions"],
+    "math_plain": "Single-photon detectors count random arrival times; the method reconstructs full spectra and materials by treating each detection event as a probabilistic sample. Error bounds decrease exponentially as more photon counts accumulate."
+  },
+  {
+    "gid": 96,
+    "math_tags": ["finding the arrangement with least energy", "distances and nearest matches"],
+    "math_plain": "The medial axis (skeleton of equidistant points) is simplified by collapsing edges, but the algorithm tracks which surface regions each skeletal point corresponds to. This preserves structural symmetries—the intrinsic balance of shape features."
+  },
+  {
+    "gid": 97,
+    "math_tags": ["distances and nearest matches", "constraints that must all hold at once"],
+    "math_plain": "Virtual objects must match physical proxies by finding closest real-world items that satisfy multiple criteria: texture, geometry, safety. The system combines language understanding with multi-objective optimization to rank physical matches."
+  },
+  {
+    "gid": 98,
+    "math_tags": ["learning a function from examples", "filling in smoothly between known points"],
+    "math_plain": "A control mesh defines a smooth surface; neural basis functions augment classical subdivision with learned local deformations. The design preserves four key properties—linearity, locality, smoothness, and affine invariance—ensuring direct manipulation without retraining."
+  },
+  {
+    "gid": 99,
+    "math_tags": ["solving a big system of equations", "smart random sampling"],
+    "math_plain": "Solving steady-state physics equations (Poisson problems) on complex shapes combines random walks (for geometry flexibility) with direct linear solving (for stability). Local random walks on sub-regions estimate local boundary-response operators, assembled into one sparse global system."
+  },
+  {
+    "gid": 100,
+    "math_tags": ["following the slope downhill to improve", "solving a big system of equations"],
+    "math_plain": "Designing camera optics for AI processing means fitting lens parameters to match ideal image outputs. Traditional solvers fail because one scalar loss gives too few constraints; the method lifts it to ray-level residuals, enabling robust pseudo-second-order optimization."
+  },
+  {
+    "gid": 101,
+    "math_tags": ["learning a function from examples", "networks and connections"],
+    "math_plain": "A language model processes multimodal scene context (visual, spatial, narrative) to emit navigation decisions that fit an agent's role. The network learns to generate movement behaviors consistent with character goals and responsive to dynamic user actions."
+  },
+  {
+    "gid": 102,
+    "math_tags": ["learning a function from examples", "filling in smoothly between known points"],
+    "math_plain": "Shape, skeleton, and skin are represented as continuous fields in shared space, learned from images so all three stay mutually consistent. Special techniques handle the geometric ambiguity where bones meet and allow rigging of variable complexity."
+  },
+  {
+    "gid": 103,
+    "math_tags": ["learning a function from examples", "probability and likelihood"],
+    "math_plain": "A network learns to remove lighting from facial photos, revealing true surface colors and material properties. Training on mixed data sources is unified by learning source-aware modulation, so the learned delighting model transfers to casual smartphone video."
+  },
+  {
+    "gid": 104,
+    "math_tags": ["finding the arrangement with least energy", "constraints that must all hold at once"],
+    "math_plain": "A cage is a simplified proxy mesh that controls deformation of a denser model. The method minimizes face count while staying close to the original shape by progressively relaxing a tightness threshold and enforcing constraints against triangle collapse."
+  }
+]

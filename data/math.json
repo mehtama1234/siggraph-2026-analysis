@@ -1,0 +1,1088 @@
+{
+ "0": {
+  "tags": [
+   "learning a function from examples",
+   "filling in smoothly between known points"
+  ],
+  "plain": "The method learns to blend bracketed photos into one high-quality image by training on synthetic data and learning which input pixels to mix. It's trained once on computer-generated examples, then applies that learned pattern to real photos it has never seen."
+ },
+ "1": {
+  "tags": [
+   "solving a big system of equations",
+   "distances and nearest matches"
+  ],
+  "plain": "Finding the maximum distance between two 3D models requires exploring many candidate point pairs and eliminating unlikely ones. The method replaces a sequential bottleneck with parallel batch processing, allowing thousands of candidates to be pruned together rather than one at a time."
+ },
+ "2": {
+  "tags": [
+   "evolving a system step by step over time",
+   "solving a big system of equations"
+  ],
+  "plain": "Sand, water, and air interact as they flow and settle; the method splits this into two coupled methods\u2014one that updates fluid motion at each moment, one that tracks how sand grains deform and move. Both proceed in lockstep, exchanging forces at each time step."
+ },
+ "3": {
+  "tags": [
+   "learning a function from examples",
+   "transformations and coordinate changes"
+  ],
+  "plain": "A a system that learns from examples learns to build 3D 3D models one face at a time by treating each face as a pieces in a sequence, mimicking how artists draw connected strips that naturally preserve the 3D model's flow and surface-layout layout."
+ },
+ "4": {
+  "tags": [
+   "evolving a system step by step over time",
+   "probability and likelihood"
+  ],
+  "plain": "Instead of many refinement steps, this method transports probability distributions in a few giant jumps. It learns cumulative paths that carry a starting distribution toward final images in one or two leaps, reducing computation while keeping quality."
+ },
+ "5": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "solving a big system of equations"
+  ],
+  "plain": "Light bounces off surfaces and through the scene in complex paths; the method uses a generative model to predict missing light paths when sensors cannot directly observe them, then refines these guesses by tracking how light actually flows."
+ },
+ "6": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "measuring how a surface curves"
+  ],
+  "plain": "Thin shells bend and stretch; the method measures bending by comparing how surfaces curve at neighboring points. Finding a realistic shape means minimizing the strain energy where bending is captured as discrete angle changes across the 3D model."
+ },
+ "7": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "solving a big system of equations"
+  ],
+  "plain": "Contact and deformation both minimize the same total energy; the method automatically computes the exact slopes and curvatures of this energy landscape needed to solve for equilibrium, turning high-level problem descriptions into efficient methods."
+ },
+ "8": {
+  "tags": [
+   "constraints that must all hold at once",
+   "networks and connections"
+  ],
+  "plain": "GPU programs pass data through many stages; contracts specify what types and layouts each stage expects. The method verifies these agreements match before runtime, catching mismatches the same way type systems catch programming errors."
+ },
+ "9": {
+  "tags": [
+   "solving a big system of equations",
+   "learning a function from examples"
+  ],
+  "plain": "Lattice materials require solving huge systems of equations to predict their strength; a a system that learns from examples learns to propose accurate starting guesses that need only one refinement step, cutting computation dramatically while staying precise."
+ },
+ "10": {
+  "tags": [
+   "smart random sampling",
+   "probability and likelihood"
+  ],
+  "plain": "Rendering probabilistic implicit surfaces requires many noisy evaluations; the method computes upper and lower bounds to skip evaluations in empty regions and skip noisy samples when bounds prove no intersection, accelerating rendering."
+ },
+ "11": {
+  "tags": [
+   "learning a function from examples",
+   "solving a big system of equations"
+  ],
+  "plain": "Existing geometry methods find shape properties by iteratively refining; the method automatically reverses this process so slope flow backward through the iterations, enabling learning-based geometry optimization without rewriting the methods."
+ },
+ "12": {
+  "tags": [
+   "learning a function from examples",
+   "constraints that must all hold at once"
+  ],
+  "plain": "From a single terrain photo, the method infers height values for visible ground and fills hidden regions using a learned model, enforcing that rivers flow downhill and rendered terrain matches the input image."
+ },
+ "13": {
+  "tags": [
+   "solving a big system of equations",
+   "finding the arrangement with least energy"
+  ],
+  "plain": "Soft and stiff objects push each other; the method solves their coupled dynamics by splitting into subproblems that reuse low-rank approximations, allowing GPU parallelism without the ill-conditioning that normally plagues mixed-stiffness systems."
+ },
+ "14": {
+  "tags": [
+   "measuring how a surface curves",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Topological features like holes persist across different scales; the method removes only weak features by cutting or filling while preserving those marked as important, using persistence to rank which features matter most."
+ },
+ "15": {
+  "tags": [
+   "learning a function from examples",
+   "filling in smoothly between known points"
+  ],
+  "plain": "The system learns to generate quad layouts by training on examples; it uses Chart Distance Fields\u2014a continuous smooth representation\u2014so the learning algorithm can adjust every part of the solution incrementally."
+ },
+ "16": {
+  "tags": [
+   "frequencies and levels of detail",
+   "solving a big system of equations"
+  ],
+  "plain": "Video compression breaks the signal into basic frequency building blocks (like a musical scale), then uses motion prediction to match the same scene across time; solving which frequencies change frame-to-frame saves storage."
+ },
+ "17": {
+  "tags": [
+   "smart random sampling",
+   "frequencies and levels of detail"
+  ],
+  "plain": "The model learns signals on 3D models by using carefully chosen noise from a Mat\u00e9rn process\u2014a random field whose frequency content stays the same no matter how the triangle 3D model is reshaped\u2014ensuring the learned patterns transfer across different 3D model forms."
+ },
+ "18": {
+  "tags": [
+   "solving a big system of equations",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Building a tetrahedral 3D model requires satisfying many geometric constraints (angles bounded, faces aligned); the algorithm uses Delaunay refinement\u2014a technique that grows the 3D model by solving these constraints together without getting stuck."
+ },
+ "19": {
+  "tags": [
+   "networks and connections",
+   "learning a function from examples"
+  ],
+  "plain": "The system models objects and their relationships as a graph, then trains a learned function to predict which objects can go where by reasoning over these connections and learned object functionalities."
+ },
+ "20": {
+  "tags": [
+   "filling in smoothly between known points",
+   "following the slope downhill to improve"
+  ],
+  "plain": "Mixing flows are built from analytical formulas (potential flow solutions), and the algorithm traces particles through displacement fields by adjusting their paths downhill toward the fluid's preferred state without global solving."
+ },
+ "21": {
+  "tags": [
+   "measuring how a surface curves",
+   "transformations and coordinate changes"
+  ],
+  "plain": "Multi-material objects are represented as signed distance fields\u2014numbers encoding how far any point is from the nearest surface\u2014combined through geometric transformations; the system extends ray tracing to handle these layered distance measurements."
+ },
+ "22": {
+  "tags": [
+   "filling in smoothly between known points",
+   "learning a function from examples"
+  ],
+  "plain": "Animation frames are connected by learning stroke correspondences; the system predicts hidden strokes using learned spatial transformations applied progressively across layers, smoothly interpolating missing motion."
+ },
+ "23": {
+  "tags": [
+   "learning a function from examples",
+   "finding a shape's natural modes of vibration"
+  ],
+  "plain": "Character motion and skeleton structure are modeled as coupled degrees of freedom in a shared learned space; the system treats all possible pose deformations as natural oscillation modes of a single unified kinematic system."
+ },
+ "24": {
+  "tags": [
+   "learning a function from examples",
+   "distances and nearest matches"
+  ],
+  "plain": "The system learns to predict how light bounces off surfaces in different ways (shiny versus matte) by training on examples; specialized ray sampling identifies which nearby lit samples matter most for each viewing angle."
+ },
+ "25": {
+  "tags": [
+   "evolving a system step by step over time",
+   "smart random sampling"
+  ],
+  "plain": "Terrain erosion is simulated by tracking particles (water, sediment) flowing downhill over time; randomness in particle motion captures the chaotic transport that larger deterministic forces miss, producing natural river and delta patterns."
+ },
+ "26": {
+  "tags": [
+   "smart random sampling",
+   "following the slope downhill to improve"
+  ],
+  "plain": "Ray tracing with very few samples per pixel uses a learned sampling strategy that decides where to trace rays based on image importance; the system trains by following the slope of a perceptual loss to avoid wasting rays on invisible details."
+ },
+ "27": {
+  "tags": [
+   "learning a function from examples",
+   "networks and connections"
+  ],
+  "plain": "Hair is modeled as a sequence of strand primitives arranged hierarchically from scalp region to fine detail; the system learns to predict each strand type autoregressively, composing complex hairstyles by chaining learned strand predictions."
+ },
+ "28": {
+  "tags": [
+   "distances and nearest matches",
+   "learning a function from examples"
+  ],
+  "plain": "Multiple 2D pose detections from different camera views are reconstructed into 3D by finding poses close to all views simultaneously; the system learns person-specific subspaces so each body stays within its natural movement patterns."
+ },
+ "29": {
+  "tags": [
+   "frequencies and levels of detail",
+   "evolving a system step by step over time"
+  ],
+  "plain": "Texture on deforming surfaces is generated procedurally by measuring how the surface stretches and shrinks, then adjusting the wave frequencies in the texture based on that deformation history\u2014making details physically respond to motion."
+ },
+ "30": {
+  "tags": [
+   "smart random sampling",
+   "filling in smoothly between known points"
+  ],
+  "plain": "Ray tracing needs sample points scattered strategically across pixel coordinates so light integrates accurately without aliasing. NILE interleaves local low-dimensional samplers (clustered within pixels) with global high-dimensional sequences (uniform across many pixels), letting you control both."
+ },
+ "31": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "following the slope downhill to improve"
+  ],
+  "plain": "Solving Poisson equations with random rays is slow because the answer wiggles wildly. Instead of estimating the solution itself, estimate how it changes locally (its slope), then reconstruct the answer more stably from those differences."
+ },
+ "32": {
+  "tags": [
+   "learning a function from examples",
+   "solving a big system of equations"
+  ],
+  "plain": "a system that learns from examples make everything smooth, but some shapes need sharp corners. SharpNet solves Poisson's equation (the same way fluids diffuse heat) on prescribed edges to inject prescribed sharp features, keeping smooth curves everywhere else."
+ },
+ "33": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Composite strength depends on how fabric layers are oriented and partially placed. Optimize which regions get material and how those layers angle to maximize stiffness while respecting manufacturing limits\u2014many constraints pulling at once."
+ },
+ "34": {
+  "tags": [
+   "evolving a system step by step over time",
+   "solving a big system of equations"
+  ],
+  "plain": "Fluids evolve as billions of jostling gas molecules; simulating each is impossible. Track instead the aggregate statistics (momentum, energy) at each point via kinetic theory, advancing those aggregates forward in time via the Boltzmann equation."
+ },
+ "35": {
+  "tags": [
+   "learning a function from examples",
+   "probability and likelihood"
+  ],
+  "plain": "Piano hands need low-level muscle precision and high-level musical timing. Train muscle-control policies, compress their learned behaviors into a smooth hidden space (VAE), then learn note-driven coordination policies that work in that condensed space."
+ },
+ "36": {
+  "tags": [
+   "learning a function from examples",
+   "filling in smoothly between known points"
+  ],
+  "plain": "Generate 3D roof geometry by iteratively denoising random vertex coordinates using a image-generating model (like reverse image-generating in image generation), guided by predicted face counts, then enforce topological consistency."
+ },
+ "37": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "solving a big system of equations"
+  ],
+  "plain": "Interpolate between two probability distributions by finding the smoothest path between them via entropy-regularized transport. The heat equation reveals this path; apply Sinkhorn iterations (alternating local averaging and scaling) to enforce boundary constraints."
+ },
+ "38": {
+  "tags": [
+   "smart random sampling",
+   "finding the arrangement with least energy"
+  ],
+  "plain": "Merging tens of image model adapters creates a huge parameter space. Use Bayesian optimization\u2014predict which coefficient settings will please a user based on past preference feedback, then strategically sample promising regions."
+ },
+ "39": {
+  "tags": [
+   "distances and nearest matches",
+   "transformations and coordinate changes"
+  ],
+  "plain": "Moving one character's motion to another requires matching spatial relationships (like hand-to-face proximity). Adaptively reposition anchor points on the target body via learned prediction, then retarget motion to preserve those adaptive relationships."
+ },
+ "40": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "smart random sampling"
+  ],
+  "plain": "Rendering smoke requires summing light arriving along rays, but computing how that sum changes with smoke density is noisy. Evaluate both scattering and transmission effects at matching sample points along the same ray segment to cancel out their wild swings."
+ },
+ "41": {
+  "tags": [
+   "measuring how a surface curves",
+   "finding the arrangement with least energy"
+  ],
+  "plain": "Knit structures need singularities positioned to avoid helical twists. Use power diagrams (regions of equal generalized distance) on 3D model surfaces to optimally place singularities by iteratively moving each toward the curl center of its region."
+ },
+ "42": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "smart random sampling"
+  ],
+  "plain": "Time-gated imaging traces light bounces that arrive within a narrow time window; simulating all bounces is expensive. Reuse previously computed bounces by warping them (via Newton's method) to satisfy the time constraints, then resample intelligently."
+ },
+ "43": {
+  "tags": [
+   "evolving a system step by step over time",
+   "solving a big system of equations"
+  ],
+  "plain": "Two-phase flows (oil-water) require tracking both fluid momentum and phase boundary motion simultaneously. Couple gas-kinetic moment evolution with a phase-field equation that diffuses the interface, advancing both forward stably over time."
+ },
+ "44": {
+  "tags": [
+   "learning a function from examples",
+   "transformations and coordinate changes"
+  ],
+  "plain": "Generating point clouds means learning curved paths in high-dimensional space. Exploit particle permutation symmetry and embed geometric structure in the flow's final velocity so the model learns simpler, straighter paths that produce normals as a byproduct."
+ },
+ "45": {
+  "tags": [
+   "smart random sampling",
+   "following the slope downhill to improve",
+   "learning a function from examples"
+  ],
+  "plain": "Light bounces off a spacecraft surface, pushing it slightly\u2014this radiation pressure effect drives what direction and speed the craft moves. The team uses random sampling to estimate this effect cheaply, then trains a a system that learns from examples to predict forces so fast optimization can find the best shape without running millions of light simulations."
+ },
+ "46": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "measuring how a surface curves"
+  ],
+  "plain": "When light interacts with object boundaries during rendering, you must add up infinitely many light paths bouncing at the edge\u2014a mathematical integral. By smearing the razor-thin boundary slightly with a smooth kernel (like photon mapping does), this integral becomes easier to estimate accurately without sampling exactly on the edge."
+ },
+ "47": {
+  "tags": [
+   "solving a big system of equations",
+   "finding the arrangement with least energy"
+  ],
+  "plain": "As material deforms under gravity and collisions, it settles into the shape where energy is lowest\u2014this is a minimization problem. The algorithm solves one giant set of coupled equations (one per grid point) to find that shape, using clever resampling so the methods doesn't bog down when there are many particles."
+ },
+ "48": {
+  "tags": [
+   "frequencies and levels of detail",
+   "filling in smoothly between known points"
+  ],
+  "plain": "Spherical harmonics decompose functions on a sphere into frequencies\u2014low frequencies capture the broad shape, high frequencies add fine detail. Multiplying two such functions is expensive; the paper converts to an intermediate grid, multiplies pointwise (cheap), then converts back, controlling detail level by grid resolution."
+ },
+ "49": {
+  "tags": [
+   "solving a big system of equations",
+   "constraints that must all hold at once"
+  ],
+  "plain": "A tetrahedral 3D model must fit a 3D shape AND satisfy many geometric constraints (faces must not intersect, boundaries must be exact). The algorithm uses edge flips and point repositioning to recover the boundary while respecting all constraints simultaneously, with careful handling of numerical rounding errors."
+ },
+ "50": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "smart random sampling"
+  ],
+  "plain": "Holography encodes wavefronts (which waves go where) into a phase pattern\u2014this is an integral over all light paths, analogous to rendering. Monte Carlo path tracing randomly samples paths and weights them to estimate this integral; path reuse (recycling samples) dramatically cuts the number of simulations needed."
+ },
+ "51": {
+  "tags": [
+   "transformations and coordinate changes",
+   "learning a function from examples"
+  ],
+  "plain": "Holographic displays distort colors due to laser light, optical imperfections, and hardware biases. The system maps input color to output color via learned neural functions; adaptive illumination adjusts light intensity, and coordinate changes (color space transformations) straighten out systematic distortions."
+ },
+ "52": {
+  "tags": [
+   "learning a function from examples",
+   "probability and likelihood"
+  ],
+  "plain": "A physics-simulated character learns to copy human motion (imitation) while also learning to adapt to new environments via trial-and-error (reinforcement learning). The hybrid approach balances likelihood that the motion matches reference data against likelihood of success in novel settings, sharing learned patterns across both objectives."
+ },
+ "53": {
+  "tags": [
+   "frequencies and levels of detail",
+   "transformations and coordinate changes"
+  ],
+  "plain": "A hologram encodes a 3D image as an interference pattern; light and dark stripes represent phase and amplitude. By carefully splitting the design across different frequency bands (low, mid, high) and using surface-relief structures with shallower phase wraps, a single transparent layer delivers full-color 3D without crosstalk."
+ },
+ "54": {
+  "tags": [
+   "solving a big system of equations",
+   "distances and nearest matches"
+  ],
+  "plain": "Collision detection checks whether a moving curve on a curved surface will hit an obstacle\u2014this requires solving equations to find the closest approach distance over time. The paper separates numerical errors (rounding, arithmetic imprecision) from model errors and benchmarks against exact rational-arithmetic ground truth."
+ },
+ "55": {
+  "tags": [],
+  "plain": "Editorial introduction to the SIGGRAPH 2026 conference proceedings; not a research contribution."
+ },
+ "56": {
+  "tags": [
+   "constraints that must all hold at once",
+   "networks and connections"
+  ],
+  "plain": "A kirigami is a hinged origami where rigid panels rotate freely without stretching. Geometric constraints (angles, edge lengths) must lock the structure into a unique folded shape while respecting graph topology; the paper derives which constraints allow rigid deployment from any planar graph, not just special cases."
+ },
+ "57": {
+  "tags": [
+   "frequencies and levels of detail",
+   "transformations and coordinate changes"
+  ],
+  "plain": "Two synchronized laser paths with spatial light modulators (phase/amplitude masks) steer beams through 3D space to paint voxels in a gas chamber. The system combines two independent wavefronts; careful timing and coordinate transforms align both beams, boosting brightness and voxel density beyond single-path limits."
+ },
+ "58": {
+  "tags": [
+   "learning a function from examples",
+   "adding up infinitely many tiny contributions"
+  ],
+  "plain": "Hidden scenes emit thermal radiation that bounces through rough walls to a camera\u2014reconstructing what's hidden requires reversing this complex light transport. The a system that learns from examples learns the convolution kernel that describes how light scatters, then inverts it to recover the hidden scene from measurements."
+ },
+ "59": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "measuring how a surface curves"
+  ],
+  "plain": "Origami materials (folded sheets) have unusual stiffness and bending because creases redirect strain. Classical Laminate Theory calculates effective stiffness from fold angles and surface curvature; simulation folds the crease pattern, then homogenization averages the behavior to predict macroscopic properties from microscopic fold geometry."
+ },
+ "60": {
+  "tags": [
+   "solving a big system of equations",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Large assemblies of jointed bodies get solved using huge systems of equations that enforce exact constraints at each joint. By keeping the system matrices constant, these equations can be pre-solved once and reused, making simulations interactive even with hundreds of thousands of bodies."
+ },
+ "61": {
+  "tags": [
+   "learning a function from examples",
+   "smart random sampling"
+  ],
+  "plain": "A image-generating model learns the space of human motions by slowly adding and removing noise from motion examples, learning how to generate new realistic motions. During inference, masked positions guide the generation to satisfy user-specified constraints like joint positions."
+ },
+ "62": {
+  "tags": [
+   "learning a function from examples",
+   "frequencies and levels of detail"
+  ],
+  "plain": "A video generation model learns to predict how light bounces onto skin and cloth from captured relighting examples. It conditions on lighting parameters (represented as pieces) and uses attention masks to handle changing lighting over time."
+ },
+ "63": {
+  "tags": [
+   "frequencies and levels of detail",
+   "measuring how a surface curves"
+  ],
+  "plain": "Feathers are represented hierarchically in surface-layout space, encoding their fine details procedurally at multiple scales. A custom scattering model captures how light interacts with the feather's micro-structure, balancing realism with real-time performance."
+ },
+ "64": {
+  "tags": [
+   "evolving a system step by step over time",
+   "smart random sampling"
+  ],
+  "plain": "Gaussian splatting primitives are anchored to time-conditioned points that move through the scene, reducing the need to track complex long-term motion. Only relevant anchors activate at each time step, providing both temporal stability and scalability."
+ },
+ "65": {
+  "tags": [
+   "solving a big system of equations",
+   "adding up infinitely many tiny contributions"
+  ],
+  "plain": "A 4D tensor (space and time) is decomposed into simpler components, then a system that learns from examples refine the solution by tracing how light rays bend through the flow field. Back-propagation updates both the tensor factors and network weights iteratively."
+ },
+ "66": {
+  "tags": [
+   "smart random sampling",
+   "evolving a system step by step over time"
+  ],
+  "plain": "Particles are jittered randomly in both space and time, then deposited onto a 4D space-time grid using a separable kernel. This Monte Carlo sampling approach lets the methods take time steps an order of magnitude larger without temporal aliasing."
+ },
+ "67": {
+  "tags": [
+   "learning a function from examples",
+   "distances and nearest matches"
+  ],
+  "plain": "A Bayesian regression with Gaussian processes fits material reflectance properties by learning distances between observed and modeled reflectance. A custom kernel better captures reflectance features than standard kernels, enabling compact analytical representations."
+ },
+ "68": {
+  "tags": [
+   "following the slope downhill to improve",
+   "probability and likelihood"
+  ],
+  "plain": "Each voxel holds a probability distribution over known materials; the method descends the slope of a loss that encourages consistency with measured X-ray projections. Nonlinear effects like scattering are naturally incorporated into this probabilistic framework."
+ },
+ "69": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "distances and nearest matches"
+  ],
+  "plain": "Winding numbers (counting ray-surface intersections) are expressed as a boundary integral over the surface projected onto a sphere. This geometric insight avoids expensive surface integrals and enables fast, precise queries on both 3D models and parametric surfaces."
+ },
+ "70": {
+  "tags": [
+   "following the slope downhill to improve",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Panelization is cast as a continuous surface flow coupled to stress analysis; the method computes slope of total stress with respect to the surface shape and uses optimization to balance geometric fit against structural performance."
+ },
+ "71": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "solving a big system of equations"
+  ],
+  "plain": "An energy-based framework enforces embeddedness (no self-intersections) by combining a global shape-level energy that captures entanglement and a local 3D model-level penalty. Minimizing these energies together reliably removes self-intersections across complex geometries."
+ },
+ "72": {
+  "tags": [
+   "learning a function from examples",
+   "smart random sampling"
+  ],
+  "plain": "An auto-regressive model generates 3D shapes in coarse-to-fine layers via octree structure prediction, with a quantized variational autoencoder encoding shapes into a multiscale sparse representation. Octree-aware attention selectively focuses on relevant features at each scale."
+ },
+ "73": {
+  "tags": [
+   "solving a big system of equations",
+   "distances and nearest matches"
+  ],
+  "plain": "Intersection curves are found by detecting their starting points robustly using winding number theory combined with subdivision to locate points on tangential intersections. This hybrid approach handles complex topologies, small loops, and degenerate cases that confound standard methods."
+ },
+ "74": {
+  "tags": [
+   "solving a big system of equations",
+   "constraints that must all hold at once"
+  ],
+  "plain": "A generalized Douglas-Rachford splitting scheme decouples the coupled yarn constraints (stretching, bending, contact) into independent convex sub-problems at each iteration. Metric selection derived from convergence theory achieves near-optimal solution speed without ad-hoc tuning."
+ },
+ "75": {
+  "tags": [
+   "measuring how a surface curves",
+   "smart random sampling",
+   "learning a function from examples"
+  ],
+  "plain": "Light aberrations bend unpredictably through an asymmetric aperture, and the resulting patterns encode the distortions; machine learning decodes these patterns to infer what the aberrations are, then optics corrects them."
+ },
+ "76": {
+  "tags": [
+   "learning a function from examples",
+   "filling in smoothly between known points",
+   "constraints that must all hold at once"
+  ],
+  "plain": "A quad 3D model must have singular points (where lines cross awkwardly); rather than predict the whole 3D model, learn only where singularities belong, then use smooth classical rules to connect them while respecting 3D model topology."
+ },
+ "77": {
+  "tags": [
+   "learning a function from examples",
+   "adding up infinitely many tiny contributions",
+   "frequencies and levels of detail"
+  ],
+  "plain": "Relight a face by learning how lights at different angles and colors interact with skin and features; a neural model trained on real and rendered footage learns to predict what light arriving from any direction does to pixels."
+ },
+ "78": {
+  "tags": [
+   "measuring how a surface curves",
+   "distances and nearest matches"
+  ],
+  "plain": "End-to-end latency measures the delay between real head motion and display update; perceptual studies measure how human perception changes as this delay shrinks, revealing threshold sensitivities in real tasks."
+ },
+ "79": {
+  "tags": [
+   "evolving a system step by step over time",
+   "solving a big system of equations",
+   "measuring how a surface curves"
+  ],
+  "plain": "Wood decay spreads via fungal colonization and moisture image-generating; simulate how fungi consume material (changing local stiffness), how water flows anisotropically through grain, and how cracks grow when stress exceeds weakened tissue."
+ },
+ "80": {
+  "tags": [
+   "solving a big system of equations",
+   "measuring how a surface curves",
+   "probability and likelihood"
+  ],
+  "plain": "A probabilistic surface model (Gaussian Process) represents uncertain geometry as a cloud of plausible shapes; compute surface operators (slope, curl, curvature) by averaging over that cloud, weighting by how likely each shape is."
+ },
+ "81": {
+  "tags": [
+   "learning a function from examples",
+   "distances and nearest matches",
+   "networks and connections"
+  ],
+  "plain": "Model 350k motion clips as points in a learned hidden space where similar poses cluster; at runtime, pick motion from the cluster matching current velocity and style commands, interpolating smoothly between primitives."
+ },
+ "82": {
+  "tags": [
+   "following the slope downhill to improve",
+   "solving a big system of equations",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Retargeting human motion to a robot must satisfy physics (no sliding, no collisions); optimize motion parameters and a tracking policy together, where the physics simulator answers whether each motion candidate is feasible."
+ },
+ "83": {
+  "tags": [
+   "frequencies and levels of detail",
+   "solving a big system of equations",
+   "filling in smoothly between known points"
+  ],
+  "plain": "Gaussian radiance volumes encode fine geometric detail; use Gabor functions (sine waves tuned to specific orientations and scales) to filter out detail selectively, pruning high-frequency components to speed rendering without refitting."
+ },
+ "84": {
+  "tags": [
+   "solving a big system of equations",
+   "smart random sampling",
+   "following the slope downhill to improve"
+  ],
+  "plain": "Heat radiation obeys a nonlinear boundary rule (temperature to the fourth power); solve the heat equation using random walks, iteratively refining boundary estimates using a fixed-point loop until the solution stabilizes."
+ },
+ "85": {
+  "tags": [
+   "learning a function from examples",
+   "evolving a system step by step over time",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Generate motion one frame at a time, conditioning on text prompts and future poses; a hybrid representation splits the problem (root trajectory separately from body pose) so text and keyframes guide generation together."
+ },
+ "86": {
+  "tags": [
+   "measuring how a surface curves",
+   "distances and nearest matches",
+   "solving a big system of equations"
+  ],
+  "plain": "Winding numbers tell if a point is inside curved geometry by measuring rotation around it; precompute moment summaries in a spatial tree, then use Taylor approximations for distant curves and exact integration for nearby ones."
+ },
+ "87": {
+  "tags": [
+   "smart random sampling",
+   "solving a big system of equations",
+   "filling in smoothly between known points"
+  ],
+  "plain": "Walk on Spheres solves PDEs using random walks; reuse intermediate points visited along each walk as independent samples using the Poisson integral formula, drastically reducing variance without slowing convergence."
+ },
+ "88": {
+  "tags": [
+   "measuring how a surface curves",
+   "distances and nearest matches"
+  ],
+  "plain": "Winding numbers measure net rotation around a point to test if it's inside; reduce the surface integral analytically to a single ray-3D model test plus a sum over boundary edges, orders of magnitude faster than prior methods."
+ },
+ "89": {
+  "tags": [
+   "learning a function from examples",
+   "following the slope downhill to improve",
+   "filling in smoothly between known points"
+  ],
+  "plain": "Capture woven fabric structure from one microscope image by matching rendered output to the photo; use differentiable geometry and shading models to optimize fiber parameters (position, angle, thickness) via image error."
+ },
+ "90": {
+  "tags": [
+   "learning a function from examples",
+   "following the slope downhill to improve"
+  ],
+  "plain": "A a system that learns from examples learns to predict surface distance at any point in space, but only needs high precision near the surface and low precision far away. The method assigns different network sizes to different regions, using only the computational depth needed for each location."
+ },
+ "91": {
+  "tags": [
+   "constraints that must all hold at once",
+   "distances and nearest matches"
+  ],
+  "plain": "The printer must follow specified direction fields (like a compass at every point) while keeping extrusion width constant and avoiding collisions. The algorithm breaks this into layered slices that satisfy all these constraints simultaneously without changing the specified fields."
+ },
+ "92": {
+  "tags": [
+   "evolving a system step by step over time",
+   "probability and likelihood"
+  ],
+  "plain": "A image-generating model gradually adds and removes noise from scene configurations, refining object placement in stages. Each stage solves a simpler problem, reducing uncertainty until realistic room layouts emerge that obey walls, doors, and semantic relationships."
+ },
+ "93": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "transformations and coordinate changes"
+  ],
+  "plain": "Maps between shapes live in a high-dimensional space; the method finds the one with minimum stretching energy by optimizing a physics-inspired model. This treats distortion-minimization as a minimal-area surface problem, solvable without 3D model combinatorics."
+ },
+ "94": {
+  "tags": [
+   "solving a big system of equations",
+   "evolving a system step by step over time"
+  ],
+  "plain": "Stiff elastic materials resist deformation; the methods must advance time accurately without requiring impossibly small steps. It reformulates the problem as a saddle-point equation where forces and deformations are solved together implicitly."
+ },
+ "95": {
+  "tags": [
+   "probability and likelihood",
+   "adding up infinitely many tiny contributions"
+  ],
+  "plain": "Single-photon detectors count random arrival times; the method reconstructs full spectra and materials by treating each detection event as a probabilistic sample. Error bounds decrease exponentially as more photon counts accumulate."
+ },
+ "96": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "distances and nearest matches"
+  ],
+  "plain": "The medial axis (skeleton of equidistant points) is simplified by collapsing edges, but the algorithm tracks which surface regions each skeletal point corresponds to. This preserves structural symmetries\u2014the intrinsic balance of shape features."
+ },
+ "97": {
+  "tags": [
+   "distances and nearest matches",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Virtual objects must match physical proxies by finding closest real-world items that satisfy multiple criteria: texture, geometry, safety. The system combines language understanding with multi-objective optimization to rank physical matches."
+ },
+ "98": {
+  "tags": [
+   "learning a function from examples",
+   "filling in smoothly between known points"
+  ],
+  "plain": "A control 3D model defines a smooth surface; neural basis functions augment classical subdivision with learned local deformations. The design preserves four key properties\u2014linearity, locality, smoothness, and affine invariance\u2014ensuring direct manipulation without retraining."
+ },
+ "99": {
+  "tags": [
+   "solving a big system of equations",
+   "smart random sampling"
+  ],
+  "plain": "Solving steady-state physics equations (Poisson problems) on complex shapes combines random walks (for geometry flexibility) with direct linear solving (for stability). Local random walks on sub-regions estimate local boundary-response operators, assembled into one sparse global system."
+ },
+ "100": {
+  "tags": [
+   "following the slope downhill to improve",
+   "solving a big system of equations"
+  ],
+  "plain": "Designing camera optics for AI processing means fitting lens parameters to match ideal image outputs. Traditional methods fail because one scalar loss gives too few constraints; the method lifts it to ray-level residuals, enabling robust pseudo-second-order optimization."
+ },
+ "101": {
+  "tags": [
+   "learning a function from examples",
+   "networks and connections"
+  ],
+  "plain": "A language model processes multimodal scene context (visual, spatial, narrative) to emit navigation decisions that fit an agent's role. The network learns to generate movement behaviors consistent with character goals and responsive to dynamic user actions."
+ },
+ "102": {
+  "tags": [
+   "learning a function from examples",
+   "filling in smoothly between known points"
+  ],
+  "plain": "Shape, skeleton, and skin are represented as continuous fields in shared space, learned from images so all three stay mutually consistent. Special techniques handle the geometric ambiguity where bones meet and allow rigging of variable complexity."
+ },
+ "103": {
+  "tags": [
+   "learning a function from examples",
+   "probability and likelihood"
+  ],
+  "plain": "A network learns to remove lighting from facial photos, revealing true surface colors and material properties. Training on mixed data sources is unified by learning source-aware modulation, so the learned delighting model transfers to casual smartphone video."
+ },
+ "104": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "constraints that must all hold at once"
+  ],
+  "plain": "A cage is a simplified proxy 3D model that controls deformation of a denser model. The method minimizes face count while staying close to the original shape by progressively relaxing a tightness threshold and enforcing constraints against triangle collapse."
+ },
+ "105": {
+  "tags": [
+   "evolving a system step by step over time",
+   "filling in smoothly between known points"
+  ],
+  "plain": "A 3D model starts noisy and gradually becomes clearer, step by step, like a photograph developing. At each step, the model predicts which shapes fit the data better, then refines the guess."
+ },
+ "106": {
+  "tags": [
+   "finding a shape's natural modes of vibration",
+   "solving a big system of equations"
+  ],
+  "plain": "When a structure vibrates, it prefers certain patterns over others\u2014like how a drum head resonates. The method finds those favorite patterns efficiently by breaking the big structure into smaller pieces and combining their vibrations."
+ },
+ "107": {
+  "tags": [
+   "evolving a system step by step over time",
+   "distances and nearest matches"
+  ],
+  "plain": "The system generates a chart by repeatedly refining noisy colors, nudged by two signals: what words say it should show, and the structure it must follow. Each refinement step brings it closer to both goals at once."
+ },
+ "108": {
+  "tags": [
+   "filling in smoothly between known points",
+   "solving a big system of equations"
+  ],
+  "plain": "A surface emerges from a distance field by finding the locations where that field equals zero. The method organizes space into blocks and uses lookup patterns to build the correct triangles without guessing sign."
+ },
+ "109": {
+  "tags": [
+   "finding distances and nearest matches",
+   "transformations and coordinate changes"
+  ],
+  "plain": "Garments wrap onto bodies through two alignment puzzles: matching the cloth to a standard skeleton, then warping that skeleton to fit the target pose. Physics then settles the cloth into natural-looking folds."
+ },
+ "110": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "transformations and coordinate changes"
+  ],
+  "plain": "Light bounces and bends as it travels through a scene; the method adds up all those paths and their effects to decide where to draw stylized lines and shading that look hand-drawn yet follow real physics."
+ },
+ "111": {
+  "tags": [
+   "solving a big system of equations",
+   "distances and nearest matches"
+  ],
+  "plain": "Curves from 3D geometry must be organized into regions without crossing incorrectly. The method builds a spatial structure that finds all intersections robustly, using it to build a planar map that partitions the image."
+ },
+ "112": {
+  "tags": [
+   "distances and nearest matches",
+   "learning a function from examples"
+  ],
+  "plain": "Each pixel's color is a soft blend of nearby seed points, weighted by distance and a learnable shape metric. The system learns where to place seeds and how to weight them by training on image data."
+ },
+ "113": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "solving a big system of equations"
+  ],
+  "plain": "A simulation domain splits into pieces for parallel computing; optimal transport finds a split that balances load, minimizes communication, and stays stable as the domain deforms and changes shape over time."
+ },
+ "114": {
+  "tags": [
+   "measuring how a surface curves",
+   "transformations and coordinate changes"
+  ],
+  "plain": "Spinning cables form natural axisymmetric shapes governed by physics. The display maps pixels to those mathematical shapes, preserving density by adjusting how many pixels render per revolution as the shape expands."
+ },
+ "115": {
+  "tags": [
+   "smart random sampling",
+   "adding up infinitely many tiny contributions"
+  ],
+  "plain": "Many tiny opaque points sample from each large Gaussian blur, splatting to pixels in parallel. The method solves how many points to use so their random hits blend to match the original sharp rendering."
+ },
+ "116": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "filling in smoothly between known points"
+  ],
+  "plain": "Lens blur spreads light according to aperture shape; the method convolves each 3D Gaussian with a blur kernel using a closed mathematical formula, enabling sharp reconstruction from blurry photos."
+ },
+ "117": {
+  "tags": [
+   "smart random sampling",
+   "learning a function from examples"
+  ],
+  "plain": "Rather than averaging random samples blindly, a a system that learns from examples learns where to sample and how to weave that sample's extra information (position, geometry) into the estimate, improving accuracy on similar problems."
+ },
+ "118": {
+  "tags": [
+   "distances and nearest matches",
+   "solving a big system of equations"
+  ],
+  "plain": "The farthest point between two 3D models is found by searching branches of possibilities, pruning those that can't beat the current best. The method runs this search on a GPU in parallel, maintaining tight bounds."
+ },
+ "119": {
+  "tags": [
+   "transformations and coordinate changes",
+   "filling in smoothly between known points"
+  ],
+  "plain": "Surface patterns are lifted from flat texture images into vertex colors by remeshing triangles finely. This lets geometry algorithms incorporate texture naturally without wrestling with surface-layout coordinates."
+ },
+ "120": {
+  "tags": [
+   "solving a big system of equations",
+   "smart random sampling"
+  ],
+  "plain": "The algorithm breaks a huge deformation problem into smaller pieces and uses smart point-placement (Gaussian quadrature) to integrate their effects without needing expensive training data. Each local piece's shape-change is predicted analytically by reading it as a smooth polynomial."
+ },
+ "121": {
+  "tags": [
+   "evolving a system step by step over time",
+   "solving a big system of equations"
+  ],
+  "plain": "Simulating jiggly volumetric materials at multiple detail levels simultaneously: coarse motion captures bulk deformation, while high-frequency detail is split and recombined with finer resolutions to add bouncy wrinkles without multiplying the number of time-steps needed."
+ },
+ "122": {
+  "tags": [
+   "probability and likelihood",
+   "distances and nearest matches"
+  ],
+  "plain": "The system learns to recognize face identity in stylized portraits by matching human perception: it observes human same-different judgments on diverse art styles and trains encoders to rank face similarities the same way humans do, learning which features truly signal the same person."
+ },
+ "123": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "measuring how a surface curves"
+  ],
+  "plain": "A porous material's internal structure is designed so its effective mechanical properties (how it bends and stretches as a whole) are uniform in all directions, while its visual appearance halftones a target image. Balancing visual appearance against uniform stiffness is the core constraint."
+ },
+ "124": {
+  "tags": [
+   "solving a big system of equations",
+   "following the slope downhill to improve"
+  ],
+  "plain": "High-resolution shape-optimization problems are solved by building Newton's method atop a block-accelerated sparse linear methods that exploits the fact that unknowns cluster naturally into dense d-by-d blocks. This structure speeds up every phase: assembly, factorization, and back-solve."
+ },
+ "125": {
+  "tags": [
+   "transformations and coordinate changes",
+   "filling in smoothly between known points"
+  ],
+  "plain": "3D spatial data (3D models, volumes, light fields) is compressed by recognizing that many regions are similar up to a geometric transformation; store only one copy of each unique piece plus the transformations between copies, using octree subdivision and rotation groups for compactness."
+ },
+ "126": {
+  "tags": [
+   "solving a big system of equations",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Fluid flow around complex boundaries requires solving for pressure that keeps fluid incompressible; the method uses a special discretization (Virtual Element Method) that robustly handles irregular grids and accelerates the pressure solve with multigrid iteration that avoids densifying coarse-level equations."
+ },
+ "127": {
+  "tags": [
+   "solving a big system of equations",
+   "adding up infinitely many tiny contributions"
+  ],
+  "plain": "Rendering smooth vector graphics with a fourth-order equation (biharmonic) by treating it as a randomized inverse problem: formulate unknown boundary conditions as an energy to minimize, then estimate slope stochastically by sampling random walks on two coupled second-order equations."
+ },
+ "128": {
+  "tags": [
+   "learning a function from examples",
+   "filling in smoothly between known points"
+  ],
+  "plain": "A image-generating model for 3D shapes is fine-tuned efficiently by recognizing the natural temporal structure of detail-generation in flow-based models: learn coarse structure first, then details, and combine predictions from multiple viewing angles to resolve the ambiguity that single views introduce."
+ },
+ "129": {
+  "tags": [
+   "networks and connections",
+   "learning a function from examples"
+  ],
+  "plain": "Text-guided image editing in image-generating transformers works by discovering which attention heads respond to which visual semantics, then routing text pieces selectively to the heads that control the regions you want to edit. The system learns head sensitivity without retraining."
+ },
+ "130": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "evolving a system step by step over time"
+  ],
+  "plain": "Noisy multi-human hand-object interaction captures are refined in two stages: first solve an optimization to find hand grasps that are both physically valid and match the body pose, then evolve the full-body motion forward in time using a image-generating model guided by single-person motion priors."
+ },
+ "131": {
+  "tags": [
+   "learning a function from examples",
+   "distances and nearest matches"
+  ],
+  "plain": "A pretrained 3D generative model encodes an object and predicts colored labels on its reconstructed surface; these colors act as part indicators. The system learns part segmentation by repurposing the model's internal structure knowledge without annotated training data for the segmentation task itself."
+ },
+ "132": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "smart random sampling"
+  ],
+  "plain": "Light bouncing many times through dense hair is expensive to track; instead, treat the hair as a participating medium that scatters light, and stochastically sample one scattering event to approximate higher-order bounces while using explicit fiber geometry for direct lighting detail."
+ },
+ "133": {
+  "tags": [
+   "learning a function from examples",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Users sketch how articulated parts should move (arrows, strokes), and the system infers movable parts and their motion parameters by learning to map 2D sketch intention to 3D part discovery and motion constraints, without needing object category labels."
+ },
+ "134": {
+  "tags": [
+   "following the slope downhill to improve",
+   "smart random sampling"
+  ],
+  "plain": "Recovering material and lighting from images is a high-variance, brittle optimization problem; a spatial blending field interpolates locally between cached radiance estimates and standard unbiased samplers, reducing variance while keeping slope well-behaved for reliable parameter recovery."
+ },
+ "135": {
+  "tags": [
+   "adding up infinitely many tiny contributions",
+   "following the slope downhill to improve",
+   "smart random sampling"
+  ],
+  "plain": "Neutron transport is computed by summing light arriving from all possible paths through matter; the paper uses random sampling to estimate how each path changes with respect to design choices, then follows the slope downhill to optimize shielding and material layouts."
+ },
+ "136": {
+  "tags": [
+   "distances and nearest matches",
+   "networks and connections"
+  ],
+  "plain": "Finding nearest neighbors in point clouds is sped up by building a recursive network of neighborhoods, where each point remembers which others it's close to; the method exploits this structure to skip far-away points without checking them."
+ },
+ "137": {
+  "tags": [
+   "transformations and coordinate changes",
+   "learning a function from examples"
+  ],
+  "plain": "Shape deformation is expressed as a smooth flow (like water moving through space) using an invertible a system that learns from examples that learns how every point transforms continuously over time without tangling or tearing."
+ },
+ "138": {
+  "tags": [
+   "measuring how a surface curves",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Finding where two complex surfaces intersect and controlling precision means bounding how far the true curve strays from our approximation using curvature measures and geometric hulls that must all satisfy distance limits at once."
+ },
+ "139": {
+  "tags": [
+   "evolving a system step by step over time",
+   "following the slope downhill to improve"
+  ],
+  "plain": "Fluid motion is optimized by following the slope that lowers error, but the paper shortcuts the backward pass by noticing that the flow map's cross-step connections carry slope information far more efficiently than computing every intermediate step's contribution."
+ },
+ "140": {
+  "tags": [
+   "solving a big system of equations",
+   "learning a function from examples"
+  ],
+  "plain": "Hologram patterns are designed by solving one enormous system balancing wave physics (how light bends through space) and chemistry (how material hardens or dissolves) at once, optimizing the phase pattern to pre-correct for blurring."
+ },
+ "141": {
+  "tags": [
+   "learning a function from examples",
+   "constraints that must all hold at once"
+  ],
+  "plain": "Human image generation learns a smooth path from noise to images while obeying topological constraints that enforce anatomically plausible bone ratios and joint angles, so the body always stays structurally valid."
+ },
+ "142": {
+  "tags": [
+   "finding a shape's natural modes of vibration",
+   "solving a big system of equations"
+  ],
+  "plain": "Finding a shape's natural vibration modes\u2014the ways it likes to wiggle\u2014requires solving enormous natural-mode equations; the paper accelerates this by borrowing multigrid methods that solve problems at coarse and fine scales together."
+ },
+ "143": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "solving a big system of equations"
+  ],
+  "plain": "Cloth geometry is reconstructed by deforming a template 3D model into the shape where elastic strain plus contact constraints are minimized, solved by balancing forces at every point simultaneously."
+ },
+ "144": {
+  "tags": [
+   "filling in smoothly between known points",
+   "transformations and coordinate changes"
+  ],
+  "plain": "Meshing a smooth surface on a fixed grid captures thin features by encoding surface connectivity via integer intersection counts on edges\u2014a topological trick that bypasses the usual frequency limits of grids."
+ },
+ "145": {
+  "tags": [
+   "measuring how a surface curves",
+   "learning a function from examples"
+  ],
+  "plain": "Signed distance to point clouds is computed by fitting each point with a torus (which has a closed-form distance formula), using a a system that learns from examples to predict local curvature, enabling fast queries without global optimization."
+ },
+ "146": {
+  "tags": [
+   "learning a function from examples",
+   "smart random sampling"
+  ],
+  "plain": "Video generation learns to conditionally denoise many modalities at once by randomly masking some as clean guidance and others as targets during training, so the model learns bidirectional mappings between any modalities."
+ },
+ "147": {
+  "tags": [
+   "finding the arrangement with least energy",
+   "transformations and coordinate changes"
+  ],
+  "plain": "Offset surfaces that preserve sharp features are computed by generating offset vertices and triangles via energy minimization that balances distance accuracy with sharp corner preservation, supporting variable offset distances."
+ },
+ "148": {
+  "tags": [
+   "measuring how a surface curves",
+   "filling in smoothly between known points"
+  ],
+  "plain": "Constant mean curvature surfaces (elegant shapes with balanced bending) are built by discretizing the classical fact that their normal maps are harmonic\u2014i.e., as smooth as possible\u2014solved via energy minimization and Poisson equations."
+ },
+ "149": {
+  "tags": [
+   "learning a function from examples",
+   "transformations and coordinate changes"
+  ],
+  "plain": "Motion style transfer decomposes pose changes into static posture and frame-by-frame temporal dynamics, learning each component from seconds of paired data via a system that learns from examples that generalize to new motions under style control."
+ },
+ "150": {
+  "tags": [
+   "learning a function from examples",
+   "networks and connections",
+   "distances and nearest matches"
+  ],
+  "plain": "The system learns to predict hand pose and motion by identifying patterns in image data, using relationships between the two hands to reason about their interaction. It builds these relationships through attention\u2014finding which hand parts matter most for predicting each other's position."
+ },
+ "151": {
+  "tags": [
+   "evolving a system step by step over time",
+   "learning a function from examples",
+   "transformations and coordinate changes"
+  ],
+  "plain": "The method evolves an image step-by-step from noise toward a realistic material by learning patterns from training examples. It uses depth and lighting information as constraints that guide the transformation, ensuring the output matches the target material's appearance under different conditions."
+ },
+ "152": {
+  "tags": [
+   "finding a shape's natural modes of vibration",
+   "learning a function from examples",
+   "solving a big system of equations"
+  ],
+  "plain": "The method discovers how a deformable object naturally evolves over time by finding its fundamental vibration patterns, then uses those patterns to skip ahead through time instead of solving step-by-step equations. This trades slow sequential solving for fast repeated multiplications."
+ }
+}

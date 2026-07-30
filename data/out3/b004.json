@@ -1,0 +1,77 @@
+[
+  {
+    "gid": 60,
+    "math_tags": ["solving a big system of equations", "constraints that must all hold at once"],
+    "math_plain": "Large assemblies of jointed bodies get solved using huge systems of equations that enforce exact constraints at each joint. By keeping the system matrices constant, these equations can be pre-solved once and reused, making simulations interactive even with hundreds of thousands of bodies."
+  },
+  {
+    "gid": 61,
+    "math_tags": ["learning a function from examples", "smart random sampling"],
+    "math_plain": "A diffusion model learns the space of human motions by slowly adding and removing noise from motion examples, learning how to generate new realistic motions. During inference, masked positions guide the generation to satisfy user-specified constraints like joint positions."
+  },
+  {
+    "gid": 62,
+    "math_tags": ["learning a function from examples", "frequencies and levels of detail"],
+    "math_plain": "A video generation model learns to predict how light bounces onto skin and cloth from captured relighting examples. It conditions on lighting parameters (represented as tokens) and uses attention masks to handle changing lighting over time."
+  },
+  {
+    "gid": 63,
+    "math_tags": ["frequencies and levels of detail", "measuring how a surface curves"],
+    "math_plain": "Feathers are represented hierarchically in UV space, encoding their fine details procedurally at multiple scales. A custom scattering model captures how light interacts with the feather's micro-structure, balancing realism with real-time performance."
+  },
+  {
+    "gid": 64,
+    "math_tags": ["evolving a system step by step over time", "smart random sampling"],
+    "math_plain": "Gaussian splatting primitives are anchored to time-conditioned points that move through the scene, reducing the need to track complex long-term motion. Only relevant anchors activate at each time step, providing both temporal stability and scalability."
+  },
+  {
+    "gid": 65,
+    "math_tags": ["solving a big system of equations", "adding up infinitely many tiny contributions"],
+    "math_plain": "A 4D tensor (space and time) is decomposed into simpler components, then neural networks refine the solution by tracing how light rays bend through the flow field. Back-propagation updates both the tensor factors and network weights iteratively."
+  },
+  {
+    "gid": 66,
+    "math_tags": ["smart random sampling", "evolving a system step by step over time"],
+    "math_plain": "Particles are jittered randomly in both space and time, then deposited onto a 4D space-time grid using a separable kernel. This Monte Carlo sampling approach lets the solver take time steps an order of magnitude larger without temporal aliasing."
+  },
+  {
+    "gid": 67,
+    "math_tags": ["learning a function from examples", "distances and nearest matches"],
+    "math_plain": "A Bayesian regression with Gaussian processes fits material reflectance properties by learning distances between observed and modeled reflectance. A custom kernel better captures reflectance features than standard kernels, enabling compact analytical representations."
+  },
+  {
+    "gid": 68,
+    "math_tags": ["following the slope downhill to improve", "probability and likelihood"],
+    "math_plain": "Each voxel holds a probability distribution over known materials; the method descends the gradient of a loss that encourages consistency with measured X-ray projections. Nonlinear effects like scattering are naturally incorporated into this probabilistic framework."
+  },
+  {
+    "gid": 69,
+    "math_tags": ["adding up infinitely many tiny contributions", "distances and nearest matches"],
+    "math_plain": "Winding numbers (counting ray-surface intersections) are expressed as a boundary integral over the surface projected onto a sphere. This geometric insight avoids expensive surface integrals and enables fast, precise queries on both meshes and parametric surfaces."
+  },
+  {
+    "gid": 70,
+    "math_tags": ["following the slope downhill to improve", "constraints that must all hold at once"],
+    "math_plain": "Panelization is cast as a continuous surface flow coupled to stress analysis; the method computes gradients of total stress with respect to the surface shape and uses optimization to balance geometric fit against structural performance."
+  },
+  {
+    "gid": 71,
+    "math_tags": ["finding the arrangement with least energy", "solving a big system of equations"],
+    "math_plain": "An energy-based framework enforces embeddedness (no self-intersections) by combining a global shape-level energy that captures entanglement and a local mesh-level penalty. Minimizing these energies together reliably removes self-intersections across complex geometries."
+  },
+  {
+    "gid": 72,
+    "math_tags": ["learning a function from examples", "smart random sampling"],
+    "math_plain": "An auto-regressive model generates 3D shapes in coarse-to-fine layers via octree structure prediction, with a quantized variational autoencoder encoding shapes into a multiscale sparse representation. Octree-aware attention selectively focuses on relevant features at each scale."
+  },
+  {
+    "gid": 73,
+    "math_tags": ["solving a big system of equations", "distances and nearest matches"],
+    "math_plain": "Intersection curves are found by detecting their starting points robustly using winding number theory combined with subdivision to locate points on tangential intersections. This hybrid approach handles complex topologies, small loops, and degenerate cases that confound standard methods."
+  },
+  {
+    "gid": 74,
+    "math_tags": ["solving a big system of equations", "constraints that must all hold at once"],
+    "math_plain": "A generalized Douglas-Rachford splitting scheme decouples the coupled yarn constraints (stretching, bending, contact) into independent convex sub-problems at each iteration. Metric selection derived from convergence theory achieves near-optimal solution speed without ad-hoc tuning."
+  }
+]

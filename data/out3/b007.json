@@ -1,0 +1,77 @@
+[
+  {
+    "gid": 105,
+    "math_tags": ["evolving a system step by step over time", "filling in smoothly between known points"],
+    "math_plain": "A mesh starts noisy and gradually becomes clearer, step by step, like a photograph developing. At each step, the model predicts which shapes fit the data better, then refines the guess."
+  },
+  {
+    "gid": 106,
+    "math_tags": ["finding a shape's natural modes of vibration", "solving a big system of equations"],
+    "math_plain": "When a structure vibrates, it prefers certain patterns over others—like how a drum head resonates. The method finds those favorite patterns efficiently by breaking the big structure into smaller pieces and combining their vibrations."
+  },
+  {
+    "gid": 107,
+    "math_tags": ["evolving a system step by step over time", "distances and nearest matches"],
+    "math_plain": "The system generates a chart by repeatedly refining noisy colors, nudged by two signals: what words say it should show, and the structure it must follow. Each refinement step brings it closer to both goals at once."
+  },
+  {
+    "gid": 108,
+    "math_tags": ["filling in smoothly between known points", "solving a big system of equations"],
+    "math_plain": "A surface emerges from a distance field by finding the locations where that field equals zero. The method organizes space into blocks and uses lookup patterns to build the correct triangles without guessing sign."
+  },
+  {
+    "gid": 109,
+    "math_tags": ["finding distances and nearest matches", "transformations and coordinate changes"],
+    "math_plain": "Garments wrap onto bodies through two alignment puzzles: matching the cloth to a standard skeleton, then warping that skeleton to fit the target pose. Physics then settles the cloth into natural-looking folds."
+  },
+  {
+    "gid": 110,
+    "math_tags": ["adding up infinitely many tiny contributions", "transformations and coordinate changes"],
+    "math_plain": "Light bounces and bends as it travels through a scene; the method adds up all those paths and their effects to decide where to draw stylized lines and shading that look hand-drawn yet follow real physics."
+  },
+  {
+    "gid": 111,
+    "math_tags": ["solving a big system of equations", "distances and nearest matches"],
+    "math_plain": "Curves from 3D geometry must be organized into regions without crossing incorrectly. The method builds a spatial structure that finds all intersections robustly, using it to build a planar map that partitions the image."
+  },
+  {
+    "gid": 112,
+    "math_tags": ["distances and nearest matches", "learning a function from examples"],
+    "math_plain": "Each pixel's color is a soft blend of nearby seed points, weighted by distance and a learnable shape metric. The system learns where to place seeds and how to weight them by training on image data."
+  },
+  {
+    "gid": 113,
+    "math_tags": ["finding the arrangement with least energy", "solving a big system of equations"],
+    "math_plain": "A simulation domain splits into pieces for parallel computing; optimal transport finds a split that balances load, minimizes communication, and stays stable as the domain deforms and changes shape over time."
+  },
+  {
+    "gid": 114,
+    "math_tags": ["measuring how a surface curves", "transformations and coordinate changes"],
+    "math_plain": "Spinning cables form natural axisymmetric shapes governed by physics. The display maps pixels to those mathematical shapes, preserving density by adjusting how many pixels render per revolution as the shape expands."
+  },
+  {
+    "gid": 115,
+    "math_tags": ["smart random sampling", "adding up infinitely many tiny contributions"],
+    "math_plain": "Many tiny opaque points sample from each large Gaussian blur, splatting to pixels in parallel. The method solves how many points to use so their random hits blend to match the original sharp rendering."
+  },
+  {
+    "gid": 116,
+    "math_tags": ["adding up infinitely many tiny contributions", "filling in smoothly between known points"],
+    "math_plain": "Lens blur spreads light according to aperture shape; the method convolves each 3D Gaussian with a blur kernel using a closed mathematical formula, enabling sharp reconstruction from blurry photos."
+  },
+  {
+    "gid": 117,
+    "math_tags": ["smart random sampling", "learning a function from examples"],
+    "math_plain": "Rather than averaging random samples blindly, a neural network learns where to sample and how to weave that sample's extra information (position, geometry) into the estimate, improving accuracy on similar problems."
+  },
+  {
+    "gid": 118,
+    "math_tags": ["distances and nearest matches", "solving a big system of equations"],
+    "math_plain": "The farthest point between two meshes is found by searching branches of possibilities, pruning those that can't beat the current best. The method runs this search on a GPU in parallel, maintaining tight bounds."
+  },
+  {
+    "gid": 119,
+    "math_tags": ["transformations and coordinate changes", "filling in smoothly between known points"],
+    "math_plain": "Surface patterns are lifted from flat texture images into vertex colors by remeshing triangles finely. This lets geometry algorithms incorporate texture naturally without wrestling with UV coordinates."
+  }
+]

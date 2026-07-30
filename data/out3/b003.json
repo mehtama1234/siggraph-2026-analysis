@@ -1,0 +1,77 @@
+[
+  {
+    "gid": 45,
+    "math_tags": ["smart random sampling", "following the slope downhill to improve", "learning a function from examples"],
+    "math_plain": "Light bounces off a spacecraft surface, pushing it slightly—this radiation pressure effect drives what direction and speed the craft moves. The team uses random sampling to estimate this effect cheaply, then trains a neural network to predict forces so fast optimization can find the best shape without running millions of light simulations."
+  },
+  {
+    "gid": 46,
+    "math_tags": ["adding up infinitely many tiny contributions", "measuring how a surface curves"],
+    "math_plain": "When light interacts with object boundaries during rendering, you must add up infinitely many light paths bouncing at the edge—a mathematical integral. By smearing the razor-thin boundary slightly with a smooth kernel (like photon mapping does), this integral becomes easier to estimate accurately without sampling exactly on the edge."
+  },
+  {
+    "gid": 47,
+    "math_tags": ["solving a big system of equations", "finding the arrangement with least energy"],
+    "math_plain": "As material deforms under gravity and collisions, it settles into the shape where energy is lowest—this is a minimization problem. The algorithm solves one giant set of coupled equations (one per grid point) to find that shape, using clever resampling so the solver doesn't bog down when there are many particles."
+  },
+  {
+    "gid": 48,
+    "math_tags": ["frequencies and levels of detail", "filling in smoothly between known points"],
+    "math_plain": "Spherical harmonics decompose functions on a sphere into frequencies—low frequencies capture the broad shape, high frequencies add fine detail. Multiplying two such functions is expensive; the paper converts to an intermediate grid, multiplies pointwise (cheap), then converts back, controlling detail level by grid resolution."
+  },
+  {
+    "gid": 49,
+    "math_tags": ["solving a big system of equations", "constraints that must all hold at once"],
+    "math_plain": "A tetrahedral mesh must fit a 3D shape AND satisfy many geometric constraints (faces must not intersect, boundaries must be exact). The algorithm uses edge flips and point repositioning to recover the boundary while respecting all constraints simultaneously, with careful handling of numerical rounding errors."
+  },
+  {
+    "gid": 50,
+    "math_tags": ["adding up infinitely many tiny contributions", "smart random sampling"],
+    "math_plain": "Holography encodes wavefronts (which waves go where) into a phase pattern—this is an integral over all light paths, analogous to rendering. Monte Carlo path tracing randomly samples paths and weights them to estimate this integral; path reuse (recycling samples) dramatically cuts the number of simulations needed."
+  },
+  {
+    "gid": 51,
+    "math_tags": ["transformations and coordinate changes", "learning a function from examples"],
+    "math_plain": "Holographic displays distort colors due to laser light, optical imperfections, and hardware biases. The system maps input color to output color via learned neural functions; adaptive illumination adjusts light intensity, and coordinate changes (color space transformations) straighten out systematic distortions."
+  },
+  {
+    "gid": 52,
+    "math_tags": ["learning a function from examples", "probability and likelihood"],
+    "math_plain": "A physics-simulated character learns to copy human motion (imitation) while also learning to adapt to new environments via trial-and-error (reinforcement learning). The hybrid approach balances likelihood that the motion matches reference data against likelihood of success in novel settings, sharing learned patterns across both objectives."
+  },
+  {
+    "gid": 53,
+    "math_tags": ["frequencies and levels of detail", "transformations and coordinate changes"],
+    "math_plain": "A hologram encodes a 3D image as an interference pattern; light and dark stripes represent phase and amplitude. By carefully splitting the design across different frequency bands (low, mid, high) and using surface-relief structures with shallower phase wraps, a single transparent layer delivers full-color 3D without crosstalk."
+  },
+  {
+    "gid": 54,
+    "math_tags": ["solving a big system of equations", "distances and nearest matches"],
+    "math_plain": "Collision detection checks whether a moving curve on a curved surface will hit an obstacle—this requires solving equations to find the closest approach distance over time. The paper separates numerical errors (rounding, arithmetic imprecision) from model errors and benchmarks against exact rational-arithmetic ground truth."
+  },
+  {
+    "gid": 55,
+    "math_tags": [],
+    "math_plain": "Editorial introduction to the SIGGRAPH 2026 conference proceedings; not a research contribution."
+  },
+  {
+    "gid": 56,
+    "math_tags": ["constraints that must all hold at once", "networks and connections"],
+    "math_plain": "A kirigami is a hinged origami where rigid panels rotate freely without stretching. Geometric constraints (angles, edge lengths) must lock the structure into a unique folded shape while respecting graph topology; the paper derives which constraints allow rigid deployment from any planar graph, not just special cases."
+  },
+  {
+    "gid": 57,
+    "math_tags": ["frequencies and levels of detail", "transformations and coordinate changes"],
+    "math_plain": "Two synchronized laser paths with spatial light modulators (phase/amplitude masks) steer beams through 3D space to paint voxels in a gas chamber. The system combines two independent wavefronts; careful timing and coordinate transforms align both beams, boosting brightness and voxel density beyond single-path limits."
+  },
+  {
+    "gid": 58,
+    "math_tags": ["learning a function from examples", "adding up infinitely many tiny contributions"],
+    "math_plain": "Hidden scenes emit thermal radiation that bounces through rough walls to a camera—reconstructing what's hidden requires reversing this complex light transport. The neural network learns the convolution kernel that describes how light scatters, then inverts it to recover the hidden scene from measurements."
+  },
+  {
+    "gid": 59,
+    "math_tags": ["finding the arrangement with least energy", "measuring how a surface curves"],
+    "math_plain": "Origami materials (folded sheets) have unusual stiffness and bending because creases redirect strain. Classical Laminate Theory calculates effective stiffness from fold angles and surface curvature; simulation folds the crease pattern, then homogenization averages the behavior to predict macroscopic properties from microscopic fold geometry."
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "gid": 75,
+    "math_tags": ["measuring how a surface curves", "smart random sampling", "learning a function from examples"],
+    "math_plain": "Light aberrations bend unpredictably through an asymmetric aperture, and the resulting patterns encode the distortions; machine learning decodes these patterns to infer what the aberrations are, then optics corrects them."
+  },
+  {
+    "gid": 76,
+    "math_tags": ["learning a function from examples", "filling in smoothly between known points", "constraints that must all hold at once"],
+    "math_plain": "A quad mesh must have singular points (where lines cross awkwardly); rather than predict the whole mesh, learn only where singularities belong, then use smooth classical rules to connect them while respecting mesh topology."
+  },
+  {
+    "gid": 77,
+    "math_tags": ["learning a function from examples", "adding up infinitely many tiny contributions", "frequencies and levels of detail"],
+    "math_plain": "Relight a face by learning how lights at different angles and colors interact with skin and features; a neural model trained on real and rendered footage learns to predict what light arriving from any direction does to pixels."
+  },
+  {
+    "gid": 78,
+    "math_tags": ["measuring how a surface curves", "distances and nearest matches"],
+    "math_plain": "End-to-end latency measures the delay between real head motion and display update; perceptual studies measure how human perception changes as this delay shrinks, revealing threshold sensitivities in real tasks."
+  },
+  {
+    "gid": 79,
+    "math_tags": ["evolving a system step by step over time", "solving a big system of equations", "measuring how a surface curves"],
+    "math_plain": "Wood decay spreads via fungal colonization and moisture diffusion; simulate how fungi consume material (changing local stiffness), how water flows anisotropically through grain, and how cracks grow when stress exceeds weakened tissue."
+  },
+  {
+    "gid": 80,
+    "math_tags": ["solving a big system of equations", "measuring how a surface curves", "probability and likelihood"],
+    "math_plain": "A probabilistic surface model (Gaussian Process) represents uncertain geometry as a cloud of plausible shapes; compute surface operators (slope, curl, curvature) by averaging over that cloud, weighting by how likely each shape is."
+  },
+  {
+    "gid": 81,
+    "math_tags": ["learning a function from examples", "distances and nearest matches", "networks and connections"],
+    "math_plain": "Model 350k motion clips as points in a learned latent space where similar poses cluster; at runtime, pick motion from the cluster matching current velocity and style commands, interpolating smoothly between primitives."
+  },
+  {
+    "gid": 82,
+    "math_tags": ["following the slope downhill to improve", "solving a big system of equations", "constraints that must all hold at once"],
+    "math_plain": "Retargeting human motion to a robot must satisfy physics (no sliding, no collisions); optimize motion parameters and a tracking policy together, where the physics simulator answers whether each motion candidate is feasible."
+  },
+  {
+    "gid": 83,
+    "math_tags": ["frequencies and levels of detail", "solving a big system of equations", "filling in smoothly between known points"],
+    "math_plain": "Gaussian radiance volumes encode fine geometric detail; use Gabor functions (sine waves tuned to specific orientations and scales) to filter out detail selectively, pruning high-frequency components to speed rendering without refitting."
+  },
+  {
+    "gid": 84,
+    "math_tags": ["solving a big system of equations", "smart random sampling", "following the slope downhill to improve"],
+    "math_plain": "Heat radiation obeys a nonlinear boundary rule (temperature to the fourth power); solve the heat equation using random walks, iteratively refining boundary estimates using a fixed-point loop until the solution stabilizes."
+  },
+  {
+    "gid": 85,
+    "math_tags": ["learning a function from examples", "evolving a system step by step over time", "constraints that must all hold at once"],
+    "math_plain": "Generate motion one frame at a time, conditioning on text prompts and future poses; a hybrid representation splits the problem (root trajectory separately from body pose) so text and keyframes guide generation together."
+  },
+  {
+    "gid": 86,
+    "math_tags": ["measuring how a surface curves", "distances and nearest matches", "solving a big system of equations"],
+    "math_plain": "Winding numbers tell if a point is inside curved geometry by measuring rotation around it; precompute moment summaries in a spatial tree, then use Taylor approximations for distant curves and exact integration for nearby ones."
+  },
+  {
+    "gid": 87,
+    "math_tags": ["smart random sampling", "solving a big system of equations", "filling in smoothly between known points"],
+    "math_plain": "Walk on Spheres solves PDEs using random walks; reuse intermediate points visited along each walk as independent samples using the Poisson integral formula, drastically reducing variance without slowing convergence."
+  },
+  {
+    "gid": 88,
+    "math_tags": ["measuring how a surface curves", "distances and nearest matches"],
+    "math_plain": "Winding numbers measure net rotation around a point to test if it's inside; reduce the surface integral analytically to a single ray-mesh test plus a sum over boundary edges, orders of magnitude faster than prior methods."
+  },
+  {
+    "gid": 89,
+    "math_tags": ["learning a function from examples", "following the slope downhill to improve", "filling in smoothly between known points"],
+    "math_plain": "Capture woven fabric structure from one microscope image by matching rendered output to the photo; use differentiable geometry and shading models to optimize fiber parameters (position, angle, thickness) via image error."
+  }
+]

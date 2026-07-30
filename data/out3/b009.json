@@ -1,0 +1,123 @@
+[
+  {
+    "gid": 135,
+    "math_tags": [
+      "adding up infinitely many tiny contributions",
+      "following the slope downhill to improve",
+      "smart random sampling"
+    ],
+    "math_plain": "Neutron transport is computed by summing light arriving from all possible paths through matter; the paper uses random sampling to estimate how each path changes with respect to design choices, then follows the slope downhill to optimize shielding and material layouts."
+  },
+  {
+    "gid": 136,
+    "math_tags": [
+      "distances and nearest matches",
+      "networks and connections"
+    ],
+    "math_plain": "Finding nearest neighbors in point clouds is sped up by building a recursive network of neighborhoods, where each point remembers which others it's close to; the method exploits this structure to skip far-away points without checking them."
+  },
+  {
+    "gid": 137,
+    "math_tags": [
+      "transformations and coordinate changes",
+      "learning a function from examples"
+    ],
+    "math_plain": "Shape deformation is expressed as a smooth flow (like water moving through space) using an invertible neural network that learns how every point transforms continuously over time without tangling or tearing."
+  },
+  {
+    "gid": 138,
+    "math_tags": [
+      "measuring how a surface curves",
+      "constraints that must all hold at once"
+    ],
+    "math_plain": "Finding where two complex surfaces intersect and controlling precision means bounding how far the true curve strays from our approximation using curvature measures and geometric hulls that must all satisfy distance limits at once."
+  },
+  {
+    "gid": 139,
+    "math_tags": [
+      "evolving a system step by step over time",
+      "following the slope downhill to improve"
+    ],
+    "math_plain": "Fluid motion is optimized by following the slope that lowers error, but the paper shortcuts the backward pass by noticing that the flow map's cross-step connections carry gradient information far more efficiently than computing every intermediate step's contribution."
+  },
+  {
+    "gid": 140,
+    "math_tags": [
+      "solving a big system of equations",
+      "learning a function from examples"
+    ],
+    "math_plain": "Hologram patterns are designed by solving one enormous system balancing wave physics (how light bends through space) and chemistry (how material hardens or dissolves) at once, optimizing the phase pattern to pre-correct for blurring."
+  },
+  {
+    "gid": 141,
+    "math_tags": [
+      "learning a function from examples",
+      "constraints that must all hold at once"
+    ],
+    "math_plain": "Human image generation learns a smooth path from noise to images while obeying topological constraints that enforce anatomically plausible bone ratios and joint angles, so the body always stays structurally valid."
+  },
+  {
+    "gid": 142,
+    "math_tags": [
+      "finding a shape's natural modes of vibration",
+      "solving a big system of equations"
+    ],
+    "math_plain": "Finding a shape's natural vibration modes—the ways it likes to wiggle—requires solving enormous eigenvalue equations; the paper accelerates this by borrowing multigrid methods that solve problems at coarse and fine scales together."
+  },
+  {
+    "gid": 143,
+    "math_tags": [
+      "finding the arrangement with least energy",
+      "solving a big system of equations"
+    ],
+    "math_plain": "Cloth geometry is reconstructed by deforming a template mesh into the shape where elastic strain plus contact constraints are minimized, solved by balancing forces at every point simultaneously."
+  },
+  {
+    "gid": 144,
+    "math_tags": [
+      "filling in smoothly between known points",
+      "transformations and coordinate changes"
+    ],
+    "math_plain": "Meshing a smooth surface on a fixed grid captures thin features by encoding surface connectivity via integer intersection counts on edges—a topological trick that bypasses the usual frequency limits of grids."
+  },
+  {
+    "gid": 145,
+    "math_tags": [
+      "measuring how a surface curves",
+      "learning a function from examples"
+    ],
+    "math_plain": "Signed distance to point clouds is computed by fitting each point with a torus (which has a closed-form distance formula), using a neural network to predict local curvature, enabling fast queries without global optimization."
+  },
+  {
+    "gid": 146,
+    "math_tags": [
+      "learning a function from examples",
+      "smart random sampling"
+    ],
+    "math_plain": "Video generation learns to conditionally denoise many modalities at once by randomly masking some as clean guidance and others as targets during training, so the model learns bidirectional mappings between any modalities."
+  },
+  {
+    "gid": 147,
+    "math_tags": [
+      "finding the arrangement with least energy",
+      "transformations and coordinate changes"
+    ],
+    "math_plain": "Offset surfaces that preserve sharp features are computed by generating offset vertices and triangles via energy minimization that balances distance accuracy with sharp corner preservation, supporting variable offset distances."
+  },
+  {
+    "gid": 148,
+    "math_tags": [
+      "measuring how a surface curves",
+      "filling in smoothly between known points"
+    ],
+    "math_plain": "Constant mean curvature surfaces (elegant shapes with balanced bending) are built by discretizing the classical fact that their normal maps are harmonic—i.e., as smooth as possible—solved via energy minimization and Poisson equations."
+  },
+  {
+    "gid": 149,
+    "math_tags": [
+      "learning a function from examples",
+      "transformations and coordinate changes"
+    ],
+    "math_plain": "Motion style transfer decomposes pose changes into static posture and frame-by-frame temporal dynamics, learning each component from seconds of paired data via neural networks that generalize to new motions under style control."
+  }
+]

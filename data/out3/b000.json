@@ -1,0 +1,77 @@
+[
+  {
+    "gid": 0,
+    "math_tags": ["learning a function from examples", "filling in smoothly between known points"],
+    "math_plain": "The method learns to blend bracketed photos into one high-quality image by training on synthetic data and learning which input pixels to mix. It's trained once on computer-generated examples, then applies that learned pattern to real photos it has never seen."
+  },
+  {
+    "gid": 1,
+    "math_tags": ["solving a big system of equations", "distances and nearest matches"],
+    "math_plain": "Finding the maximum distance between two meshes requires exploring many candidate point pairs and eliminating unlikely ones. The method replaces a sequential bottleneck with parallel batch processing, allowing thousands of candidates to be pruned together rather than one at a time."
+  },
+  {
+    "gid": 2,
+    "math_tags": ["evolving a system step by step over time", "solving a big system of equations"],
+    "math_plain": "Sand, water, and air interact as they flow and settle; the method splits this into two coupled solvers—one that updates fluid motion at each moment, one that tracks how sand grains deform and move. Both proceed in lockstep, exchanging forces at each time step."
+  },
+  {
+    "gid": 3,
+    "math_tags": ["learning a function from examples", "transformations and coordinate changes"],
+    "math_plain": "A neural network learns to build 3D meshes one face at a time by treating each face as a token in a sequence, mimicking how artists draw connected strips that naturally preserve the mesh's flow and UV layout."
+  },
+  {
+    "gid": 4,
+    "math_tags": ["evolving a system step by step over time", "probability and likelihood"],
+    "math_plain": "Instead of many refinement steps, this method transports probability distributions in a few giant jumps. It learns cumulative paths that carry a starting distribution toward final images in one or two leaps, reducing computation while keeping quality."
+  },
+  {
+    "gid": 5,
+    "math_tags": ["adding up infinitely many tiny contributions", "solving a big system of equations"],
+    "math_plain": "Light bounces off surfaces and through the scene in complex paths; the method uses a generative model to predict missing light paths when sensors cannot directly observe them, then refines these guesses by tracking how light actually flows."
+  },
+  {
+    "gid": 6,
+    "math_tags": ["finding the arrangement with least energy", "measuring how a surface curves"],
+    "math_plain": "Thin shells bend and stretch; the method measures bending by comparing how surfaces curve at neighboring points. Finding a realistic shape means minimizing the strain energy where bending is captured as discrete angle changes across the mesh."
+  },
+  {
+    "gid": 7,
+    "math_tags": ["finding the arrangement with least energy", "solving a big system of equations"],
+    "math_plain": "Contact and deformation both minimize the same total energy; the method automatically computes the exact slopes and curvatures of this energy landscape needed to solve for equilibrium, turning high-level problem descriptions into efficient solvers."
+  },
+  {
+    "gid": 8,
+    "math_tags": ["constraints that must all hold at once", "networks and connections"],
+    "math_plain": "GPU programs pass data through many stages; contracts specify what types and layouts each stage expects. The method verifies these agreements match before runtime, catching mismatches the same way type systems catch programming errors."
+  },
+  {
+    "gid": 9,
+    "math_tags": ["solving a big system of equations", "learning a function from examples"],
+    "math_plain": "Lattice materials require solving huge systems of equations to predict their strength; a neural network learns to propose accurate starting guesses that need only one refinement step, cutting computation dramatically while staying precise."
+  },
+  {
+    "gid": 10,
+    "math_tags": ["smart random sampling", "probability and likelihood"],
+    "math_plain": "Rendering probabilistic implicit surfaces requires many noisy evaluations; the method computes upper and lower bounds to skip evaluations in empty regions and skip noisy samples when bounds prove no intersection, accelerating rendering."
+  },
+  {
+    "gid": 11,
+    "math_tags": ["learning a function from examples", "solving a big system of equations"],
+    "math_plain": "Existing geometry solvers find shape properties by iteratively refining; the method automatically reverses this process so gradients flow backward through the iterations, enabling learning-based geometry optimization without rewriting the solvers."
+  },
+  {
+    "gid": 12,
+    "math_tags": ["learning a function from examples", "constraints that must all hold at once"],
+    "math_plain": "From a single terrain photo, the method infers height values for visible ground and fills hidden regions using a learned model, enforcing that rivers flow downhill and rendered terrain matches the input image."
+  },
+  {
+    "gid": 13,
+    "math_tags": ["solving a big system of equations", "finding the arrangement with least energy"],
+    "math_plain": "Soft and stiff objects push each other; the method solves their coupled dynamics by splitting into subproblems that reuse low-rank approximations, allowing GPU parallelism without the ill-conditioning that normally plagues mixed-stiffness systems."
+  },
+  {
+    "gid": 14,
+    "math_tags": ["measuring how a surface curves", "constraints that must all hold at once"],
+    "math_plain": "Topological features like holes persist across different scales; the method removes only weak features by cutting or filling while preserving those marked as important, using persistence to rank which features matter most."
+  }
+]

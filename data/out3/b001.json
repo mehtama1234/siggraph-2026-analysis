@@ -1,0 +1,77 @@
+[
+  {
+    "gid": 15,
+    "math_tags": ["learning a function from examples", "filling in smoothly between known points"],
+    "math_plain": "The system learns to generate quad layouts by training on examples; it uses Chart Distance Fields—a continuous smooth representation—so the learning algorithm can adjust every part of the solution incrementally."
+  },
+  {
+    "gid": 16,
+    "math_tags": ["frequencies and levels of detail", "solving a big system of equations"],
+    "math_plain": "Video compression breaks the signal into basic frequency building blocks (like a musical scale), then uses motion prediction to match the same scene across time; solving which frequencies change frame-to-frame saves storage."
+  },
+  {
+    "gid": 17,
+    "math_tags": ["smart random sampling", "frequencies and levels of detail"],
+    "math_plain": "The model learns signals on meshes by using carefully chosen noise from a Matérn process—a random field whose frequency content stays the same no matter how the triangle mesh is reshaped—ensuring the learned patterns transfer across different mesh forms."
+  },
+  {
+    "gid": 18,
+    "math_tags": ["solving a big system of equations", "constraints that must all hold at once"],
+    "math_plain": "Building a tetrahedral mesh requires satisfying many geometric constraints (angles bounded, faces aligned); the algorithm uses Delaunay refinement—a technique that grows the mesh by solving these constraints together without getting stuck."
+  },
+  {
+    "gid": 19,
+    "math_tags": ["networks and connections", "learning a function from examples"],
+    "math_plain": "The system models objects and their relationships as a graph, then trains a learned function to predict which objects can go where by reasoning over these connections and learned object functionalities."
+  },
+  {
+    "gid": 20,
+    "math_tags": ["filling in smoothly between known points", "following the slope downhill to improve"],
+    "math_plain": "Mixing flows are built from analytical formulas (potential flow solutions), and the algorithm traces particles through displacement fields by adjusting their paths downhill toward the fluid's preferred state without global solving."
+  },
+  {
+    "gid": 21,
+    "math_tags": ["measuring how a surface curves", "transformations and coordinate changes"],
+    "math_plain": "Multi-material objects are represented as signed distance fields—numbers encoding how far any point is from the nearest surface—combined through geometric transformations; the system extends ray tracing to handle these layered distance measurements."
+  },
+  {
+    "gid": 22,
+    "math_tags": ["filling in smoothly between known points", "learning a function from examples"],
+    "math_plain": "Animation frames are connected by learning stroke correspondences; the system predicts hidden strokes using learned spatial transformations applied progressively across layers, smoothly interpolating missing motion."
+  },
+  {
+    "gid": 23,
+    "math_tags": ["learning a function from examples", "finding a shape's natural modes of vibration"],
+    "math_plain": "Character motion and skeleton structure are modeled as coupled degrees of freedom in a shared learned space; the system treats all possible pose deformations as natural oscillation modes of a single unified kinematic system."
+  },
+  {
+    "gid": 24,
+    "math_tags": ["learning a function from examples", "distances and nearest matches"],
+    "math_plain": "The system learns to predict how light bounces off surfaces in different ways (shiny versus matte) by training on examples; specialized ray sampling identifies which nearby lit samples matter most for each viewing angle."
+  },
+  {
+    "gid": 25,
+    "math_tags": ["evolving a system step by step over time", "smart random sampling"],
+    "math_plain": "Terrain erosion is simulated by tracking particles (water, sediment) flowing downhill over time; randomness in particle motion captures the chaotic transport that larger deterministic forces miss, producing natural river and delta patterns."
+  },
+  {
+    "gid": 26,
+    "math_tags": ["smart random sampling", "following the slope downhill to improve"],
+    "math_plain": "Ray tracing with very few samples per pixel uses a learned sampling strategy that decides where to trace rays based on image importance; the system trains by following the gradient of a perceptual loss to avoid wasting rays on invisible details."
+  },
+  {
+    "gid": 27,
+    "math_tags": ["learning a function from examples", "networks and connections"],
+    "math_plain": "Hair is modeled as a sequence of strand primitives arranged hierarchically from scalp region to fine detail; the system learns to predict each strand type autoregressively, composing complex hairstyles by chaining learned strand predictions."
+  },
+  {
+    "gid": 28,
+    "math_tags": ["distances and nearest matches", "learning a function from examples"],
+    "math_plain": "Multiple 2D pose detections from different camera views are reconstructed into 3D by finding poses close to all views simultaneously; the system learns person-specific subspaces so each body stays within its natural movement patterns."
+  },
+  {
+    "gid": 29,
+    "math_tags": ["frequencies and levels of detail", "evolving a system step by step over time"],
+    "math_plain": "Texture on deforming surfaces is generated procedurally by measuring how the surface stretches and shrinks, then adjusting the wave frequencies in the texture based on that deformation history—making details physically respond to motion."
+  }
+]
