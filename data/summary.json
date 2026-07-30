@@ -1,0 +1,77 @@
+{
+ "n_analyzed": 153,
+ "methods": [
+  {
+   "tag": "diffusion",
+   "n": 21
+  },
+  {
+   "tag": "neural nets",
+   "n": 11
+  },
+  {
+   "tag": "optimization",
+   "n": 11
+  },
+  {
+   "tag": "monte carlo rendering",
+   "n": 10
+  },
+  {
+   "tag": "transformers",
+   "n": 9
+  },
+  {
+   "tag": "physical simulation",
+   "n": 9
+  },
+  {
+   "tag": "mesh",
+   "n": 9
+  },
+  {
+   "tag": "implicit surfaces",
+   "n": 9
+  },
+  {
+   "tag": "fluid sim",
+   "n": 6
+  },
+  {
+   "tag": "differentiable",
+   "n": 6
+  },
+  {
+   "tag": "real-time/GPU",
+   "n": 5
+  },
+  {
+   "tag": "physics FEM/MPM",
+   "n": 4
+  },
+  {
+   "tag": "gaussian splatting",
+   "n": 4
+  },
+  {
+   "tag": "reinforcement learning",
+   "n": 3
+  },
+  {
+   "tag": "materials/BRDF",
+   "n": 3
+  },
+  {
+   "tag": "rigging/skinning",
+   "n": 1
+  },
+  {
+   "tag": "neural rendering",
+   "n": 1
+  },
+  {
+   "tag": "cloth/fiber sim",
+   "n": 1
+  }
+ ]
+}

@@ -1,0 +1,614 @@
+{
+ "0": {
+  "p": "Smartphone cameras capture much less brightness detail than human eyes, losing highlights in bright skies and crushing shadows in dark areas.",
+  "a": "Blend multiple photos taken at different brightness levels, using a small learned system to pick the best detail from each."
+ },
+ "1": {
+  "p": "Measuring the exact distance between two 3D shapes requires intense computation, especially when shapes are huge and complex.",
+  "a": "Use a fast queue-free method on graphics chips that breaks the measurement task into parallel chunks for instant answers."
+ },
+ "2": {
+  "p": "Simulating wet sand, air, and water together is hard because they interact in tiny scales that create complex visual behavior.",
+  "a": "Connect two standard simulation methods\u2014one for fluids, one for sand\u2014using a single unified physics method to track water soaking."
+ },
+ "3": {
+  "p": "Computer-generated 3D shapes often look sloppy compared to hand-made ones because the underlying structure lacks human-like organization.",
+  "a": "Build shapes using organized strips of faces that encode layout rules, allowing both triangle and quad shapes from the same recipe."
+ },
+ "4": {
+  "p": "Creating images or shapes from scratch takes many steps, wasting compute and time even when a rough result is fine.",
+  "a": "Use a unified step-by-step method that reasons about global state changes at each step, allowing one-step or few-step creation."
+ },
+ "5": {
+  "p": "Capturing light bouncing and traveling through scenes is nearly impossible due to hidden geometry and the sheer complexity of all angles and timings.",
+  "a": "Combine hardware that separately controls light and detection with a learned model that uses 3D shape priors to fill in hidden regions."
+ },
+ "6": {
+  "p": "Simulating thin sheets and shells bouncing and bending has many competing methods, but no clear guidance on which to use when.",
+  "a": "Test ten popular bending models on exact math problems and real-world cases to identify which methods are fastest and most accurate."
+ },
+ "7": {
+  "p": "Building fast simulators for colliding, stretching objects requires hand-coding derivatives for every new energy type, which is tedious and error-prone.",
+  "a": "Use a symbolic system that automatically derives the needed math expressions, handling all energy types and parameterizations uniformly."
+ },
+ "8": {
+  "p": "Graphics programs have many moving parts that must agree on data types and memory layout, but these agreements are invisible and break easily.",
+  "a": "Define resource contracts upfront as verifiable rules that the system enforces across all program parts before running."
+ },
+ "9": {
+  "p": "Testing honeycomb-like structures for engineering is slow because the math is expensive, but simple learned shortcuts lose accuracy.",
+  "a": "Train a learned solver that mirrors a classical fast method, using physics rules to enforce correctness with a 160x speedup."
+ },
+ "10": {
+  "p": "Rendering surfaces defined by uncertain probability data requires checking many points, making rendering slow despite having acceleration tricks.",
+  "a": "Use probability bounds to safely skip unnecessary point checks before rendering, speeding up surface intersection tests."
+ },
+ "11": {
+  "p": "Changing a shape backward through processing steps (like smoothing or stretching) is hard because those operations don't naturally reverse.",
+  "a": "Differentiate through existing geometry processing algorithms using the adjoint method, unlocking backward learning without rewriting."
+ },
+ "12": {
+  "p": "Artists must manually build 3D terrain from reference photos because automatic methods only handle obvious features like buildings.",
+  "a": "Extract camera angles and visible ground from photos, then use a learned system to fill hidden terrain while maintaining river flow."
+ },
+ "13": {
+  "p": "Simulating soft and stiff objects together is slow on graphics chips because they need different tuning and converge poorly.",
+  "a": "Split the system into two coupled iterations with a GPU-fast low-rank method to handle soft-stiff interactions efficiently."
+ },
+ "14": {
+  "p": "Simplifying shape topology to match a target blueprint requires either losing everything or manually controlling many tiny changes.",
+  "a": "Remove only weak topological features by computing cuts and fills, preserving the exact topology the user specified."
+ },
+ "15": {
+  "p": "Making simple quad layouts for 3D shapes is tedious and requires extensive manual cleanup.",
+  "a": "A system learns patterns from a large dataset to automatically create clean quad arrangements."
+ },
+ "16": {
+  "p": "Storing videos of moving 3D shapes takes enormous space, making real-time streaming impractical.",
+  "a": "Apply old video compression tricks like motion tracking to 3D content to shrink file sizes dramatically."
+ },
+ "17": {
+  "p": "Systems that generate shapes on 3D models break when the 3D model structure changes in different files.",
+  "a": "Use a special noise pattern that works the same way no matter how the 3D model is divided differently."
+ },
+ "18": {
+  "p": "Creating 3D grids inside complex solid shapes often fails when the shape has sharp corners.",
+  "a": "Slightly round off sharp edges first, build the grid, then restore the original corners exactly."
+ },
+ "19": {
+  "p": "Robots cannot figure out where misplaced objects belong without explicit human instruction and feedback.",
+  "a": "Use a large language model to understand what each surface is meant for and where things should go."
+ },
+ "20": {
+  "p": "Making paint-mixing effects look sharp and realistic requires constant heavy computation as you paint.",
+  "a": "Pre-store how a brush shape moves paint as functions that combine easily without recalculating."
+ },
+ "21": {
+  "p": "Representing objects made of different materials at different scales inside a single shape is complicated.",
+  "a": "Store materials and boundaries in a tree that composes easily and works with existing shape-tracing tools."
+ },
+ "22": {
+  "p": "Drawing in-between frames in animation is tedious when objects overlap and hide each other completely.",
+  "a": "Automatically figure out which lines are hidden and redraw them in middle frames using layer information."
+ },
+ "23": {
+  "p": "Turning static 3D shapes into moving characters requires three separate hard steps that don't talk.",
+  "a": "Use a single system that builds skeletons and creates motion together by learning from both at once."
+ },
+ "24": {
+  "p": "Virtual people in mixed reality look fake because the lighting doesn't match the real room around you.",
+  "a": "Capture how light hits the person from headset cameras and use that to relight them to match the room."
+ },
+ "25": {
+  "p": "Simulating how mountains erode over millions of years while water and rocks move at different speeds is slow.",
+  "a": "Use random particle movement respecting physics to simulate erosion over long timescales much faster."
+ },
+ "26": {
+  "p": "Real-time 3D rendering with very few light rays per pixel produces noise in some areas but not others.",
+  "a": "Shoot more rays where they make the biggest visual difference and use learned denoising to clean up."
+ },
+ "27": {
+  "p": "Generating realistic 3D hair is hard because hair has structure and texture mixed together confusingly.",
+  "a": "Build hair strand-by-strand in a hierarchy, treating each strand as a composable unit to control."
+ },
+ "28": {
+  "p": "Detecting where people are in 3D from multiple camera views is slow when matching all joints globally.",
+  "a": "Track each person in their own 3D space using paired 2D and 3D representations then combine."
+ },
+ "29": {
+  "p": "Painting realistic surface details on stretching, squishing objects looks wrong because paint distorts.",
+  "a": "Generate surface texture patterns on the fly based on how much the surface is deforming physically."
+ },
+ "30": {
+  "p": "Drawing realistic images needs many sample points per pixel, but current methods either work pixel-by-pixel (messy) or treat all dimensions equally, losing control over individual problems.",
+  "a": "They built a system that mixes local sampling at each pixel with global patterns across the image, letting designers use whatever sampling method works best for each type of problem."
+ },
+ "31": {
+  "p": "Solving complex equations on strange shapes using randomness is slow and noisy; nobody has figured out how to borrow techniques from image rendering to make it faster.",
+  "a": "They stole a trick from graphics (working with differences instead of absolute values) and applied it to equation-solving, which cuts the noise and converges quicker."
+ },
+ "32": {
+  "p": "Systems trained on examples always produce smooth outputs, but real shapes have sharp edges and corners that those systems blur away.",
+  "a": "They added a special layer that lets the system learn where corners and edges should be and keeps those sharp while staying smooth everywhere else."
+ },
+ "33": {
+  "p": "Designing strong fabric-reinforced composite materials by hand is slow; you need to pick both the overall shape AND how to layer the fabric to make something that actually works.",
+  "a": "They wrote a recipe that tunes both the structure and the fabric-layer arrangements all at once, testing designs on real materials to confirm 44 percent stronger results."
+ },
+ "34": {
+  "p": "Simulating moving fluids is always a three-way trade-off: either it's accurate but slow, fast but inaccurate, or uses too much memory.",
+  "a": "They built a fluid solver that borrows from gas-kinetic physics and runs in a way that only needs two GPU operations per step, cutting memory by five times while staying accurate."
+ },
+ "35": {
+  "p": "Robot hands have dozens of muscles that coordinate in complex ways; teaching a hand to play piano from scratch would require millions of examples.",
+  "a": "They trained the hand to follow motion examples first, then compressed that knowledge into a simpler space, so a higher-level controller can choreograph whole pieces the system has never seen."
+ },
+ "36": {
+  "p": "Building 3D roof shapes is hard because roofs have many different slopes and angles; current systems struggle with unusual architectures.",
+  "a": "They represent roofs as sets of flat faces with boundaries, then used a system that creates images by refining from noise to generate realistic roofs, and fixes the edges so they connect properly."
+ },
+ "37": {
+  "p": "Smoothly blending one shape into another while respecting probability and staying true to the start and end points requires expensive computation.",
+  "a": "They built a method based on how heat spreads through a surface that blends shapes on actual surface grids, producing sharper results faster than existing methods."
+ },
+ "38": {
+  "p": "Image generators have hundreds of trained add-ons for different styles and subjects; mixing them manually with sliders is tedious and gets worse with each new add-on.",
+  "a": "They use a learning system that watches your preferences and suggests better mixes of add-ons, finding great combinations without endless slider adjustments."
+ },
+ "39": {
+  "p": "When a character has different body proportions, moving one character's animation to another breaks self-contact and makes limbs look wrong.",
+  "a": "They adjust the guidance points dynamically based on what the new character can actually reach, then use those to retarget the animation while keeping interaction semantics intact."
+ },
+ "40": {
+  "p": "Tuning a 3D volumetric scene by fine detail feedback is very noisy and slow because the light-extinction math splits into parts calculated in incompatible ways.",
+  "a": "They reformulated the math so both parts of extinction are calculated at the same sample points, which reveals hidden correlations and cuts noise by up to 80 percent."
+ },
+ "41": {
+  "p": "Planning where to place knit singularities (where the pattern changes direction) across a surface is slow and produces suboptimal layouts.",
+  "a": "They extended a geometric area-division concept to curved surfaces and tuned singularity positions all at once, making denser knit designs much faster."
+ },
+ "42": {
+  "p": "Simulating time-of-flight cameras that capture light arriving at precise moments is very expensive; you cannot reuse light paths like you can in normal rendering.",
+  "a": "They adapted a path-reuse technique and adjusted reused paths by their travel time to respect the temporal constraints, making time-of-flight rendering interactive."
+ },
+ "43": {
+  "p": "Simulating two liquids mixing (oil and water) demands three things: accuracy, speed, and low memory use; no method delivers all three.",
+  "a": "They combined gas-kinetic physics with phase-field modeling in a way that is both explicit and memory-light, handling even large density contrasts efficiently."
+ },
+ "44": {
+  "p": "Generating 3D particle clouds (like point clouds) is hard because the order of particles does not matter, yet systems treat each particle index separately and create confusing learning paths.",
+  "a": "They built a generative system that respects permutation symmetry, uses flow matching with geometric terminal velocities, and produces surface normals directly as a bonus."
+ },
+ "45": {
+  "p": "Spacecraft design is hard because light pressure is invisible and expensive to calculate.",
+  "a": "They built a fast learned system that predicts how light pushes objects so designers can tune shapes."
+ },
+ "46": {
+  "p": "Calculating exactly how light bounces off surfaces is mathematically fragile and slow.",
+  "a": "They use a statistical method from photon mapping to estimate bounces more reliably."
+ },
+ "47": {
+  "p": "Simulating soft materials like sand is slow because it tracks millions of tiny particles.",
+  "a": "They moved particle state to a fixed grid so the solver runs fast regardless of particle count."
+ },
+ "48": {
+  "p": "Multiplying mathematical descriptions of light functions is a bottleneck in rendering.",
+  "a": "They convert to a grid where multiplication is just one number times another, then convert back."
+ },
+ "49": {
+  "p": "Breaking a 3D shape into tiny blocks for simulation while keeping the surface exact is unreliable.",
+  "a": "They identify where flips get stuck and use smarter point placement to avoid numerical failures."
+ },
+ "50": {
+  "p": "Holograms cannot show realistic depth or shiny surfaces because light rays are not traced properly.",
+  "a": "They combined ray tracing with wave optics so phase holograms encode full 3D sight."
+ },
+ "51": {
+  "p": "Holographic displays show wrong colors because lasers and sensors mess up what the eye sees.",
+  "a": "They built a system fixing input and output colors using learned models of sensor response."
+ },
+ "52": {
+  "p": "Teaching simulated characters parkour requires them to learn one motion or fail in new spaces.",
+  "a": "They combined motion imitation with adversarial learning so one controller does parkour and adapts."
+ },
+ "53": {
+  "p": "Glass holograms need three separate patterns to show all colors, making them dim.",
+  "a": "They encoded one full-color pattern using shallow ripples instead of deep phase wraps."
+ },
+ "54": {
+  "p": "Checking if smooth curves crash is mathematically fragile due to computer rounding errors.",
+  "a": "They built a method to handle rounding safely and a dataset to test collision detection fairly."
+ },
+ "55": {
+  "p": "The SIGGRAPH 2026 conference received 1177 submissions.",
+  "a": "The conference accepted 327 papers, with an overall acceptance rate of 27%."
+ },
+ "56": {
+  "p": "Predicting which folded paper designs will open and close smoothly is hard for complex shapes.",
+  "a": "They found math rules that work on any folding pattern to ensure rigid deployability."
+ },
+ "57": {
+  "p": "Laser-based floating images are dim because one laser beam cannot be bright enough.",
+  "a": "They used two synchronized lasers to paint voxels brighter and denser in physical space."
+ },
+ "58": {
+  "p": "Seeing hidden objects through rough walls using heat is nearly impossible due to reflection scatter.",
+  "a": "They built a learned system that models scattering as blurring to reconstruct hidden scenes."
+ },
+ "59": {
+  "p": "Predicting what stiffness a folded pattern has is hard because creases couple folding and stretching.",
+  "a": "They simulated folding and used material theory to find the effective stiffness of origami."
+ },
+ "60": {
+  "p": "Simulating scenes with many connected objects (like robots with joints) gets very slow because the math equations become tangled and hard to solve.",
+  "a": "They simplified the math by treating connected objects as a special kind of body that keeps most of its shape fixed, then solved the joint constraints as one system instead of separately."
+ },
+ "61": {
+  "p": "Animators have videos of people moving, but it's expensive to film new actors with different body shapes, so they reuse the same motions on different characters.",
+  "a": "They trained a system on lots of videos to learn how motion behaves, then let artists add constraints (like where arms should go) while the system fills in the rest naturally."
+ },
+ "62": {
+  "p": "Movies and videos of actors need to look good under different lighting for different scenes, but filming with new lights every time is slow and expensive.",
+  "a": "They trained a system on videos filmed under many different light setups, then used that knowledge to change the lighting in a video after it's already shot, keeping each frame consistent."
+ },
+ "63": {
+  "p": "Feathers are hairy, complicated structures that look different from every angle, and drawing them by hand takes forever and looks fake.",
+  "a": "From one photo of a feather, they extract the main structure and fine details, then use math to generate it at any level of detail without storing huge files, rendering it fast."
+ },
+ "64": {
+  "p": "Recording movies of people and scenes in 3D from all angles, then playing them back from any viewpoint, fails when the scene changes over a long time or moves in complex ways.",
+  "a": "Instead of tracking each individual piece of the scene, they anchor the pieces to time-dependent waypoints that stay consistent, so long recordings don't drift or glitch."
+ },
+ "65": {
+  "p": "Physicists photograph the way air or liquid flows around objects using light rays, but reconstructing the invisible flow from 2D images is extremely slow and uses tons of memory.",
+  "a": "They organized the space and time data as one big table, broke it into smaller pieces, combined that with a small learned system, and fixed distortions caused by the flowing medium itself."
+ },
+ "66": {
+  "p": "Simulating splashing water in films or games needs tiny time steps to look right, making it very slow; bigger time steps look wrong because details get missed.",
+  "a": "They treated particles as spread across both space and time together instead of just space, so the simulation can skip ahead in time without the water surface breaking into ugly artifacts."
+ },
+ "67": {
+  "p": "Real materials don't just reflect light the same way from every angle and shiny surface, and storing all that variation takes a lot of memory and is slow to render.",
+  "a": "They use a statistical learning method that finds the simplest formula to match how a real material reflects light, then that formula works instantly when rendering."
+ },
+ "68": {
+  "p": "X-ray scans need lots of photos from many angles to figure out what's inside an object; when you only have a few photos the answer is ambiguous and reconstruction fails.",
+  "a": "They treat each spot inside the object as having a probability of being different materials, then tune those probabilities to match the X-ray photos, similar to how renderering works backwards."
+ },
+ "69": {
+  "p": "Figuring out whether a point is inside or outside a 3D shape is needed all the time, but existing methods are either slow or fail on messy, broken shapes.",
+  "a": "They rewrote the math as counting how many times a ray hits the surface plus an area calculation on a sphere, avoiding expensive integrals and running 22 times faster."
+ },
+ "70": {
+  "p": "Architects design beautiful curved buildings, but making them from flat panels is tricky: panels need to fit the curve, hold the weight, and not buckle under stress.",
+  "a": "They model the surface as a stretchy shell that adapts, measure stresses, and tune which way the surface should flow to both match the design and stay structurally safe."
+ },
+ "71": {
+  "p": "3D shapes made in software often end up tangled or self-intersecting, which breaks everything downstream; local fixes don't work because the knots are global.",
+  "a": "They built an energy that measures both the overall shape tangle and the local 3D model tangle, then lower that energy to untangle shapes while keeping their connected structure."
+ },
+ "72": {
+  "p": "Generating realistic 3D shapes with current systems requires lots of steps, so creating new shapes takes a long time, even with good results.",
+  "a": "They build 3D shapes hierarchically from coarse to fine, one size level at a time, so each prediction step adds detail faster than other methods while staying high quality."
+ },
+ "73": {
+  "p": "CAD software needs to find where two curved surfaces intersect for design and manufacturing, but it misses intersections when loops are tiny or surfaces just graze.",
+  "a": "They use a winding-number method on the surface parameters to find all branches reliably, especially small loops and touches that other software missed."
+ },
+ "74": {
+  "p": "Simulating knitted fabric with individual yarn threads is realistic but so slow that artists can't work interactively because of the huge number of threads and forces.",
+  "a": "They split the tangle of yarn forces into independent smaller problems and solve each one, plus they picked the best math constants automatically to converge faster."
+ },
+ "75": {
+  "p": "Telescopes see blurry images when Earth's atmosphere warps light. Current fixing systems need a reference star or special sensors.",
+  "a": "Use an oddly-shaped telescope opening and a learned system to read distortions directly from any scene, then bounce light to correct them live."
+ },
+ "76": {
+  "p": "Creating tidy quad-grid patterns on 3D shapes for animation is tedious handwork; AI shows promise but produces jittery outputs when shapes change slightly.",
+  "a": "Train a system to find only the special corner points, then use classic recipes to smoothly connect them, keeping the grid clean."
+ },
+ "77": {
+  "p": "Portrait videos look wrong when you change the lighting because it distorts faces and colors. Current methods lose temporal consistency and detail.",
+  "a": "Train a system on real footage under known lighting to relight videos realistically, preserving facial expression and consistency frame-by-frame."
+ },
+ "78": {
+  "p": "Headsets delay what you see when you move your head, breaking immersion and causing discomfort. Current devices can't study delays below 12 milliseconds.",
+  "a": "Build a camera passthrough headset with only 2-millisecond end-to-end delay to test how much latency actually bothers people."
+ },
+ "79": {
+  "p": "Wood rots in complex ways\u2014fungi eat material, wood splinters in patterns, moisture changes everything. Current simulation can't show this realistically.",
+  "a": "Model wood as layered tissue with grain direction, track fungi eating resources and moisture spreading, then show how wood cracks and decays."
+ },
+ "80": {
+  "p": "3D shape processing assumes shapes are known perfectly, but real scans are noisy and ambiguous. Current methods ignore this uncertainty.",
+  "a": "Define shape operations (smoothing, blending, filtering) to work directly on probabilistic shape representations accounting for noise."
+ },
+ "81": {
+  "p": "Games and robots need hundreds of different motions in real-time, but AI-generated motion systems are too slow and hard to control precisely.",
+  "a": "Use a compact learned representation for 350,000 motion clips, then add intuitive control blocks for movement and object interaction without retraining."
+ },
+ "82": {
+  "p": "Teaching robots human movements fails because robot bodies are different\u2014feet slide, limbs collide, movements aren't physically possible.",
+  "a": "Train a robot control policy that simultaneously adapts human motion to the robot's body and learns to execute it realistically in simulation."
+ },
+ "83": {
+  "p": "Rendering smooth clouds and fog efficiently requires different detail levels in different places, but current systems need retrained models at each level.",
+  "a": "Use oriented frequency filters that skip unnecessary fine detail automatically, accelerating rendering without reprocessing or storing extra data."
+ },
+ "84": {
+  "p": "Heat radiating from surfaces follows nonlinear physics that standard solvers can't handle on complex shapes. Exact methods are too slow.",
+  "a": "Use random sampling to estimate heat flow, iteratively refining the solution with a denoising technique for heat radiating at boundaries."
+ },
+ "85": {
+  "p": "Generating 3D human animation in real-time from spoken commands needs both speed and the ability to follow long-term goals and constraints.",
+  "a": "Process text and movement goals frame-by-frame, tracking explicit position while learning body motion, enabling live streaming animation control."
+ },
+ "86": {
+  "p": "Checking if a point is inside a curved 3D shape is slow for large models, especially when shapes have gaps or overlap.",
+  "a": "Speed up containment queries by pre-storing data in a space tree, approximating far regions while computing nearby curved patches exactly."
+ },
+ "87": {
+  "p": "Random-walk methods for solving physics equations converge slowly. Current variance reduction doesn't reuse the geometry information explored.",
+  "a": "Reuse intermediate points from random walks by treating them as boundary samples, using fixed probe spheres to evaluate them efficiently."
+ },
+ "88": {
+  "p": "Testing if points are inside messy 3D shapes (with holes, overlaps, or gaps) is computationally expensive. Current methods use approximations.",
+  "a": "Reduce the math to one ray test and simple edge sums per point, making the computation orders of magnitude faster with no approximation."
+ },
+ "89": {
+  "p": "Rendering fabric realistically requires expensive scanners or hand-crafted rules to capture individual fiber geometry. This is tedious and limited.",
+  "a": "Extract fiber patterns from a single cheap microscope photo by learning to predict initial structure, then fine-tune geometry and appearance simultaneously."
+ },
+ "90": {
+  "p": "Computing 3D shapes by asking a learning system millions of questions about points in space is slow, wasting effort on easy regions far from the actual surface.",
+  "a": "A system that remembers which regions need careful work and which don't, asking fewer questions in simple areas and more in detailed ones."
+ },
+ "91": {
+  "p": "3D printers that tilt the nozzle to avoid ugly stair-steps and need less cleanup, but struggle to plan print paths that keep consistent nozzle width and never jam.",
+  "a": "Software that respects the printer's desired angle and direction fields, slicing shapes into layers with steady nozzle thickness and paths that flow smoothly within and between layers."
+ },
+ "92": {
+  "p": "Generating realistic 3D rooms with furniture that all fit together and respect walls, floors, and doors is hard because you must decide quantity, placement, and relationships all at once.",
+  "a": "A staged system that breaks the room into four steps: count furniture types, size each piece, figure out spatial relationships, then lock in final positions with physics constraints."
+ },
+ "93": {
+  "p": "Finding perfect one-to-one correspondences between two curved surfaces without tangling them is hard and usually requires messy trial-and-error fixes.",
+  "a": "Treating the mapping between surfaces as its own invisible shape inside a higher-dimensional space, then smoothing and untangling by tuning one physics equation borrowed from magnetism."
+ },
+ "94": {
+  "p": "Simulating stiff, stubborn materials like clay or snow that barely squeeze when squeezed causes numerical nightmares and forces tiny time steps.",
+  "a": "A method that treats forces and flows separately in a mixed method, letting the graphics chip solve the hard part all at once instead of tiny step by step."
+ },
+ "95": {
+  "p": "Cameras that count single photons can sense detailed color info but produce heavily noisy measurements, making reliable color video capture in normal light nearly impossible.",
+  "a": "A system combining pushbroom scanning and single-photon sensors with math proving that enough noisy counts can reconstruct accurate full-color video despite the noise."
+ },
+ "96": {
+  "p": "Extracting a shape's skeleton to simplify or understand it is messy with triangle 3D models, especially keeping the skeleton's joints aligned with actual symmetries.",
+  "a": "Carefully tracking which surface regions match which skeleton joints during simplification, using priority rules to keep structure clean and symmetries honest."
+ },
+ "97": {
+  "p": "VR users can see virtual objects but can't feel them, and custom haptic gear is bulky and expensive or requires pre-built physical props.",
+  "a": "A smart system that watches the real room through the VR headset camera, finds ordinary objects nearby, and suggests which one feels closest to what you're touching in the game."
+ },
+ "98": {
+  "p": "Deforming smooth curved surfaces in real time while keeping them detailed and easy to sculpt by hand is tough when using learning-based shape models.",
+  "a": "Using learned basis functions layered over a simple subdivision base, so the shape stays smooth and editable without retraining when you push and pull."
+ },
+ "99": {
+  "p": "Solving physics equations on complicated changing shapes is slow with traditional grid methods, but random-walk methods are noisy and struggle with boundary conditions.",
+  "a": "Splitting the space into small regular regions, using random walks only locally to estimate boundary behavior, then stitching results together with one big deterministic solve."
+ },
+ "100": {
+  "p": "Modern cameras process images with AI, so camera optics should be tuned for that processing, but standard design methods can't handle the high-dimensional tuning problem.",
+  "a": "Lifting simple image-quality goals into detailed ray-level descriptions, unlocking a proven mathematical solver from traditional camera design to handle high-dimensional spaces."
+ },
+ "101": {
+  "p": "Virtual characters in AR scenes should move and act in ways that match their assigned role and respond to what the user is actually doing.",
+  "a": "Using a language-vision system to read the scene, the user's state, and role instructions, then telling the character what move to make and which path to follow."
+ },
+ "102": {
+  "p": "Generating 3D character models from a photo is possible, but the skeleton and joint connections often don't match the shape, making them unusable in games.",
+  "a": "Generating shape, skeleton, and joint weights all at once as consistent fields, with special handling for ambiguous bone regions and weights that work for any number of joints."
+ },
+ "103": {
+  "p": "Capturing a person's face appearance from phone video alone is hard because unknown lighting mixes with face material in ways that are impossible to untangle.",
+  "a": "Training a learning system on studio footage and dataset tricks to remove lighting effects, creating a powerful prior that constrains how light and material can separate."
+ },
+ "104": {
+  "p": "Cages are simple geometry shells used as handles to deform shapes, but making them simple yet tight to the original is pulling in opposite directions.",
+  "a": "Gradually loosening a thickness tolerance while pruning edges, using proven edge-removal math with hard rules against triangles flipping or shrinking."
+ },
+ "105": {
+  "p": "Creating detailed 3D shapes is slow when built piece-by-piece, and one mistake early on ruins everything that comes after.",
+  "a": "Build the shape all at once in two passes: first place all corner points using a noise-to-clear process, then connect them using learned signals."
+ },
+ "106": {
+  "p": "Computing how huge structures vibrate requires solving enormous math problems that are too heavy for one computer to handle alone.",
+  "a": "Split the structure into overlapping regions, solve each piece separately from multiple angles, then blend the answers together smartly."
+ },
+ "107": {
+  "p": "Charts full of boring bars and lines bore people, but making them pretty by hand while keeping the data honest takes forever.",
+  "a": "Ask the system two things at once\u2014a text description of the story and a sketch of the chart's shape\u2014then blend pictures to fill it in artfully."
+ },
+ "108": {
+  "p": "Extracting clean shapes from neural-learned distance functions fails when surfaces twist, fold, or touch themselves.",
+  "a": "Extend the dual-contouring method to work block-by-block instead of cube-by-cube, using lookup tables to handle tangles correctly."
+ },
+ "109": {
+  "p": "Dressing 3D characters in realistic clothes requires matching garments and bodies that were designed separately by different teams.",
+  "a": "Use a standard body model as a middleman: match clothes to it, then match it to the target character, then drape the result realistically."
+ },
+ "110": {
+  "p": "Hand-drawn art styles like line drawings rely on what the viewer sees on screen, but light-transport math works in the scene, not the image.",
+  "a": "Anchor image-space style rules to the geometry paths light takes, using curve math and wave theory to keep lines consistent through shadows."
+ },
+ "111": {
+  "p": "Converting 3D line drawings to clean flat images with filled regions often fails when lines barely touch, don't connect, or have numerical errors.",
+  "a": "Use the spatial index that finds line crossings as the source of truth for the planar map itself, giving perfect topology even with messy input."
+ },
+ "112": {
+  "p": "Images are hard to edit programmatically because their pixels don't know who they belong to or why they sit there.",
+  "a": "Represent images as soft, stretchy ownership maps where each pixel blends colors from multiple smart learnable sites with unique shapes."
+ },
+ "113": {
+  "p": "Simulating massive explosions and fluid flows requires splitting work across many computers, but the regions must balance load and minimize data shipped.",
+  "a": "Use optimal transport\u2014a math tool for fair distribution\u2014to create domain slices that stay balanced and consistent frame-to-frame."
+ },
+ "114": {
+  "p": "Spinning displays can show pictures in 360 degrees, but expanding their size stretches pixels and makes them look bad.",
+  "a": "Spin cables on a pole using careful physics and timing to create expanding shapes while releasing new pixel rows to keep density steady."
+ },
+ "115": {
+  "p": "Drawing scenes made of millions of soft blobs becomes a bottleneck even on fast graphics chips because there's too much to paint.",
+  "a": "Sample tiny opaque points from each blob, splat them in parallel using atomic counters, then cull hidden ones using occlusion tricks."
+ },
+ "116": {
+  "p": "Photos from real cameras have blurry zones from the lens, but current soft-blob methods ignore this and produce sharp, unrealistic results.",
+  "a": "Blur each soft blob using a math formula based on the lens's aperture shape, solving it exactly to stay fast and physically honest."
+ },
+ "117": {
+  "p": "Calculating light in 3D scenes requires averaging thousands of random samples, but many are wasted on dark or irrelevant areas.",
+  "a": "Train a learned pair of sampler and counter that work together: sampler picks smart spots, counter uses all available context to weight them."
+ },
+ "118": {
+  "p": "Measuring the closest distance between two tangled 3D shapes requires exhaustive checking that becomes impossibly slow on huge models.",
+  "a": "Use a branch-and-bound pruning strategy on graphics hardware by replacing recursion with a pipeline of sorted batches that cull candidates in parallel."
+ },
+ "119": {
+  "p": "Geometry editors can't account for surface color and pattern because most 3D models store texture in flat image maps, not on vertices.",
+  "a": "Remesh the shape so colors live on corners instead, then apply geometry operations that see and respect texture like color and edges."
+ },
+ "120": {
+  "p": "Computer simulations of bouncy or stretchy objects struggle when they jump over the answer and need millions of test points to work well.",
+  "a": "Instead of testing fixed points, the method uses a smart math trick to guess where to test based on the current problem, avoiding expensive data collection."
+ },
+ "121": {
+  "p": "Making a fancy video of a jiggly, stretchy object takes forever because the computer must calculate every tiny piece's movement at once.",
+  "a": "A system shows you a rougher preview instantly, then swaps in fine detail only where it matters, keeping the motion feeling natural at every step."
+ },
+ "122": {
+  "p": "Face-recognition systems fail when a photo is drawn as a cartoon or painting because they learned on real photos and can't adapt to style changes.",
+  "a": "New test-and-tune sets measure human judgment of faces across styles, then train systems to match how people actually recognize identity through artistic distortion."
+ },
+ "123": {
+  "p": "When you press or squeeze a porous object, its strength and stiffness scatter randomly because tiny holes are chaotic; engineers want both properties uniform.",
+  "a": "Arrange the holes to look like a printed picture but stay mechanically balanced, so the material feels the same in every direction when squeezed."
+ },
+ "124": {
+  "p": "Finding the best shape for a stretchy object via computer takes days because the math equations have so many variables and the solver is sluggish.",
+  "a": "A new solver exploits how these equations naturally break into small, dense blocks, speeding up every stage from setup through solving by orders of magnitude."
+ },
+ "125": {
+  "p": "Storing huge 3D worlds, textures, and video data eats massive memory and bandwidth, choking phones and web browsers.",
+  "a": "A new file format notices when regions are similar under rotation or shift, stores just the transformation once, shrinking data while preserving fine details."
+ },
+ "126": {
+  "p": "Simulating water flowing past complex shapes with curved walls crashes or stalls because the grid around the boundary makes math equations ill-behaved.",
+  "a": "A specialized math scheme fits the grid snugly around any boundary and uses a layered solver that avoids the numerical pitfalls, running orders of magnitude faster."
+ },
+ "127": {
+  "p": "Drawing smooth colored vector shapes (like in Illustrator) that have soft, blended edges is easy to draw but hard to compute and render.",
+  "a": "Treat the edges as an unsolved puzzle and use random sampling to guess the right color blend that respects the artist's hand-drawn curves."
+ },
+ "128": {
+  "p": "Creating a detailed 3D shape from one photo stays fuzzy because the photo doesn't show the whole object, and training from scratch wastes compute.",
+  "a": "Teach the system in stages\u2014first broad shape, then fine details\u2014then stitch views together using large language models to hallucinate missing angles."
+ },
+ "129": {
+  "p": "Editing a photo with text instructions (e.g., 'make the dog blue') fails in modern fast image-generating models because they don't track text well during editing.",
+  "a": "Identify which brain areas in the model pay attention to which semantic concepts, then send text instructions only to the right areas for precise edits."
+ },
+ "130": {
+  "p": "Capturing two people passing a ball back and forth creates messy, jittery videos with hands clipping through the object because the motion is so complex.",
+  "a": "First solve for realistic hand grasps that fit the object, then use a learned single-person motion blueprint to smooth out body jitter and align all parts."
+ },
+ "131": {
+  "p": "Labeling which parts of a 3D model are a leg, arm, wheel, etc. requires huge hand-labeled datasets and weeks of training.",
+  "a": "Repurpose a pretrained 3D shape generator by assigning colors to each part and letting it find sensible regions, needing far less labeled data."
+ },
+ "132": {
+  "p": "Rendering realistic fur or hair with light bouncing between fibers looks beautiful but takes hours per frame because light scatters thousands of times.",
+  "a": "Model the hair as a misty volume that scatters light softly while keeping individual fibers for crisp direct highlights, running 7-10 times faster."
+ },
+ "133": {
+  "p": "Turning a static 3D object from CAD software into one with moving parts (e.g., a door that swings) requires manual rigging and is very time-consuming.",
+  "a": "Let users sketch arrows showing which direction parts move, then automatically find the parts and how far they rotate, inferring internal structure if needed."
+ },
+ "134": {
+  "p": "Reverse-engineering the paint, metal, and lights from a photo using physics math fails because small errors blow up and the answer isn't even unique.",
+  "a": "Cache precomputed light bounces and blend between cached and precise estimates, letting the solver lock onto material answers even when lights are ambiguous."
+ },
+ "135": {
+  "p": "Nuclear shields need to be designed to stop dangerous radiation, but testing them is slow and expensive.",
+  "a": "They adapted computer graphics techniques for simulating light to instead simulate how neutrons bounce and fade through materials, enabling rapid virtual testing."
+ },
+ "136": {
+  "p": "Finding nearby points in a cloud of millions is slow, especially when those points lie on curved surfaces like skin or terrain.",
+  "a": "They built a smarter search method that exploits the curved shape of the data to check fewer candidates than traditional search trees."
+ },
+ "137": {
+  "p": "Turning a frozen shape into a different one requires knowing how every part moves at every moment in time.",
+  "a": "They used a learnable system to describe the motion as a continuous flow, allowing instant answers about any part at any time."
+ },
+ "138": {
+  "p": "When designers create curved surfaces in CAD, computers need exact intersection lines for making parts fit together perfectly.",
+  "a": "They control precision by measuring gaps and fitting curves through those measurement points until accuracy targets are met."
+ },
+ "139": {
+  "p": "Tuning fluid simulations for desired behaviors is expensive because computing how changes ripple backward through time is wasteful.",
+  "a": "They skip redundant calculations by recognizing that long-distance effects flow through specific paths and only computing those paths backward."
+ },
+ "140": {
+  "p": "3D printing with light needs to create tiny details, but light bends and spreads, and chemicals diffuse, both blurring the result.",
+  "a": "They designed light patterns from a single direction that pre-correct for how light will bend and chemicals will blur during printing."
+ },
+ "141": {
+  "p": "Generating realistic photos of people is hard because you must match both what they look like and how their body is positioned.",
+  "a": "They built a system that learns to create people by refining from noise while respecting bone lengths and joint angles from real poses."
+ },
+ "142": {
+  "p": "Finding the most important directions in large datasets slows down with millions of numbers.",
+  "a": "They sped up the standard iterative search method by adding a coarse-to-fine strategy that skips redundant calculations."
+ },
+ "143": {
+  "p": "Recording how fabric wrinkles and bends during motion requires both precision and seeing through areas the camera can't reach.",
+  "a": "They used printed targets on cloth to pinpoint motion precisely, then filled unseen parts by simulating how fabric naturally deforms."
+ },
+ "144": {
+  "p": "Converting a shape described by numbers into a connected triangle 3D model can miss thin sheets or get trapped by pixel-sized limits.",
+  "a": "They count how many times the surface edge crosses each grid line, allowing the method to resolve features smaller than grid cells."
+ },
+ "145": {
+  "p": "Point clouds from scans have no clear surface, making it hard to compute distances or apply offsets to the underlying shape.",
+  "a": "They fit doughnut shapes locally to each point using a learned system, then query their built-in distance functions instantly."
+ },
+ "146": {
+  "p": "Generating videos with multiple types of input cues requires training separate systems for each combination of conditions.",
+  "a": "They randomly swap which cues are clean versus noisy during training so one system learns to handle all input-output pairings."
+ },
+ "147": {
+  "p": "Moving surfaces inward or outward while keeping sharp edges intact is hard without making geometry break or overlap.",
+  "a": "They generated offset geometry first using energy-based constraints to place corners correctly, then stitched faces together afterward."
+ },
+ "148": {
+  "p": "Beautiful surfaces with constant bend can be hard to construct because they obey strict geometric rules.",
+  "a": "They solved it by using a property from curved geometry theory that lets them build the surface through energy minimization and a single equation solve."
+ },
+ "149": {
+  "p": "Making a character move in a specific style requires huge amounts of training data and months of work.",
+  "a": "They decomposed style into how a character stands and how they move, needing only a few seconds of footage and minutes to train."
+ },
+ "150": {
+  "p": "Cameras struggle to accurately capture how fingers move and how two hands interact with each other in real-world videos.",
+  "a": "A learning system understands the spatial relationship between hands to reconstruct detailed hand positions from video frames."
+ },
+ "151": {
+  "p": "Transferring how one material looks onto an object is hard because lighting and surface details affect the appearance change.",
+  "a": "A system uses depth, surface direction, and light data to apply one material's look onto another object realistically."
+ },
+ "152": {
+  "p": "Simulating how physical objects bend and move is slow because it computes changes frame by frame instead of jumping ahead.",
+  "a": "A method learns how an object moves from examples, then skips many frames at once instead of calculating every single moment."
+ }
+}

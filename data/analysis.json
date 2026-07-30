@@ -1,0 +1,2635 @@
+{
+ "n_papers": 153,
+ "n_analyzed": 153,
+ "bad_batches": [],
+ "papers": [
+  {
+   "title": "Lucky High Dynamic Range Smartphone Imaging",
+   "doi": "10.1145/3811374",
+   "url": "https://www.semanticscholar.org/paper/00a21bbfbd00d51c0608d692aa36a5bc3fa3e50c",
+   "pdf": "https://doi.org/10.1145/3811374",
+   "arxiv": "2604.19976",
+   "gid": 0,
+   "problem": "Smartphone cameras limited to 12 stops dynamic range vs 20 stops human perception",
+   "approach": "Lightweight network on linear raw bracketed exposures with convex pixel combinations",
+   "contribution": "Zero-shot mobile HDR from 3-9 exposures avoiding hallucination artifacts",
+   "primary_theme": "HDR image capture",
+   "methods": [
+    "deep learning",
+    "raw processing",
+    "multi-exposure fusion"
+   ]
+  },
+  {
+   "title": "PQ-Free HD: Priority-Queue-Free Hausdorff Distance for Triangle Meshes on GPU",
+   "doi": "10.1145/3811324",
+   "url": "https://www.semanticscholar.org/paper/02471f49752f569676602199256df0bae66a06ca",
+   "pdf": null,
+   "arxiv": null,
+   "gid": 1,
+   "problem": "Hausdorff distance between meshes requires global priority queue bottleneck",
+   "approach": "Parallel branch-and-bound with ring buffer replacing priority queue",
+   "contribution": "71.7x GPU speedup over CPU with 83.9% memory reduction via 29-byte task descriptor",
+   "primary_theme": "mesh distance computation",
+   "methods": [
+    "gpu parallelism",
+    "branch-and-bound",
+    "geometric culling"
+   ]
+  },
+  {
+   "title": "Volume-Preserving LBM-MPM Coupling for Air-Water-Sand Mixtures",
+   "doi": "10.1145/3811302",
+   "url": "https://www.semanticscholar.org/paper/029ed3becdc907e3350f41e5533db20074058287",
+   "pdf": "https://doi.org/10.1145/3811302",
+   "arxiv": null,
+   "gid": 2,
+   "problem": "Simulating coupled air-water-sand mixtures with multiscale interactions",
+   "approach": "Lattice Boltzmann for fluids coupled with Material Point Method for granular sand",
+   "contribution": "Volume-preserving simulation of sand mobilization, settling, erosion",
+   "primary_theme": "multiphase simulation",
+   "methods": [
+    "lbm",
+    "mpm",
+    "fluid-solid coupling"
+   ]
+  },
+  {
+   "title": "Strips as Tokens: Artist Mesh Generation with Native UV Segmentation",
+   "doi": "10.1145/3811286",
+   "url": "https://www.semanticscholar.org/paper/03068f6631a4b3223963af039c1ef3cc5546363f",
+   "pdf": "https://doi.org/10.1145/3811286",
+   "arxiv": "2604.09132",
+   "gid": 3,
+   "problem": "Mesh generation preserves edge flow yet autoregressive transformers fail artist standards",
+   "approach": "Strip-based token ordering encoding UV boundaries as connected face chains",
+   "contribution": "Unified decoder for both triangle and quad meshes with structured UV layout",
+   "primary_theme": "mesh generation",
+   "methods": [
+    "autoregressive",
+    "transformer",
+    "topology-aware tokenization"
+   ]
+  },
+  {
+   "title": "A Few-Step Generative Model on Cumulative Flow Maps",
+   "doi": "10.1145/3811380",
+   "url": "https://www.semanticscholar.org/paper/034040ca5dc45cfa24da7bf931a43a5f5fbd221e",
+   "pdf": "https://doi.org/10.1145/3811380",
+   "arxiv": "2605.03623",
+   "gid": 4,
+   "problem": "Generative models require many steps reducing inference efficiency for synthesis",
+   "approach": "Cumulative flow maps framework unifying local updates with finite-time transport",
+   "contribution": "Few-step or one-step generation with minimal training changes and quality preservation",
+   "primary_theme": "generative modeling",
+   "methods": [
+    "flow-based models",
+    "diffusion models",
+    "cumulative transport"
+   ]
+  },
+  {
+   "title": "GenPIE: A Time-Resolved Plenoptic Imager",
+   "doi": "10.1145/3811281",
+   "url": "https://www.semanticscholar.org/paper/09de3337717dc97eb3c39e753d3f8eca46e1dda7",
+   "pdf": "https://doi.org/10.1145/3811281",
+   "arxiv": null,
+   "gid": 5,
+   "problem": "Time-resolved plenoptic imaging combats high dimensionality and occlusion blind spots",
+   "approach": "Decoupled laser-detector hardware with generative inverse transient rendering",
+   "contribution": "Sparse observations bridged to full light transport via 3D foundation model priors",
+   "primary_theme": "computational imaging",
+   "methods": [
+    "time-resolved imaging",
+    "inverse rendering",
+    "foundation models"
+   ]
+  },
+  {
+   "title": "Better Bending: Analysis, Construction and Verification of Discrete Bending Models for Kirchhoff-Love Shells",
+   "doi": "10.1145/3811373",
+   "url": "https://www.semanticscholar.org/paper/0b1200cce86bf09abcbc88e351afaabaa6327977",
+   "pdf": "https://doi.org/10.1145/3811373",
+   "arxiv": null,
+   "gid": 6,
+   "problem": "Thin shell discretization lacks consensus on best bending models across scenarios",
+   "approach": "Systematic analysis of ten discrete Kirchhoff-Love bending models with variants",
+   "contribution": "Best practices identifying model tradeoffs in accuracy, performance, stability",
+   "primary_theme": "shell simulation",
+   "methods": [
+    "discrete bending",
+    "convergence analysis",
+    "numerical validation"
+   ]
+  },
+  {
+   "title": "YASPS: A Symbolic Framework for Extensible, High-Performance IPC Simulation",
+   "doi": "10.1145/3811327",
+   "url": "https://www.semanticscholar.org/paper/0c236a5113e00a2b7ddd5a9cb35ed59228da52ca",
+   "pdf": "https://doi.org/10.1145/3811327",
+   "arxiv": "2605.23088",
+   "gid": 7,
+   "problem": "IPC contact simulation requires re-deriving derivatives for each energy variant",
+   "approach": "Symbolic framework with JOIN/UNION operators encoding connectivity and parameterizations",
+   "contribution": "Automatic derivative derivation enabling extensible contact simulation",
+   "primary_theme": "physics simulation",
+   "methods": [
+    "symbolic differentiation",
+    "incremental potential",
+    "automatic derivatives"
+   ]
+  },
+  {
+   "title": "RCGP: Resource Contracts for Graphics Programming",
+   "doi": "10.1145/3811317",
+   "url": "https://www.semanticscholar.org/paper/0c52f47fddd03b43e7ebd7a4d4eee475a4456f53",
+   "pdf": "https://doi.org/10.1145/3811317",
+   "arxiv": null,
+   "gid": 8,
+   "problem": "Graphics pipeline contracts enforced implicitly causing late detection of mismatches",
+   "approach": "Centralized resource declarations with formal contract specification and verification",
+   "contribution": "Statically enforced resource compatibility between shader and pipeline components",
+   "primary_theme": "graphics programming",
+   "methods": [
+    "formal verification",
+    "type checking",
+    "resource contracts"
+   ]
+  },
+  {
+   "title": "GMT: A Geometric Multigrid Transformer Solver for Microstructure Homogenization",
+   "doi": "10.1145/3811333",
+   "url": "https://www.semanticscholar.org/paper/0dfbe4906c02b552aef42f4d2e97f1478661829c",
+   "pdf": "https://doi.org/10.1145/3811333",
+   "arxiv": "2604.26518",
+   "gid": 9,
+   "problem": "Lattice homogenization surrogates sacrifice accuracy/stability for speed",
+   "approach": "Geometric Multigrid Transformer aligned with GMG hierarchies on sparse structures",
+   "contribution": "160x speedup at 10^-5 residual error matching engineering requirements",
+   "primary_theme": "neural solvers",
+   "methods": [
+    "transformer",
+    "multigrid",
+    "physics-informed learning"
+   ]
+  },
+  {
+   "title": "Bounding Stratified Bernoulli Impulses for Ray Marching Gaussian Process Implicit Surfaces",
+   "doi": "10.1145/3811311",
+   "url": "https://www.semanticscholar.org/paper/0fe993ae7be82e61b8a2b8341782163fca4f330b",
+   "pdf": "https://doi.org/10.1145/3811311",
+   "arxiv": null,
+   "gid": 10,
+   "problem": "Ray marching Gaussian process surfaces requires full noise evaluations reducing efficiency",
+   "approach": "Stratified Bernoulli impulses and region-level bounds pruning marching points",
+   "contribution": "Accelerated GPIS rendering via two-level bounding strategies",
+   "primary_theme": "neural rendering",
+   "methods": [
+    "gaussian processes",
+    "ray marching",
+    "spatial acceleration"
+   ]
+  },
+  {
+   "title": "Iskra: A System for Inverse Geometry Processing",
+   "doi": "10.1145/3811371",
+   "url": "https://www.semanticscholar.org/paper/14ac03260a290a8b6effa303b50f4d0fa1ae0034",
+   "pdf": "https://doi.org/10.1145/3811371",
+   "arxiv": "2602.12105",
+   "gid": 11,
+   "problem": "Differentiating geometry processing algorithms requires reformulation for optimization",
+   "approach": "Adjoint method applied to existing imperative geometry processing code",
+   "contribution": "Efficient backward pass through mean curvature flow, parameterization, deformation",
+   "primary_theme": "inverse geometry",
+   "methods": [
+    "automatic differentiation",
+    "adjoint method",
+    "geometry processing"
+   ]
+  },
+  {
+   "title": "Pixels2Peaks: Converting Terrain Images to Heightmaps",
+   "doi": "10.1145/3811288",
+   "url": "https://www.semanticscholar.org/paper/17cbcfd6f7a5c95576e635d8cc3ee14c39048532",
+   "pdf": "https://doi.org/10.1145/3811288",
+   "arxiv": null,
+   "gid": 12,
+   "problem": "Inferring terrain heightmaps from single images requires unoccluded and occluded regions",
+   "approach": "Camera extraction and diffusion model for occluded regions with consistency constraints",
+   "contribution": "Complete detailed heightmaps obeying geomorphological, hydrological, view consistency",
+   "primary_theme": "terrain reconstruction",
+   "methods": [
+    "3d reconstruction",
+    "diffusion models",
+    "inverse graphics"
+   ]
+  },
+  {
+   "title": "Heterogeneous Subspace Corrections for GPU Deformable Multibody Dynamics",
+   "doi": "10.1145/3811275",
+   "url": "https://www.semanticscholar.org/paper/1eddb895a5cd9d7c620ce236ea4b999c02cbc920",
+   "pdf": "https://doi.org/10.1145/3811275",
+   "arxiv": null,
+   "gid": 13,
+   "problem": "GPU solvers struggle with ill-conditioning in heterogeneous multibody stiff contacts",
+   "approach": "Newton-CG variant with adaptive cross approximation for low-rank coupling",
+   "contribution": "GPU convergence comparable to direct solvers with high-resolution stiff contacts",
+   "primary_theme": "multibody dynamics",
+   "methods": [
+    "gpu solver",
+    "krylov iteration",
+    "adaptive cross approximation"
+   ]
+  },
+  {
+   "title": "Persistence-guided Prescribed Topological Simplification",
+   "doi": "10.1145/3811384",
+   "url": "https://www.semanticscholar.org/paper/205d64fa2ff3ec2c09fc680ab354e88d494dbcbf",
+   "pdf": "https://doi.org/10.1145/3811384",
+   "arxiv": null,
+   "gid": 14,
+   "problem": "Topology simplification either removes all features or provides indirect control",
+   "approach": "Persistent homology guides cutting/filling to remove low-persistence features",
+   "contribution": "Exact preservation of prescribed topological features with minimal geometric change",
+   "primary_theme": "topology simplification",
+   "methods": [
+    "persistent homology",
+    "topological algorithms",
+    "mesh editing"
+   ]
+  },
+  {
+   "title": "SQuadGen: Generating Simple Quad Layouts via Chart Distance Fields",
+   "doi": "10.1145/3811348",
+   "url": "https://www.semanticscholar.org/paper/25c0967c1908443b3f6bcbd8b74cac6c0ad95b01",
+   "pdf": "https://doi.org/10.1145/3811348",
+   "arxiv": "2604.27329",
+   "gid": 15,
+   "problem": "3D shapes lack simple quad mesh layouts for efficient editing and modeling",
+   "approach": "Diffusion-based generative framework leveraging Chart Distance Fields continuous representation",
+   "contribution": "Synthesizes artist-friendly simple quad layouts with robust automated recovery pipeline",
+   "primary_theme": "mesh generation",
+   "methods": [
+    "diffusion",
+    "continuous representation",
+    "generative model"
+   ]
+  },
+  {
+   "title": "Implicit Surface Compression -- with Good Old Discrete Cosine Transform and Motion Compensation",
+   "doi": "10.1145/3811298",
+   "url": "https://www.semanticscholar.org/paper/25fc40c511bb89ab96ad7de8bc26072350864dfe",
+   "pdf": "https://doi.org/10.1145/3811298",
+   "arxiv": null,
+   "gid": 16,
+   "problem": "Dynamic 3D content compression requires real-time encoding for volumetric capture streaming",
+   "approach": "Adapts 2D video coding paradigms DCT and motion compensation to TSDF volumes",
+   "contribution": "Achieves 35% bitrate savings and 12\u00d7 reduction with real-time 30 FPS encoding",
+   "primary_theme": "volumetric compression",
+   "methods": [
+    "discrete cosine transform",
+    "motion compensation",
+    "temporal coding"
+   ]
+  },
+  {
+   "title": "Mat\u00e9rn Noise for Triangulation-Agnostic Flow Matching on Meshes",
+   "doi": "10.1145/3811309",
+   "url": "https://www.semanticscholar.org/paper/2808c15d221f9ff41cf1fbbdb47292eb993569c9",
+   "pdf": "https://doi.org/10.1145/3811309",
+   "arxiv": "2605.19305",
+   "gid": 17,
+   "problem": "Mesh signal generation needs triangulation-agnostic models for diverse mesh topologies",
+   "approach": "Adapts flow matching with Mat\u00e9rn noise distribution using PoissonNet denoiser",
+   "contribution": "Generates realistic signals on million-triangle meshes triangulation-independently",
+   "primary_theme": "mesh generation",
+   "methods": [
+    "flow matching",
+    "mat\u00e9rn process",
+    "gradient domain"
+   ]
+  },
+  {
+   "title": "Surface chamfering for robust tetrahedral meshing",
+   "doi": "10.1145/3811395",
+   "url": "https://www.semanticscholar.org/paper/290c7015aeb20ffd5a39c070151361844968e7aa",
+   "pdf": "https://doi.org/10.1145/3811395",
+   "arxiv": null,
+   "gid": 18,
+   "problem": "Tetrahedral meshing fails on complex inputs with acute angles causing robustness issues",
+   "approach": "Delaunay refinement with novel chamfering approach removing acute input angles",
+   "contribution": "Succeeds on 100% of test models versus 63% for existing methods with bounded angles",
+   "primary_theme": "tetrahedral meshing",
+   "methods": [
+    "delaunay refinement",
+    "geometric predicates",
+    "chamfering"
+   ]
+  },
+  {
+   "title": "LLM-enhanced Scene Graph Learning for Household Rearrangement",
+   "doi": "10.1145/3795693",
+   "url": "https://www.semanticscholar.org/paper/2b6fafa606a5670efe7ad6d97d692b5db61108e0",
+   "pdf": "https://doi.org/10.1145/3795693",
+   "arxiv": null,
+   "gid": 19,
+   "problem": "Scene rearrangement requires balancing objective functionality and subjective user preferences",
+   "approach": "LLM-enhanced scene graphs create Affordance Enhanced Graphs with enriched node relations",
+   "contribution": "Autonomous household rearrangement in unseen environments achieving state-of-the-art detection",
+   "primary_theme": "scene understanding",
+   "methods": [
+    "scene graphs",
+    "affordance learning",
+    "llm integration"
+   ]
+  },
+  {
+   "title": "Mixwell: Sharp 2D Fluid Brushes for Progressive Physics-Based Mixing",
+   "doi": "10.1145/3811312",
+   "url": "https://www.semanticscholar.org/paper/2b7df31fcec90379d6ce4b67d00c8c11bcf48acd",
+   "pdf": "https://doi.org/10.1145/3811312",
+   "arxiv": null,
+   "gid": 20,
+   "problem": "2D fluid brushes need resolution-independent sharp mixing without global solves or blurring",
+   "approach": "GPU-accelerated analytical methods from potential flow and Maxwell drift formulation",
+   "contribution": "Progressive real-time mixing via Reverse-Drift Functions without intermediate resampling",
+   "primary_theme": "fluid simulation",
+   "methods": [
+    "potential flow",
+    "reverse-drift functions",
+    "gpu acceleration"
+   ]
+  },
+  {
+   "title": "The PhaseTree: Multiphase Signed Distance Fields",
+   "doi": "10.1145/3811379",
+   "url": "https://www.semanticscholar.org/paper/2ca224cf8f9913011ef79485dfc20079e8100210",
+   "pdf": "https://doi.org/10.1145/3811379",
+   "arxiv": null,
+   "gid": 21,
+   "problem": "Volumetric objects with multiple materials need compact representation supporting complex topologies",
+   "approach": "Hierarchical construction tree combining phase-aware primitives through composition operators",
+   "contribution": "Seamlessly integrates multiphase SDF into standard workflows with 25% overhead preservation",
+   "primary_theme": "implicit surfaces",
+   "methods": [
+    "signed distance fields",
+    "hierarchical trees",
+    "sphere tracing"
+   ]
+  },
+  {
+   "title": "LayerInbetween: Occlusion-Aware Stroke Correspondence and Inbetweening with Automatic Layering",
+   "doi": "10.1145/3811364",
+   "url": "https://www.semanticscholar.org/paper/2cb10478d6850fa452257dcac8d7fb4c3777d137",
+   "pdf": "https://doi.org/10.1145/3811364",
+   "arxiv": null,
+   "gid": 22,
+   "problem": "Vector animation inbetweening struggles with occluded strokes requiring tedious manual layering",
+   "approach": "Occlusion-aware framework with Global-Local Layer Transformation for automatic layering",
+   "contribution": "Automatic inbetweening resolving occlusions with layer prediction and flexible animation editing",
+   "primary_theme": "animation synthesis",
+   "methods": [
+    "stroke correspondence",
+    "automatic layering",
+    "spatial alignment"
+   ]
+  },
+  {
+   "title": "ACT: A Unified Framework for Rigging and Animating Characters with Arbitrary Topologies",
+   "doi": "10.1145/3811392",
+   "url": "https://www.semanticscholar.org/paper/2eaa0951cbea0d5ba5fa83a51709d5a016a2cc89",
+   "pdf": "https://doi.org/10.1145/3811392",
+   "arxiv": null,
+   "gid": 23,
+   "problem": "Character animation pipelines fracture into sequential rigging and motion stages ignoring morphology coupling",
+   "approach": "Unified generative framework modeling joint skeletal topology and motion in shared latent space",
+   "contribution": "Zero-shot rigging and text-guided motion for arbitrary non-humanoid characters end-to-end",
+   "primary_theme": "character animation",
+   "methods": [
+    "diffusion transformer",
+    "vision language model",
+    "geometry-guided decoder"
+   ]
+  },
+  {
+   "title": "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+   "doi": "10.1145/3811346",
+   "url": "https://www.semanticscholar.org/paper/2ef6b384001f60e03924ee4c1b3b24b3da681b33",
+   "pdf": "https://doi.org/10.1145/3811346",
+   "arxiv": "2605.28401",
+   "gid": 24,
+   "problem": "Egocentric telepresence requires simultaneous capture appearance lighting and environment estimation",
+   "approach": "Holistic framework with stereo depth cameras and neural appearance model separating shading",
+   "contribution": "Photorealistic relightable avatars from HMD with novel ray-sampling generalizing to unseen illumination",
+   "primary_theme": "neural rendering",
+   "methods": [
+    "egocentric perception",
+    "neural appearance",
+    "hdr estimation"
+   ]
+  },
+  {
+   "title": "Stochastic geomorphological transport for terrain erosion simulation",
+   "doi": "10.1145/3811336",
+   "url": "https://www.semanticscholar.org/paper/31e880ae078359ffdcfd02b6a8c0d66db53031f7",
+   "pdf": "https://doi.org/10.1145/3811336",
+   "arxiv": null,
+   "gid": 25,
+   "problem": "Erosion simulation struggles with temporal scale differences between transport and erosive processes",
+   "approach": "Parallel stochastic particle-based method relaxing strong velocity assumptions for transport",
+   "contribution": "Simulates multiscale geomorphological features including braided rivers meanders and deltas",
+   "primary_theme": "terrain simulation",
+   "methods": [
+    "particle methods",
+    "stochastic transport",
+    "momentum conservation"
+   ]
+  },
+  {
+   "title": "Forget Superresolution, Sample Adaptively (when Path Tracing)",
+   "doi": "10.1145/3811377",
+   "url": "https://www.semanticscholar.org/paper/32984f79f05451e034b6fccbd1271a4a93165ca2",
+   "pdf": "https://doi.org/10.1145/3811377",
+   "arxiv": "2602.08642",
+   "gid": 26,
+   "problem": "Sub-1-spp path tracing needs adaptive sampling avoiding uniform quality tradeoffs across image",
+   "approach": "Neural sampler with stochastic sample placement and tone-mapping-aware perceptual training",
+   "contribution": "End-to-end adaptive sampling and denoising for sparse rendering with improved efficiency",
+   "primary_theme": "path tracing",
+   "methods": [
+    "adaptive sampling",
+    "denoising",
+    "perceptual loss"
+   ]
+  },
+  {
+   "title": "HairGPT: Strand-as-Language Autoregressive Modeling for Realistic 3D Hairstyle Synthesis",
+   "doi": "10.1145/3811350",
+   "url": "https://www.semanticscholar.org/paper/32b2ca7e3e3ca56340285f69df6eb6dd82c1f68e",
+   "pdf": "https://doi.org/10.1145/3811350",
+   "arxiv": "2605.08824",
+   "gid": 27,
+   "problem": "Hair generation entangles global topology with local texture obscuring semantic organization",
+   "approach": "Strand-centric framework treating strands as primitives with spatial and structural decoupling",
+   "contribution": "Compositional hairstyle synthesis across rare complex and stylized domains with semantic control",
+   "primary_theme": "hair synthesis",
+   "methods": [
+    "autoregressive modeling",
+    "geometric tokenizer",
+    "semantic decoupling"
+   ]
+  },
+  {
+   "title": "TwinPose: Person-Specific Subspaces for Multi-View 3D Pose Estimation",
+   "doi": "10.1145/3811316",
+   "url": "https://www.semanticscholar.org/paper/32eb49d68b080322f67afe3901261b7bd580e6f3",
+   "pdf": "https://doi.org/10.1145/3811316",
+   "arxiv": null,
+   "gid": 28,
+   "problem": "Multi-view 3D pose estimation faces complexity in global optimization and detector coupling",
+   "approach": "Person-specific 3D pose subspaces optimizing with twin pose inheriting instance representations",
+   "contribution": "Supports diverse 2D detectors leveraging pose-instance cues for simplified multi-person inference",
+   "primary_theme": "pose estimation",
+   "methods": [
+    "pose subspaces",
+    "twin pose",
+    "multi-view reconstruction"
+   ]
+  },
+  {
+   "title": "Physics-Inspired Procedural Texturing of Extremely Deformable Surfaces",
+   "doi": "10.1145/3811353",
+   "url": "https://www.semanticscholar.org/paper/33347cff4dcb8c1ce9a3791684d909b38d0a2207",
+   "pdf": "https://doi.org/10.1145/3811353",
+   "arxiv": null,
+   "gid": 29,
+   "problem": "Dynamic deformable surfaces lose texture quality through extreme map distortion and shifting scales",
+   "approach": "Wave-based procedural texturing algorithms encoding physical processes without simulation",
+   "contribution": "Plausible animation of deforming objects with extreme texture distortion real-time efficient",
+   "primary_theme": "texture synthesis",
+   "methods": [
+    "procedural texturing",
+    "wave-based",
+    "gpu-parallel"
+   ]
+  },
+  {
+   "title": "NILE: Nested Interleaving of Low-Dimensional Elements",
+   "doi": "10.1145/3811283",
+   "url": "https://www.semanticscholar.org/paper/3718e968daf0d04ab12e700e6a5ff99649ac62f7",
+   "pdf": "https://doi.org/10.1145/3811283",
+   "arxiv": null,
+   "gid": 30,
+   "problem": "Global samplers lack control over subspace sample distributions, causing aliasing artifacts.",
+   "approach": "Meta-sampler architecture orchestrating local samplers via hierarchical low-discrepancy sequences.",
+   "contribution": "Hybrid sampling bridging local and global methods with better alias control.",
+   "primary_theme": "sampling strategies",
+   "methods": [
+    "low-discrepancy sequences",
+    "hierarchical sampling",
+    "stratified sampling"
+   ]
+  },
+  {
+   "title": "Gradient Domain Reconstruction for Monte Carlo PDE Solvers",
+   "doi": "10.1145/3811295",
+   "url": "https://www.semanticscholar.org/paper/3950f8016166815cd1574f1e959f10a67fc71cfe",
+   "pdf": "https://doi.org/10.1145/3811295",
+   "arxiv": null,
+   "gid": 31,
+   "problem": "Monte Carlo Poisson solvers have high variance and slow convergence in primal domain.",
+   "approach": "Gradient-domain framework targeting solution differences with reconstruction techniques.",
+   "contribution": "Faster Poisson solving on complex domains via gradient-domain estimates.",
+   "primary_theme": "PDE solving",
+   "methods": [
+    "gradient domain",
+    "monte carlo",
+    "poisson equation"
+   ]
+  },
+  {
+   "title": "SharpNet: Enhancing MLPs to Represent Functions with Controlled Non-differentiability",
+   "doi": "10.1145/3811330",
+   "url": "https://www.semanticscholar.org/paper/3a4357d26d5091d5cffec22d1a57d01a6574dd34",
+   "pdf": "https://doi.org/10.1145/3811330",
+   "arxiv": "2601.19683",
+   "gid": 32,
+   "problem": "MLPs produce smooth outputs, struggling to represent sharp discontinuous features.",
+   "approach": "MLP augmented with auxiliary Poisson feature function encoding sharp edges.",
+   "contribution": "Precise C0 discontinuity control in neural function representation.",
+   "primary_theme": "neural shape representation",
+   "methods": [
+    "implicit neural fields",
+    "poisson equation",
+    "neural network"
+   ]
+  },
+  {
+   "title": "Co-Optimization of Structure and Manufacturable Semi-Continuous Layers for Laminated Composites",
+   "doi": "10.1145/3811393",
+   "url": "https://www.semanticscholar.org/paper/3a8ff88d9ded6c7b9a5e367515de702334a42174",
+   "pdf": "https://doi.org/10.1145/3811393",
+   "arxiv": null,
+   "gid": 33,
+   "problem": "Optimizing composite structures with partial fabric layers is complex and unconventional.",
+   "approach": "Field-driven joint optimization of topology and semi-continuous fabric layers.",
+   "contribution": "Laminated composites achieving 43.8% higher stiffness via optimized partial layers.",
+   "primary_theme": "structure optimization",
+   "methods": [
+    "topology optimization",
+    "implicit neural field",
+    "semi-continuous design"
+   ]
+  },
+  {
+   "title": "Kinetic Predicted-Moment Flux Reconstruction for High-Order High-Performance Fluid Simulation",
+   "doi": "10.1145/3811292",
+   "url": "https://www.semanticscholar.org/paper/3beee114aeda6756e0b1eeadae98bebcaba8d566",
+   "pdf": "https://doi.org/10.1145/3811292",
+   "arxiv": null,
+   "gid": 34,
+   "problem": "Fluid simulation must balance fidelity, performance, and memory efficiency.",
+   "approach": "Kinetic scheme solving Boltzmann-BGK equation in moment-space via high-order flux reconstruction.",
+   "contribution": "5x memory reduction vs LBM with high-order accuracy and minimal dissipation.",
+   "primary_theme": "fluid simulation",
+   "methods": [
+    "kinetic scheme",
+    "flux reconstruction",
+    "moment-based formulation"
+   ]
+  },
+  {
+   "title": "MUSIC: Learning Muscle-Driven Dexterous Hand Control",
+   "doi": "10.1145/3811402",
+   "url": "https://www.semanticscholar.org/paper/3c74c8d1ec829048e2e4399159ab2f9d1e689d23",
+   "pdf": "https://doi.org/10.1145/3811402",
+   "arxiv": "2604.23886",
+   "gid": 35,
+   "problem": "Muscle-driven hand control for complex tasks like piano playing lacks generalization.",
+   "approach": "Hierarchical RL combining muscle-level tracking with VAE latent-space coordination.",
+   "contribution": "Dexterous musculoskeletal hands performing novel piano pieces beyond training data.",
+   "primary_theme": "character animation",
+   "methods": [
+    "reinforcement learning",
+    "variational autoencoder",
+    "musculoskeletal model"
+   ]
+  },
+  {
+   "title": "Loops2Roofs: Diffusion-based 3D Roof Generation using a Loop Representation",
+   "doi": "10.1145/3807955",
+   "url": "https://www.semanticscholar.org/paper/3ddc9fe0b045c4a4f43f1e7b5ad15f424d9d672f",
+   "pdf": "https://doi.org/10.1145/3807955",
+   "arxiv": null,
+   "gid": 36,
+   "problem": "Representing and generating complex 3D roof structures is difficult.",
+   "approach": "Diffusion model directly denoising roof vertices, conditioned on structural priors.",
+   "contribution": "Flexible loop-based representation enabling realistic roof generation across styles.",
+   "primary_theme": "roof generation",
+   "methods": [
+    "diffusion model",
+    "transformer",
+    "mesh generation"
+   ]
+  },
+  {
+   "title": "Schr\u00f6dinger Bridges on Discretized Geometric Domains",
+   "doi": "10.1145/3811314",
+   "url": "https://www.semanticscholar.org/paper/3e04ef3985bdf79966cf90cc7e7400e89afa603b",
+   "pdf": "https://doi.org/10.1145/3811314",
+   "arxiv": null,
+   "gid": 37,
+   "problem": "Interpolating probability distributions on meshes requires high computational cost.",
+   "approach": "Discrete Schr\u00f6dinger bridge via entropy-regularized transport on mesh domains.",
+   "contribution": "Sharper, faster interpolation with exact endpoint marginals on high-resolution meshes.",
+   "primary_theme": "optimal transport",
+   "methods": [
+    "optimal transport",
+    "heat equation",
+    "sinkhorn algorithm"
+   ]
+  },
+  {
+   "title": "GimmBO: Interactive Generative Image Model Merging via Bayesian Optimization",
+   "doi": "10.1145/3811293",
+   "url": "https://www.semanticscholar.org/paper/3e071bc6e65cfac633d4f522b87b9319d16f37b9",
+   "pdf": "https://doi.org/10.1145/3811293",
+   "arxiv": "2601.18585",
+   "gid": 38,
+   "problem": "Manual tuning of diffusion adapter merging scales poorly with many adapters.",
+   "approach": "Preferential Bayesian optimization for interactive exploration of adapter coefficients.",
+   "contribution": "Efficient two-stage BO enabling practical high-dimensional adapter merging.",
+   "primary_theme": "image generation",
+   "methods": [
+    "bayesian optimization",
+    "diffusion model",
+    "adapter merging"
+   ]
+  },
+  {
+   "title": "Skinned Motion Retargeting with Spatially Adaptive Interaction Guidance",
+   "doi": "10.1145/3811354",
+   "url": "https://www.semanticscholar.org/paper/426dcc613b11a4d0f23395a92292b8ffc6d5c464",
+   "pdf": "https://doi.org/10.1145/3811354",
+   "arxiv": "2605.19355",
+   "gid": 39,
+   "problem": "Retargeting motion to exaggerated characters loses interaction semantics.",
+   "approach": "Transformer-based anchor refinement with spatial adaptation for interaction guidance.",
+   "contribution": "Geometry-aware retargeting preserving self-contact across varied body proportions.",
+   "primary_theme": "motion retargeting",
+   "methods": [
+    "transformer",
+    "graph neural network",
+    "spatial adaptation"
+   ]
+  },
+  {
+   "title": "Sample Matching for Joint Extinction Gradient Estimation in Differentiable Volume Rendering",
+   "doi": "10.1145/3811329",
+   "url": "https://www.semanticscholar.org/paper/42bfe088db9ff528254a4701e860d616fc479091",
+   "pdf": "https://doi.org/10.1145/3811329",
+   "arxiv": null,
+   "gid": 40,
+   "problem": "Differentiable volume rendering suffers from high gradient variance.",
+   "approach": "Sample matching coupling scattering and transmittance components at shared locations.",
+   "contribution": "Up to 80% variance reduction in extinction gradients via coupled estimators.",
+   "primary_theme": "volume rendering",
+   "methods": [
+    "differentiable rendering",
+    "monte carlo",
+    "gradient estimation"
+   ]
+  },
+  {
+   "title": "Surface Power Diagrams for Knit Singularity Placement",
+   "doi": "10.1145/3811401",
+   "url": "https://www.semanticscholar.org/paper/43323d1ad765b9ea74eabee05a0e0f3dcc723db4",
+   "pdf": "https://doi.org/10.1145/3811401",
+   "arxiv": null,
+   "gid": 41,
+   "problem": "Global knit structure planning has limited singularity placement optimization.",
+   "approach": "Power diagram generalization via geodesic heat kernels for optimal singularity quantization.",
+   "contribution": "Faster knit graph generation with robust helix-free constraints.",
+   "primary_theme": "knit structure planning",
+   "methods": [
+    "power diagram",
+    "lloyd algorithm",
+    "geodesic heat kernel"
+   ]
+  },
+  {
+   "title": "ToF ReSTIR: Time-of-Flight Rendering with Spatio-temporal Reservoir Resampling",
+   "doi": "10.1145/3811299",
+   "url": "https://www.semanticscholar.org/paper/487242ec3cc5d7d59f4920a06bf4b7b6220dbe4f",
+   "pdf": "https://doi.org/10.1145/3811299",
+   "arxiv": "2605.11536",
+   "gid": 42,
+   "problem": "Time-of-flight rendering is computationally expensive for interactive applications.",
+   "approach": "ReSTIR adaptation with path-length-aware shift mapping for temporal gating.",
+   "contribution": "Interactive-rate ToF simulation handling dynamic scenes with glossy materials.",
+   "primary_theme": "time-resolved rendering",
+   "methods": [
+    "reservoir resampling",
+    "path reuse",
+    "temporal gating"
+   ]
+  },
+  {
+   "title": "An Extended Full GKS Formulation for High-Efficiency and Low-Memory Two-Phase Flow Simulation",
+   "doi": "10.1145/3811290",
+   "url": "https://www.semanticscholar.org/paper/48ee1be7225927fc60060e8fa885655316e2e2b6",
+   "pdf": "https://doi.org/10.1145/3811290",
+   "arxiv": null,
+   "gid": 43,
+   "problem": "Two-phase flow simulation struggles to balance accuracy, efficiency, and memory.",
+   "approach": "Extended GKS formulation coupled with phase-field model on Navier-Stokes solver.",
+   "contribution": "Unified two-phase solver with high accuracy, efficiency, and low memory footprint.",
+   "primary_theme": "two-phase flow",
+   "methods": [
+    "gas-kinetic scheme",
+    "phase-field model",
+    "explicit solver"
+   ]
+  },
+  {
+   "title": "Generative Modeling with Orbit-Space Particle Flow Matching",
+   "doi": "10.1145/3811342",
+   "url": "https://www.semanticscholar.org/paper/49a28644bd2112373bbc65bc57b12da0224e3e90",
+   "pdf": "https://doi.org/10.1145/3811342",
+   "arxiv": "2605.02222",
+   "gid": 44,
+   "problem": "Particle flow matching has high per-index variance and curved learning flows.",
+   "approach": "Orbit-space canonicalization with geometric probability paths and arc-length awareness.",
+   "contribution": "Particle generation with 2-100x error reduction and competitive surface normal quality.",
+   "primary_theme": "generative modeling",
+   "methods": [
+    "flow matching",
+    "particle systems",
+    "geometric probability paths"
+   ]
+  },
+  {
+   "title": "Photons \u00d7 Force: Differentiable Radiation Pressure Modeling",
+   "doi": "10.1145/3811396",
+   "url": "https://www.semanticscholar.org/paper/4acf31e933320f75475f7583726bda8814a4133a",
+   "pdf": "https://doi.org/10.1145/3811396",
+   "arxiv": "2602.10712",
+   "gid": 45,
+   "problem": "High computational cost limits radiation pressure modeling for spacecraft design optimization",
+   "approach": "Monte Carlo simulation with neural proxy model for fast differentiable force queries",
+   "contribution": "Orders of magnitude speedup enabling inverse design optimization of radiation pressure effects",
+   "primary_theme": "physics-based optimization",
+   "methods": [
+    "monte carlo simulation",
+    "neural networks",
+    "differentiable rendering"
+   ]
+  },
+  {
+   "title": "Robust Computation of Boundary Path Integrals Using Kernel-Density Estimation",
+   "doi": "10.1145/3811325",
+   "url": "https://www.semanticscholar.org/paper/4e83502eb15801d50dd832445824a75433a38f7d",
+   "pdf": "https://doi.org/10.1145/3811325",
+   "arxiv": null,
+   "gid": 46,
+   "problem": "Robust numerical estimation of boundary path integrals for differentiable rendering remains challenging",
+   "approach": "Kernel density estimation to expand integration domain, avoiding direct delta-function sampling",
+   "contribution": "First kernel-density boundary integral formulation with consistent derivative estimates",
+   "primary_theme": "differentiable rendering",
+   "methods": [
+    "kernel density estimation",
+    "path integrals",
+    "inverse rendering"
+   ]
+  },
+  {
+   "title": "MPM Lite: Linear Kernels and Integration without Particles",
+   "doi": "10.1145/3811294",
+   "url": "https://www.semanticscholar.org/paper/4fad535e6d8052addfe1b1058b2065307053cea7",
+   "pdf": "https://doi.org/10.1145/3811294",
+   "arxiv": "2602.07853",
+   "gid": 47,
+   "problem": "Material Point Method implicit solve cost scales with particle count, limiting performance",
+   "approach": "Hybrid method using compact linear kernels with fixed quadrature points, eliminating particle quadrature",
+   "contribution": "Solver complexity independent of particle count via rotation-free deformation reference",
+   "primary_theme": "physics simulation",
+   "methods": [
+    "hybrid lagrangian eulerian",
+    "material point method",
+    "fem integration"
+   ]
+  },
+  {
+   "title": "Generalized Spherical Harmonics Products using Spherical Grids",
+   "doi": "10.1145/3811322",
+   "url": "https://www.semanticscholar.org/paper/504092464459e7c4dcdc333af421344f0ed0cda0",
+   "pdf": "https://doi.org/10.1145/3811322",
+   "arxiv": null,
+   "gid": 48,
+   "problem": "Spherical Harmonics product computation is inefficient and requires identical input orders",
+   "approach": "Spherical Grids as intermediate representation enabling point-wise multiplication",
+   "contribution": "Generalized SH products supporting different orders with superior performance",
+   "primary_theme": "rendering algorithms",
+   "methods": [
+    "spherical harmonics",
+    "grid representation",
+    "frequency domain"
+   ]
+  },
+  {
+   "title": "Robust Constrained Tetrahedralization with Steiner-point-free Boundaries",
+   "doi": "10.1145/3829358",
+   "url": "https://www.semanticscholar.org/paper/5176c0f584832de751f9a671d590289e046b01fe",
+   "pdf": "https://doi.org/10.1145/3829358",
+   "arxiv": null,
+   "gid": 49,
+   "problem": "Controlling Steiner point placement in tetrahedral mesh generation for complex geometries",
+   "approach": "Flip-hard configuration analysis with boundary Steiner relocation and local optimization",
+   "contribution": "Robust constrained tetrahedralization preserving boundary topology without Steiner points",
+   "primary_theme": "mesh generation",
+   "methods": [
+    "constrained tetrahedralization",
+    "steiner points",
+    "mesh optimization"
+   ]
+  },
+  {
+   "title": "HoloPathTracer: Fast and Accurate Wave Path Tracing for Holography",
+   "doi": "10.1145/3811351",
+   "url": "https://www.semanticscholar.org/paper/530c9d9af9f5e368b2666e31a3181c4786d744e0",
+   "pdf": "https://doi.org/10.1145/3811351",
+   "arxiv": "2606.14173",
+   "gid": 50,
+   "problem": "Existing CGH paradigms separate radiometric and wave-optical computation, limiting visual effects",
+   "approach": "Monte Carlo path tracing solving rendering and wave propagation equations simultaneously",
+   "contribution": "Physically accurate hologram generation with full 3D visual cues and material effects",
+   "primary_theme": "holographic rendering",
+   "methods": [
+    "wave optics",
+    "path tracing",
+    "monte carlo"
+   ]
+  },
+  {
+   "title": "PAColorHolo: A Perceptually-Aware Color Management Framework for Holographic Displays",
+   "doi": "10.1145/3789511",
+   "url": "https://www.semanticscholar.org/paper/53bab426db248a7cb967792372c29771ede4cd85",
+   "pdf": "https://doi.org/10.1145/3789511",
+   "arxiv": "2601.14766",
+   "gid": 51,
+   "problem": "Holographic displays struggle with perceptually accurate color reproduction due to system distortions",
+   "approach": "Color space transformation with adaptive illumination and neural perceptual color response modeling",
+   "contribution": "Perceptually-aware color management framework improving color fidelity in holographic displays",
+   "primary_theme": "holographic display",
+   "methods": [
+    "color management",
+    "neural networks",
+    "perceptual modeling"
+   ]
+  },
+  {
+   "title": "HIL: Hybrid Imitation Learning for Dynamic Athletic Control",
+   "doi": "10.1145/3829364",
+   "url": "https://www.semanticscholar.org/paper/53c8c29d003e26edaf470b015919ba9d91d80c3a",
+   "pdf": "https://doi.org/10.1145/3829364",
+   "arxiv": null,
+   "gid": 52,
+   "problem": "Data-driven character controllers struggle with novel environments and skill composition",
+   "approach": "Hybrid framework combining motion tracking with adversarial imitation learning via multi-task learning",
+   "contribution": "Athletic controller preserving motion naturalness while generalizing to challenging environments",
+   "primary_theme": "character animation",
+   "methods": [
+    "imitation learning",
+    "reinforcement learning",
+    "motion control"
+   ]
+  },
+  {
+   "title": "Invisible Holographic Window: Full-color 3D Image Reconstruction from Transparent Surface-relief Computer-generated Holograms",
+   "doi": "10.1145/3811381",
+   "url": "https://www.semanticscholar.org/paper/5a08dc24185b9623500b14d78a948af9b17ccf4b",
+   "pdf": "https://doi.org/10.1145/3811381",
+   "arxiv": null,
+   "gid": 53,
+   "problem": "Limited wavelength selectivity in DOEs reduces transmittance, requiring separate CGHs for colors",
+   "approach": "Spatial frequency domain band-division multiplexing on shallow sinusoidal phase profiles",
+   "contribution": "Single transparent surface-relief CGH achieving full-color 3D reconstruction on glass",
+   "primary_theme": "holographic displays",
+   "methods": [
+    "computer generated holograms",
+    "diffractive optics",
+    "frequency multiplexing"
+   ]
+  },
+  {
+   "title": "Floating-Point Robustness in Parametric Surface Continuous Collision Detection: From Algorithm to Benchmarking",
+   "doi": "10.1145/3811310",
+   "url": "https://www.semanticscholar.org/paper/5a1feaca6f1cceccd8126cda4a02b4966cda85cd",
+   "pdf": "https://doi.org/10.1145/3811310",
+   "arxiv": null,
+   "gid": 54,
+   "problem": "Ensuring floating-point robustness for parametric surface collision detection remains open",
+   "approach": "Time-dependent inclusion-based method with error decomposition and rational arithmetic benchmarking",
+   "contribution": "First floating-point robust CCD framework for parametric surfaces with rigorous validation",
+   "primary_theme": "collision detection",
+   "methods": [
+    "continuous collision detection",
+    "robustness analysis",
+    "benchmarking"
+   ]
+  },
+  {
+   "title": "TOG 45(4) Editorial",
+   "doi": "10.1145/3815597",
+   "url": "https://www.semanticscholar.org/paper/5c910402755e8eea456ee759feb3f54fe791065c",
+   "pdf": "https://doi.org/10.1145/3815597",
+   "arxiv": null,
+   "gid": 55,
+   "problem": "SIGGRAPH 2026 conference editorial introduction to special issue",
+   "approach": "Editorial documenting acceptance statistics and submissions overview",
+   "contribution": "Context for 327 accepted papers from 1177 submissions across journal and conference tracks",
+   "primary_theme": "conference editorial",
+   "methods": []
+  },
+  {
+   "title": "Uniformly Deployable Kirigami on Arbitrary Planar Graphs",
+   "doi": "10.1145/3811326",
+   "url": "https://www.semanticscholar.org/paper/601f178d11bc45c62f2ccbb6f5fa35b2bd383a29",
+   "pdf": "https://doi.org/10.1145/3811326",
+   "arxiv": null,
+   "gid": 56,
+   "problem": "Designing deployable kirigami from arbitrary planar graphs lacks systematic framework",
+   "approach": "Analytical framework deriving geometric constraints for uniform rigid deployability",
+   "contribution": "Multiple distinct kirigami structures from same graph with full design space characterization",
+   "primary_theme": "kirigami design",
+   "methods": [
+    "computational geometry",
+    "mechanical design",
+    "graph theory"
+   ]
+  },
+  {
+   "title": "Dual-Path Holographic Laser-Excited Volumetric Display",
+   "doi": "10.1145/3816042",
+   "url": "https://www.semanticscholar.org/paper/614305ac112901da83cfab6fc904758e0a3cced3",
+   "pdf": "https://doi.org/10.1145/3816042",
+   "arxiv": null,
+   "gid": 57,
+   "problem": "Volumetric displays require improved brightness and voxel density for practical applications",
+   "approach": "Dual optical paths with femtosecond lasers and synchronized spatial light modulators",
+   "contribution": "Centimeter-scale volumetric graphics with interactive performance under room lighting",
+   "primary_theme": "volumetric display",
+   "methods": [
+    "laser rendering",
+    "holography",
+    "volumetric graphics"
+   ]
+  },
+  {
+   "title": "Thermal Non-Line-of-Sight Imaging through Rough Surfaces",
+   "doi": "10.1145/3811030",
+   "url": "https://www.semanticscholar.org/paper/638321a0651c4081c8d40831314ed64c119a0c56",
+   "pdf": "https://doi.org/10.1145/3811030",
+   "arxiv": null,
+   "gid": 58,
+   "problem": "Reconstructing hidden scenes through rough surfaces suffers from severe spatial mixing",
+   "approach": "Physics-embedded neural network estimating convolution kernels for light transport",
+   "contribution": "Real-time thermal NLOS imaging through rough surfaces with relative depth estimation",
+   "primary_theme": "computational imaging",
+   "methods": [
+    "neural networks",
+    "non line of sight",
+    "thermal imaging"
+   ]
+  },
+  {
+   "title": "A Unified Homogenization Framework for Straight- and Curved-Crease Origami Materials",
+   "doi": "10.1145/3811301",
+   "url": "https://www.semanticscholar.org/paper/63b649757fdc8b21479585f087d32f5e27f2267f",
+   "pdf": "https://doi.org/10.1145/3811301",
+   "arxiv": null,
+   "gid": 59,
+   "problem": "Predicting macroscopic origami material properties from crease patterns remains challenging",
+   "approach": "Simulation-based folding with numerical homogenization and Classical Laminate Theory",
+   "contribution": "Unified framework for straight and curved crease materials revealing diverse behavior",
+   "primary_theme": "origami materials",
+   "methods": [
+    "homogenization",
+    "simulation",
+    "material modeling"
+   ]
+  },
+  {
+   "title": "M-ABD: Scalable, Efficient, and Robust Multi-Affine-Body Dynamics",
+   "doi": "10.48550/arXiv.2603.08079",
+   "url": "https://www.semanticscholar.org/paper/679616243fccddfcb544ef5f7b7c3c36a6fd73de",
+   "pdf": null,
+   "arxiv": "2603.08079",
+   "gid": 60,
+   "problem": "Simulating large-scale articulated assemblies with numerical stiffness and high DOF",
+   "approach": "Linear kinematic mapping with affine body dynamics and corotational framework",
+   "contribution": "Interactive simulation of hundreds of thousands of bodies via pre-factorized matrices",
+   "primary_theme": "rigid body dynamics",
+   "methods": [
+    "affine body dynamics",
+    "corotational",
+    "constraint enforcement",
+    "specialized solvers"
+   ]
+  },
+  {
+   "title": "DMP: Directable Motion Retargeting through Motion Paraphrasing",
+   "doi": "10.1145/3829359",
+   "url": "https://www.semanticscholar.org/paper/6938da28aa6dfd43689ec786caa5fd1777c8b323",
+   "pdf": "https://doi.org/10.1145/3829359",
+   "arxiv": null,
+   "gid": 61,
+   "problem": "Motion retargeting limits diversity, realism, and artistic control across character morphologies",
+   "approach": "Diffusion-based motion paraphrasing with spatio-temporal constraints and masked inpainting",
+   "contribution": "Diverse, controllable motion retargeting via diffusion priors and flexible constraint specification",
+   "primary_theme": "motion retargeting",
+   "methods": [
+    "diffusion",
+    "motion paraphrasing",
+    "masked inpainting",
+    "loss guidance"
+   ]
+  },
+  {
+   "title": "BodyReLux: Temporally Consistent Full-Body Video Relighting",
+   "doi": "10.1145/3811352",
+   "url": "https://www.semanticscholar.org/paper/6bae9afcb76871594371fa7de47aeade03812629",
+   "pdf": "https://arxiv.org/pdf/2605.21766",
+   "arxiv": "2605.21766",
+   "gid": 62,
+   "problem": "Relighting full-body video while maintaining temporal consistency and photorealism",
+   "approach": "Video diffusion with token-based lighting conditioning and masked attention control",
+   "contribution": "Photorealistic temporally consistent human relighting from hybrid OLAT and dynamic capture",
+   "primary_theme": "video relighting",
+   "methods": [
+    "video diffusion",
+    "token conditioning",
+    "masked attention",
+    "dynamic capture"
+   ]
+  },
+  {
+   "title": "A Real-time, Multiscale and Procedural Feather Appearance Model",
+   "doi": "10.1145/3811328",
+   "url": "https://www.semanticscholar.org/paper/6ebf9c0393cd550439edb0bb928b9c08e502bcf0",
+   "pdf": "https://doi.org/10.1145/3811328",
+   "arxiv": null,
+   "gid": 63,
+   "problem": "Realistic bird feather rendering requires high detail but impractical memory and computation",
+   "approach": "Hierarchical procedural representation in UV domain with novel scattering model",
+   "contribution": "Real-time feather rendering from single photo with minimal memory and high visual fidelity",
+   "primary_theme": "appearance modeling",
+   "methods": [
+    "procedural representation",
+    "hierarchical encoding",
+    "scattering model",
+    "multiscale rendering"
+   ]
+  },
+  {
+   "title": "ATGS: Anchored Temporal Gaussian Splatting for Long Volumetric Video Representation",
+   "doi": "10.1145/3811306",
+   "url": "https://www.semanticscholar.org/paper/71945117d6f400609038c5ea15ffba3d63c59c40",
+   "pdf": "https://doi.org/10.1145/3811306",
+   "arxiv": null,
+   "gid": 64,
+   "problem": "Long volumetric videos suffer from temporal instability and motion complexity artifacts",
+   "approach": "Time-conditioned anchors organizing Gaussians with temporal windowing strategy",
+   "contribution": "Stable volumetric video reconstruction for long sequences with complex motions",
+   "primary_theme": "volumetric video",
+   "methods": [
+    "gaussian splatting",
+    "time-conditioned anchors",
+    "temporal windowing",
+    "multi-level features"
+   ]
+  },
+  {
+   "title": "Tensor Decomposition-Based Four-dimensional Background-Oriented Schlieren Tomography for High-Speed, High-Fidelity Flow Field Reconstruction",
+   "doi": "10.1145/3809488",
+   "url": "https://www.semanticscholar.org/paper/72d01ad780c5d789ea664c3a49b28f1e51613b14",
+   "pdf": "https://doi.org/10.1145/3809488",
+   "arxiv": null,
+   "gid": 65,
+   "problem": "Time-resolved flow field reconstruction from Schlieren tomography is memory and time expensive",
+   "approach": "Tensor decomposition with neural networks and distortion correction optimization",
+   "contribution": "Fast high-fidelity flow field reconstruction via tensor decomposition and ray tracing",
+   "primary_theme": "flow reconstruction",
+   "methods": [
+    "tensor decomposition",
+    "neural networks",
+    "ray tracing",
+    "mixed-precision computing"
+   ]
+  },
+  {
+   "title": "Spatiotemporal FLIP for Fast Free-Surface and Two-Phase Simulation With Very Large Time Steps",
+   "doi": "10.1145/3811289",
+   "url": "https://www.semanticscholar.org/paper/72de78bc50217a495f56db9de532298725379e7b",
+   "pdf": "https://doi.org/10.1145/3811289",
+   "arxiv": null,
+   "gid": 66,
+   "problem": "Large time steps in liquid simulation cause temporal aliasing and free-surface artifacts",
+   "approach": "4D space-time particle sampling with separable kernels and phase-field weighting",
+   "contribution": "Order-of-magnitude larger time steps in FLIP solvers preserving flow structures",
+   "primary_theme": "fluid simulation",
+   "methods": [
+    "flip",
+    "space-time sampling",
+    "phase-field",
+    "particle-grid methods"
+   ]
+  },
+  {
+   "title": "Fast and Accurate Gaussian Process Modelling of Real-World Materials",
+   "doi": "10.1145/3806194",
+   "url": "https://www.semanticscholar.org/paper/746d55da081851bf071478aa96d47055b9b4add1",
+   "pdf": "https://doi.org/10.1145/3806194",
+   "arxiv": null,
+   "gid": 67,
+   "problem": "BRDF modeling requires both accuracy and computational efficiency for diverse materials",
+   "approach": "Gaussian process regression with generalized distance kernel and factorization",
+   "contribution": "Fast analytical BRDF representations with compact form and flexible accuracy",
+   "primary_theme": "BRDF modeling",
+   "methods": [
+    "gaussian process",
+    "bayesian regression",
+    "covariance kernels",
+    "spherical harmonics"
+   ]
+  },
+  {
+   "title": "Inverse Rendering for Discrete X-Ray Computed Tomography",
+   "doi": "10.1145/3811391",
+   "url": "https://www.semanticscholar.org/paper/74f38a1a0377c1cf80f97597dcfca5747960b501",
+   "pdf": "https://doi.org/10.1145/3811391",
+   "arxiv": null,
+   "gid": 68,
+   "problem": "Discrete tomography becomes ill-posed with sparse or limited-angle X-ray projections",
+   "approach": "Gradient-based volumetric optimization with probability distributions over materials",
+   "contribution": "Inverse rendering approach surpasses SIRT/DART in sparse and limited-angle scenarios",
+   "primary_theme": "computed tomography",
+   "methods": [
+    "inverse rendering",
+    "gradient optimization",
+    "volumetric loss",
+    "material distributions"
+   ]
+  },
+  {
+   "title": "The Antipodal Method: Fast, Accurate, and Robust 3D Generalized Winding Numbers",
+   "doi": "10.1145/3811323",
+   "url": "https://www.semanticscholar.org/paper/78de1b1dbadf5036e2ed801d92b0b7f13931fb16",
+   "pdf": "https://doi.org/10.1145/3811323",
+   "arxiv": "2605.01536",
+   "gid": 69,
+   "problem": "Computing generalized winding numbers trades off accuracy versus computational efficiency",
+   "approach": "Ray-surface intersection plus boundary integral formulation with efficient discretization",
+   "contribution": "22X CPU speedup and 109 queries/second GPU throughput for precise winding numbers",
+   "primary_theme": "geometry processing",
+   "methods": [
+    "winding numbers",
+    "ray tracing",
+    "boundary integrals",
+    "spherical projection"
+   ]
+  },
+  {
+   "title": "Stress-Aware Panelization of Freeform Surfaces",
+   "doi": "10.1145/3811387",
+   "url": "https://www.semanticscholar.org/paper/7a9194585ca321f9b7abd6e1291494c8940ea887",
+   "pdf": "https://doi.org/10.1145/3811387",
+   "arxiv": null,
+   "gid": 70,
+   "problem": "Panelizing freeform surfaces requires balancing geometric fidelity and structural robustness",
+   "approach": "Continuous surface flow coupled to stress analysis via creased elastic shells",
+   "contribution": "Joint optimization of geometry and panelization for both aesthetic and structural goals",
+   "primary_theme": "surface panelization",
+   "methods": [
+    "surface flow",
+    "stress analysis",
+    "elastic shells",
+    "shape optimization"
+   ]
+  },
+  {
+   "title": "Untangling Surfaces via Shape and Mesh Repulsion",
+   "doi": "10.1145/3811382",
+   "url": "https://www.semanticscholar.org/paper/7b7774a3773f8caf2fee47e5e4aebd86cc2af11e",
+   "pdf": "https://doi.org/10.1145/3811382",
+   "arxiv": null,
+   "gid": 71,
+   "problem": "Self-intersections in meshes break downstream simulation, fabrication, and learning pipelines",
+   "approach": "Energy-based framework enforcing embeddedness at both shape and mesh levels",
+   "contribution": "Reliable self-intersection removal via global shape and local mesh repulsion energies",
+   "primary_theme": "surface untangling",
+   "methods": [
+    "energy minimization",
+    "shape repulsion",
+    "mesh penalties",
+    "multi-level enforcement"
+   ]
+  },
+  {
+   "title": "Grow3D: Hierarchical Next-Scale Octree Prediction for Fast and High-Fidelity 3D Shape Generation",
+   "doi": "10.1145/3820379",
+   "url": "https://www.semanticscholar.org/paper/7cb46f245cb3e124a0320d769417e8bb83021902",
+   "pdf": "https://doi.org/10.1145/3820379",
+   "arxiv": null,
+   "gid": 72,
+   "problem": "3D shape generation via diffusion or auto-regressive models requires dozens of slow steps",
+   "approach": "Next-scale prediction auto-regressive framework with VQ-VAE and octree attention",
+   "contribution": "Fast high-quality 3D shape generation via coarse-to-fine octree structure prediction",
+   "primary_theme": "3D shape generation",
+   "methods": [
+    "auto-regressive",
+    "next-scale prediction",
+    "vq-vae",
+    "octree attention"
+   ]
+  },
+  {
+   "title": "A Robust and Efficient Intersection Algorithm for NURBS Surfaces: Handling Small Loops and Tangent Intersections",
+   "doi": "10.1145/3807948",
+   "url": "https://www.semanticscholar.org/paper/7d60e630cd05bb43caf0977ccdd7fba2096ff63d",
+   "pdf": "https://doi.org/10.1145/3807948",
+   "arxiv": null,
+   "gid": 73,
+   "problem": "NURBS surface intersection fails on complex topology with small loops and tangencies",
+   "approach": "Winding number theory combined with subdivision scheme for vector field detection",
+   "contribution": "Robust detection of all intersection branches including small loops and tangencies",
+   "primary_theme": "NURBS intersection",
+   "methods": [
+    "winding number theory",
+    "subdivision scheme",
+    "vector field analysis",
+    "topological detection"
+   ]
+  },
+  {
+   "title": "Interactive Yarn-level Knitwear with Nested Douglas-Rachford Splitting",
+   "doi": "10.1145/3811277",
+   "url": "https://www.semanticscholar.org/paper/80e2957983181a5ac0b822330b5018626661eb78",
+   "pdf": "https://doi.org/10.1145/3811277",
+   "arxiv": null,
+   "gid": 74,
+   "problem": "Yarn-level knitwear simulation is prohibitively expensive due to high DOF and non-convex coupling",
+   "approach": "Nested Douglas-Rachford splitting decoupling non-convex variational energy subproblems",
+   "contribution": "Stable high-resolution knitwear simulation via convexification and theoretically grounded metrics",
+   "primary_theme": "cloth simulation",
+   "methods": [
+    "douglas-rachford splitting",
+    "nested decomposition",
+    "convexification",
+    "admm"
+   ]
+  },
+  {
+   "title": "Guidestar-Free Adaptive Optics with Asymmetric Apertures",
+   "doi": "10.1145/3809501",
+   "url": "https://www.semanticscholar.org/paper/814cfe34cda97cde72f42f94f9f7ce28b39fb7d0",
+   "pdf": "https://doi.org/10.1145/3809501",
+   "arxiv": "2602.07029",
+   "gid": 75,
+   "problem": "Real-time wavefront sensing without guidestar or dedicated sensor in adaptive optics",
+   "approach": "Asymmetric apertures with phase retrieval and machine learning for computational wavefront sensing",
+   "contribution": "First guidestar-free closed-loop AO system with order of magnitude fewer measurements",
+   "primary_theme": "adaptive optics imaging",
+   "methods": [
+    "phase retrieval",
+    "machine learning",
+    "computational sensing"
+   ]
+  },
+  {
+   "title": "Learning Sparse Singularities for Cross Field Design",
+   "doi": "10.1145/3787520",
+   "url": "https://www.semanticscholar.org/paper/83abfb7bed6c44e990f40adaa87585dbafad7328",
+   "pdf": "https://doi.org/10.1145/3787520",
+   "arxiv": null,
+   "gid": 76,
+   "problem": "Manual quad mesh design; neural networks struggle with cross field discontinuities",
+   "approach": "Learn sparse singularities and indices, then use smooth conventional methods to connect",
+   "contribution": "Smooth cross fields with varying topologies via learned singularities",
+   "primary_theme": "quad mesh generation",
+   "methods": [
+    "neural networks",
+    "singularity learning",
+    "geodesic distance fields"
+   ]
+  },
+  {
+   "title": "Pixel Cube: Diffusion-based Portrait Video Relighting Through Realistic Lighting Reproduction",
+   "doi": "10.1145/3811400",
+   "url": "https://www.semanticscholar.org/paper/84f3047c877f42606af9d6619d802ff103110485",
+   "pdf": "https://doi.org/10.1145/3811400",
+   "arxiv": "2606.02919",
+   "gid": 77,
+   "problem": "Dynamic portrait video relighting lacks photorealism and temporal consistency",
+   "approach": "Video diffusion models trained on hybrid real+rendered data with HDR environment map control",
+   "contribution": "Temporally consistent realistic relighting preserving subject identity and facial details",
+   "primary_theme": "portrait video relighting",
+   "methods": [
+    "diffusion models",
+    "neural rendering",
+    "hdr environment maps"
+   ]
+  },
+  {
+   "title": "A Two-Millisecond Passthrough Headset for Perceptual Studies",
+   "doi": "10.1145/3811335",
+   "url": "https://www.semanticscholar.org/paper/86b5a8083ebcead20fb679d94166bbcde26d71b6",
+   "pdf": "https://doi.org/10.1145/3811335",
+   "arxiv": "2603.15796",
+   "gid": 78,
+   "problem": "HMD end-to-end latency 12-60ms prevents perceptual studies of lower latencies",
+   "approach": "Video passthrough HMD with catadioptric design achieving 2ms e2e latency",
+   "contribution": "First passthrough HMD platform for studying sub-10ms latency effects on user experience",
+   "primary_theme": "virtual reality headsets",
+   "methods": [
+    "catadioptric optics",
+    "low-latency rendering",
+    "passthrough display"
+   ]
+  },
+  {
+   "title": "Woodstock: Interactive Modeling of Fungal Wood Decay",
+   "doi": "10.1145/3811376",
+   "url": "https://www.semanticscholar.org/paper/88ef33768b45dfaeb903fb38b43a7e1815d59442",
+   "pdf": "https://doi.org/10.1145/3811376",
+   "arxiv": null,
+   "gid": 79,
+   "problem": "Simulating complex fungal wood decay with biological and mechanical interactions",
+   "approach": "Volumetric tree representation with anisotropic diffusion, fungal colonization, and moisture dynamics",
+   "contribution": "Realistic simulation of cuboid fractures, trunk hollowing, and environmental moisture effects",
+   "primary_theme": "biological material simulation",
+   "methods": [
+    "volumetric simulation",
+    "anisotropic diffusion",
+    "grain-aligned meshes"
+   ]
+  },
+  {
+   "title": "Uncertainty-aware geometry processing on Gaussian Process Implicit Surfaces",
+   "doi": "10.1145/3811280",
+   "url": "https://www.semanticscholar.org/paper/89a577193e34cd580c346b65d08d1a6a23236640",
+   "pdf": "https://doi.org/10.1145/3811280",
+   "arxiv": null,
+   "gid": 80,
+   "problem": "Geometry processing on uncertain/probabilistic surface representations",
+   "approach": "Kac-Rice formula to embed differential operators on Gaussian Process Implicit Surfaces",
+   "contribution": "Uncertainty-aware geometry processing with principled handling of noise and ambiguity",
+   "primary_theme": "probabilistic geometry processing",
+   "methods": [
+    "gaussian processes",
+    "differential operators",
+    "kac-rice formula"
+   ]
+  },
+  {
+   "title": "MotionBricks: Scalable Real-Time Motions with Modular Latent Generative Model and Smart Primitives",
+   "doi": "10.1145/3811334",
+   "url": "https://www.semanticscholar.org/paper/8c10d76b4727be49cda4bbb2a7d9c3e8791148bb",
+   "pdf": "https://doi.org/10.1145/3811334",
+   "arxiv": "2604.24833",
+   "gid": 81,
+   "problem": "Real-time generative motion control lacks scalability and multi-modal control interfaces",
+   "approach": "Modular latent generative backbone with smart primitives for navigation and interaction",
+   "contribution": "Real-time generation of 350k+ motions with unified control interface and zero-shot adaptation",
+   "primary_theme": "motion generation and synthesis",
+   "methods": [
+    "latent generative models",
+    "smart primitives",
+    "motion authoring"
+   ]
+  },
+  {
+   "title": "ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting",
+   "doi": "10.1145/3811378",
+   "url": "https://www.semanticscholar.org/paper/8c964e7a26e5c9da1c8f5a62ada31f9a297da7d0",
+   "pdf": "https://arxiv.org/pdf/2605.06593",
+   "arxiv": "2605.06593",
+   "gid": 82,
+   "problem": "Robot motion retargeting produces physical inconsistencies and dynamically infeasible motions",
+   "approach": "Bilevel optimization jointly adapting reference motions while training tracking policy via RL",
+   "contribution": "Physically plausible retargeted motions enabling robust imitation learning across morphologies",
+   "primary_theme": "motion retargeting robotics",
+   "methods": [
+    "reinforcement learning",
+    "bilevel optimization",
+    "physics simulation"
+   ]
+  },
+  {
+   "title": "Gabor Fields: Orientation-Selective Level-of-Detail for Volume Rendering",
+   "doi": "10.1145/3811369",
+   "url": "https://www.semanticscholar.org/paper/8cb0bbc0263e7ee2ca11230aea1423d732e187ce",
+   "pdf": "https://doi.org/10.1145/3811369",
+   "arxiv": "2602.05081",
+   "gid": 83,
+   "problem": "Gaussian-based volume representations lack efficient hierarchical level-of-detail strategies",
+   "approach": "Mixture of Gabor kernels enabling orientation-selective frequency filtering via primitive pruning",
+   "contribution": "Continuous smooth LOD transitions without refitting or extra storage; faster ray traversal",
+   "primary_theme": "neural volume rendering",
+   "methods": [
+    "gabor filters",
+    "gaussian splatting",
+    "frequency filtering"
+   ]
+  },
+  {
+   "title": "Monte Carlo PDE Solvers for Nonlinear Radiative Boundary Conditions",
+   "doi": "10.1145/3811321",
+   "url": "https://www.semanticscholar.org/paper/8ddd357b6dbde1a4963520edb79eb84cec035814",
+   "pdf": "https://doi.org/10.1145/3811321",
+   "arxiv": "2604.21717",
+   "gid": 84,
+   "problem": "Monte Carlo PDE solvers cannot handle nonlinear radiative boundary conditions",
+   "approach": "Picard-style fixed-point iteration with heteroscedastic regression denoising for on-boundary estimates",
+   "contribution": "Stable convergent solver for thermal radiation with higher accuracy than linearization",
+   "primary_theme": "physics-based simulation",
+   "methods": [
+    "monte carlo methods",
+    "pde solvers",
+    "fixed-point iteration"
+   ]
+  },
+  {
+   "title": "Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+   "doi": "10.1145/3811284",
+   "url": "https://www.semanticscholar.org/paper/8e28267f4c5e3133f2c8cca55e9dc1f62a1a3d0c",
+   "pdf": "https://doi.org/10.1145/3811284",
+   "arxiv": "2607.08741",
+   "gid": 85,
+   "problem": "Motion generation requires offline computation or sacrifices controllability for real-time",
+   "approach": "Autoregressive hybrid representation combining explicit root features with latent body embedding",
+   "contribution": "Real-time streaming motion generation with text and kinematic constraint control",
+   "primary_theme": "human motion generation",
+   "methods": [
+    "autoregressive diffusion",
+    "hybrid representation",
+    "text conditioning"
+   ]
+  },
+  {
+   "title": "Spatially Accelerated Winding Numbers for Curved Geometry",
+   "doi": "10.1145/3811389",
+   "url": "https://www.semanticscholar.org/paper/8f09b64e0ca548613b3809628591abac8d85d376",
+   "pdf": "https://doi.org/10.1145/3811389",
+   "arxiv": "2605.19200",
+   "gid": 86,
+   "problem": "Fast winding number evaluation limited to discrete inputs; slow on curved geometry",
+   "approach": "Bounding volume hierarchy with precomputed moments for arbitrary NURBS curves and patches",
+   "contribution": "Sub-linear complexity winding numbers on curved geometry preserving feature accuracy",
+   "primary_theme": "winding number computation",
+   "methods": [
+    "bounding volume hierarchy",
+    "moment data",
+    "nurbs evaluation"
+   ]
+  },
+  {
+   "title": "Probe-based Walk on Spheres for Efficient Path Reusing",
+   "doi": "10.1145/3811366",
+   "url": "https://www.semanticscholar.org/paper/90c07037c62cb5975ac553f08e35e19bfe1a7274",
+   "pdf": "https://doi.org/10.1145/3811366",
+   "arxiv": null,
+   "gid": 87,
+   "problem": "Walk on Spheres has slow O(N^-1/2) convergence despite mesh-free flexibility",
+   "approach": "Reuse intermediate walk states as fixed spherical probes with Poisson integral evaluation",
+   "contribution": "Substantially improved sample efficiency via probe-based path reusing and variance reduction",
+   "primary_theme": "monte carlo pde solving",
+   "methods": [
+    "walk on spheres",
+    "variance reduction",
+    "control variates"
+   ]
+  },
+  {
+   "title": "Fast and Exact Winding Numbers for Triangle Meshes",
+   "doi": "10.1145/3811339",
+   "url": "https://www.semanticscholar.org/paper/94b32f4d8fce93c29bf8742983e480a33be8d839",
+   "pdf": "https://doi.org/10.1145/3811339",
+   "arxiv": null,
+   "gid": 88,
+   "problem": "Winding number computation on noisy meshes with gaps and self-intersections is slow",
+   "approach": "Analytical reduction of surface integral to single ray-mesh test and edge sum",
+   "contribution": "Orders of magnitude faster exact winding numbers with no approximations besides floating-point",
+   "primary_theme": "winding number computation",
+   "methods": [
+    "ray-mesh intersection",
+    "analytical reduction",
+    "robust geometry"
+   ]
+  },
+  {
+   "title": "Fiber-level Woven Fabric Capture from a Single Microscopic Image",
+   "doi": "10.1145/3816036",
+   "url": "https://www.semanticscholar.org/paper/95a4bbea4671e4d5b71901f84bfa1b99ca2aec9d",
+   "pdf": "https://doi.org/10.1145/3816036",
+   "arxiv": null,
+   "gid": 89,
+   "problem": "Fiber-level fabric geometry and appearance capture requires special devices or manual design",
+   "approach": "Coarse-to-fine parameter estimation with differentiable procedural geometry and appearance models",
+   "contribution": "Single microscope image to fiber-level fabric geometry and realistic rendering",
+   "primary_theme": "fabric appearance capture",
+   "methods": [
+    "differentiable rendering",
+    "procedural models",
+    "microscopy imaging"
+   ]
+  },
+  {
+   "title": "SAND: Spatially Adaptive Network Depth for Fast Sampling of Neural Implicit Surfaces",
+   "doi": "10.1145/3811341",
+   "url": "https://www.semanticscholar.org/paper/96d71743cc43e1737ef59def660cabf17b4679da",
+   "pdf": "https://doi.org/10.1145/3811341",
+   "arxiv": "2604.25936",
+   "gid": 90,
+   "problem": "High computational cost of neural implicit surface evaluations at all spatial locations",
+   "approach": "Spatially adaptive network depth map with tailed MLP for efficient query point evaluation",
+   "contribution": "Terminating network evaluation adaptively based on spatial geometry complexity reduces computation",
+   "primary_theme": "neural implicit surfaces",
+   "methods": [
+    "neural implicit representation",
+    "adaptive network depth",
+    "multi-layer perceptron"
+   ]
+  },
+  {
+   "title": "AtomSlicer: Constant-Thickness Field-Aligned Non-Planar Slicing and Continuous Toolpaths for FFF",
+   "doi": "10.1145/3811363",
+   "url": "https://www.semanticscholar.org/paper/96efc601fc1ba81fdb8c1789c5de9c7797884538",
+   "pdf": "https://doi.org/10.1145/3811363",
+   "arxiv": null,
+   "gid": 91,
+   "problem": "Multi-axis 3D printing requires continuous collision-free toolpaths with constant bead geometry",
+   "approach": "Field-aligned phase fields partitioned into layers with 2-RoSy-aligned toolpath synthesis",
+   "contribution": "Reduces travel moves by 1-2 orders of magnitude while preserving field constraints and constant thickness",
+   "primary_theme": "3D printing toolpaths",
+   "methods": [
+    "field-aligned layers",
+    "phase fields",
+    "collision-free toolpaths"
+   ]
+  },
+  {
+   "title": "CasLayout: Cascaded 3D Layout Diffusion for Indoor Scene Synthesis with Implicit Relation Modeling",
+   "doi": "10.1145/3811347",
+   "url": "https://www.semanticscholar.org/paper/975b63c859859ecd141d62cc63d550fb8fa45765",
+   "pdf": "https://doi.org/10.1145/3811347",
+   "arxiv": "2604.27361",
+   "gid": 92,
+   "problem": "3D indoor scene synthesis lacks global architectural constraints and struggles with local semantic consistency",
+   "approach": "Cascaded diffusion framework with sparse relation graphs and building elements as constraints",
+   "contribution": "Reduces data requirements and enables zero-shot image-to-scene generation via LLM/VLM integration",
+   "primary_theme": "3D scene generation",
+   "methods": [
+    "cascaded diffusion",
+    "sparse relation graphs",
+    "conditional constraints"
+   ]
+  },
+  {
+   "title": "Implicit Minimal Surfaces for Bijective Correspondences",
+   "doi": "10.1145/3811368",
+   "url": "https://www.semanticscholar.org/paper/981d199c34921eff47930fbf8e9a2b9787521739",
+   "pdf": "https://doi.org/10.1145/3811368",
+   "arxiv": "2605.02770",
+   "gid": 93,
+   "problem": "Computing bijective surface correspondences requires complex combinatorial mesh modifications and barrier functions",
+   "approach": "Implicit 4D mapping surface using complex sections minimized via Ginzburg-Landau functional",
+   "contribution": "Robust correspondence computation without initialization requirement or mesh modifications needed",
+   "primary_theme": "surface correspondence",
+   "methods": [
+    "implicit representation",
+    "complex sections",
+    "ginzburg-landau functional"
+   ]
+  },
+  {
+   "title": "Mixed Material Point Methods for Stiff Elastoplasticity",
+   "doi": "10.1145/3811345",
+   "url": "https://www.semanticscholar.org/paper/98aa5aaa669fa6d8b27950a7f675d1ecabf9a455",
+   "pdf": "https://doi.org/10.1145/3811345",
+   "arxiv": null,
+   "gid": 94,
+   "problem": "Simulating stiff elastoviscoplastic materials requires stable CFL-rate integration handling high-strain deformation",
+   "approach": "Mixed Material Point Methods with implicit integration producing well-posed symmetric optimization",
+   "contribution": "Extends mixed discretization to handle finite-strain viscoelasticity and general flow rules efficiently",
+   "primary_theme": "material point methods",
+   "methods": [
+    "material point method",
+    "implicit integration",
+    "mixed discretization"
+   ]
+  },
+  {
+   "title": "Hi-SPAD: Video-Rate Hyperspectral Imaging and Inference with Single-Photon Cameras",
+   "doi": "10.1145/3829360",
+   "url": "https://www.semanticscholar.org/paper/9c19574958436862d23aac162cd06ac80be46575",
+   "pdf": "https://doi.org/10.1145/3829360",
+   "arxiv": null,
+   "gid": 95,
+   "problem": "Hyperspectral imaging requires high spatial, spectral, temporal resolution under passive ambient lighting",
+   "approach": "Pushbroom architecture combining single-photon avalanche diode sensors for photon-counting spectral sensing",
+   "contribution": "Demonstrates 26fps hyperspectral video with 123 spectral channels under ambient illumination",
+   "primary_theme": "hyperspectral imaging",
+   "methods": [
+    "single-photon sensors",
+    "pushbroom configuration",
+    "spectrum reconstruction"
+   ]
+  },
+  {
+   "title": "Structural MAT: Clean and Scalable Medial Axis Simplification via Explicit Surface Correspondence",
+   "doi": "10.1145/3811291",
+   "url": "https://www.semanticscholar.org/paper/9d38f6bac96864c2ab8226e19ebf4a745728f32a",
+   "pdf": "https://doi.org/10.1145/3811291",
+   "arxiv": "2605.02302",
+   "gid": 96,
+   "problem": "Computing high-quality medial axis transform with structural features and robust reconstruction from discrete meshes",
+   "approach": "Explicit surface correspondence tracking during QEM-like Voronoi simplification with priority control strategies",
+   "contribution": "Produces MAT with strong structural alignment and regularity while achieving high runtime efficiency",
+   "primary_theme": "medial axis transform",
+   "methods": [
+    "voronoi diagram",
+    "qem simplification",
+    "surface correspondence"
+   ]
+  },
+  {
+   "title": "ProXeek: Seeking and Leveraging Real-World Objects and Environments as Haptic Proxies for Virtual Reality through Multimodal Reasoning",
+   "doi": "10.1145/3811349",
+   "url": "https://www.semanticscholar.org/paper/9f27d2de680da2dba1dc836890f24ed7b552c832",
+   "pdf": "https://doi.org/10.1145/3811349",
+   "arxiv": null,
+   "gid": 97,
+   "problem": "Providing realistic haptic feedback in VR without bulky hardware or pre-fabricated physical proxies",
+   "approach": "LLM-based multi-agent system using multimodal reasoning to match virtual objects with real-world proxies",
+   "contribution": "Leverages environmental snapshots to identify viable haptic proxies with higher fidelity than 3D-printed replicas",
+   "primary_theme": "haptic VR interaction",
+   "methods": [
+    "large language model",
+    "multimodal reasoning",
+    "proxy matching"
+   ]
+  },
+  {
+   "title": "NeuBase: Spline Surfaces with Neural Basis Functions",
+   "doi": "10.1145/3811355",
+   "url": "https://www.semanticscholar.org/paper/a0a4e2605d2e19115e1cc95a7cd450f21cda5f24",
+   "pdf": "https://doi.org/10.1145/3811355",
+   "arxiv": null,
+   "gid": 98,
+   "problem": "Neural surface representations lack intuitive real-time deformation and geometric properties for manipulation",
+   "approach": "Catmull-Clark subdivision base surface with neural basis function offset fields via neural maps",
+   "contribution": "Enables direct real-time deformation preserving linearity, locality, smoothness, and affine equivariance",
+   "primary_theme": "neural surface representation",
+   "methods": [
+    "neural basis functions",
+    "subdivision surface",
+    "neural map"
+   ]
+  },
+  {
+   "title": "Walk on Decomposed Subdomains: A Hybrid Monte Carlo\u2013Deterministic Solver for Elliptic PDEs",
+   "doi": "10.1145/3811340",
+   "url": "https://www.semanticscholar.org/paper/a0afb5b2a3cf8dfa6dd65a6efeb97b4c585c8ddd",
+   "pdf": "https://doi.org/10.1145/3811340",
+   "arxiv": null,
+   "gid": 99,
+   "problem": "Solving elliptic PDEs on complex geometries requires either heavy meshing or long slow random walks with high variance",
+   "approach": "Hybrid approach combining Monte Carlo first-passage operators with deterministic global linear solve",
+   "contribution": "Achieves geometric flexibility of Monte Carlo with stable, reusable solution operators and controlled variance",
+   "primary_theme": "PDE solving",
+   "methods": [
+    "monte carlo",
+    "domain decomposition",
+    "hybrid solver"
+   ]
+  },
+  {
+   "title": "Generalized Aberrations for Processing-Aware Optical Design",
+   "doi": "10.1145/3817055",
+   "url": "https://www.semanticscholar.org/paper/a164aa8aaccaabc2fec7ee662e38ee4589ae64d4",
+   "pdf": "https://doi.org/10.1145/3817055",
+   "arxiv": null,
+   "gid": 100,
+   "problem": "Processing-aware optical design lacks effective second-order optimization due to rank-deficient Jacobians",
+   "approach": "Generalized transverse ray aberrations lifting scalar losses into high-dimensional ray-level residuals",
+   "contribution": "Enables robust Levenberg-Marquardt optimization for end-to-end imaging pipeline design",
+   "primary_theme": "optical design optimization",
+   "methods": [
+    "ray aberrations",
+    "levenberg-marquardt",
+    "end-to-end optimization"
+   ]
+  },
+  {
+   "title": "Role-Aware Virtual Agents for Navigational Interaction guided by a Multimodal Large Language Model",
+   "doi": "10.1145/3811319",
+   "url": "https://www.semanticscholar.org/paper/a16ead96909aaa0d7a932cf767a65cf035f13f92",
+   "pdf": "https://doi.org/10.1145/3811319",
+   "arxiv": null,
+   "gid": 101,
+   "problem": "Virtual agents need consistent role-aligned behaviors in dynamic immersive environments with spatial reasoning",
+   "approach": "Multimodal LLM interprets scene information and role instructions to generate discrete navigation decisions",
+   "contribution": "Enables role-aware embodied agent behaviors responding to dynamic user actions in AR/VR",
+   "primary_theme": "virtual agent navigation",
+   "methods": [
+    "multimodal language model",
+    "navigation planning",
+    "role-aware behavior"
+   ]
+  },
+  {
+   "title": "AniGen: Unified S3 Fields for Animatable 3D Asset Generation",
+   "doi": "10.1145/3811297",
+   "url": "https://www.semanticscholar.org/paper/a1fe3edc36d65e9e7b5dfdb0d39ff6141f01b9bb",
+   "pdf": "https://doi.org/10.1145/3811297",
+   "arxiv": "2604.08746",
+   "gid": 102,
+   "problem": "3D generation models produce static geometry; auto-rigging produces inconsistent skeletons and skinning",
+   "approach": "Unified S3 Fields framework with confidence-decaying skeleton field and dual skin feature field",
+   "contribution": "Directly generates animate-ready 3D assets with consistent rigging from single-image conditioning",
+   "primary_theme": "animatable asset generation",
+   "methods": [
+    "s3 fields",
+    "flow-matching",
+    "confidence-decaying fields"
+   ]
+  },
+  {
+   "title": "Learning a Delighting Prior for Facial Appearance Capture in the Wild",
+   "doi": "10.1145/3811303",
+   "url": "https://www.semanticscholar.org/paper/a64b4687cf2fbcfd04171157022038c8496fffe7",
+   "pdf": "https://doi.org/10.1145/3811303",
+   "arxiv": "2605.05636",
+   "gid": 103,
+   "problem": "In-the-wild facial appearance capture struggles with complex disentanglement of reflectance from unknown illumination",
+   "approach": "Trains delighting prior network with dataset latent modulation integrating heterogeneous training data sources",
+   "contribution": "Achieves high-quality reflectance estimation from casual video, enabling relightable facial scan collections",
+   "primary_theme": "facial appearance capture",
+   "methods": [
+    "inverse rendering",
+    "delighting prior",
+    "dataset modulation"
+   ]
+  },
+  {
+   "title": "PR-Cage: Progressive Feasibility Relaxation for Tight Bounding Cage Generation",
+   "doi": "10.1145/3811300",
+   "url": "https://www.semanticscholar.org/paper/a6eb454c649f5138b1a744c05e64538e3f6b412a",
+   "pdf": "https://doi.org/10.1145/3811300",
+   "arxiv": null,
+   "gid": 104,
+   "problem": "Cage generation balances conflicting objectives of simplicity and tightness for geometric fidelity",
+   "approach": "Progressive feasibility relaxation via staircase schedule on thickness parameter with constrained QEM framework",
+   "contribution": "Achieves extreme simplification while maintaining high geometric adherence through nested optimization",
+   "primary_theme": "cage generation",
+   "methods": [
+    "quadric error metric",
+    "edge collapse",
+    "feasibility relaxation"
+   ]
+  },
+  {
+   "title": "Nexus: Native Mesh Generation with Diffusion",
+   "doi": "10.1145/3811344",
+   "url": "https://www.semanticscholar.org/paper/a9a986382361845b0c753e4a3735592fe900ae6d",
+   "pdf": "https://doi.org/10.1145/3811344",
+   "arxiv": "2607.13563",
+   "gid": 105,
+   "problem": "Autoregressive mesh methods suffer from error accumulation and inefficient inference",
+   "approach": "Diffusion-based decoupled generation of vertices via octree and topologies via embeddings",
+   "contribution": "Outperforms autoregressive baselines via holistic, parallelizable mesh generation avoiding sequential bottlenecks",
+   "primary_theme": "mesh generation",
+   "methods": [
+    "diffusion",
+    "octree",
+    "topology modeling",
+    "space-time interval"
+   ]
+  },
+  {
+   "title": "Component Modes Synthesis Method with Multiple Partitions for Large-scale Eigenvalue Problem",
+   "doi": "10.1145/3811279",
+   "url": "https://www.semanticscholar.org/paper/b4e2c09b7b77c0a4ead896d256adc0ca091a2dba",
+   "pdf": "https://doi.org/10.1145/3811279",
+   "arxiv": null,
+   "gid": 106,
+   "problem": "Component Mode Synthesis substructure bases do not span solution space efficiently for large-scale modal analysis",
+   "approach": "Multiple spatially staggered domain partitions with low-frequency interface basis approximations",
+   "contribution": "3 orders of magnitude accuracy improvement with better scaling on distributed computing clusters",
+   "primary_theme": "modal analysis",
+   "methods": [
+    "component mode synthesis",
+    "domain partitioning",
+    "basis acceleration"
+   ]
+  },
+  {
+   "title": "Semantic-Structural Alignment for Generative Pictorial Charts",
+   "doi": "10.1145/3811313",
+   "url": "https://www.semanticscholar.org/paper/b6f416db6773802e499df51b1a4fc4ee3755c275",
+   "pdf": "https://doi.org/10.1145/3811313",
+   "arxiv": "2606.06498",
+   "gid": 107,
+   "problem": "Traditional statistical graphics lack visual appeal, memorability, and engagement compared to pictorial charts",
+   "approach": "Multi-modal diffusion transformer with dual structural and semantic alignment guided by text and chart image",
+   "contribution": "Generates artistically compelling pictorial charts maintaining structural consistency across visual channels",
+   "primary_theme": "generative visualization",
+   "methods": [
+    "diffusion transformer",
+    "semantic alignment",
+    "structural guidance"
+   ]
+  },
+  {
+   "title": "Dual Contouring over Expanded Cubes (DCx) for Zero-Level Set Extraction from Neural Unsigned Distance Functions",
+   "doi": "10.1145/3811388",
+   "url": "https://www.semanticscholar.org/paper/b7c2df840a2f0724a3a4cd7c452725187a538ed4",
+   "pdf": "https://doi.org/10.1145/3811388",
+   "arxiv": null,
+   "gid": 108,
+   "problem": "Extracting manifold and non-manifold surfaces from unsigned distance functions loses topology",
+   "approach": "Extended Dual Contouring on expanded cubes with voxel-to-mesh lookup tables for arbitrary topology",
+   "contribution": "Efficiently extracts both manifold and non-manifold surfaces from neural UDFs via optimization-based active cube detection",
+   "primary_theme": "mesh extraction",
+   "methods": [
+    "dual contouring",
+    "signed distance fields",
+    "non-manifold handling"
+   ]
+  },
+  {
+   "title": "Learned Universal Interoperable Virtual Try-ON",
+   "doi": "10.1145/3811307",
+   "url": "https://www.semanticscholar.org/paper/b866b857860c8953dc1b843ffaaee0de3fac7b39",
+   "pdf": "https://doi.org/10.1145/3811307",
+   "arxiv": null,
+   "gid": 109,
+   "problem": "Virtual try-on requires garment-to-body transfer despite mismatched skeletons and dense correspondences",
+   "approach": "SMPL proxy with geometry-driven and diffusion-based correspondence models plus simulator-driven fitting",
+   "contribution": "Handles complex multi-layer garments on diverse humanoids while maintaining physical plausibility",
+   "primary_theme": "virtual try-on",
+   "methods": [
+    "diffusion correspondence",
+    "SMPL proxy",
+    "physics simulation"
+   ]
+  },
+  {
+   "title": "Lifting Lines and Tone: Image-Space Stylization in Path-Space",
+   "doi": "10.1145/3811359",
+   "url": "https://www.semanticscholar.org/paper/bf8c9518d79f12fbe5951208eaa02881186a4590",
+   "pdf": "https://doi.org/10.1145/3811359",
+   "arxiv": null,
+   "gid": 110,
+   "problem": "Path-space stylization lacks mechanism for enforcing image-space consistency from hand-drawn styles",
+   "approach": "Geometric lifting of image-space stylizations into path-space via parametrization and parallel transport",
+   "contribution": "Principled SRE-compatible framework enabling feature lines and tone while preserving image-space structure",
+   "primary_theme": "non-photorealistic rendering",
+   "methods": [
+    "path-space lifting",
+    "stylized rendering equation",
+    "geometry-driven mapping"
+   ]
+  },
+  {
+   "title": "Robust Planar Maps for 3D Vectorization",
+   "doi": "10.1145/3811357",
+   "url": "https://www.semanticscholar.org/paper/c2c2e8ebbe080a492e7b7d6528c76206a56104f5",
+   "pdf": "https://doi.org/10.1145/3811357",
+   "arxiv": null,
+   "gid": 111,
+   "problem": "Vectorizing 3D scenes with proper occlusion requires robust handling of curve intersections and numerical errors",
+   "approach": "Spatial hierarchy acceleration provides fundamental planar map representation with curve-line intersection",
+   "contribution": "Scalable, output-sensitive vectorization robust to curve soup with topologically valid results",
+   "primary_theme": "3D vectorization",
+   "methods": [
+    "planar partitioning",
+    "spatial hierarchy",
+    "curve-line intersection"
+   ]
+  },
+  {
+   "title": "Soft Anisotropic Diagrams for Differentiable Image Representation",
+   "doi": "10.1145/3811372",
+   "url": "https://www.semanticscholar.org/paper/c31bcff334a3f57122537816efca96ab5e420f66",
+   "pdf": "https://doi.org/10.1145/3811372",
+   "arxiv": "2604.21984",
+   "gid": 112,
+   "problem": "Gaussian splatting image representation lacks differentiability and efficient spatial representation",
+   "approach": "Soft anisotropic Apollonius diagrams with learnable per-site temperatures and top-K propagation rendering",
+   "contribution": "4-19x speedups over baselines with 46 dB PSNR on Kodak at matched bitrate via efficient GPU computation",
+   "primary_theme": "neural image representation",
+   "methods": [
+    "gaussian splatting",
+    "apollonius diagrams",
+    "differentiable rendering"
+   ]
+  },
+  {
+   "title": "A practical partitioner for distributed simulations on sparse dynamic domains using optimal transport",
+   "doi": "10.1145/3787521",
+   "url": "https://www.semanticscholar.org/paper/c49244b243f1352ff41c4a9b8d736e261e2bfbe1",
+   "pdf": "https://doi.org/10.1145/3787521",
+   "arxiv": null,
+   "gid": 113,
+   "problem": "Physics simulations on rapidly evolving dynamic domains require even load distribution and minimal inter-node data exchange",
+   "approach": "Optimal transport power diagram partitioner with surface and temporal consistency metrics",
+   "contribution": "Outperforms state-of-the-art in film production distributed simulations via artist-friendly partitioning",
+   "primary_theme": "distributed simulation",
+   "methods": [
+    "optimal transport",
+    "power diagram",
+    "domain partitioning"
+   ]
+  },
+  {
+   "title": "MorphSkein: A Shape-Changing Afterimage Display Preserving Pixel Density During Surface-Area Changes Across Troposkein-Based Shapes",
+   "doi": "10.1145/3811320",
+   "url": "https://www.semanticscholar.org/paper/c4b40104eb8be51f960feba2a8737012d04d8b00",
+   "pdf": "https://doi.org/10.1145/3811320",
+   "arxiv": null,
+   "gid": 114,
+   "problem": "Shape-changing displays lose pixel density as surface area expands, limiting usability",
+   "approach": "Telescopic pole and LED-strip rewinders with troposkein geometry and angular velocity optimization",
+   "contribution": "Preserves pixel density across expanding axisymmetric shapes via mathematical modeling and interpolation",
+   "primary_theme": "shape-changing displays",
+   "methods": [
+    "persistence of vision",
+    "troposkein geometry",
+    "density preservation"
+   ]
+  },
+  {
+   "title": "Gaussian Point Splatting",
+   "doi": "10.1145/3811272",
+   "url": "https://www.semanticscholar.org/paper/c6bfc2265a4a7b348e6b14b333c25dfece18299a",
+   "pdf": "https://doi.org/10.1145/3811272",
+   "arxiv": null,
+   "gid": 115,
+   "problem": "Gaussian splatting rendering scales poorly to scenes with millions of Gaussians",
+   "approach": "Stochastic sampling of pixel-sized opaque points with 64-bit atomic splatting and hierarchical culling",
+   "contribution": "Renders hundreds of millions of Gaussians in real time with minimal perceptual difference from original",
+   "primary_theme": "gaussian splatting",
+   "methods": [
+    "stochastic sampling",
+    "atomic operations",
+    "frustum culling"
+   ]
+  },
+  {
+   "title": "Closed-Form Convolution for physically-accurate defocus in Gaussian Splatting",
+   "doi": "10.1145/3821567",
+   "url": "https://www.semanticscholar.org/paper/c6e82a79decf7384225a952d514d81ec5f5f8d42",
+   "pdf": "https://doi.org/10.1145/3821567",
+   "arxiv": null,
+   "gid": 116,
+   "problem": "3D Gaussian Splatting assumes perfect focus but real captures contain lens defocus blur under large apertures",
+   "approach": "Closed-form convolution of projected Gaussians with Circle of Confusion kernel via error function",
+   "contribution": "Physically accurate depth-of-field in 3DGS enabling refocusing and aperture manipulation from blurry captures",
+   "primary_theme": "depth-of-field rendering",
+   "methods": [
+    "gaussian splatting",
+    "depth-of-field",
+    "closed-form convolution"
+   ]
+  },
+  {
+   "title": "Neural Quadrature Rule and Autoregressive Adaptive Sampling",
+   "doi": "10.1145/3811318",
+   "url": "https://www.semanticscholar.org/paper/c93139eec41cbef87c122938d2237b1703233a78",
+   "pdf": "https://doi.org/10.1145/3811318",
+   "arxiv": null,
+   "gid": 117,
+   "problem": "Monte Carlo integration cannot effectively use auxiliary information or adapt sampling to informative regions",
+   "approach": "End-to-end neural network learning sampler and integrator jointly with learned priors over integrand structure",
+   "contribution": "Substantial improvements in equal-sample setting across diverse graphics applications via coupled sampling-integration",
+   "primary_theme": "monte carlo integration",
+   "methods": [
+    "neural networks",
+    "adaptive sampling",
+    "learned integration"
+   ]
+  },
+  {
+   "title": "GPU-accelerated Certified Hausdorff Distance Between Triangle Meshes",
+   "doi": "10.1145/3811287",
+   "url": "https://www.semanticscholar.org/paper/c9ef4d7db340b8315658fba824d95c1cbb18306d",
+   "pdf": "https://doi.org/10.1145/3811287",
+   "arxiv": null,
+   "gid": 118,
+   "problem": "Hausdorff distance branch-and-bound becomes prohibitively expensive on large models under tight tolerances",
+   "approach": "GPU-accelerated certified branch-and-bound with sorted double-buffered wavefront and adaptive subdivision",
+   "contribution": "Robust deep-refinement handling via resource-aware deferral while maintaining efficient SIMT mapping",
+   "primary_theme": "hausdorff distance",
+   "methods": [
+    "branch-and-bound",
+    "gpu acceleration",
+    "adaptive subdivision"
+   ]
+  },
+  {
+   "title": "Texture-Aware Remeshing for Texture-aware Geometry Processing",
+   "doi": "10.1145/3804451",
+   "url": "https://www.semanticscholar.org/paper/ca6a55ba8b9e7499725f75e9908209c650b58de7",
+   "pdf": "https://doi.org/10.1145/3804451",
+   "arxiv": null,
+   "gid": 119,
+   "problem": "Standard geometry processing tools ignore textures when meshes use UV parameterization with texture maps",
+   "approach": "Remeshing hoists textures to vertex colors via per-triangle processing preserving appearance",
+   "contribution": "Enables texture-aware geometry processing on segmentation, parameterization, and vector field operations",
+   "primary_theme": "texture-aware processing",
+   "methods": [
+    "remeshing",
+    "vertex colors",
+    "texture hoisting"
+   ]
+  },
+  {
+   "title": "JGS2-GQ: Training-free 2nd Jacobi with Gaussian Quadrature",
+   "doi": "10.1145/3811274",
+   "url": "https://www.semanticscholar.org/paper/ccf06f092ccd17471354f493956b7c6f4105e43a",
+   "pdf": "https://doi.org/10.1145/3811274",
+   "arxiv": null,
+   "gid": 120,
+   "problem": "JGS2 Cubature method degrades with high-resolution deformation lacking representative training data",
+   "approach": "Training-free Gaussian quadrature integration with adaptive region generation for subspace integration",
+   "contribution": "Stable volumetric simulation without data generation, handling large novel deformations and frictional contact",
+   "primary_theme": "volumetric simulation",
+   "methods": [
+    "gaussian quadrature",
+    "jacobi solver",
+    "perturbation subspace"
+   ]
+  },
+  {
+   "title": "Progressing Level-of-Detail Animation for Volumetric Elastodynamics",
+   "doi": "10.1145/3811383",
+   "url": "https://www.semanticscholar.org/paper/cd75edf71b3d2981a6b8b3dbffc549063d0d6545",
+   "pdf": "https://doi.org/10.1145/3811383",
+   "arxiv": null,
+   "gid": 121,
+   "problem": "LOD animation design requires slow high-resolution preview iteration for volumetric elastodynamics",
+   "approach": "VelPro Splitter integrator with velocity splitting and cross-level consistency in progressive dynamics",
+   "contribution": "Decoupled finest-level enrichment from LOD levels, enabling efficient multi-resolution volumetric animation",
+   "primary_theme": "level-of-detail animation",
+   "methods": [
+    "progressive dynamics",
+    "velocity splitting",
+    "finite elements"
+   ]
+  },
+  {
+   "title": "StyleID: A Perception-Aware Dataset and Metric for Stylization-Agnostic Facial Identity Recognition",
+   "doi": "10.1145/3811360",
+   "url": "https://www.semanticscholar.org/paper/cd868d46b4ea009f3e1328c363dbfd5a32b5773f",
+   "pdf": "https://doi.org/10.1145/3811360",
+   "arxiv": "2604.21689",
+   "gid": 122,
+   "problem": "Identity encoders brittle under face stylization, confusing texture/color changes with identity drift",
+   "approach": "Perception-aware benchmark with 2AFC psychometric experiments and fine-tuned semantic encoders",
+   "contribution": "StyleID dataset and calibrated models achieving human-aligned perception of stylized face identity",
+   "primary_theme": "face stylization",
+   "methods": [
+    "psychometric calibration",
+    "diffusion stylization",
+    "semantic encoding"
+   ]
+  },
+  {
+   "title": "Mechanical Cloaking of Halftoned Imagery",
+   "doi": "10.1145/3811394",
+   "url": "https://www.semanticscholar.org/paper/cf67084f1ab94274f536f7f7bf02fd7c79e697e0",
+   "pdf": "https://doi.org/10.1145/3811394",
+   "arxiv": null,
+   "gid": 123,
+   "problem": "Metamaterial cloaking lacks mechanical domain application, visually encoding properties",
+   "approach": "Parametric porous structures halftoning images while maintaining near-isotropic mechanical properties",
+   "contribution": "Visually matches target image while appearing mechanically homogeneous and isotropic",
+   "primary_theme": "mechanical metamaterials",
+   "methods": [
+    "halftoning",
+    "porous structures",
+    "material design"
+   ]
+  },
+  {
+   "title": "MeshFEM: A Block-accelerated Solver for Nonlinear Finite Elements",
+   "doi": "10.1145/3811386",
+   "url": "https://www.semanticscholar.org/paper/d64c5bfa21ac2e68081416479184d966d6e872b6",
+   "pdf": "https://doi.org/10.1145/3811386",
+   "arxiv": null,
+   "gid": 124,
+   "problem": "Direct sparse solvers underperform on block-sparse Hessians from spatial FEM problems",
+   "approach": "Block-accelerated multifrontal Cholesky with fast parallel assembly and heuristic Hessian projection",
+   "contribution": "BlockCatamari solver achieving significantly faster factorizations on shared-memory systems",
+   "primary_theme": "nonlinear solver",
+   "methods": [
+    "sparse cholesky",
+    "block structure",
+    "multifrontal"
+   ]
+  },
+  {
+   "title": "SCom DAG: compact representation of spatial data for real-time rendering",
+   "doi": "10.1145/3811365",
+   "url": "https://www.semanticscholar.org/paper/d67b50e1f28d31c99a0a1e9eb72118c1308804aa",
+   "pdf": "https://doi.org/10.1145/3811365",
+   "arxiv": null,
+   "gid": 125,
+   "problem": "Volumetric data representation lacks compact encoding balancing fidelity and compression across dimensions",
+   "approach": "Similarity Compressed DAG with octree subdivision, spatial/data transformations, hyper-octahedral groups",
+   "contribution": "Compact lossy representation for 2D/3D/4D data with controlled quality, efficient browser rendering",
+   "primary_theme": "spatial data compression",
+   "methods": [
+    "directed acyclic graph",
+    "octree",
+    "transformation encoding"
+   ]
+  },
+  {
+   "title": "Fast VEM Fluid Simulation",
+   "doi": "10.1145/3811315",
+   "url": "https://www.semanticscholar.org/paper/d8a7ab59ec57e445d36a47ba5adbb6ec8dde7574",
+   "pdf": "https://doi.org/10.1145/3811315",
+   "arxiv": "2607.17725",
+   "gid": 126,
+   "problem": "Cut-cell methods for boundary-conforming fluid simulation yield poorly conditioned pressure systems",
+   "approach": "Virtual Element Method on convexity-preserving cut-cell grids with geometric multi-grid solver",
+   "contribution": "High-fidelity flow-boundary interaction with substantially reduced computational cost",
+   "primary_theme": "fluid simulation",
+   "methods": [
+    "virtual element method",
+    "cut-cell",
+    "geometric multigrid"
+   ]
+  },
+  {
+   "title": "Monte Carlo Rendering of Biharmonic Diffusion Curves",
+   "doi": "10.1145/3811397",
+   "url": "https://www.semanticscholar.org/paper/dad15ba4275869f279181d90f6c77b9a8e73d5bd",
+   "pdf": "https://doi.org/10.1145/3811397",
+   "arxiv": null,
+   "gid": 127,
+   "problem": "No Monte Carlo solver exists for biharmonic diffusion curves with coupled boundary conditions",
+   "approach": "Variational inverse problem formulation treating Dirichlet data as unknown, stochastic gradient estimation",
+   "contribution": "Monte Carlo rendering of biharmonic diffusion curves with coupled Dirichlet-Neumann conditions",
+   "primary_theme": "vector graphics rendering",
+   "methods": [
+    "monte carlo",
+    "variational optimization",
+    "pde solving"
+   ]
+  },
+  {
+   "title": "Tempo3D: Efficient Temporal-Aware Fine-Tuning and Multi-View Latent Aggregation for 3D Generation",
+   "doi": "10.1145/3811362",
+   "url": "https://www.semanticscholar.org/paper/db8566e48ee6d791ae976f63c1bbe18364675b39",
+   "pdf": "https://doi.org/10.1145/3811362",
+   "arxiv": null,
+   "gid": 128,
+   "problem": "Single-view 3D diffusion models produce inadequate geometry and incorrect topology from ambiguity",
+   "approach": "Temporal-aware TS-LoRA fine-tuning and multi-view latent aggregation with score-based velocity field",
+   "contribution": "High-fidelity VecSet-based 3D generation with structure-to-details learning and geometric refinement",
+   "primary_theme": "3D generation",
+   "methods": [
+    "temporal fine-tuning",
+    "lora",
+    "multi-view aggregation"
+   ]
+  },
+  {
+   "title": "HeadRouter: A Training-free Image Editing Framework for MM-DiTs by Adaptively Routing Attention Heads",
+   "doi": "10.1145/3797956",
+   "url": "https://www.semanticscholar.org/paper/dd1476c271eee1084a0cef7643dcb8ded430fb96",
+   "pdf": "https://doi.org/10.1145/3797956",
+   "arxiv": null,
+   "gid": 129,
+   "problem": "MM-DiTs lack semantic text guidance consistency in image editing unlike UNet-based structures",
+   "approach": "Training-free attention head routing with dual-token refinement for text/image semantic alignment",
+   "contribution": "Accurate text-guided editing on multimodal Transformers through adaptive head routing mechanism",
+   "primary_theme": "image editing",
+   "methods": [
+    "attention routing",
+    "diffusion transformers",
+    "token refinement"
+   ]
+  },
+  {
+   "title": "MOCHI: Motion Enhancement of Collaborative Human-object Interactions",
+   "doi": "10.1145/3811308",
+   "url": "https://www.semanticscholar.org/paper/df5993c552a9f8a2c907e9c3ecb0ef5280c63ae7",
+   "pdf": "https://doi.org/10.1145/3811308",
+   "arxiv": "2606.18243",
+   "gid": 130,
+   "problem": "Multi-human object interaction capture contains contact misalignment, jitter, and missing finger articulation",
+   "approach": "Two-stage framework: physics-aware grasp optimization then diffusion-based full-body motion refinement",
+   "contribution": "Enhanced MHOI data with plausible hand grasps, temporal consistency, and complete articulation details",
+   "primary_theme": "motion capture enhancement",
+   "methods": [
+    "grasp optimization",
+    "diffusion refinement",
+    "physics constraints"
+   ]
+  },
+  {
+   "title": "SegviGen: Repurposing 3D Generative Model for Part Segmentation",
+   "doi": "10.1145/3811399",
+   "url": "https://www.semanticscholar.org/paper/e12da73668e5e1e7c8199f24d228151b9a26e8ee",
+   "pdf": "https://doi.org/10.1145/3811399",
+   "arxiv": "2603.16869",
+   "gid": 131,
+   "problem": "3D part segmentation requires large annotated data or suffers from cross-view inconsistency blurs",
+   "approach": "Repurpose pretrained 3D generative models with part-indicative colorization on active voxels",
+   "contribution": "40% improvement on interactive segmentation with only 0.32% training data via generative priors",
+   "primary_theme": "part segmentation",
+   "methods": [
+    "generative model",
+    "voxel colorization",
+    "interactive segmentation"
+   ]
+  },
+  {
+   "title": "Efficient Fur and Hair Multiple Scattering Using Volumetric Approximation",
+   "doi": "10.1145/3811343",
+   "url": "https://www.semanticscholar.org/paper/e136176109825e95fe86bca0cfa843415440ea3a",
+   "pdf": "https://doi.org/10.1145/3811343",
+   "arxiv": null,
+   "gid": 132,
+   "problem": "Multiple scattering in dense hair/fur expensive and prior approximations fail, appearing dry or blurred",
+   "approach": "Volumetric approximation as anisotropic participating medium with explicit fiber for direct lighting",
+   "contribution": "7-10x faster than path tracing, reproducing rich scattering appearance under varied lighting",
+   "primary_theme": "hair rendering",
+   "methods": [
+    "volumetric scattering",
+    "participating media",
+    "fiber geometry"
+   ]
+  },
+  {
+   "title": "Sketch2Arti: Sketch-based Articulation Modeling of CAD Objects",
+   "doi": "10.1145/3811375",
+   "url": "https://www.semanticscholar.org/paper/e15914e3620558c15b5511ffc511a899ea5abeff",
+   "pdf": "https://doi.org/10.1145/3811375",
+   "arxiv": "2604.25781",
+   "gid": 133,
+   "problem": "Articulation modeling from CAD requires manual translation of designer sketches to rigged 3D models",
+   "approach": "Sketch-based discovery of movable parts and motion parameters, category-agnostic training",
+   "contribution": "First sketch-to-CAD articulation system with controllable internal completion generalization",
+   "primary_theme": "articulation modeling",
+   "methods": [
+    "sketch-based modeling",
+    "part discovery",
+    "motion inference"
+   ]
+  },
+  {
+   "title": "Radiance Caching for Differentiable Path Tracing",
+   "doi": "10.1145/3811398",
+   "url": "https://www.semanticscholar.org/paper/e1fadec6cbc24a2721eb27abf0e2b563f835a7b9",
+   "pdf": "https://doi.org/10.1145/3811398",
+   "arxiv": null,
+   "gid": 134,
+   "problem": "Differentiable path tracing suffers high variance and poor conditioning for inverse rendering",
+   "approach": "Radiance cache with spatial blending field interpolating between cache and unbiased estimators",
+   "contribution": "Recover material parameters even with unidentifiable lighting, improved speed and robustness",
+   "primary_theme": "inverse rendering",
+   "methods": [
+    "radiance caching",
+    "differentiable rendering",
+    "variance reduction"
+   ]
+  },
+  {
+   "title": "Differentiable Neutron Transport",
+   "doi": "10.1145/3811296",
+   "url": "https://www.semanticscholar.org/paper/e27308b51ccad73345d687f83720475510ac6880",
+   "pdf": "https://doi.org/10.1145/3811296",
+   "arxiv": null,
+   "gid": 135,
+   "problem": "Inverse problems in neutron transport remain extremely challenging despite shared foundation with rendering",
+   "approach": "Extend differentiable rendering to multi-energy neutron transport via automatic differentiation of Monte Carlo",
+   "contribution": "Gradient-based optimization for nuclear shielding design, sensitivity analysis, and sensor shape optimization",
+   "primary_theme": "differentiable simulation",
+   "methods": [
+    "differentiable rendering",
+    "monte carlo",
+    "automatic differentiation",
+    "inverse design"
+   ]
+  },
+  {
+   "title": "Manifold k-NN: Accelerated k-NN Queries for Manifold Point Clouds",
+   "doi": "10.1145/3811271",
+   "url": "https://www.semanticscholar.org/paper/e305d9e1418bfe8263955a39e34963ba224cf138",
+   "pdf": "https://doi.org/10.1145/3811271",
+   "arxiv": "2605.02224",
+   "gid": 136,
+   "problem": "Standard k-NN structures like kd-trees fail to exploit intrinsic low-dimensional structure of manifold data",
+   "approach": "Generalize dynamic programming nearest neighbor search to support arbitrary k-NN via recursive refinement of Voronoi cells",
+   "contribution": "1-10x speedup for manifold-aligned k-NN queries and support for dynamic prefix queries",
+   "primary_theme": "spatial search acceleration",
+   "methods": [
+    "dynamic programming",
+    "voronoi diagrams",
+    "manifold-aware",
+    "nearest neighbor"
+   ]
+  },
+  {
+   "title": "Explicit flows for implicit surfaces",
+   "doi": "10.1145/3811331",
+   "url": "https://www.semanticscholar.org/paper/e5978ce756dda6677833578b990fd01bcb2d04df",
+   "pdf": "https://doi.org/10.1145/3811331",
+   "arxiv": null,
+   "gid": 137,
+   "problem": "Shape deformation often requires intricate advection schemes without explicit evaluation at arbitrary times",
+   "approach": "Use invertible neural networks to parameterize implicit surface deformation as explicit flow",
+   "contribution": "Direct flow-based shape morphing, editing, and pairwise-to-any transformations via flow composition",
+   "primary_theme": "shape deformation flow",
+   "methods": [
+    "invertible neural networks",
+    "implicit surfaces",
+    "flow matching",
+    "shape morphing"
+   ]
+  },
+  {
+   "title": "A Precision Controlled Surface-Surface Intersection Algorithm for NURBS",
+   "doi": "10.1145/3806045",
+   "url": "https://www.semanticscholar.org/paper/e6dcf3c2b435e9d025a9f45842622a933b90160a",
+   "pdf": "https://doi.org/10.1145/3806045",
+   "arxiv": null,
+   "gid": 138,
+   "problem": "Surface-surface intersection precision control impacts watertightness, meshing, and CAE accuracy for NURBS",
+   "approach": "A priori precision control via Lipschitz continuity, convex hulls, and Hausdorff distance constraints",
+   "contribution": "Superior precision and robustness over commercial/open-source kernels with categorized intersection processing",
+   "primary_theme": "surface intersection",
+   "methods": [
+    "nurbs",
+    "hausdorff distance",
+    "convex hulls",
+    "curve fitting"
+   ]
+  },
+  {
+   "title": "DiffSurFlow: Efficient and Robust Differentiable Fluid Optimization via Surrogate Strategy on Flow Map",
+   "doi": "10.1145/3811337",
+   "url": "https://www.semanticscholar.org/paper/eb1f1a0a63b923ff57e67dfc7804fa28b2cf2f09",
+   "pdf": "https://doi.org/10.1145/3811337",
+   "arxiv": null,
+   "gid": 139,
+   "problem": "Full-gradient backpropagation in differentiable fluids is computationally expensive over long horizons",
+   "approach": "Surrogate gradient method leveraging flow map structure to retain critical gradient highways",
+   "contribution": "Significant speedups and memory reductions while maintaining near-identical gradients vs full backward pass",
+   "primary_theme": "differentiable fluids",
+   "methods": [
+    "adjoint method",
+    "flow map",
+    "surrogate gradient",
+    "physics-informed optimization"
+   ]
+  },
+  {
+   "title": "Single-View Holographic Volumetric 3D Printing with Coupled Differentiable Wave-Optical and Photochemical Optimization",
+   "doi": "10.1145/3811332",
+   "url": "https://www.semanticscholar.org/paper/eb2f235fee81221bdc09039127ba64dbb7bb4930",
+   "pdf": "https://doi.org/10.1145/3811332",
+   "arxiv": "2601.16330",
+   "gid": 140,
+   "problem": "Volumetric 3D printing micro-scale fidelity challenged by complex optical diffraction and chemical effects",
+   "approach": "Couple differentiable wave-optical forward model with photochemical model capturing inhibitor diffusion",
+   "contribution": "Hologram synthesis achieving ~10 micron lateral resolution via pre-compensating for chemical blur",
+   "primary_theme": "holographic fabrication",
+   "methods": [
+    "wave optics",
+    "photochemistry",
+    "differentiable optimization",
+    "phase holograms"
+   ]
+  },
+  {
+   "title": "HumanFlow: Controllable Human Image Generation via Flow Matching",
+   "doi": "10.1145/3811361",
+   "url": "https://www.semanticscholar.org/paper/ec578747b0444c4831ec1c10fdc99ac35e52909c",
+   "pdf": "https://doi.org/10.1145/3811361",
+   "arxiv": null,
+   "gid": 141,
+   "problem": "Balancing high visual fidelity with strict human-centric control in controllable image generation remains challenging",
+   "approach": "Unified flow-matching framework with Control Encoder, Token-ControlNet, and Human Topology Consistency Loss",
+   "contribution": "High-fidelity controllable full-body human image generation with structural topology constraints",
+   "primary_theme": "human image synthesis",
+   "methods": [
+    "flow matching",
+    "diffusion models",
+    "control networks",
+    "topology constraints"
+   ]
+  },
+  {
+   "title": "Efficient Multiscale Lanczos Eigenpair Extraction",
+   "doi": "10.1145/3811367",
+   "url": "https://www.semanticscholar.org/paper/ee77dd23bb7c6f27cadeab8d3b76b6920202f129",
+   "pdf": "https://doi.org/10.1145/3811367",
+   "arxiv": null,
+   "gid": 142,
+   "problem": "Standard Lanczos eigenpair extraction lacks convergence speed and robustness for large-scale geometry problems",
+   "approach": "Extend implicitly restarted Lanczos with multigrid acceleration to improve convergence",
+   "contribution": "Enhanced convergence speed and robustness for eigenpair extraction in geometry processing applications",
+   "primary_theme": "eigenvalue computation",
+   "methods": [
+    "lanczos iteration",
+    "multigrid",
+    "linear algebra",
+    "spectral methods"
+   ]
+  },
+  {
+   "title": "High-Fidelity 4D Cloth Capture Pipeline with a Two-Level Pattern",
+   "doi": "10.1145/3811305",
+   "url": "https://www.semanticscholar.org/paper/f291a09eba5ca150836e36cc20003193d431eded",
+   "pdf": "https://doi.org/10.1145/3811305",
+   "arxiv": null,
+   "gid": 143,
+   "problem": "High-fidelity cloth capture requires resolving fine wrinkles, large deformation, and self-occlusion simultaneously",
+   "approach": "Two-level marker pattern with physics-based optimization deforming template to match captured geometry",
+   "contribution": "1 mm spatial resolution 4D cloth capture with temporal coherence via keypoint triangulation and mesh deformation",
+   "primary_theme": "cloth motion capture",
+   "methods": [
+    "marker tracking",
+    "photogrammetry",
+    "physics simulation",
+    "mesh optimization"
+   ]
+  },
+  {
+   "title": "Subgrid Marching Tetrahedra",
+   "doi": "10.1145/3811358",
+   "url": "https://www.semanticscholar.org/paper/f3992af7251e65e527f5ada79e32f0a1a96d722c",
+   "pdf": "https://doi.org/10.1145/3811358",
+   "arxiv": "2606.00454",
+   "gid": 144,
+   "problem": "Classic marching schemes cannot capture arbitrarily many surface patches per cell or thin sheet details",
+   "approach": "Generalize normal coordinates from topology to encode surface connectivity via integer intersection counts",
+   "contribution": "Manifold intersection-free meshes capturing fine features and thin sheets without geometric orientation requirements",
+   "primary_theme": "mesh reconstruction",
+   "methods": [
+    "marching tetrahedra",
+    "normal coordinates",
+    "topology",
+    "contouring"
+   ]
+  },
+  {
+   "title": "Points as Tori: Fast Pointwise Signed Distance for Point Clouds",
+   "doi": "10.1145/3811385",
+   "url": "https://www.semanticscholar.org/paper/f458cfecdac341fec619c09195ecd5c9236c8362",
+   "pdf": "https://doi.org/10.1145/3811385",
+   "arxiv": "2607.16946",
+   "gid": 145,
+   "problem": "Computing signed distance to point clouds requires costly global optimization or spatial discretization",
+   "approach": "Locally fit point clouds with tori using pre-trained network for curvature and shift parameters",
+   "contribution": "Fast analytical signed distance parameterization enabling reconstruction, offsets, and Boolean operations on point clouds",
+   "primary_theme": "signed distance fields",
+   "methods": [
+    "implicit surfaces",
+    "tori fitting",
+    "neural networks",
+    "winding numbers"
+   ]
+  },
+  {
+   "title": "UniVidX: A Unified Multimodal Framework for Versatile Video Generation via Diffusion Priors",
+   "doi": "10.1145/3811304",
+   "url": "https://www.semanticscholar.org/paper/f479dc5ff16c10a6dd3d2f8ab10497f3f97b8c65",
+   "pdf": "https://doi.org/10.1145/3811304",
+   "arxiv": "2605.00658",
+   "gid": 146,
+   "problem": "Existing video diffusion approaches train separate models per task, ignoring joint multimodal correlations",
+   "approach": "Unified framework with Stochastic Condition Masking, Decoupled Gated LoRA, and Cross-Modal Self-Attention",
+   "contribution": "Versatile multimodal video generation with preserved VDM priors and cross-modal consistency",
+   "primary_theme": "video diffusion generation",
+   "methods": [
+    "diffusion models",
+    "lora",
+    "multimodal",
+    "conditional generation"
+   ]
+  },
+  {
+   "title": "Feature-Preserving Offset Meshing",
+   "doi": "10.1145/3797950",
+   "url": "https://www.semanticscholar.org/paper/f4be3b9b0d8020a944b034b931a9aace7b9a0755",
+   "pdf": null,
+   "arxiv": null,
+   "gid": 147,
+   "problem": "Existing offset meshing focuses on constant-radius offsets and lacks sharp feature preservation",
+   "approach": "Explicitly generate offset vertices and triangles with feature-capturing energy and mitered offset support",
+   "contribution": "First method supporting mitered offsets with sharp feature preservation on clean and dirty meshes",
+   "primary_theme": "offset mesh generation",
+   "methods": [
+    "mesh processing",
+    "feature preservation",
+    "geometric algorithms",
+    "offset surfaces"
+   ]
+  },
+  {
+   "title": "Constant Mean Curvature Surfaces from Discrete Harmonic Maps",
+   "doi": "10.1145/3811370",
+   "url": "https://www.semanticscholar.org/paper/fa87a6f23f6e155452042a4c514932d1c9bf92b5",
+   "pdf": "https://doi.org/10.1145/3811370",
+   "arxiv": null,
+   "gid": 148,
+   "problem": "Discretizing constant mean curvature surfaces lacks direct boundary control and handles closed cases poorly",
+   "approach": "Discretize via harmonic Gauss maps using Dirichlet energy minimization and novel M\u00f6bius-invariant formulation",
+   "contribution": "Direct boundary control and natural handling of closed/periodic CMC surfaces with robust Willmore energy",
+   "primary_theme": "differential geometry",
+   "methods": [
+    "harmonic maps",
+    "discrete differential geometry",
+    "willmore energy",
+    "optimization"
+   ]
+  },
+  {
+   "title": "STyMo: Fast and Controllable Few-Shot Motion Style Transfer",
+   "doi": "10.1145/3811356",
+   "url": "https://www.semanticscholar.org/paper/faf7fc5343ce0bbd3570d683e0a416aafdc3da81",
+   "pdf": "https://doi.org/10.1145/3811356",
+   "arxiv": null,
+   "gid": 149,
+   "problem": "Motion style transfer typically requires large stylized datasets or pre-trained models with limited generalization",
+   "approach": "Decompose style into static posture and temporal dynamics components trainable from seconds of paired data",
+   "contribution": "Few-shot motion style transfer with interpretable runtime control over posture, exaggeration, and per-region style",
+   "primary_theme": "motion style transfer",
+   "methods": [
+    "motion synthesis",
+    "style decomposition",
+    "few-shot learning",
+    "character animation"
+   ]
+  },
+  {
+   "title": "OmniHands: Robust Motion Capture of Interactive Hands via A Versatile Transformer",
+   "doi": "10.1145/3807943",
+   "url": "https://www.semanticscholar.org/paper/fdcfd1062f940599716e16d8354098b96fe21159",
+   "pdf": "https://doi.org/10.1145/3807943",
+   "arxiv": null,
+   "gid": 150,
+   "problem": "Hand motion capture lacks unified approach for single/interactive hands and real-world robustness",
+   "approach": "Transformer with Relation-aware Two-Hand Tokenization and 4D Interaction Reasoning fusion",
+   "contribution": "Universal hand capture from monocular/multi-view supporting both single and interactive hands",
+   "primary_theme": "hand motion capture",
+   "methods": [
+    "transformer",
+    "tokenization",
+    "attention"
+   ]
+  },
+  {
+   "title": "DealMaTe: Multi-Dimensional Material Transfer via Diffusion Transformer",
+   "doi": "10.1145/3817061",
+   "url": "https://www.semanticscholar.org/paper/fde0f7ea41a20ec4c3d38c6009aeddc64389b129",
+   "pdf": null,
+   "arxiv": "2605.15681",
+   "gid": 151,
+   "problem": "Material transfer methods rely on text guidance and auxiliary networks with feature misalignment",
+   "approach": "Diffusion framework with Multi-Dim 3D Shader LoRA and Shader Causal Mutual Attention",
+   "contribution": "Text-free material transfer achieving high-fidelity results with low architectural complexity",
+   "primary_theme": "material transfer",
+   "methods": [
+    "diffusion",
+    "lora",
+    "attention optimization"
+   ]
+  },
+  {
+   "title": "Low-Rank Koopman Deformables with Log-Linear Time Integration",
+   "doi": "10.1145/3811273",
+   "url": "https://www.semanticscholar.org/paper/fe347b42d3987e57af0a3248f236fd9a25b210ba",
+   "pdf": "https://doi.org/10.1145/3811273",
+   "arxiv": "2602.07687",
+   "gid": 152,
+   "problem": "Deformable simulation is computationally slow; Koopman models limited to single shape/discretization",
+   "approach": "DMD-based Koopman operator with log-linear time integration generalizing across shapes/resolutions",
+   "contribution": "Fast deformable simulation and shape optimization via generalized low-rank Koopman learning",
+   "primary_theme": "deformable simulation",
+   "methods": [
+    "koopman operator",
+    "dynamic mode decomposition",
+    "reduced-order modeling"
+   ]
+  }
+ ]
+}

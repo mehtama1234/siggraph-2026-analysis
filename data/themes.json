@@ -1,0 +1,209 @@
+{
+ "venue": "SIGGRAPH 2026 (ACM TOG vol 45)",
+ "n_papers": 153,
+ "with_abstract": 153,
+ "n_uncategorized": 10,
+ "themes": [
+  {
+   "theme": "Geometry Processing & Meshes",
+   "n": 59,
+   "pct": 38.6,
+   "examples": [
+    "PQ-Free HD: Priority-Queue-Free Hausdorff Distance for Triangle Meshes on GPU",
+    "Strips as Tokens: Artist Mesh Generation with Native UV Segmentation",
+    "A Few-Step Generative Model on Cumulative Flow Maps",
+    "Better Bending: Analysis, Construction and Verification of Discrete Bending Models for Kirchhoff-Love Shells",
+    "YASPS: A Symbolic Framework for Extensible, High-Performance IPC Simulation",
+    "Bounding Stratified Bernoulli Impulses for Ray Marching Gaussian Process Implicit Surfaces"
+   ]
+  },
+  {
+   "theme": "Physical Simulation",
+   "n": 54,
+   "pct": 35.3,
+   "examples": [
+    "Volume-Preserving LBM-MPM Coupling for Air-Water-Sand Mixtures",
+    "Better Bending: Analysis, Construction and Verification of Discrete Bending Models for Kirchhoff-Love Shells",
+    "YASPS: A Symbolic Framework for Extensible, High-Performance IPC Simulation",
+    "GMT: A Geometric Multigrid Transformer Solver for Microstructure Homogenization",
+    "Heterogeneous Subspace Corrections for GPU Deformable Multibody Dynamics",
+    "Mat\u00e9rn Noise for Triangulation-Agnostic Flow Matching on Meshes"
+   ]
+  },
+  {
+   "theme": "Character Animation & Motion",
+   "n": 37,
+   "pct": 24.2,
+   "examples": [
+    "Strips as Tokens: Artist Mesh Generation with Native UV Segmentation",
+    "Implicit Surface Compression -- with Good Old Discrete Cosine Transform and Motion Compensation",
+    "Mixwell: Sharp 2D Fluid Brushes for Progressive Physics-Based Mixing",
+    "LayerInbetween: Occlusion-Aware Stroke Correspondence and Inbetweening with Automatic Layering",
+    "ACT: A Unified Framework for Rigging and Animating Characters with Arbitrary Topologies",
+    "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering"
+   ]
+  },
+  {
+   "theme": "Appearance, Materials & BRDF",
+   "n": 35,
+   "pct": 22.9,
+   "examples": [
+    "Volume-Preserving LBM-MPM Coupling for Air-Water-Sand Mixtures",
+    "GMT: A Geometric Multigrid Transformer Solver for Microstructure Homogenization",
+    "Heterogeneous Subspace Corrections for GPU Deformable Multibody Dynamics",
+    "The PhaseTree: Multiphase Signed Distance Fields",
+    "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+    "HairGPT: Strand-as-Language Autoregressive Modeling for Realistic 3D Hairstyle Synthesis"
+   ]
+  },
+  {
+   "theme": "Generative 3D & Diffusion",
+   "n": 33,
+   "pct": 21.6,
+   "examples": [
+    "A Few-Step Generative Model on Cumulative Flow Maps",
+    "GenPIE: A Time-Resolved Plenoptic Imager",
+    "Pixels2Peaks: Converting Terrain Images to Heightmaps",
+    "SQuadGen: Generating Simple Quad Layouts via Chart Distance Fields",
+    "Mat\u00e9rn Noise for Triangulation-Agnostic Flow Matching on Meshes",
+    "ACT: A Unified Framework for Rigging and Animating Characters with Arbitrary Topologies"
+   ]
+  },
+  {
+   "theme": "Rendering & Light Transport",
+   "n": 28,
+   "pct": 18.3,
+   "examples": [
+    "GenPIE: A Time-Resolved Plenoptic Imager",
+    "Bounding Stratified Bernoulli Impulses for Ray Marching Gaussian Process Implicit Surfaces",
+    "Mat\u00e9rn Noise for Triangulation-Agnostic Flow Matching on Meshes",
+    "Forget Superresolution, Sample Adaptively (when Path Tracing)",
+    "Gradient Domain Reconstruction for Monte Carlo PDE Solvers",
+    "Loops2Roofs: Diffusion-based 3D Roof Generation using a Loop Representation"
+   ]
+  },
+  {
+   "theme": "Faces & Avatars",
+   "n": 15,
+   "pct": 9.8,
+   "examples": [
+    "LayerInbetween: Occlusion-Aware Stroke Correspondence and Inbetweening with Automatic Layering",
+    "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+    "HairGPT: Strand-as-Language Autoregressive Modeling for Realistic 3D Hairstyle Synthesis",
+    "TwinPose: Person-Specific Subspaces for Multi-View 3D Pose Estimation",
+    "Loops2Roofs: Diffusion-based 3D Roof Generation using a Loop Representation",
+    "Generalized Spherical Harmonics Products using Spherical Grids"
+   ]
+  },
+  {
+   "theme": "Computational Photography & Imaging",
+   "n": 14,
+   "pct": 9.2,
+   "examples": [
+    "Lucky High Dynamic Range Smartphone Imaging",
+    "GenPIE: A Time-Resolved Plenoptic Imager",
+    "Pixels2Peaks: Converting Terrain Images to Heightmaps",
+    "Mat\u00e9rn Noise for Triangulation-Agnostic Flow Matching on Meshes",
+    "Mixwell: Sharp 2D Fluid Brushes for Progressive Physics-Based Mixing",
+    "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering"
+   ]
+  },
+  {
+   "theme": "Fluids, Smoke & Granular",
+   "n": 14,
+   "pct": 9.2,
+   "examples": [
+    "Volume-Preserving LBM-MPM Coupling for Air-Water-Sand Mixtures",
+    "Mixwell: Sharp 2D Fluid Brushes for Progressive Physics-Based Mixing",
+    "HairGPT: Strand-as-Language Autoregressive Modeling for Realistic 3D Hairstyle Synthesis",
+    "Kinetic Predicted-Moment Flux Reconstruction for High-Order High-Performance Fluid Simulation",
+    "An Extended Full GKS Formulation for High-Efficiency and Low-Memory Two-Phase Flow Simulation",
+    "Dual-Path Holographic Laser-Excited Volumetric Display"
+   ]
+  },
+  {
+   "theme": "VR/AR & Displays",
+   "n": 13,
+   "pct": 8.5,
+   "examples": [
+    "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+    "Forget Superresolution, Sample Adaptively (when Path Tracing)",
+    "HoloPathTracer: Fast and Accurate Wave Path Tracing for Holography",
+    "PAColorHolo: A Perceptually-Aware Color Management Framework for Holographic Displays",
+    "Invisible Holographic Window: Full-color 3D Image Reconstruction from Transparent Surface-relief Computer-generated Holograms",
+    "Dual-Path Holographic Laser-Excited Volumetric Display"
+   ]
+  },
+  {
+   "theme": "Cloth, Hair & Fibers",
+   "n": 10,
+   "pct": 6.5,
+   "examples": [
+    "HairGPT: Strand-as-Language Autoregressive Modeling for Realistic 3D Hairstyle Synthesis",
+    "Surface Power Diagrams for Knit Singularity Placement",
+    "A Real-time, Multiscale and Procedural Feather Appearance Model",
+    "Interactive Yarn-level Knitwear with Nested Douglas-Rachford Splitting",
+    "Pixel Cube: Diffusion-based Portrait Video Relighting Through Realistic Lighting Reproduction",
+    "Fiber-level Woven Fabric Capture from a Single Microscopic Image"
+   ]
+  },
+  {
+   "theme": "Sketching & Vector / 2D",
+   "n": 7,
+   "pct": 4.6,
+   "examples": [
+    "Mixwell: Sharp 2D Fluid Brushes for Progressive Physics-Based Mixing",
+    "LayerInbetween: Occlusion-Aware Stroke Correspondence and Inbetweening with Automatic Layering",
+    "Learned Universal Interoperable Virtual Try-ON",
+    "Lifting Lines and Tone: Image-Space Stylization in Path-Space",
+    "StyleID: A Perception-Aware Dataset and Metric for Stylization-Agnostic Facial Identity Recognition",
+    "Monte Carlo Rendering of Biharmonic Diffusion Curves"
+   ]
+  },
+  {
+   "theme": "Neural Rendering & Radiance Fields",
+   "n": 7,
+   "pct": 4.6,
+   "examples": [
+    "Robust Computation of Boundary Path Integrals Using Kernel-Density Estimation",
+    "ATGS: Anchored Temporal Gaussian Splatting for Long Volumetric Video Representation",
+    "Fiber-level Woven Fabric Capture from a Single Microscopic Image",
+    "Gaussian Point Splatting",
+    "Closed-Form Convolution for physically-accurate defocus in Gaussian Splatting",
+    "SCom DAG: compact representation of spatial data for real-time rendering"
+   ]
+  },
+  {
+   "theme": "Fabrication & 3D Printing",
+   "n": 6,
+   "pct": 3.9,
+   "examples": [
+    "Co-Optimization of Structure and Manufacturable Semi-Continuous Layers for Laminated Composites",
+    "Stress-Aware Panelization of Freeform Surfaces",
+    "Untangling Surfaces via Shape and Mesh Repulsion",
+    "AtomSlicer: Constant-Thickness Field-Aligned Non-Planar Slicing and Continuous Toolpaths for FFF",
+    "ProXeek: Seeking and Leveraging Real-World Objects and Environments as Haptic Proxies for Virtual Reality through Multimodal Reasoning",
+    "Single-View Holographic Volumetric 3D Printing with Coupled Differentiable Wave-Optical and Photochemical Optimization"
+   ]
+  },
+  {
+   "theme": "Neural Fields & Representations",
+   "n": 3,
+   "pct": 2.0,
+   "examples": [
+    "GMT: A Geometric Multigrid Transformer Solver for Microstructure Homogenization",
+    "Co-Optimization of Structure and Manufacturable Semi-Continuous Layers for Laminated Composites",
+    "SAND: Spatially Adaptive Network Depth for Fast Sampling of Neural Implicit Surfaces"
+   ]
+  },
+  {
+   "theme": "Sound & Multisensory",
+   "n": 2,
+   "pct": 1.3,
+   "examples": [
+    "ProXeek: Seeking and Leveraging Real-World Objects and Environments as Haptic Proxies for Virtual Reality through Multimodal Reasoning",
+    "Mechanical Cloaking of Halftoned Imagery"
+   ]
+  }
+ ]
+}
