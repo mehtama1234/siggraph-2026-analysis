@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 135,
+    "deep_why": "The core computation is recovering unknown material and geometric properties from observed particle interactions. The soundness rests on the physics principle that particles moving through matter follow mathematically identical rules whether we simulate forward or compute gradients backward—the transport process is reversible. Because particle paths and energy losses obey continuous equations, tiny changes in shielding or moderation propagate smoothly into changes in observed counts, letting gradient-based search navigate toward better designs. This trustworthiness lets engineers flip expensive real-world experimentation into efficient numerical inverse design."
+  },
+  {
+    "gid": 136,
+    "deep_why": "The core task is finding neighbors fast while respecting that points lie on smooth, low-dimensional surfaces. The principle ensuring correctness is that when points cluster on a manifold, each nearest neighbor constrains where all further neighbors can hide—they must lie either before that neighbor in a sorted order or in successor sets that reflect the manifold's local structure. This ordering guarantee means you can prune search branches intelligently. Because smooth surfaces have this predictable neighbor containment property, the recursive refinement exhausts far fewer candidates than naive spatial partitioning."
+  },
+  {
+    "gid": 137,
+    "deep_why": "The core thing computed is a smooth deformation path through shape space that morphs one shape into another continuously. The mathematical guarantee is that invertible networks, by design, create mappings with no tears or folds—every point has exactly one pre-image and one image. When you use such a network to push shapes through time, the path remains physically valid: no parts overlap where they shouldn't, and volumes stay coherent. This invertibility guarantee lets blending, editing, and composition all work without ad-hoc fixes or expensive checks."
+  },
+  {
+    "gid": 138,
+    "deep_why": "The core task is tracing where two smooth curved surfaces intersect, then representing the intersection curve with controlled error. The principle is that a smooth curve's distance from any nearby polyline approximation is bounded by the flatness of the curve itself, which follows from smoothness guarantees like Lipschitz continuity. By choosing polyline segments short enough relative to how 'wiggly' the surface is, you make error predictable and controllable. This lets the algorithm give manufacturers watertight promises about precision—critical when parts must fit exactly."
+  },
+  {
+    "gid": 139,
+    "deep_why": "The core insight is that long-lived flow patterns—vortices and jets persisting for many steps—are the dominant paths along which changes propagate backward through time. The principle is that sparse, high-fidelity 'highways' of influence carry more gradient information than many weak paths, so pruning redundant connections while preserving these flow-map links keeps gradients faithful. Because vorticity structures physically persist, these critical paths stay stable and identifiable. This pruning shrinks computation without losing gradient quality, speeding difficult fluid optimizations."
+  },
+  {
+    "gid": 140,
+    "deep_why": "The core computation is designing light patterns that create a precise dose field deep inside a volume, accounting for both how light bends and how chemistry responds. The principle is that forward-computing both optical diffraction and chemical blur reveals their coupling: you can't fix optical blur alone—you must pre-distort the light pattern to compensate for chemical blur that comes later. Because photochemistry involves diffusion with known length scales, the interactions become predictable. Jointly optimizing both lets the system achieve micro-scale precision from a single viewing angle."
+  },
+  {
+    "gid": 141,
+    "deep_why": "The core task is generating humans in diverse poses and styles while respecting both visual realism and strict anatomical structure. The principle ensuring control is that natural human skeletons cluster into a learned set of valid configurations—no human has a 3-meter leg or joints bending backward. By regularizing the generation to stay within these manifolds of feasible poses, defined by realistic bone ratios and joint angles, the model learns to satisfy style conditions without breaking anatomy. This constraint makes control reliable: the network can explore creative variation while remaining within physical law."
+  },
+  {
+    "gid": 142,
+    "deep_why": "The core computation is extracting critical numerical values (eigenvalues) from enormous matrices that describe geometric shapes. The mathematical principle is that coarse approximations to the answer can be iteratively refined using information from coarser and finer scales—information flows between scales smoothly. By solving related but cheaper problems at lower resolution, you get better starting guesses for the fine-scale solver, speeding convergence. For geometry processing, shapes often have this multiscale structure naturally, so the acceleration works reliably across diverse problems."
+  },
+  {
+    "gid": 143,
+    "deep_why": "The core measurement is locating tiny points on cloth to the millimeter across multiple camera views and then reconstructing deformation. The principle is that a dense pattern with multiple clues per region—colored shapes plus noise texture—lets you find each point with pixel accuracy and then sub-pixel precision by unwrapping to a reference frame where perspective distortion cancels. The physics-based refinement then fills gaps from occlusions by enforcing that cloth behaves realistically. This combination of dense cues, geometric unwrapping, and physical constraints yields temporal coherence despite cloth's complexity."
+  },
+  {
+    "gid": 144,
+    "deep_why": "The core problem is converting a surface defined in continuous space into a mesh without missing thin sheets or fine features. The key principle is that surface connectivity can be encoded by counting how many times the surface crosses each edge of a grid—a topological count invariant to smooth deformation. Unlike binary inside-outside tests, counting allows multiple sheets per cell, so features smaller than cell size remain recoverable. This encoding removes the usual resolution limits, letting the same grid capture details classical methods miss, all while staying local and parallelizable."
+  },
+  {
+    "gid": 145,
+    "deep_why": "The core task is estimating signed distance to a point cloud—how far any query point sits from the surface and which side. The principle unifying this work is that locally fitting shapes with known analytical distance functions (like tori with simple formulas) builds a smooth approximation covering the whole point set. Because curvature at each point predicts local shape, a network can predict fitting parameters feed-forward without global optimization. This avoids expensive global solving, staying differentiable and parallelizable while giving access to applications like Boolean operations and offsets previously needing explicit surface reconstruction."
+  },
+  {
+    "gid": 146,
+    "deep_why": "The core task is generating videos that satisfy diverse input conditions—depth, pose, style—all from the same base model. The principle is that if you randomly swap which modalities are 'given' and which are 'targets' during training, the model learns bidirectional conditioning: depth can guide pose, or pose can guide depth, or both guide color. This random masking strategy breaks the fixed input-output mapping, revealing the model's full generative power. Because video diffusion models understand temporal coherence implicitly, this flexibility preserves cross-modal consistency while adapting to each application without retraining."
+  },
+  {
+    "gid": 147,
+    "deep_why": "The core task is moving a surface outward by a specified distance while keeping sharp edges crisp. The principle is that sharp features—edges and corners—behave differently from smooth regions: at an edge, the surface pinches, so the offset must refocus to avoid gaps or overlaps. By explicitly generating offset points and triangles with energy penalties for feature distortion before establishing how they connect, the method respects topology before topology emerges. This generates-geometry-first approach, combined with exact algorithms at critical steps, avoids the cascade of errors that plague simpler offsets."
+  },
+  {
+    "gid": 148,
+    "deep_why": "The core objects are surfaces with constant mean curvature—perfectly balanced curvedness everywhere. The mathematical principle is that the curved normal directions on such surfaces satisfy a flatness equation (harmonicity) identical to how heat or steady-state charge distributes. By solving this distribution equation on a discrete mesh, you automatically capture the structure of these rare, beautiful surfaces. Because the connection is exact—not approximate—geometric properties like conformal parameterization and closed forms flow through to the discrete version. This gives a direct, simple recipe for creating architecturally appealing shapes with guaranteed correctness."
+  },
+  {
+    "gid": 149,
+    "deep_why": "The core insight is that motion style has two independent parts: static posture biases (how tall, hunched, or twisted an actor tends to be) and dynamic frame-to-frame variation (how exaggerated or snappy). Decomposing style this way means you can learn each part with minimal data: posture from still frames, dynamics from motion clips. Because the two components are orthogonal, varying one doesn't break the other, letting artists adjust intensity and exaggeration at runtime independently. This factorization shrinks training time from hours to minutes while making the result interpretable and editable."
+  }
+]

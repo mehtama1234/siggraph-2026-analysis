@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 15,
+    "deep_why": "The core challenge is learning to lay out repeating four-sided shapes on curved surfaces without explicit shape descriptions. The method works by converting mesh topology (discrete, hard to learn) into a smooth distance field that measures how far any point sits from layout boundaries. This continuous representation lets learning algorithms see smooth patterns. Because distance fields naturally capture local surface geometry while abstracting away specific shape choices, the learned model generalizes to new surfaces. This lets artists get clean, editableResults from raw scans instantly."
+  },
+  {
+    "gid": 16,
+    "deep_why": "The core task is shrinking video-like sequences of dynamic 3D shapes to fit storage and network demands. The method borrows classical video compression: it breaks space into frequency bands and tracks how those change frame-to-frame. This works because dynamic volumetric shapes, like video frames, naturally exhibit strong redundancy—nearby frames look almost identical spatially and differ only gradually over time. By encoding differences rather than full frames, the method exploits temporal smoothness inherent in real capture. This lets producers stream 3D captures in real-time without specialized hardware."
+  },
+  {
+    "gid": 17,
+    "deep_why": "The core problem is teaching a model to generate signals on curved surfaces so that the same trained model works on any surface with any internal structure. The method uses noise that respects intrinsic geometry rather than specific triangulation patterns. This works because certain random fields, when sampled on surfaces, remain unchanged whether the surface is finely or coarsely divided. By building generation on this triangulation-agnostic noise, the model learns semantic structure that transfers freely. This enables one pre-trained generator to handle infinite surface variations without retraining."
+  },
+  {
+    "gid": 18,
+    "deep_why": "The core task is slicing 3D shapes into small tetrahedral pieces for simulation and analysis while keeping piece quality high. The method works by first softening sharp corners at shape boundaries through controlled rounding, then applying an established refinement recipe that guarantees good piece shapes. This works because sharp angles force the refinement algorithm to create bad pieces near them; removing them first eliminates the root cause. Reintroducing the original corners afterward adds only a few poor pieces in tiny regions. This trades minor local compromise for global robustness."
+  },
+  {
+    "gid": 19,
+    "deep_why": "The core challenge is deciding where misplaced household objects belong without manual training or human guidance for each home. The method enhances scene descriptions by asking a language model to infer what each container actually holds and what objects fit there based on contextual clues from surrounding objects and their typical use patterns. This works because everyday reasoning about containers, purpose, and appropriateness is deeply encoded in human language—the model distills this without explicit programming. This lets robots understand novel homes by reason alone."
+  },
+  {
+    "gid": 20,
+    "deep_why": "The core task is mixing paint or fluid on a 2D canvas interactively while simulating realistic flow and color blending. The method derives smooth velocity fields from idealized flow around a brush tip, then precomputes spatial transformations that encode how paint moves and settles when the brush strokes. These transformations compose naturally in image space and avoid per-pixel grid solving. This works because real fluid drift motion, once captured analytically, can be baked into displacement fields that commute—applying multiple strokes in sequence gives the same result as their combined effect. This enables real-time, resolution-independent mixing."
+  },
+  {
+    "gid": 21,
+    "deep_why": "The core problem is representing solid objects made from multiple distinct materials—wood wrapped in plastic, composite shells with foam cores—in a way that stays compact and works with existing tools. The method builds a tree of simple volume primitives layered with operations that blend them and warp them together, each layer aware of which material it represents. This works because material interfaces sit at specific positions in such trees; existing algorithms can extract single-phase shapes by querying one material or merging phases when needed. This lets complex multi-material objects stay as usable as single-material ones."
+  },
+  {
+    "gid": 22,
+    "deep_why": "The core challenge is drawing hidden strokes in hand-drawn animation inbetweening without explicit layering by the artist. The method predicts stroke layers across keyframes using geometric alignment cues, then generates missing strokes in the in-between frames positioned correctly behind foreground elements. This works because strokes occluded by other strokes follow predictable spatial paths—the model learns these patterns from synthetic training data where occlusion is explicit. By guessing layers first, it solves correspondence correctly even when direct matching fails. This eliminates frame-by-frame manual hiding."
+  },
+  {
+    "gid": 23,
+    "deep_why": "The core task is automatically adding a digital skeleton and motion to 3D character shapes so they can be animated, handling any body topology without retraining. The method jointly models skeleton structure and motion as dual projections of a single latent space, extracting semantic body-part hints from the shape's appearance. This works because animate structures are fundamentally constrained—what skeleton fits a given shape and how it must move are tightly linked. By treating both aspects as different views of one thing, the model learns their coupling; applying different masking patterns at decode time extracts either skeleton, motion, or both. This unifies rigid pipeline stages."
+  },
+  {
+    "gid": 24,
+    "deep_why": "The core task is capturing a person's full-body shape, motion, and lighting from a head-mounted camera so they appear naturally in mixed-reality spaces under new lighting. The method uses stereo depth from outward-facing cameras to reconstruct shape robustly, then learns how that person's skin scatters and reflects light separately for diffuse and glossy components. This works because separating appearance into direction-dependent and direction-independent parts exploits how real skin actually behaves—diffuse light bounces equally in all directions, while specularity depends on viewpoint. With this split, the model generalizes to new illuminations without memorizing specific lighting conditions. This lets virtual people blend seamlessly indoors or outdoors."
+  },
+  {
+    "gid": 25,
+    "deep_why": "The core problem is simulating how mountains erode over millions of years as water and sediment flow, carve, and deposit—processes happening at wildly different time scales. The method models particles of water and sediment bouncing and flowing stochastically down slopes while they collectively create erosion patterns. This works because erosion respects conservation laws—mass and energy flow downhill consistently even if individual particle paths vary. By using randomness in particle trajectories but summing their collective effect, the method satisfies conservation while sidestepping the need to solve coupled equations across disparate time scales. This enables realistic geological features like river meandering to emerge naturally."
+  },
+  {
+    "gid": 26,
+    "deep_why": "The core task is rendering photorealistic images when you can afford only a fraction of a light ray per pixel due to speed or resolution demands. The method learns where to spend those precious rays by noticing that noise, difficulty, and perceptual importance vary across the image—bright regions need fewer rays than dark ones. By training the placement strategy as a learnable probabilistic choice rather than a fixed grid, gradients can flow through sampling decisions themselves. Pairing this with perceptual loss makes the optimizer prioritize human-visible quality over mathematical error. This lets artists trade off speed and quality adaptively per region instead of uniformly."
+  },
+  {
+    "gid": 27,
+    "deep_why": "The core challenge is generating realistic 3D hairstyles where global structure (how many strands, their flow direction) and local detail (thickness, waviness) must be semantically organized, not tangled into opaque texture. The method treats individual hair strands as discrete tokens and generates them autoregressively region by region from scalp to tips, building a hierarchical description from coarse layout to fine texture. This works because hairstyles, like written language, have hierarchical semantic structure—regions, strand groups, then individual strands—that humans naturally think about step-by-step. Aligning generation with that thinking makes the model interpretable and editable. This turns hair synthesis from black-box texture into authored structure."
+  },
+  {
+    "gid": 28,
+    "deep_why": "The core problem is finding where multiple people are positioned in 3D when you only see 2D poses from several camera angles and must avoid forcing one giant optimization problem that gets stuck in local mistakes. The method works by inferring each person individually within their own learned pose space, where physically valid poses naturally cluster and outliers stand out. For each 2D pose seen, it finds a matching 3D twin pose in that person's private space that aligns with poses from other angles. This works because each person's body structure constrains their possible poses—their personal space is smaller and smoother than the global pose space. This makes individual fitting faster and more robust."
+  },
+  {
+    "gid": 29,
+    "deep_why": "The core task is adding realistic surface detail to simulated objects that deform dramatically—leaves wrinkling, cloth tearing, mud cracking—where texture coordinates get wildly stretched and bunched. The method generates texture procedurally on-the-fly based on local deformation measures rather than mapping static images. This works because real deforming materials change appearance through actual physical processes: stretched regions thin and lighten, compressed regions bunch and darken, and ruptures expose interior texture underneath. By keying texture generation to these deformation invariants, the method mimics physics without solving it. This produces plausible distortion that evolves with motion naturally."
+  }
+]

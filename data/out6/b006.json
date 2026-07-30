@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 90,
+    "deep_why": "The core insight is that computing the signed distance to a surface requires different numerical precision depending on where you are: far away, rough approximation works; near the surface, fine detail matters. The method builds a spatial map predicting the depth of computation needed at each location, then pairs it with a modified network where each internal layer can produce a valid output. This works because the total error in approximating the distance shrinks as you compute deeper, so you can stop early in simple regions without sacrificing accuracy where it counts—the spatial map steers computational resources exactly where the geometry gets complex, making the whole process faster without losing surface fidelity."
+  },
+  {
+    "gid": 91,
+    "deep_why": "Three-dimensional printing with tilted nozzles must balance following directional fields while keeping bead thickness constant and avoiding collisions. The method encodes these constraints into oriented phase fields—mathematical scalar fields that capture direction and position simultaneously—then partitions them into printable layers and reconstructs layer shapes. This approach works because phase fields obey fundamental smoothness and consistency properties: if you respect the field directions at every point and control thickness carefully, the resulting toolpaths automatically avoid clashing with previous layers and stay manufacturable, collapsing the many competing constraints into a single coherent geometric representation that can be solved directly."
+  },
+  {
+    "gid": 92,
+    "deep_why": "Indoor scene generation faces a collision—enforcing building rules while avoiding mistakes from relating every object to every other object. The method breaks generation into four sequential stages: first predicting what goes in, then sizing and positioning, then building a sparse relationship graph, finally placing boxes. This works because each stage conditions on outputs from the previous one, shrinking the search space and reducing the number of object-pair relationships to consider; the sparsity (only relevant semantic links, not fully connected) removes redundant error accumulation, and encoding the sparse graph into a compact space makes learning tractable, so each stage can focus on one geometric or semantic aspect rather than solving everything simultaneously."
+  },
+  {
+    "gid": 93,
+    "deep_why": "Finding a one-to-one correspondence between two surfaces that minimizes distortion requires avoiding tangled or self-overlapping maps. The key is to treat the correspondence itself as a hidden surface sitting in the product of the two input surfaces, then minimize the area of that mapping surface; this corresponds to minimizing a classical physics functional known to encode optimal mappings. Since the functional rewards flat, undistorted maps and punishes folds, the optimization is guaranteed to converge to bijections that preserve orientation—the mathematics of area minimization ensures injectivity emerges naturally without needing penalty terms or special initialization tricks."
+  },
+  {
+    "gid": 94,
+    "deep_why": "Simulating stiff elastoplastic materials like clay or snow faces a stability wall: explicit time-stepping breaks into tiny pieces when materials resist compression, while implicit methods struggle with the complex physics of flow and deformation. The approach uses a mixed formulation that separates position and stress into independent variables, then solves them together as a single well-posed optimization problem. This works because separating the variables decouples the fast pressure responses from the slower deformation rates, allowing the solver to handle stiff gradients without shrinking the timestep catastrophically; the symmetric structure of the problem unlocks standard optimization solvers that are robust and efficient on parallel hardware."
+  },
+  {
+    "gid": 95,
+    "deep_why": "Single-photon cameras count arriving light quanta one at a time—an extremely quantized, noisy measurement—yet the goal is to recover full-spectrum images. The theoretical guarantee comes from probabilistic concentration bounds: as you accumulate more photon counts, the empirical frequency distribution of colors converges exponentially fast to the true spectral content. This works because the measurement process is unbiased (each detected photon is a fair sample of the incident spectrum) and independent; so long as you gather enough measurements, statistical law-of-large-numbers ensures the spectrum reconstructs accurately, and the error bound shrinks exponentially, making the approach sound despite the extreme quantization."
+  },
+  {
+    "gid": 96,
+    "deep_why": "The medial axis—the set of all points equidistant from the boundary—describes shape by recording where spheres fit perfectly inside. Simplifying it naively loses structural meaning, so the method carefully tracks which surface regions each simplified axis point represents. This works because the medial axis encodes intrinsic symmetries: two axis points merge only if the surface patches they correspond to were genuinely connected by a perfect fit; by respecting this correspondence throughout simplification, the algorithm preserves feature alignment and avoids spurious collapses, ensuring the final axis remains faithful to the shape's true structure and geometry."
+  },
+  {
+    "gid": 97,
+    "deep_why": "Virtual reality touch feedback typically requires expensive hardware or pre-built prop setups, but most real environments already contain objects with textures and weights. The system uses multimodal reasoning to match virtual object properties (hardness, texture, temperature) to physical ones found nearby, then solves a multi-objective constraint problem that ranks proxy candidates. This works because semantic matching leverages learned world knowledge—large models understand which real materials feel like virtual ones—and the optimization balances competing criteria (size, reachability, haptic match) to find feasible proxies that deliver plausible tactile feedback without custom fabrication or active machinery."
+  },
+  {
+    "gid": 98,
+    "deep_why": "Deforming 3D surfaces interactively requires both fitting detail and enabling direct manipulation without retraining. The approach uses a base subdivision surface (which has known, clean algebraic properties) plus an offset field learned via neural basis functions anchored to that base. This works because subdivision surfaces obey linearity, locality, and smoothness by design: any linear combination of control point displacements produces a proportional surface change, and the offset field inherits these properties through its base, so you can deform the mesh directly via the control points without retraining while still capturing fine surface details in the learned offset."
+  },
+  {
+    "gid": 99,
+    "deep_why": "Solving boundary-value equations on complex shapes requires either fine spatial discretization (expensive) or random walk simulation (slow and noisy). The hybrid approach splits the domain into small regular pieces, computes how random walks escape each piece (the Poisson kernel), then assembles these local escape probabilities into a large global equation and solves it exactly. This works because the variance of a random walk shrinks with domain size, so local escape probabilities are fast to estimate; replacing millions of walks with a single deterministic solve trades fast-to-compute stochastic variance for controlled, reusable discretization error, getting geometric flexibility and parallelism from Monte Carlo while gaining speed and stability from the global solve."
+  },
+  {
+    "gid": 100,
+    "deep_why": "End-to-end camera design must optimize optics for downstream processing (like image restoration), but a single-number loss function provides too few constraints for the hundreds of optical parameters, causing standard optimization solvers to fail. The method lifts this scalar loss into ray-level residuals by measuring how rays deviate from perfect focus; now the high-dimensional residual vector feeds back into robust optimization solvers designed for over-constrained problems. This works because ray-level measurements give rich directional information about which parts of the optical system cause problems, transforming an under-constrained scalar problem into a well-posed over-constrained one that standard second-order solvers can handle reliably, bridging traditional optics tuning with modern end-to-end learning."
+  },
+  {
+    "gid": 101,
+    "deep_why": "Virtual agents must move consistently with their role (hero, shadow, guide) and respond to the user's actions, requiring behavioral coherence across diverse situations. The system prompts a multimodal language model with scene layout, agent role, and user state to predict movement decisions and stylized paths. This works because large models encode rich commonsense about how characters behave in spatial narratives: a pursuer runs differently than a hider, both shaped by scene geometry and social intent; the model integrates scene understanding, role semantics, and behavioral pragmatics into spatially coherent plans, grounding linguistic roles in embodied movement without hand-coded behavior trees."
+  },
+  {
+    "gid": 102,
+    "deep_why": "Generating articulated 3D characters from images requires predicting geometry, skeleton, and skinning together, but they must stay mutually consistent—bone boundaries can't cut through flesh, skinning weights must match joint structure. The approach represents all three as fields defined over the same spatial domain (shape, skeleton, and skin fields), then learns them jointly with two key tricks: a confidence-decay skeleton field to handle uncertainty where bones meet geometry, and a dual feature space for skin that decouples weights from bone count. This works because expressing all three as fields in a shared space enforces consistency automatically; confining skeleton prediction to high-confidence regions avoids impossible bone placements, and the dual skin representation lets a fixed network handle rigs of any complexity—the shared domain makes inconsistency geometrically impossible."
+  },
+  {
+    "gid": 103,
+    "deep_why": "Inferring facial appearance from casual videos requires untangling reflectance (how the material interacts with light) from illumination (where the light comes from), which is mathematically underdetermined—many reflection-plus-light combinations look identical. The method trains a neural prior using carefully aligned real-world capture data (studio scans under controlled light plus in-the-wild video), bridging them with dataset-specific learned tokens that let a single network adapt to both sources. This works because priors constrain the solution space: the prior learns what realistic reflectance and light distributions look like, making the inversion more stable; by learning to recognize dataset style separately from physical principles, the prior transfers across very different capture setups, letting casual video produce results rivaling expensive studio gear."
+  },
+  {
+    "gid": 104,
+    "deep_why": "Bounding cages must be both simple (few faces) and tight (hugging the shape closely), competing objectives that pull the cage in opposite directions. The method uses a thickness parameter that defines an allowed deviation region around a target offset surface, then progressively relaxes this region by tightening the band step-by-step, while using rigorous inequality constraints to prevent triangles from flipping or degenerating. This works because the staircase relaxation schedule guides the cage away from trivial solutions toward increasingly tight ones while maintaining feasibility at each step; linear inequality constraints prevent local geometric failures that trap solvers, and the atomic edge-collapse operations stay efficient, so each step solves a well-defined, achievable subproblem that builds toward the global balance between simplicity and fidelity."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 75,
+    "deep_why": "Asymmetric telescope openings create distorted star images that contain hidden information about what light waves are doing as they travel through the atmosphere. When an opening is shaped unevenly, the blurry image it makes encodes phase information—the wave timing—that a symmetric opening would discard. A machine learning model learns to read these clues from real photographs taken through unknown air distortions, then predicts what corrections a deformable mirror should apply. This transforms photography into wavefront sensing without needing an artificial guide star, letting cameras see through atmospheric blur using only natural scene structure."
+  },
+  {
+    "gid": 76,
+    "deep_why": "Quadrilateral meshes must have special singular points where the regular four-way corner pattern breaks down, and the exact placement of these singularities determines whether a smooth, well-shaped mesh is even possible. Rather than trying to predict an entire meshing scheme directly, learning just the sparse singularity locations and their types is much simpler and more stable. A standard algorithm then fills in the smooth field between them with provable smoothness. This split solves a fundamental mismatch: tiny shape changes can flip the entire mesh if you predict it end-to-end, but singularity locations stay almost the same, giving a continuous learning target that produces consistent outputs."
+  },
+  {
+    "gid": 77,
+    "deep_why": "Video diffusion models trained on real footage already know how light should look on human faces—the subtle gradients, shadows, and skin response. By training on a hybrid dataset of real filmed faces plus synthetic renders with known lighting, the model learns to take any portrait and relight it by predicting what pixels should change when the light source moves. The high dynamic range environment maps act as precise lighting instructions that the model understands because it has seen both real and simulated examples, letting it preserve fine skin texture and expression while changing only what light would actually change."
+  },
+  {
+    "gid": 78,
+    "deep_why": "Latency in virtual reality breaks the real-time connection between your head movement and what you see; above a certain threshold, your brain detects the delay and the illusion of presence collapses. This passthrough headset uses a camera-based optical design that displays reality with only 2 milliseconds of delay—fast enough that the eye-brain connection feels immediate. By keeping this delay below perception thresholds, the system enables true studies of how small latency changes affect user comfort and task performance, filling a gap where faster devices simply couldn't measure."
+  },
+  {
+    "gid": 79,
+    "deep_why": "Fungal decay of wood is fundamentally a competition for chemical resources governed by how fungi spread through wood fiber and how moisture enables chemical breakdown and structural fracture. The simulation tracks three coupled processes: how fungal colonies advance through the grain, how chemical defenses deplete as fungi consume them, and how moisture-driven pressure causes specific fracture patterns. By modeling wood as a volumetric material with grain-aligned structure and tracking resource consumption plus water flow together, the system captures why wood hollows in specific patterns and why environmental moisture drastically affects collapse, grounding appearance in physical cause."
+  },
+  {
+    "gid": 80,
+    "deep_why": "Real shapes captured from noisy sensors do not have one true surface; they have a cloud of plausible surfaces consistent with the measurement noise. This framework extends classical surface mathematics—the rules for computing gradients and smoothness—to work on this entire cloud at once, using the Kac-Rice formula to convert the intricate probability problem into computable integrals over space. By doing geometry processing on probabilistic surfaces instead of pretending one measurement is truth, the system naturally handles measurement ambiguity and produces robust results on noisy data."
+  },
+  {
+    "gid": 81,
+    "deep_why": "Real-time game animation demands both the quality of machine learning models and the speed of hand-coded motion pieces. MotionBricks splits this problem: a single learned model handles the core motion generation task efficiently, then 'smart primitives'—plug-in modules for steering and interaction—provide the multi-faceted control that game designers need without retraining. By modularizing learned generation and leaving intuitive control to interpretable primitives, the system scales to 350,000 motion variations at interactive frame rates while staying designer-friendly."
+  },
+  {
+    "gid": 82,
+    "deep_why": "Moving human motion onto a robot's body must respect physics: feet cannot slide across the ground, limbs cannot pass through the body, and the robot cannot command impossible forces. A bilevel optimization loop jointly warps the original motion to match the robot's limbs while training a policy that tracks the warped motion under realistic physics. The reinforcement learning agent learns to compensate for the robot's differences, and the warping adapts the targets to what is physically feasible, so the two refinements converge to motions that are both human-like and physically plausible."
+  },
+  {
+    "gid": 83,
+    "deep_why": "Rendering volumetric scenes with Gaussian components becomes slow when you include everything; you need a way to stop rendering far-away detail without storing multiple copies. Gabor Fields represent the volume using oriented frequency patterns that let you selectively turn off high-frequency components by removing primitives, automatically creating a smooth level-of-detail hierarchy. Because these filters are mathematically built into the representation itself, removing detail does not require expensive recomputation or extra storage, directly trading off rendering speed for detail."
+  },
+  {
+    "gid": 84,
+    "deep_why": "Heat radiates from surfaces at a rate that depends on temperature to the fourth power, creating a nonlinear boundary condition that does not have a direct algebraic solution. A Picard iteration method solves this by guessing an initial temperature, computing how much heat would radiate from that guess, solving the resulting simpler heat equation, and repeating. Each iteration brings the solution closer to equilibrium. The method is stable and empirically converges because the heat equation dampens errors, and the special variance reduction technique reduces Monte Carlo noise specifically at boundaries where it matters most."
+  },
+  {
+    "gid": 85,
+    "deep_why": "Human motion is hierarchical: the body's center moves along a path while the limbs dance around it with their own detailed patterns. ARDY uses two representations at once—an explicit root trajectory for precise path control and a learned body embedding for realistic limb motion—letting the model generate motion one frame at a time conditioned on real-time text prompts. By streaming predictions with a limited but shifting context window and treating text and pose constraints equally, the system balances real-time speed with the ability to follow long-horizon instructions."
+  },
+  {
+    "gid": 86,
+    "deep_why": "The generalized winding number is a scalar field that determines whether a point lies inside or outside a curved boundary, and computing it usually requires expensive surface integrals. This method reduces the integral analytically to just one ray intersection test and a sum over edge signatures, cutting computation dramatically. By building a hierarchical spatial index that stores precomputed moment data for NURBS surface clusters and adaptively subdividing curves to improve spatial partitions, the system computes the field sub-linearly while preserving sharp features near the actual boundary."
+  },
+  {
+    "gid": 87,
+    "deep_why": "The Walk on Spheres method solves equations by simulating random walks that bounce around inside a domain until they hit a boundary, then read off the answer. Each walk path actually contains many intermediate points that are also valid solutions to the equation—they are just unused. By replacing the continuously shrinking spheres with a fixed set of pre-placed probe boundaries and treating path points as unbiased samples from the Poisson integral formula, the method reuses this hidden information. Combined with control variates for variance reduction, this lets far fewer random walks achieve the same accuracy."
+  },
+  {
+    "gid": 88,
+    "deep_why": "The winding number—how many times a curve wraps around a point—tells you if the point is inside or outside a shape, but computing it involves an expensive surface integral. This method reduces the integral analytically to one ray-mesh intersection test plus a sum over mesh edges, orders of magnitude faster. The construction is exact up to floating-point precision with no approximations, and it works even on broken or noisy geometry because the mathematical reduction is valid regardless, making it both faster and more robust than approximation methods."
+  },
+  {
+    "gid": 89,
+    "deep_why": "A single microscope image of woven fabric contains only 2D visual information, yet you need to recover 3D fiber positions, orientations, and optical properties. The method builds this in stages using differentiable procedural models: a neural network gives rough fiber parameters, then rendering is compared to the microscope image and parameters are refined so the synthetic render matches the photo. This works because differentiable rendering lets you run the inverse problem—backpropagating appearance through geometry to adjust both simultaneously. The coarse-to-fine approach starts simple and adds detail as the estimate improves, avoiding local minima."
+  }
+]

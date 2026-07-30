@@ -7,6 +7,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 MATH = json.load(open(os.path.join(HERE, "data", "math.json")))
 _wm = os.path.join(HERE, "data", "whymath.json")
 WHYMATH = json.load(open(_wm)) if os.path.exists(_wm) else {}
+_dw = os.path.join(HERE, "data", "deepwhy.json")
+DEEPWHY = json.load(open(_dw)) if os.path.exists(_dw) else {}
 analysis = json.load(open(os.path.join(HERE, "data", "analysis.json")))["papers"]
 def esc(s): return html.escape(str(s or ""))
 
@@ -72,6 +74,7 @@ def concept_html(c):
         rows += (f"<div class='pr'><div class='pt'>{esc(title_of.get(gid,''))}</div>"
                  f"<div class='mp'><span class='pk'>uses</span> {esc(mv['plain'])}</div>"
                  + (f"<div class='mp wy'><span class='pk wk'>why it works</span> {esc(why)}</div>" if why else "")
+                 + (f"<details class='dw'><summary>the deeper reason</summary><div class='dwb'>{esc(DEEPWHY.get(gid,''))}</div></details>" if DEEPWHY.get(gid) else "")
                  + "</div>")
     whybox = (f"<div class='whybox'><div class='wt'>Why it works — the principle</div><p>{esc(WHY[c['key']])}</p></div>"
               if c["key"] in WHY else "")
@@ -104,6 +107,8 @@ h2{{font-family:var(--serif);font-size:29px;margin:0 0 12px;color:#fff}}
 .mp{{font-size:13.5px;color:var(--dim);margin-top:3px;padding-left:82px;text-indent:-82px}}
 .mp.wy{{color:var(--soft)}}
 .pk{{display:inline-block;width:74px;font-family:var(--mono);font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);text-align:right;margin-right:8px}}.pk.wk{{color:var(--accent)}}
+.dw{{margin:5px 0 0 82px}}.dw summary{{font-family:var(--mono);font-size:10.5px;color:var(--accent);cursor:pointer;list-style:none}}.dw summary::-webkit-details-marker{{display:none}}.dw summary::before{{content:'▸ ';color:var(--faint)}}.dw[open] summary::before{{content:'▾ '}}
+.dwb{{font-size:13.5px;color:var(--soft);margin-top:6px;padding:10px 14px;background:rgba(79,168,184,.05);border-left:2px solid var(--line);border-radius:0 8px 8px 0;line-height:1.6}}
 .whybox{{background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:14px 18px;margin:6px 0 4px}}
 .whybox .wt{{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}}.whybox p{{margin:0;font-size:15.5px;color:var(--ink)}}
 .bars{{margin-top:14px}}

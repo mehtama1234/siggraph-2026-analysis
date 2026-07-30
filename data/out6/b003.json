@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 45,
+    "deep_why": "When light photons strike an object, they carry momentum and transfer force. The core challenge is computing this radiation pressure accurately for complex shapes without simulating trillions of individual photons. By treating light paths as random samples across the design surface and weighting each path by how much it matters to the final answer (importance sampling), the method collects unbiased force estimates in parallel. The proxy neural model then memorizes this relationship between shape and force, becoming instantly queryable during design optimization. This works because light momentum obeys conservation laws—the pressure always accumulates consistently regardless of how you approximate it, so a well-trained model capturing that relationship becomes reliable for finding designs that dodge radiation drag."
+  },
+  {
+    "gid": 46,
+    "deep_why": "When surfaces change shape during rendering, light paths bend and split in complex ways—the integral along those paths becomes mathematically delicate and hard to measure numerically. The core trick is smoothing the razor-thin boundary with a small kernel, just like how photon mapping works by clustering photons in space rather than tracking them infinitesimally. This thickening transforms an impossible delta-function integral into a friendly finite integral, which computers can sample reliably. The method remains mathematically sound because the kernel width is controlled: it vanishes as precision increases, so computed derivatives converge to the true answer. This lets rendering software take derivatives with respect to shape changes without numerical collapse, enabling inverse design problems."
+  },
+  {
+    "gid": 47,
+    "deep_why": "Standard Material Point Method simulations slow down with more particles because every particle demands computational work during the solve step. The core insight is treating particles only as luggage for motion and history, while all force calculations happen on fixed grid points using simple linear interpolation. This decoupling is sound because the underlying physics—how materials deform and stress transmits—depends only on deformation gradients and stress, which can be cleanly resampled onto the grid without information loss. By storing stress in a rotation-aware way and solving forces on the grid alone, the method becomes independent of particle count, letting solvers use standard numerical techniques that scale predictably."
+  },
+  {
+    "gid": 48,
+    "deep_why": "Spherical Harmonics compactly encode how light shines from all directions, but multiplying two such representations is computationally expensive. The core idea is converting both to a sampled grid on the sphere, multiplying them pointwise (trivial), then converting back. This works because pointwise multiplication on a fine enough grid faithfully captures the true product—you can mathematically prove that the grid resolution needed depends only on the maximum frequency content of the input functions. By choosing grid resolution adaptively based on input orders rather than forcing a fixed one, the method handles mixed-order products efficiently while remaining exact when needed, avoiding unnecessary computation without sacrificing accuracy."
+  },
+  {
+    "gid": 49,
+    "deep_why": "Building a tetrahedral mesh that respects input boundaries exactly is computationally hard—adding extra points (Steiner points) at boundaries can corrupt the original topology. The core strategy identifies local configurations where standard flips alone cannot recover a boundary, then inserts interior Steiner points only when necessary and relocates boundary ones optimally. This works because flip operations have well-understood geometric properties: when they cannot bridge a gap, the configuration is characterizable. By resolving only true flip-hard cases and using high-precision arithmetic with error tracking, the algorithm preserves both the input shape and connectivity, reducing point insertion from a combinatorial explosion to practical overhead."
+  },
+  {
+    "gid": 50,
+    "deep_why": "Hologram phase patterns must encode the wavefront shape of a 3D scene to display it convincingly. The core problem is that traditional methods render light brightness separately from wave propagation, losing depth cues and reflection variety. By employing path tracing to collect both the brightness and the wave-optical field simultaneously, the method naturally encodes full 3D information into interference patterns. This is sound because both the rendering equation (measuring light) and the wave propagation equation (how waves combine) have the same underlying Monte Carlo solution structure—sampling paths and weighting by their contribution. A cache of ambient light further accelerates convergence, making physically accurate holograms practical."
+  },
+  {
+    "gid": 51,
+    "deep_why": "Holographic displays use coherent laser light and special optical elements that distort color in complex, system-dependent ways. The core challenge is mapping user intent (desired colors) through all these transformations to achieve what the eye actually perceives. By modeling the full chain—input color space, display optics, and camera response (using learned neural models)—the system finds corrections at each stage. This is mathematically sound because the transformations are invertible or close to it: perceptual color is deterministic given the display state, so controlling inputs reliably produces outputs. Adaptive illumination then tunes the laser intensity, reducing distortion further and making color fidelity achievable despite hardware imperfections."
+  },
+  {
+    "gid": 52,
+    "deep_why": "Teaching a simulated character to move athletically is hard because pure motion copying lacks adaptability, while pure reinforcement learning loses natural motion quality. The core idea combines two learned models in parallel: one tracking reference motions precisely and another maximizing task reward via adversarial learning, sharing knowledge through a unified state representation. This hybrid works because motion tracking provides a strong scaffold (the character knows the reference motion), while adversarial learning adds generalization pressure (adapt and solve the task). Parallel training with goal-conditioned rewards ties them together—the network learns when to follow reference and when to improvise, letting it replicate naturalness yet adapt to novel situations."
+  },
+  {
+    "gid": 53,
+    "deep_why": "Creating full-color 3D holograms requires encoding three separate colors, which demands multiple optical elements or low efficiency. The core trick encodes only the real (amplitude) part of the interference pattern rather than both phase and amplitude, using shallower surface structures. This works because amplitude-only encoding reduces phase wrapping—the surface becomes smoother and less jagged, transmitting more light. A spatial frequency multiplexing strategy then separates the three colors by assigning each to different frequency bands, preventing them from interfering with each other. Together these reduce crosstalk and boost transmittance, enabling transparent color holograms on a single glass surface."
+  },
+  {
+    "gid": 54,
+    "deep_why": "Detecting collisions between smooth surfaces like splines is mathematically intricate because numerical rounding errors accumulate across multiple coordinate transformations. The core approach is separating error sources into two categories—errors in how coefficients are represented and errors in arithmetic operations—then bounding each independently. By inverting the collision detection logic (generating ground-truth collisions in exact arithmetic, then checking if algorithms find them), the method builds a rational benchmark revealing where floating-point implementations fail. This is sound because error sources follow mathematical rules; characterizing them precisely lets implementations add safety checks and fallbacks that guarantee robustness without sacrificing speed."
+  },
+  {
+    "gid": 55,
+    "deep_why": "This is an editorial summary of the SIGGRAPH 2026 conference, not a technical paper describing a method. It announces acceptance statistics and the scope of the special issue."
+  },
+  {
+    "gid": 56,
+    "deep_why": "Folded paper structures (kirigami) can deploy—transform from flat to 3D—if the angles and fold lines are chosen correctly. The core challenge is whether a given graph of fold connections and their geometric layout permits motion. By analyzing the degree-of-freedom constraints from hinges and rigid faces as a system of equations, the work derives geometric conditions that guarantee rigid uniform deployment. This is sound because hinged structures have well-defined kinematic constraints: each hinge removes a degree of freedom, and each face is rigid. By characterizing these constraints for arbitrary graph topologies, designers can systematically build deployable structures without trial and error, knowing in advance whether a pattern will fold smoothly."
+  },
+  {
+    "gid": 57,
+    "deep_why": "Creating volumetric graphics in air by exciting atoms with precisely timed laser pulses is inherently dim—one laser path cannot deliver enough photons fast enough. Using two synchronized laser paths working cooperatively concentrates photon delivery into a shared rendering volume, brightening the voxels significantly. This works because each laser path independently can form the image (full optical control via spatial light modulators and scanning), so combining them simply doubles the available photon energy without conflict. By scanning in three dimensions and using varifocal optics, both paths can create the same volumetric structure in parallel, making laser-excited displays bright enough and dense enough for practical use."
+  },
+  {
+    "gid": 58,
+    "deep_why": "Seeing around walls using thermal radiation requires untangling how heat bounces off rough relay surfaces—the mixing is severe because rough surfaces scatter in many directions. The core insight models light transport through these rough surfaces as a convolution operation: the hidden scene gets blurred in a predictable way determined by surface properties. A neural network learns this convolution kernel directly from measurements rather than solving physics equations pixel by pixel. This is mathematically sound because convolution structure is fundamental to wave and particle propagation; once the kernel is known, inverting it reconstructs the hidden scene. The learned kernel also naturally supports depth estimation, making the method robust even under severe scattering."
+  },
+  {
+    "gid": 59,
+    "deep_why": "Origami patterns fold into shapes with unusual stiffness—some directions resist bending while others do not, creating tailored mechanical properties. To predict what properties a given crease pattern produces, the work simulates the folded state then measures how it resists forces in all directions. These measurements are assembled into an effective material model (Classical Laminate Theory), which is compact and reusable. This is sound because crease geometry constrains how the sheet can bend and stretch—these constraints are deterministic and repeatable. By numerically measuring the effective response rather than deriving closed-form formulas, the method handles both straight and curved creases and reveals how pattern symmetry translates into material symmetry, enabling computational design of metamaterials."
+  }
+]

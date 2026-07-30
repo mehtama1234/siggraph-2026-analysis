@@ -1,0 +1,14 @@
+[
+  {
+    "gid": 150,
+    "deep_why": "The core thing being solved is recovering 3D hand shape and motion from video without requiring separate pipelines for single hands versus interacting hands. The mathematical principle at work is that relative spatial relationships between objects constrain their individual states, so encoding relationship information lets a single model generalize across different input scenarios. This principle applies here because hand pose and relative position are geometric facts—the spatial reasoning that determines plausibility doesn't change depending on whether you're analyzing one hand or two; the same constraints hold in both cases. By embedding relative hand position information into the model's input tokens, they unlock a unified system that handles everything from solo hand tracking to complex two-hand interactions with one architecture, sidestepping the traditional need for separate models."
+  },
+  {
+    "gid": 151,
+    "deep_why": "The core thing is transferring material appearance to surfaces without text guidance or auxiliary networks. The mathematical principle is that visible material properties are determined entirely by how surfaces reflect light given their shape and illumination direction—these are geometric facts. When you provide depth, surface orientation, and lighting information explicitly, you give the model the geometric building blocks it relies on implicitly, making material control direct and efficient. This principle applies because material isn't an abstract concept but a rule set about light behavior on surfaces, and that behavior is fully determined by geometry and illumination; no language interpretation or extra networks needed. By removing text dependency and simplifying architecture while keeping the actual geometric information that explains material appearance, they achieve high-fidelity results with minimal complexity."
+  },
+  {
+    "gid": 152,
+    "deep_why": "The core thing being computed is the future state of a deforming shape by jumping multiple time steps at once rather than stepping through each moment. The mathematical principle underlying this is that smooth dynamic systems exhibit hidden patterns where future states can be expressed as combinations of earlier states, allowing these patterns to be applied repeatedly without losing accuracy. This principle applies here because physical deformation follows continuous, smooth laws—the local rules governing shape change are identical whether you're predicting one step ahead or many, and compounding these predictions preserves fidelity. By learning this temporal pattern once and reusing it across many steps, they eliminate the expensive frame-by-frame integration that normally bottlenecks design and control problems, making shape optimization suddenly tractable for large-scale engineering tasks."
+  }
+]

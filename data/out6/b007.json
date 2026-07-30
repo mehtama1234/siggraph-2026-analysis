@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 105,
+    "deep_why": "The method splits shape generation into two cleaner parts: vertex positions and how they connect. Instead of building the mesh piece by piece in order (which lets early mistakes cascade), this approach refines all vertices together from coarse to fine, letting them settle into better positions before topology is decided. The connection patterns are encoded as continuous scores at each vertex, which can be computed globally after geometry stabilizes. This parallel generation avoids the bottleneck of sequential modeling where each piece constrains the next, and produces more coherent shapes for film and gaming where real-world assets demand quality."
+  },
+  {
+    "gid": 106,
+    "deep_why": "The core idea: solving one giant problem is hard, but solving many small problems together can be easier if you use smart overlaps. By partitioning space into overlapping blocks and solving each block independently, then recombining solutions, the method reduces the condition number of each local problem. Using multiple staggered partitions captures modes that a single partition would miss, so each block's solution contributes unique information. This stacking makes the combined solution more complete and converges orders of magnitude faster, solving large physics and engineering problems that would otherwise need impractical computing."
+  },
+  {
+    "gid": 107,
+    "deep_why": "Traditional charts are precise but sterile. This method treats pictorial styling as a dual constraint problem: the underlying data structure (bars, areas, positions) must remain true while artistic textures and appearance wrap around that structure. A diffusion model can gradually build the image by respecting both channels in parallel—the abstract structure anchors spatial relationships while semantic descriptions guide visual flavor. This works because structure and style operate at different scales; enforcing both keeps charts truthful yet memorable for better communication and engagement."
+  },
+  {
+    "gid": 108,
+    "deep_why": "When you represent a shape as a distance field without sign information, you lose the ability to tell inside from outside. This method extends classical surface-extraction by working on small blocks instead of single cells and using predefined templates that encode every possible configuration. Instead of trusting sign changes to find active cells, it optimizes to find them, then applies templates that automatically handle tricky cases like multiple surfaces meeting. This ensures both simple closed surfaces and complex shapes with holes or multiple parts extract correctly from the unsigned representation."
+  },
+  {
+    "gid": 109,
+    "deep_why": "Dressing arbitrary bodies in arbitrary clothes is hard because shapes, skeletons, and surface layouts rarely match. The key insight: use a standard human template as a universal bridge. First, align clothes to this template by matching surface geometry, treating it as a partial-to-complete alignment. Second, align the target body to the template using appearance and pose cues. Then transfer the dressed template to the body through smooth interpolation and physical simulation. This two-step correspondence breaks an impossible general problem into two tractable alignment tasks, enabling reuse across robots, cartoon characters, and diverse human poses."
+  },
+  {
+    "gid": 110,
+    "deep_why": "Non-photorealistic styles like sketch lines live in 2D images, but light bounces in 3D. The breakthrough: geometric-driven mappings translate 2D rules into 3D language. For lines, the method uses shape curvature and ray path geometry to detect where edges should appear, preserving 2D structure as light spreads through the scene. For tones, a material-independent mapping rooted in wave physics lets artistic shading work at any point along a light path. This anchoring of image conventions to physical principles lets stylization coexist with realistic light transport."
+  },
+  {
+    "gid": 111,
+    "deep_why": "Converting 3D curves (silhouettes, material edges) to a valid 2D vector partition is fragile when numbers are imprecise. The method uses a spatial hierarchy built to accelerate curve intersections as the foundation of the planar map itself. This hierarchy enforces consistent regions even when segment endpoints are misaligned or numbers are noisy. By replacing complex curve-curve intersections with simpler curve-line tests, the algorithm becomes robust while preserving precise output for graphics work where validation matters."
+  },
+  {
+    "gid": 112,
+    "deep_why": "Images can be represented as a smooth blend of overlapping regions, each centered at an adaptive site. By weighting these regions using a softmax (which spreads gradients smoothly), the representation stays differentiable and trainable. Each site learns an anisotropic shape—tilted and stretched ellipses that align with image content—producing content-aware boundaries without hard edges. A top-K approximation keeps computation local and efficient on GPUs while a propagation scheme maintains global coverage. This yields crisp, sparse, learnable image structure faster than prior methods."
+  },
+  {
+    "gid": 113,
+    "deep_why": "Simulations of fire and water split the computation across machines to run faster, but uneven splits waste work. Optimal transport finds the fairest way to partition a moving domain: it minimizes total communication and computational imbalance while respecting the domain's changing shape. The power diagram it produces has a mathematical property—regions grow and shrink smoothly over time. This temporal stability ensures a visual effects simulation runs predictably frame to frame without sudden load spikes or data reorganization hiccups."
+  },
+  {
+    "gid": 114,
+    "deep_why": "A spinning rope forms a smooth, symmetric shape (troposkein) where the surface area changes as it grows or shrinks. To keep pixel density constant across this changing surface, the system must add display pixels in proportion to the area growth. The method releases new LED rows as the surface expands and adjusts rotation speed so pixel rendering keeps pace with the spinning motion. The mathematics of the rope shape guarantees this scaling works—the troposkein geometry defines exactly how area and shape relate, letting display refresh rates match the surface changes predictably."
+  },
+  {
+    "gid": 115,
+    "deep_why": "Rendering many small blobs (Gaussians) by drawing each individually is slow when there are millions. This method samples individual points from each blob and draws them as opaque pixels in parallel using atomic hardware operations. Multiple points may land on the same pixel, but that's solved by computing how many points each blob should contribute so the final opacity matches the intended blending. Parallel threads work independently with no synchronization overhead, letting the method scale to hundreds of millions of primitives while remaining faithful to the original appearance."
+  },
+  {
+    "gid": 116,
+    "deep_why": "Real camera lenses blur out-of-focus areas in a shape determined by the lens opening (aperture) and distance from the focal plane. Each 3D blob projected into an image should be blurred by convolving it with this lens blur kernel. The trick: deriving a closed-form formula for this convolution means it can be computed exactly and differentiably without expensive sampling. By decomposing any lens shape into simple rectangles, the method handles arbitrary apertures while preserving the ability to refocus or adjust exposure after capture, unlocking high-quality 3D reconstruction from real blurry photographs."
+  },
+  {
+    "gid": 117,
+    "deep_why": "Standard sampling averages function values without using context about where samples land or what the function looks like. A learned neural sampler-integrator pair solves both problems jointly: the sampler learns where high-value regions cluster, the integrator learns to weight samples based on local function structure and geometry. By training on families of similar problems (lighting, transmittance, winding numbers), the learned model captures priors that point sampling toward informative regions faster than classical methods, reducing noise per sample in rendering and geometric queries."
+  },
+  {
+    "gid": 118,
+    "deep_why": "Computing the farthest distance between two shapes requires exploring many possibilities, but rigid pruning fails when shapes touch closely. This GPU method maintains dual bounds—best lower bound and best upper bound—and narrows the gap until precision is met. The dual-buffer pipeline reorganizes prioritized search into parallel bulk work, keeping GPU threads productive. When bounds stay loose on thin details, adaptive refinement strategically splits just those regions. This combination of branch-and-bound logic mapped to parallel hardware solves distance queries efficiently even when shapes are nearly identical."
+  },
+  {
+    "gid": 119,
+    "deep_why": "Surface geometry processing like smoothing or segmentation is easier when color information lives at corner points rather than in image textures with mapping coordinates. Converting textures to vertex colors preserves appearance while enabling existing geometric algorithms to see and respect texture features. By remeshing to sample textures densely at vertices, tools designed for colored geometry can now account for image detail. This bridges two worlds—geometry processing and image processing—letting artists use texture-aware algorithms without building new tools for each application domain."
+  }
+]
