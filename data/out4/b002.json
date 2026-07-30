@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 30,
+    "why_math": "Hierarchical power-of-two intervals expose a hidden structure: any point's local sample quality can be tuned independently while the nested intervals automatically maintain uniform coverage across all dimensions, because the overlapping intervals force consistency between neighboring regions."
+  },
+  {
+    "gid": 31,
+    "why_math": "The differences between nearby solution values have lower noise than the raw values themselves—like taking a derivative smooths out scatter. Estimating these clean differences and then reconstructing the original signal via integration recovers the solution faster because you're sampling where the noise is smallest."
+  },
+  {
+    "gid": 32,
+    "why_math": "Poisson's equation with jump boundary conditions creates a function that is smooth everywhere except at one prescribed boundary where it has a controlled sharp corner. Solving this equation once gives a feature template that the MLP can add to its smooth output, letting it manufacture sharp edges exactly where specified."
+  },
+  {
+    "gid": 33,
+    "why_math": "Partial fabric layers vary in density across space, creating anisotropic (direction-dependent) stiffness. Jointly optimizing which parts get fabric and how the overall shape bends works because the two compete fairly: better shape means needing less material, and better material placement means the shape can be lighter, reaching an equilibrium."
+  },
+  {
+    "gid": 34,
+    "why_math": "Gas molecules bounce at random angles, but averaging their motion across many molecules recovers the smooth fluid equations. Working in moment space (keeping sums and averages of molecular motion) captures that average behavior directly, shrinking what needs to be stored while staying accurate."
+  },
+  {
+    "gid": 35,
+    "why_math": "A learned smooth latent space abstracts away chaotic muscle-level details while preserving the essential motion structure; policies trained at this level coordinate hands like an orchestra conductor, who sees only the beat, not each player's finger tremor, yet achieves ensemble coherence."
+  },
+  {
+    "gid": 36,
+    "why_math": "Roofs are loops (closed curves) bounding polygonal faces that fit together; representing this topological skeleton lets the diffusion model learn the combinatorial rules (which loops touch which) separately from vertex coordinates, so it can reason about complex shapes across styles."
+  },
+  {
+    "gid": 37,
+    "why_math": "Entropy and optimal transport are secretly dual: minimizing fuzzy disorder (entropy) while moving stuff around efficiently (transport) produces the same solution either way. The heat equation couples these automatically, so alternating heat spreading with constraint corrections reaches the perfect interpolation."
+  },
+  {
+    "gid": 38,
+    "why_math": "Each slider rating of a merged model is a noisy observation of your preference landscape; Bayesian optimization maintains a belief about which blend direction pleases you most, so it asks about the most informative blend next, converging faster than manual sliders or random search."
+  },
+  {
+    "gid": 39,
+    "why_math": "Static contact anchors break when limbs are short or long; dynamic anchors project onto the target body, ensuring any guidance is geometrically feasible. Structured anchors from the source skeleton ensure the spatial logic is preserved while being adapted to the new shape."
+  },
+  {
+    "gid": 40,
+    "why_math": "Light extinction gradients have two parts—scattering at one point and dimming along the ray—that have opposite signs and therefore cancel noise. Evaluating both parts at the same sample locations lets their opposite swings cancel, shrinking the variance without biasing the answer."
+  },
+  {
+    "gid": 41,
+    "why_math": "A power diagram partitions space so that each singularity is equidistant (in a generalized sense) to its neighbors; optimizing singularity positions via Lloyd iteration minimizes the total 'curl waste', converging to an evenly-spread pattern that uses material most efficiently."
+  },
+  {
+    "gid": 42,
+    "why_math": "Reusing light paths across time works only if they obey temporal gating (path length in air equals time); path-length-aware shifting adjusts reused rays to satisfy this constraint, so recycled paths stay valid and contribute signal instead of noise."
+  },
+  {
+    "gid": 43,
+    "why_math": "Gas-kinetic theory says macroscopic fluid flow emerges from microscopic molecular averages; encoding this average behavior (moments) in a unified framework for both phases lets two-phase flow simulators capture high Reynolds numbers and density contrasts without storing each phase separately."
+  },
+  {
+    "gid": 44,
+    "why_math": "Particles are anonymous—swapping labels changes nothing, so optimizing per-index flows wastes effort on spurious variation. Working in orbit space (treating swaps as equivalences) cuts that waste and learns simpler flows; terminal velocities in 3D space directly encode geometry like surface normals as a free byproduct."
+  }
+]

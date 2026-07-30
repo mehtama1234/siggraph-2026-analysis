@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 120,
+    "why_math": "Gaussian quadrature works because a polynomial function's value over a region can be exactly computed from just a few carefully-chosen test points, without needing to sample all possible deformations. The approach exploits that low-degree polynomials are determined by a small amount of information."
+  },
+  {
+    "gid": 121,
+    "why_math": "Splitting velocities into coarse and fine components decouples the work needed to model slow and fast motion separately. Computing coarse motion cheaply and adding fine details through the fine component lets you get rich detail without proportionally increasing the number of coarse simulation steps."
+  },
+  {
+    "gid": 122,
+    "why_math": "Calibrating identity encoders using human perception data works because the encoded features are flexible enough to be nudged toward any target ordering. Matching the model to what humans see makes it follow the same rules humans use for recognizing faces across visual styles."
+  },
+  {
+    "gid": 123,
+    "why_math": "A porous structure appears mechanically uniform because the material's effective stiffness is determined by the average density and arrangement of pores at a scale much larger than individual pores. At that scale, detailed variation averages out to near-uniform behavior."
+  },
+  {
+    "gid": 124,
+    "why_math": "Block structure in the Hessian arises naturally when unknowns are spatial positions in 3D and each element depends only on a few neighbors. Recognizing and exploiting this structure reduces the work of factorization from dealing with scattered single values to handling dense small blocks."
+  },
+  {
+    "gid": 125,
+    "why_math": "Many regions of space differ only by a rigid transformation or a simple change in value. Storing the transformation once and reusing it at many places compresses the representation because the shared pattern doesn't have to be stored repeatedly."
+  },
+  {
+    "gid": 126,
+    "why_math": "Virtual Element Method works on irregular grids because it enforces boundary conditions through a polynomial basis that naturally adapts to the grid's shape. Multi-grid acceleration works because the coupling between coarse and fine scales is weak enough to solve them together efficiently."
+  },
+  {
+    "gid": 127,
+    "why_math": "A fourth-order equation can be rewritten as two coupled second-order equations. Random sampling solves the coupled system by treating the coupling as the unknown and iteratively refining it, allowing Monte Carlo methods designed for second-order problems to apply."
+  },
+  {
+    "gid": 128,
+    "why_math": "Flow-based models naturally transition from coarse structure to fine details over time. Learning fine details at the time-steps where they appear avoids the confusion of learning everything at once, allowing a smaller model to capture detail that normally requires retraining on vast data."
+  },
+  {
+    "gid": 129,
+    "why_math": "Different attention heads in the transformer specialize in different semantic features. Routing text guidance to heads sensitive to the target concept ensures the signal reaches the right computation pathway, steering generation without retraining the model."
+  },
+  {
+    "gid": 130,
+    "why_math": "A single-person motion prior captures the natural movement rules for one body. Applying it to each person independently in a collaborative interaction preserves each person's individual realism while a contact optimization layer glues them together consistently at contact points."
+  },
+  {
+    "gid": 131,
+    "why_math": "A generative model trained to create diverse shapes learns the part structure implicitly. Coloring different parts distinctly and reconstructing from colored voxels forces the learned structure to separate into parts, reusing rich knowledge without needing segmentation labels."
+  },
+  {
+    "gid": 132,
+    "why_math": "Hair fibers scattered through a volume scatter light many times before escaping. Treating this as light moving through a fog-like medium averages over all the complex interactions, capturing the soft glowing appearance at much lower cost than tracing each fiber-to-fiber bounce."
+  },
+  {
+    "gid": 133,
+    "why_math": "A sketch is a sparse signal of motion direction. Training a model category-agnostic on many objects forces it to extract the core rule linking 2D motion hints to 3D part motion, so that rule generalizes to objects outside training data."
+  },
+  {
+    "gid": 134,
+    "why_math": "A radiance cache stores values computed once and reuses them, reducing noise. Blending between cached and unbiased estimates locally lets you trust the cache where it's smooth and fall back to noise where it's uncertain, balancing speed and accuracy."
+  }
+]

@@ -1,0 +1,14 @@
+[
+ {
+  "gid": 150,
+  "why_math": "Tokenizing hands with their relative position information bakes the spatial relationship into the representation itself, so the transformer naturally learns to fuse them coherently without misalignment—the constraint is structural, not learned."
+ },
+ {
+  "gid": 151,
+  "why_math": "Diffusion models denoise by stepping down error in millions of directions; injecting 3D conditions as lightweight LoRA adapters guides the denoising without modifying core weights—it's a reversible suggestion rather than a heavy constraint."
+ },
+ {
+  "gid": 152,
+  "why_math": "Real deformable motion lives in a sparse lower-dimensional space; Koopman finds coordinates where those patterns evolve linearly, so one matrix multiply jumps ahead instead of simulating every step—fewer dimensions plus linear time equals massive speedup."
+ }
+]

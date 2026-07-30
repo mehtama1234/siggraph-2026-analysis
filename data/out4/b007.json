@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 105,
+    "why_math": "Diffusion works because it breaks impossible-to-sample complexity into tiny steps, each from a learned local pattern, and reversing noise progressively forces the model toward high-probability regions where real meshes live."
+  },
+  {
+    "gid": 106,
+    "why_math": "Multiple staggered partitions span more of the solution space than single partitions alone because different cuts through a domain capture different low-frequency patterns; combining them gives bases that converge faster."
+  },
+  {
+    "gid": 107,
+    "why_math": "Dual guidance works because two independent control signals—semantic intent and structural template—can be fused via attention weights, letting the model honor both without sacrificing either."
+  },
+  {
+    "gid": 108,
+    "why_math": "The lookup table replaces sign detection because voxel connectivity patterns are finite; enumerating all local shapes and storing their face counts lets you mesh topologically-complex unsigned surfaces without needing sign changes."
+  },
+  {
+    "gid": 109,
+    "why_math": "SMPL acts as a universal pivot because it solves the correspondence bottleneck: rather than matching diverse clothes-to-body pairs directly, routing through one canonical skeleton reuses proven human-fitting geometry."
+  },
+  {
+    "gid": 110,
+    "why_math": "Parallel transport along path-space geometry preserves image-space structure because following the underlying surface curvature keeps lines coherent under light variation, mathematically anchored by how objects orient in 3D."
+  },
+  {
+    "gid": 111,
+    "why_math": "The spatial acceleration tree defines the planar map itself because hierarchy cells partition the plane into regions; curve-curve collisions automatically induce topology, and numerical errors stay inside cell boundaries."
+  },
+  {
+    "gid": 112,
+    "why_math": "Soft maxed Voronoi regions preserve gradients because smooth blending of nearest-site contributions lets backprop flow through all contributing sites, enabling jointly optimal site placement and appearance."
+  },
+  {
+    "gid": 113,
+    "why_math": "Optimal transport (power diagrams) balances load and communication because it moves mass to equalize density across partitions; the resulting boundaries naturally minimize data crossing domain splits."
+  },
+  {
+    "gid": 114,
+    "why_math": "Releasing new LED rows as area grows preserves density because the rate of new rows per revolution equals the rate the troposkein expands, keeping pixels-per-unit-area constant by design."
+  },
+  {
+    "gid": 115,
+    "why_math": "Sampling opaque points from Gaussians works because each point is independently weighted by its Gaussian's strength; averaging many random samples converges to the true blended opacity by the law of large numbers."
+  },
+  {
+    "gid": 116,
+    "why_math": "The closed-form convolution works because a Gaussian blurred by another Gaussian (the circle of confusion) is still a Gaussian; the error function solution computes this composite shape exactly and differentiably."
+  },
+  {
+    "gid": 117,
+    "why_math": "Joint sampling-integration learns because paired networks can specialize: the sampler places points where the integrator needs them most, and training on integrands reveals which features matter, unlike blind averaging."
+  },
+  {
+    "gid": 118,
+    "why_math": "Branch-and-bound prunes by maintaining gap bounds: each subdivision tightens the true distance's range; once the gap narrows below tolerance, you have a certified answer without exhaustive search."
+  },
+  {
+    "gid": 119,
+    "why_math": "Vertex colors bypass UV problems because color at a vertex applies directly to its local geometry; converting textures to colors once front-loads the correspondence cost, then all downstream tools inherit texture awareness."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 135,
+    "why_math": "Neutron transport and volume rendering follow the same integral equations. Monte Carlo gradient estimates converge to true slopes because averaging many noisy samples of the slope converges reliably as sample count grows, enabling gradient-based optimization."
+  },
+  {
+    "gid": 136,
+    "why_math": "If point p is nearest to query q, the next-nearest must lie either before p or in p's successor list—this recursive partitioning avoids exploring dead space. The manifold structure keeps successor lists short, dramatically cutting search cost."
+  },
+  {
+    "gid": 137,
+    "why_math": "Invertible neural networks preserve space topology (no tearing or folding). Their composition always maps regions coherently, guaranteeing a valid flow where no regions collapse or self-intersect, by invertibility itself."
+  },
+  {
+    "gid": 138,
+    "why_math": "Lipschitz continuity bounds how much a smooth curve can wiggle per step, so bounding slope bounds error from any polyline. Convex hulls contain the curve, making hull-to-polyline distance an upper bound on true error."
+  },
+  {
+    "gid": 139,
+    "why_math": "Fluid adjoint equations reveal that sensitivities propagate mainly along flow trajectories (the 'highways') rather than scattered across time. Keeping these paths while pruning redundant branches retains dominant signals with much less computation."
+  },
+  {
+    "gid": 140,
+    "why_math": "Joint optimization of optical diffraction and chemical diffusion lets you compensate for blur before it spreads—coupled simulation verifies each guess. One unified inverse problem beats separate optical-only optimization because chemistry and optics interact."
+  },
+  {
+    "gid": 141,
+    "why_math": "Enforcing human body topology (joint angles and bone ratios follow learned statistical patterns) constrains the flow to stay in the space of plausible shapes. Flow matching learns a continuous path through this constrained space, keeping generation realistic."
+  },
+  {
+    "gid": 142,
+    "why_math": "Multigrid acceleration works because coarse-grid refinement finds a good eigenvector direction in few iterations, seeding fine-scale iteration—this skips redundant fine steps, accelerating convergence by starting from a better guess."
+  },
+  {
+    "gid": 143,
+    "why_math": "Unwarping 2D markers to a canonical frame removes most deformation before localization, letting the network work on nearly-flat geometry and achieve sub-pixel accuracy. Physics-based fitting then enforces temporal coherence and handles occluded regions."
+  },
+  {
+    "gid": 144,
+    "why_math": "Normal coordinates encode surface connectivity via intersection counts along edges—a topological property unchanged by small deformation. This sidesteps the Nyquist limit: features smaller than grid spacing stay representable because encoding is topological, not spatial sampling."
+  },
+  {
+    "gid": 145,
+    "why_math": "Tori have closed-form signed distance formulas. Fitting them locally to point clouds gives instant analytical queries at any resolution—no grid or global optimization. Winding numbers and Poisson reconstruction both measure enclosed volume; this unifies them under tori."
+  },
+  {
+    "gid": 146,
+    "why_math": "Randomly masking modalities during training forces the model to learn omni-directional generation, not one fixed mapping. Per-modality LoRAs activate by task, protecting base priors while adapting to each modality's statistics without compromising other tasks."
+  },
+  {
+    "gid": 147,
+    "why_math": "Building offset vertices and triangles explicitly with feature-preserving energy keeps sharp edges sharp—orthogonal offsets at features are energetically favored. Exact algorithms at critical steps (intersections, topology) prevent error accumulation that would silent-corrupt features."
+  },
+  {
+    "gid": 148,
+    "why_math": "Smooth constant-mean-curvature surfaces have harmonic Gauss maps. Discretizing this property directly via Dirichlet energy minimization makes discrete surfaces exactly mirror the smooth theory, preserving the mean-curvature property at the grid level."
+  },
+  {
+    "gid": 149,
+    "why_math": "Decomposing style into static posture (time-invariant) and temporal dynamics (frame-wise changes) separates two independent, low-complexity factors. Learning them separately on short data is tractable; recombining with controls preserves this factorization."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 60,
+    "why_math": "Pre-computing system matrices works because separating geometric nonlinearity from material behavior via co-rotation allows the linear part to be factorized once; materials are nearly identical in near-rigid bodies, so this separation is mathematically justified and enables reuse across time steps."
+  },
+  {
+    "gid": 61,
+    "why_math": "Diffusion models denoise random noise toward learned realistic distributions step by step; adding spatio-temporal constraints guides the noise toward completions that satisfy the constraints while respecting the learned motion patterns, combining data likelihood with user intent."
+  },
+  {
+    "gid": 62,
+    "why_math": "The diffusion model learns the statistical relationship between lighting and appearance from training pairs; conditioning on lighting tokens tells it which appearance transformation to produce, while masked attention across frames enforces temporal consistency by making each frame prediction aware of its neighbors."
+  },
+  {
+    "gid": 63,
+    "why_math": "Feather structure is multi-scale and self-similar—coarse barbs contain finer barbules—so procedural encoding at each scale captures the hierarchy without storing every strand; correct shadowing and masking formulas then reconstruct the appearance from this compact model."
+  },
+  {
+    "gid": 64,
+    "why_math": "Motion viewed relative to moving anchors becomes simpler because anchors absorb the bulk motion; Gaussians then only track small residual deviations instead of long absolute trajectories, dramatically reducing the complexity each primitive must represent and improving stability."
+  },
+  {
+    "gid": 65,
+    "why_math": "The four-dimensional data naturally factors into three coupled pairs (XY-ZT, XZ-YT, YZ-XT), compressing it; neural networks refine this factorization efficiently, and iterative ray correction converges because each correction makes the forward model closer to the measured projections."
+  },
+  {
+    "gid": 66,
+    "why_math": "Randomizing particle positions along the time axis and using a 4D kernel turns temporal under-sampling into Monte Carlo noise; averaging many random time samples recovers the true integrated particle contribution, so noise shrinks predictably as sample density grows."
+  },
+  {
+    "gid": 67,
+    "why_math": "A Bayesian prior encodes that nearby BRDF measurements are correlated; the distance-based covariance kernel captures smoothness in material properties, so the posterior mean predicts unseen values accurately without overfitting, extracting maximum information from sparse samples."
+  },
+  {
+    "gid": 68,
+    "why_math": "If predicted material distributions produce the measured X-ray projections when rendered forward, they must recover the true materials; minimizing the projection loss drives the solution toward consistency, and gradient descent always moves downhill toward minimizers that satisfy this consistency."
+  },
+  {
+    "gid": 69,
+    "why_math": "Winding number equals ray intersections plus a boundary integral by an integral theorem; computing intersections directly (fast) and the collapsed spherical integral (small) avoids expensive surface integration while preserving the exact mathematical relationship, enabling both speed and precision."
+  },
+  {
+    "gid": 70,
+    "why_math": "Since stress depends globally on panel geometry, optimizing them jointly lets stress gradients guide shape toward both geometric faithfulness and structural strength; the flow formulation enables this coupling by differentiating through the stress analysis."
+  },
+  {
+    "gid": 71,
+    "why_math": "Embeddedness is a global topological property that shows up locally as mesh collisions; addressing both levels simultaneously prevents local fixes from creating new entanglements elsewhere, ensuring that all self-intersections resolve without cycling."
+  },
+  {
+    "gid": 72,
+    "why_math": "Octrees encode hierarchical refinement naturally—coarse nodes branch into fine children—so generating structure and geometry autoregressively at each scale respects the geometric hierarchy; this is much faster than diffusion because you build top-down rather than iteratively denoising."
+  },
+  {
+    "gid": 73,
+    "why_math": "Winding number theory robustly detects enclosed curves even in degenerate cases; the vector field's winding count wraps around small loops and tangent points topologically, pinpointing all starting points; subdivision then refines these points to high precision."
+  },
+  {
+    "gid": 74,
+    "why_math": "Splitting couples non-convex yarn constraints into independent convex sub-problems, each with a unique stable solution; theory-based metric selection ensures convergence without tuning, because convex minimizers are well-behaved and the split scheme provably reconstructs the coupled solution."
+  }
+]

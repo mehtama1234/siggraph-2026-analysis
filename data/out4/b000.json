@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 0,
+    "why_math": "It works because a convex combination of input pixels remains valid under exposure changes — each pixel's contribution scales predictably with exposure, so blending aligned pixels directly in raw space avoids the hallucinations that come from learning made-up colors through a network."
+  },
+  {
+    "gid": 1,
+    "why_math": "It works because relaxing the priority-queue requirement replaces serial bottlenecks with parallel batching: instead of globally scheduling the next best branch, you test all candidates asynchronously and discard regions violating your bounds, turning a step-by-step search into hundreds of parallel workers eliminating bad regions simultaneously."
+  },
+  {
+    "gid": 2,
+    "why_math": "It works because writing the same physical laws (conservation of mass, momentum, and energy) for both fluids and sand in one unified form ensures they couple consistently: when you solve the equations that balance all forces across phases, the solution automatically captures how water infiltrates grain spaces and how sand's stickiness changes."
+  },
+  {
+    "gid": 3,
+    "why_math": "It works because triangle strips naturally preserve connectivity and edge flow — encoding faces as a chain that respects UV boundaries forces the sequence to follow the artist's intended structure, so the model learns the organized regularity that makes quads and triangles both decode from the same logical flow."
+  },
+  {
+    "gid": 4,
+    "why_math": "It works because cumulative flow maps separate global state changes from local steps: instead of taking many tiny jumps, you describe the entire destination path at once, so even one or two large steps land in the right place — the model reasons about total transport rather than incremental moves."
+  },
+  {
+    "gid": 5,
+    "why_math": "It works because decoupling light sources from detectors lets you actively probe indirect paths that self-occlusion hides, and a foundation model's geometric prior fills in blind spots — solving through generative inversion leverages strong semantic constraints to make the ill-posed sparse-sampling problem solvable."
+  },
+  {
+    "gid": 6,
+    "why_math": "It works because discrete bending energies must approximate the true shell's continuous curvature penalty — comparing many discretizations against analytic benchmarks reveals which ones converge correctly as mesh refinement, and that convergence guarantees the method will handle real shells accurately."
+  },
+  {
+    "gid": 7,
+    "why_math": "It works because symbolic differentiation captures connectivity explicitly: when you encode which pieces of the system couple together in a computation graph and apply symbolic rules, the derivatives and sparsity structure emerge automatically, eliminating manual error-prone casework."
+  },
+  {
+    "gid": 8,
+    "why_math": "It works because resource contracts centralize truth — when shader types, bindings, and memory layouts are declared once and checked statically at module boundaries, mismatches are caught before runtime, so composition of graphics components never breaks undetected."
+  },
+  {
+    "gid": 9,
+    "why_math": "It works because geometric multigrid solvers work by solving coarse versions of the problem and interpolating back to fine scales — aligning a neural network's architecture with that hierarchy lets it learn to predict both fine details and cross-level residual corrections, so a single refinement step converges."
+  },
+  {
+    "gid": 10,
+    "why_math": "It works because bounds on noise realizations let you skip redundant evaluation: instead of evaluating noise at every marching step, stratified Bernoulli bounds and spatial pruning guarantee regions are geometrically empty, so you eliminate unnecessary noise calls while staying provably correct."
+  },
+  {
+    "gid": 11,
+    "why_math": "It works because the adjoint method automatically reverses any algorithm: by recording which operations happen and their parameters, you can compute how output changes flow backward, so you differentiate existing solvers without reformulating them — the backward pass is derived mechanically."
+  },
+  {
+    "gid": 12,
+    "why_math": "It works because three consistency constraints co-constrain the solution: geomorphological features must match across occlusions, hydrology must flow downhill uninterrupted, and rendered terrain must look like the photo — these three principles together eliminate implausible terrains while allowing the diffusion model freedom where they don't conflict."
+  },
+  {
+    "gid": 13,
+    "why_math": "It works because decoupling deformable and stiff parts into separate Krylov iterations lets you precondition each independently: low-rank approximations capture the cross-coupling, and parallel contact Hessian assembly avoids repeated recomputation, so convergence accelerates despite heterogeneous materials."
+  },
+  {
+    "gid": 14,
+    "why_math": "It works because persistent homology measures which topological features are robust (long-lived across scale): removing only low-persistence features guarantees geometric changes are minimal, and framing selection as a weighted independent set ensures you preserve exactly the user's target counts efficiently."
+  }
+]

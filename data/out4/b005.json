@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 75,
+    "why_math": "Asymmetric apertures break the lens symmetry, encoding phase information into measurable intensity patterns. Inverting those patterns through phase retrieval recovers the hidden distortion, making a wavefront sensor unnecessary."
+  },
+  {
+    "gid": 76,
+    "why_math": "Smooth fields are uniquely determined by their singularities—where topology flips. Learning only these sparse points and filling between them with standard smoothing bypasses the continuity errors of direct field prediction."
+  },
+  {
+    "gid": 77,
+    "why_math": "Pre-trained diffusion models carry implicit physics knowledge from their training set. Conditioning that knowledge on target lighting parameters guides generation toward realistic, consistent results rather than arbitrary alternatives."
+  },
+  {
+    "gid": 78,
+    "why_math": "Catadioptric optics physically curve light rays to achieve perspective-correct viewing. No computational reprojection is needed—the optics themselves perform the transformation, eliminating the delay."
+  },
+  {
+    "gid": 79,
+    "why_math": "Fungal decay couples biology with physics: fungi spread where moisture guides them, and their feeding weakens structure. Simulating both processes together captures the feedback that makes realistic decay patterns emerge."
+  },
+  {
+    "gid": 80,
+    "why_math": "The Kac-Rice formula converts the hard problem of averaging over uncertain surfaces into solvable integrals of smooth functions over a fixed domain. This translates uncertain geometry into computable expected quantities."
+  },
+  {
+    "gid": 81,
+    "why_math": "Modular latent codes compress motion variety into a small trainable space; primitives map high-level intent cleanly to this space. This avoids the combinatorial explosion of generating every detail from scratch."
+  },
+  {
+    "gid": 82,
+    "why_math": "Physics simulation enforces physical laws automatically. Bilevel optimization corrects both motion retargeting and tracking policy iteratively until the adapted motion satisfies physics and remains easy for the robot to imitate."
+  },
+  {
+    "gid": 83,
+    "why_math": "Gabor kernels encode position and frequency orientation together. Pruning them reduces frequency content directly, creating automatic hierarchy with smooth transitions between detail levels—no refitting needed."
+  },
+  {
+    "gid": 84,
+    "why_math": "Picard iteration converts a nonlinear boundary condition into a sequence of solvable linear problems. Relaxation damping ensures convergence despite the nonlinearity, progressively approaching the correct solution."
+  },
+  {
+    "gid": 85,
+    "why_math": "Explicit root trajectories anchor the spatial frame precisely; latent embeddings capture flexible deformations. This splits the learning problem: the model learns efficient body detail while keeping trajectory reference sharp."
+  },
+  {
+    "gid": 86,
+    "why_math": "Precomputed moments in the hierarchy bound far-cluster contributions analytically via Taylor expansion; nearby NURBS use exact evaluation. This split gives fast approximation far away and exact accuracy near boundaries."
+  },
+  {
+    "gid": 87,
+    "why_math": "Fixed probe spheres replace random walk paths with deterministic samples on fixed boundaries. The Poisson integral formula evaluates these exactly, eliminating variance from the complex distribution of dynamic spheres."
+  },
+  {
+    "gid": 88,
+    "why_math": "The winding number integral reduces algebraically to a single ray intersection and an edge sum. This exact analytical simplification achieves the best asymptotic complexity and introduces only floating-point error."
+  },
+  {
+    "gid": 89,
+    "why_math": "Differentiable procedural models encode fabric structure as adjustable parameters. Rendering-based optimization inverts this: microscope images constrain parameters, making invisible fiber geometry observable through its rendered appearance."
+  }
+]

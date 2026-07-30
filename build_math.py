@@ -5,8 +5,23 @@ every paper placed under the idea it leans on and its own plain-language math no
 import json, os, html
 HERE = os.path.dirname(os.path.abspath(__file__))
 MATH = json.load(open(os.path.join(HERE, "data", "math.json")))
+_wm = os.path.join(HERE, "data", "whymath.json")
+WHYMATH = json.load(open(_wm)) if os.path.exists(_wm) else {}
 analysis = json.load(open(os.path.join(HERE, "data", "analysis.json")))["papers"]
 def esc(s): return html.escape(str(s or ""))
+
+# concept-level "why it works" — the underlying mathematical principle, first-principles.
+WHY = {
+ "modes": "It works because real shapes and images are not random static — they pour almost all of their content into a few smooth, large-scale patterns and leave only a little in the fine, jagged ones. So keeping the handful of dominant patterns and dropping the rest changes almost nothing you would ever notice. The deeper truth: the world is mostly smooth, and smoothness means the information lives in the coarse patterns.",
+ "curve": "It works because how a surface curves is an intrinsic fact about it — it does not depend on where you place it, how you rotate it, or how finely you chop it into pieces. That makes curvature a true, stable property you can measure and then preserve. Deform a shape while keeping its curvature story intact and it still reads as the same material; smooth by evening out curvature and you remove bumps without inventing new features.",
+ "integrate": "It works because although the total is a sum over infinitely many contributions, they are not equally important — most of the light, most of the mass, is concentrated. And a continuous total can always be trapped between an under-estimate and an over-estimate that both tighten as you chop it into finer pieces. So a finite sum of small pieces is guaranteed to close in on the true infinite total: you never reach infinity, you just get as close as you like.",
+ "random": "It works because of one quiet guarantee: the average of many independent random samples equals, on average, exactly the true total you are chasing — the randomness cancels itself out. And the leftover error shrinks in a predictable way as you add samples, so a noisy guess sharpens into a reliable one just by taking more. Aim the samples where the answer varies most and that error shrinks faster still.",
+ "time": "It works because over a short enough moment almost anything changes nearly in a straight line — its rate of change right now is a good guide to where it will be an instant later. So one tiny step forward using the current rate is accurate, and repeating it traces the true motion. Keep the steps small and the small errors stay small instead of piling up into nonsense — which is the entire discipline of simulation.",
+ "optimize": "It works because the slope of how-wrong always points the way that makes things worse, so stepping the opposite way can only improve — and you halt exactly where no small change helps, a resting point. When the how-wrong score is shaped like a single bowl, that resting point is the one best answer; even when it is bumpier you reliably fall into a good one. Physics leans on the same truth: real things settle into their lowest-energy state.",
+ "solve": "It works because a genuine physical balance — a hanging cloth, a shape at rest — has exactly one state where every little force cancels against its neighbours at the same time. Writing that forces-cancel-here condition at every point gives a web of equations whose single joint solution IS that balanced state. There is no guessing involved: the equations pin down the one arrangement that satisfies everyone at once, and solving them finds it exactly.",
+ "connect": "It works because smooth things do not jump: between two nearby known values the truth stays close to their blend, so filling the gaps with a gentle blend is rarely far off. And the relationships that matter — who is nearest, how things connect, how one shape maps onto another — survive the honest coordinate changes graphics uses, so you can carry a problem into a convenient frame, solve it there, and carry the answer back unharmed.",
+ "learn": "It works because of a bargain between simplicity and coverage: when the real rule is far simpler than the mountain of data, and the examples you show cover the territory well, any rule forced to match all those examples has almost no room left to be wrong on the new ones — it is squeezed toward the true rule. It fails in exactly the opposite case: when the rule is as tangled as the data, or the examples leave whole regions unseen.",
+}
 
 # concept groups (my plain-language first-principles narrative), priority order:
 # specific/foundational first, generic "learning from examples" last.
@@ -51,11 +66,17 @@ for gid, mv in MATH.items():
 
 def concept_html(c):
     ps = groups[c["key"]]
-    rows = "".join(
-        f"<div class='pr'><div class='pt'>{esc(title_of.get(gid,''))}</div>"
-        f"<div class='mp'>{esc(mv['plain'])}</div></div>" for gid, mv in ps)
+    rows = ""
+    for gid, mv in ps:
+        why = WHYMATH.get(gid, "")
+        rows += (f"<div class='pr'><div class='pt'>{esc(title_of.get(gid,''))}</div>"
+                 f"<div class='mp'><span class='pk'>uses</span> {esc(mv['plain'])}</div>"
+                 + (f"<div class='mp wy'><span class='pk wk'>why it works</span> {esc(why)}</div>" if why else "")
+                 + "</div>")
+    whybox = (f"<div class='whybox'><div class='wt'>Why it works — the principle</div><p>{esc(WHY[c['key']])}</p></div>"
+              if c["key"] in WHY else "")
     return (f"<section><div class='anum'>{len(ps)} papers</div><h2>{esc(c['title'])}</h2>"
-            f"<p class='intro'>{c['intro']}</p><div class='papers'>{rows}</div></section>")
+            f"<p class='intro'>{c['intro']}</p>{whybox}<div class='papers'>{rows}</div></section>")
 
 concepts_html = "".join(concept_html(c) for c in CG if groups[c["key"]])
 NA = len(MATH)
@@ -78,9 +99,13 @@ section{{padding:44px 0;border-top:1px solid var(--line)}}
 h2{{font-family:var(--serif);font-size:29px;margin:0 0 12px;color:#fff}}
 .intro{{font-size:16.5px}}
 .papers{{margin-top:16px}}
-.pr{{padding:8px 0;border-bottom:1px solid rgba(150,170,205,.06)}}
+.pr{{padding:10px 0;border-bottom:1px solid rgba(150,170,205,.06)}}
 .pt{{font-family:var(--serif);font-size:15.5px;color:#fff}}
-.mp{{font-size:13.5px;color:var(--dim);margin-top:2px}}
+.mp{{font-size:13.5px;color:var(--dim);margin-top:3px;padding-left:82px;text-indent:-82px}}
+.mp.wy{{color:var(--soft)}}
+.pk{{display:inline-block;width:74px;font-family:var(--mono);font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);text-align:right;margin-right:8px}}.pk.wk{{color:var(--accent)}}
+.whybox{{background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:14px 18px;margin:6px 0 4px}}
+.whybox .wt{{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}}.whybox p{{margin:0;font-size:15.5px;color:var(--ink)}}
 .bars{{margin-top:14px}}
 .bar{{display:flex;align-items:center;gap:12px;margin:5px 0;font-family:var(--mono);font-size:12px}}
 .bl{{width:280px;color:var(--soft);text-align:right;flex:0 0 auto}}
@@ -93,7 +118,7 @@ h2{{font-family:var(--serif);font-size:29px;margin:0 0 12px;color:#fff}}
 <header style="padding:0 0 8px">
   <div class="kick">SIGGRAPH 2026 · the mathematics of graphics · first principles</div>
   <h1>A small toolkit, used everywhere.</h1>
-  <p class="dek">Computer graphics looks like many different crafts — cloth, light, faces, fluids, shapes. Underneath, nearly all of it runs on the same short list of mathematical ideas. This is that list, each idea explained in plain words, with every 2026 paper placed under the one it leans on and a one-line note on the math it actually uses.</p>
+  <p class="dek">Computer graphics looks like many different crafts — cloth, light, faces, fluids, shapes. Underneath, nearly all of it runs on the same short list of mathematical ideas. This is that list — and for each one, not just <em>what</em> it is but <b>why it actually works</b>: the underlying principle that makes the trick valid. Every 2026 paper is placed under the idea it leans on, with a plain note on the math it uses and why that math is sound.</p>
   <p class="lead">How do you turn the messy, continuous, physical world into numbers a computer can balance, minimise, add up, and predict?</p>
   <p>That is what all of this math is for. A shape, a splash of water, a lit scene — each has to become a problem of a familiar mathematical shape before a computer can touch it. Read the ideas below in order and you'll see the same handful of moves recur across wildly different papers: balance everything at once, find the least-bad arrangement, step forward in time, add up an infinity of small things, sample cleverly, measure how things curve, find their natural patterns, and — increasingly — learn the rule from examples. A whole field, on one small toolkit.</p>
   <div class="bars"><div style="font-family:var(--mono);font-size:11px;color:var(--faint);margin-bottom:8px">HOW OFTEN EACH IDEA APPEARS (across {NA} papers, a paper can use several)</div>

@@ -1,0 +1,62 @@
+[
+  {
+    "gid": 15,
+    "why_math": "Continuous surface representations enable the learning model to work smoothly, and learning from many examples forces the model toward the simplest patterns that fit all of them, automatically producing clean quad layouts."
+  },
+  {
+    "gid": 16,
+    "why_math": "Video frames are nearly identical, so encoding only the small differences between frames (motion compensation) drastically cuts data. Transform coding (DCT) isolates the few patterns that carry most visual information, compressing what remains."
+  },
+  {
+    "gid": 17,
+    "why_math": "A noise distribution that depends only on smoothness and distance (not how triangles are arranged) stays identical after remeshing—ensuring the learned model works on any mesh without retraining."
+  },
+  {
+    "gid": 18,
+    "why_math": "Delaunay refinement terminates when all angles are bounded, so removing acute obstacles from input allows it to succeed. Reinserting those obstacles afterward breaks only the tiny regions around them."
+  },
+  {
+    "gid": 19,
+    "why_math": "Language models have learned from vast real-world data, so they reliably infer what everyday containers hold—common sense that a bare scene graph could never capture alone."
+  },
+  {
+    "gid": 20,
+    "why_math": "Potential flow exactly solves the incompressible fluid equations, so sampling from it gives physically correct fluid motion. Precomputed drift fields compose linearly, replacing expensive global solves with fast lookups."
+  },
+  {
+    "gid": 21,
+    "why_math": "Tree composition is mathematically associative, so promoting single-phase algorithms to multiphase requires only changing how primitives combine—the underlying math (tracing, rendering) automatically extends."
+  },
+  {
+    "gid": 22,
+    "why_math": "Layers explicitly represent front-to-back order, so occluded strokes can be found and placed independently. The correct layer ordering then hides them automatically in inbetweens, replacing tedious frame-by-frame work."
+  },
+  {
+    "gid": 23,
+    "why_math": "Skeletal structure and motion are inherently coupled—moving a shape requires appropriate joints. A single learned sequence captures this coupling far better than separate stages guessing at each other's decisions."
+  },
+  {
+    "gid": 24,
+    "why_math": "Real materials split into fixed diffuse color and angle-dependent specular shine. Separating them means each part presents simpler patterns to the model, so each learns better than trying to learn their tangled mixture."
+  },
+  {
+    "gid": 25,
+    "why_math": "Particles conserve momentum at each step, so summing all particle motions automatically satisfies conservation laws everywhere. This grounds the simulation in physics without explicit global solves."
+  },
+  {
+    "gid": 26,
+    "why_math": "Stochastic sampling lets backprop flow through discrete ray decisions, enabling training. Optimizing for perceived brightness instead of raw pixels avoids wasting rays on imperceptible details humans cannot see."
+  },
+  {
+    "gid": 27,
+    "why_math": "Hair has global organization (which strands sit where) and local detail (fine texture)—two different scales. Decoding them separately lets each part focus on its own scale without interference or confusion."
+  },
+  {
+    "gid": 28,
+    "why_math": "Grouping 3D poses by their 2D source eliminates the combinatorial explosion of which person-view pair goes with whom, leaving only the simpler geometric consistency problem within each person."
+  },
+  {
+    "gid": 29,
+    "why_math": "Physical rupture and wrinkling follow repeating patterns at every scale (self-similar). Encoding only the local stretch magnitude lets the same procedural formula generate plausible details at any deformation level."
+  }
+]
