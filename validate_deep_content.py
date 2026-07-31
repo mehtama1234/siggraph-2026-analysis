@@ -51,6 +51,9 @@ BAD_MARKERS = (
     "The abstract makes this math necessary because it names a concrete mismatch",
     "In practical terms, the paper buys a more dependable version of the task named by its theme",
     "The step-by-step pattern is that the input is first converted into a form",
+    "The title and abstract place this work in",
+    "The payoff is practical only because the method changes the working procedure",
+    "A careful reader should trust the claimed result for the evidence described",
 )
 
 def load(name, required=True):
