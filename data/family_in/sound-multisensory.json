@@ -1,0 +1,11 @@
+{
+ "key": "sound-multisensory",
+ "theme": "Sound & Multisensory",
+ "n_papers": 2,
+ "pct": 1.3,
+ "theme_examples": [
+  "ProXeek: Seeking and Leveraging Real-World Objects and Environments as Haptic Proxies for Virtual Reality through Multimodal Reasoning",
+  "Mechanical Cloaking of Halftoned Imagery"
+ ],
+ "representative_papers": []
+}

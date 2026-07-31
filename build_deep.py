@@ -12,13 +12,19 @@ papers_raw = json.load(open(os.path.join(HERE, "data", "papers.json")))["papers"
 analysis = json.load(open(os.path.join(HERE, "data", "analysis.json")))["papers"]
 PLAIN = json.load(open(os.path.join(HERE, "data", "plain.json"))) if os.path.exists(os.path.join(HERE, "data", "plain.json")) else {}
 RICH = json.load(open(os.path.join(HERE, "data", "rich.json"))) if os.path.exists(os.path.join(HERE, "data", "rich.json")) else {}
+FAMILIES = json.load(open(os.path.join(HERE, "data", "families_rich.json"))) if os.path.exists(os.path.join(HERE, "data", "families_rich.json")) else {}
+
+def slug(s):
+    return re.sub(r"[^a-z0-9]+", "-", str(s).lower()).strip("-")
 def esc(s): return html.escape(str(s or ""))
 
 def story_html(gid):
     r = RICH.get(str(gid))
     if not r: return ""
-    parts = [("bp","the big picture"),("wh","why it's hard"),("ap","what they do"),
-             ("ww","why it works"),("po","the payoff")]
+    parts = [("bp","the big picture"),("wh","why it's hard"),("naive","the naive solution"),
+             ("ap","the core idea"),("mech","how the mechanism runs"),
+             ("math","mathematical concepts"),("dots","connecting the dots"),
+             ("ww","why it works"),("po","the payoff"),("limits","limits and assumptions")]
     secs = "".join(f"<div class='sec {k}'><span class='lbl'>{lbl}</span><p>{esc(r.get(k))}</p></div>"
                    for k,lbl in parts if r.get(k))
     return f"<details class='story'><summary>read the full first-principles story</summary>{secs}</details>"
@@ -104,6 +110,23 @@ def paper_row(a):
         body = f"<div class='pc'>{esc(a.get('contribution') or a.get('problem') or '')}</div>"
     return f"<div class='pr'><div class='pt'>{esc(a['title'])}</div>{body}{story_html(a.get('gid'))}</div>"
 
+def family_html(theme):
+    f = FAMILIES.get(slug(theme))
+    if not f:
+        return ""
+    parts = [
+        ("problem_shape", "problem shape"),
+        ("naive_failure", "why the naive attempt fails"),
+        ("mathematical_principle", "mathematical principle"),
+        ("why_math_matters", "why the math matters"),
+        ("paper_family", "the paper family"),
+        ("what_changed", "what changed in 2026"),
+        ("limits", "limits and assumptions"),
+    ]
+    secs = "".join(f"<div class='fsec'><span>{lbl}</span><p>{esc(f.get(k))}</p></div>"
+                   for k, lbl in parts if f.get(k))
+    return f"<details class='family'><summary>read this paper family from first principles</summary>{secs}</details>"
+
 placed = set()
 def act_papers(themes):
     rows = []
@@ -123,6 +146,7 @@ def act_html(act):
         fr = FRAMING.get(t)
         if fr:
             inner += f"<p class='subframe'><b>Problem.</b> {fr[0]} <b>Approach.</b> {fr[1]}</p>"
+        inner += family_html(t)
         inner += "".join(paper_row(a) for a in group)
     return f"""<section id="act{act['n']}">
   <div class="anum">Stage {act['n']} · {ncount} papers</div>
@@ -162,6 +186,10 @@ h2{{font-family:var(--serif);font-size:30px;margin:0 0 14px;color:#fff}}
 .papers{{margin-top:20px}}
 .sub{{font-family:var(--mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--amber);margin:22px 0 8px;border-bottom:1px solid var(--line);padding-bottom:5px}}.sub .sn{{color:var(--faint);margin-left:4px}}
 .subframe{{font-size:14.5px;color:var(--soft);margin:0 0 12px;padding:10px 14px;background:var(--bg2);border:1px solid var(--line);border-left:2px solid var(--amber);border-radius:9px}}.subframe b{{color:var(--amber);font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase}}
+.family{{margin:0 0 14px;background:var(--bg2);border:1px solid var(--line);border-left:3px solid #7EC7D8;border-radius:10px;padding:10px 14px}}
+.family>summary{{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#7EC7D8;cursor:pointer;list-style:none}}
+.family>summary::-webkit-details-marker{{display:none}}.family>summary::before{{content:"▸ ";color:#7EC7D8}}.family[open]>summary::before{{content:"▾ "}}
+.fsec{{margin-top:12px}}.fsec span{{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--amber);margin-bottom:3px}}.fsec p{{margin:0;color:var(--ink);font-size:14.5px;line-height:1.6}}
 .pr{{padding:9px 0;border-bottom:1px solid rgba(150,170,205,.07)}}
 .pt{{font-family:var(--serif);font-size:16.5px;color:#fff;line-height:1.3}}
 .pc{{font-size:14px;color:var(--soft);margin-top:2px}}
@@ -174,7 +202,7 @@ h2{{font-family:var(--serif);font-size:30px;margin:0 0 14px;color:#fff}}
 .story>summary::before{{content:"▸ ";color:var(--accent)}}.story[open]>summary::before{{content:"▾ "}}.story[open]>summary{{color:var(--dim)}}
 .story .sec{{margin:9px 0 9px 8px;padding-left:12px;border-left:1px solid var(--line)}}
 .story .sec .lbl{{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:2px}}
-.story .sec.bp .lbl{{color:var(--accent)}}.story .sec.wh .lbl{{color:var(--rose)}}.story .sec.ap .lbl{{color:var(--viol)}}.story .sec.ww .lbl{{color:var(--amber)}}.story .sec.po .lbl{{color:#6FCF97}}
+.story .sec.bp .lbl{{color:var(--accent)}}.story .sec.wh .lbl{{color:var(--rose)}}.story .sec.naive .lbl{{color:#D38D63}}.story .sec.ap .lbl{{color:var(--viol)}}.story .sec.mech .lbl{{color:#7EC7D8}}.story .sec.math .lbl{{color:#D8BE5F}}.story .sec.dots .lbl{{color:#B69CF0}}.story .sec.ww .lbl{{color:var(--amber)}}.story .sec.po .lbl{{color:#6FCF97}}.story .sec.limits .lbl{{color:#A7B0BF}}
 .story .sec p{{margin:0;color:var(--ink);font-size:13.5px;line-height:1.6}}
 .aha{{font-family:var(--serif);font-size:23px;line-height:1.45;color:#fff;border-left:3px solid var(--accent);padding-left:20px;margin:14px 0}}
 .src{{font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:28px;padding-top:16px;border-top:1px solid var(--line)}}

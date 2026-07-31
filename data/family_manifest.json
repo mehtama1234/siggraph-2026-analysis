@@ -1,0 +1,68 @@
+{
+ "families": [
+  {
+   "theme": "Geometry Processing & Meshes",
+   "key": "geometry-processing-meshes"
+  },
+  {
+   "theme": "Physical Simulation",
+   "key": "physical-simulation"
+  },
+  {
+   "theme": "Character Animation & Motion",
+   "key": "character-animation-motion"
+  },
+  {
+   "theme": "Appearance, Materials & BRDF",
+   "key": "appearance-materials-brdf"
+  },
+  {
+   "theme": "Generative 3D & Diffusion",
+   "key": "generative-3d-diffusion"
+  },
+  {
+   "theme": "Rendering & Light Transport",
+   "key": "rendering-light-transport"
+  },
+  {
+   "theme": "Faces & Avatars",
+   "key": "faces-avatars"
+  },
+  {
+   "theme": "Computational Photography & Imaging",
+   "key": "computational-photography-imaging"
+  },
+  {
+   "theme": "Fluids, Smoke & Granular",
+   "key": "fluids-smoke-granular"
+  },
+  {
+   "theme": "VR/AR & Displays",
+   "key": "vr-ar-displays"
+  },
+  {
+   "theme": "Cloth, Hair & Fibers",
+   "key": "cloth-hair-fibers"
+  },
+  {
+   "theme": "Sketching & Vector / 2D",
+   "key": "sketching-vector-2d"
+  },
+  {
+   "theme": "Neural Rendering & Radiance Fields",
+   "key": "neural-rendering-radiance-fields"
+  },
+  {
+   "theme": "Fabrication & 3D Printing",
+   "key": "fabrication-3d-printing"
+  },
+  {
+   "theme": "Neural Fields & Representations",
+   "key": "neural-fields-representations"
+  },
+  {
+   "theme": "Sound & Multisensory",
+   "key": "sound-multisensory"
+  }
+ ]
+}

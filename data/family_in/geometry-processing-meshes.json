@@ -1,0 +1,445 @@
+{
+ "key": "geometry-processing-meshes",
+ "theme": "Geometry Processing & Meshes",
+ "n_papers": 59,
+ "pct": 38.6,
+ "theme_examples": [
+  "PQ-Free HD: Priority-Queue-Free Hausdorff Distance for Triangle Meshes on GPU",
+  "Strips as Tokens: Artist Mesh Generation with Native UV Segmentation",
+  "A Few-Step Generative Model on Cumulative Flow Maps",
+  "Better Bending: Analysis, Construction and Verification of Discrete Bending Models for Kirchhoff-Love Shells",
+  "YASPS: A Symbolic Framework for Extensible, High-Performance IPC Simulation",
+  "Bounding Stratified Bernoulli Impulses for Ray Marching Gaussian Process Implicit Surfaces"
+ ],
+ "representative_papers": [
+  {
+   "title": "Texture-Aware Remeshing for Texture-aware Geometry Processing",
+   "problem": "Standard geometry processing tools ignore textures when meshes use UV parameterization with texture maps",
+   "approach": "Remeshing hoists textures to vertex colors via per-triangle processing preserving appearance",
+   "contribution": "Enables texture-aware geometry processing on segmentation, parameterization, and vector field operations",
+   "primary_theme": "texture-aware processing",
+   "methods": [
+    "remeshing",
+    "vertex colors",
+    "texture hoisting"
+   ]
+  },
+  {
+   "title": "Iskra: A System for Inverse Geometry Processing",
+   "problem": "Differentiating geometry processing algorithms requires reformulation for optimization",
+   "approach": "Adjoint method applied to existing imperative geometry processing code",
+   "contribution": "Efficient backward pass through mean curvature flow, parameterization, deformation",
+   "primary_theme": "inverse geometry",
+   "methods": [
+    "automatic differentiation",
+    "adjoint method",
+    "geometry processing"
+   ]
+  },
+  {
+   "title": "The Antipodal Method: Fast, Accurate, and Robust 3D Generalized Winding Numbers",
+   "problem": "Computing generalized winding numbers trades off accuracy versus computational efficiency",
+   "approach": "Ray-surface intersection plus boundary integral formulation with efficient discretization",
+   "contribution": "22X CPU speedup and 109 queries/second GPU throughput for precise winding numbers",
+   "primary_theme": "geometry processing",
+   "methods": [
+    "winding numbers",
+    "ray tracing",
+    "boundary integrals",
+    "spherical projection"
+   ]
+  },
+  {
+   "title": "Uncertainty-aware geometry processing on Gaussian Process Implicit Surfaces",
+   "problem": "Geometry processing on uncertain/probabilistic surface representations",
+   "approach": "Kac-Rice formula to embed differential operators on Gaussian Process Implicit Surfaces",
+   "contribution": "Uncertainty-aware geometry processing with principled handling of noise and ambiguity",
+   "primary_theme": "probabilistic geometry processing",
+   "methods": [
+    "gaussian processes",
+    "differential operators",
+    "kac-rice formula"
+   ]
+  },
+  {
+   "title": "Fast and Exact Winding Numbers for Triangle Meshes",
+   "problem": "Winding number computation on noisy meshes with gaps and self-intersections is slow",
+   "approach": "Analytical reduction of surface integral to single ray-mesh test and edge sum",
+   "contribution": "Orders of magnitude faster exact winding numbers with no approximations besides floating-point",
+   "primary_theme": "winding number computation",
+   "methods": [
+    "ray-mesh intersection",
+    "analytical reduction",
+    "robust geometry"
+   ]
+  },
+  {
+   "title": "Efficient Multiscale Lanczos Eigenpair Extraction",
+   "problem": "Standard Lanczos eigenpair extraction lacks convergence speed and robustness for large-scale geometry problems",
+   "approach": "Extend implicitly restarted Lanczos with multigrid acceleration to improve convergence",
+   "contribution": "Enhanced convergence speed and robustness for eigenpair extraction in geometry processing applications",
+   "primary_theme": "eigenvalue computation",
+   "methods": [
+    "lanczos iteration",
+    "multigrid",
+    "linear algebra",
+    "spectral methods"
+   ]
+  },
+  {
+   "title": "Feature-Preserving Offset Meshing",
+   "problem": "Existing offset meshing focuses on constant-radius offsets and lacks sharp feature preservation",
+   "approach": "Explicitly generate offset vertices and triangles with feature-capturing energy and mitered offset support",
+   "contribution": "First method supporting mitered offsets with sharp feature preservation on clean and dirty meshes",
+   "primary_theme": "offset mesh generation",
+   "methods": [
+    "mesh processing",
+    "feature preservation",
+    "geometric algorithms",
+    "offset surfaces"
+   ]
+  },
+  {
+   "title": "Lucky High Dynamic Range Smartphone Imaging",
+   "problem": "Smartphone cameras limited to 12 stops dynamic range vs 20 stops human perception",
+   "approach": "Lightweight network on linear raw bracketed exposures with convex pixel combinations",
+   "contribution": "Zero-shot mobile HDR from 3-9 exposures avoiding hallucination artifacts",
+   "primary_theme": "HDR image capture",
+   "methods": [
+    "deep learning",
+    "raw processing",
+    "multi-exposure fusion"
+   ]
+  },
+  {
+   "title": "PQ-Free HD: Priority-Queue-Free Hausdorff Distance for Triangle Meshes on GPU",
+   "problem": "Hausdorff distance between meshes requires global priority queue bottleneck",
+   "approach": "Parallel branch-and-bound with ring buffer replacing priority queue",
+   "contribution": "71.7x GPU speedup over CPU with 83.9% memory reduction via 29-byte task descriptor",
+   "primary_theme": "mesh distance computation",
+   "methods": [
+    "gpu parallelism",
+    "branch-and-bound",
+    "geometric culling"
+   ]
+  },
+  {
+   "title": "Strips as Tokens: Artist Mesh Generation with Native UV Segmentation",
+   "problem": "Mesh generation preserves edge flow yet autoregressive transformers fail artist standards",
+   "approach": "Strip-based token ordering encoding UV boundaries as connected face chains",
+   "contribution": "Unified decoder for both triangle and quad meshes with structured UV layout",
+   "primary_theme": "mesh generation",
+   "methods": [
+    "autoregressive",
+    "transformer",
+    "topology-aware tokenization"
+   ]
+  },
+  {
+   "title": "Mat\u00e9rn Noise for Triangulation-Agnostic Flow Matching on Meshes",
+   "problem": "Mesh signal generation needs triangulation-agnostic models for diverse mesh topologies",
+   "approach": "Adapts flow matching with Mat\u00e9rn noise distribution using PoissonNet denoiser",
+   "contribution": "Generates realistic signals on million-triangle meshes triangulation-independently",
+   "primary_theme": "mesh generation",
+   "methods": [
+    "flow matching",
+    "mat\u00e9rn process",
+    "gradient domain"
+   ]
+  },
+  {
+   "title": "ACT: A Unified Framework for Rigging and Animating Characters with Arbitrary Topologies",
+   "problem": "Character animation pipelines fracture into sequential rigging and motion stages ignoring morphology coupling",
+   "approach": "Unified generative framework modeling joint skeletal topology and motion in shared latent space",
+   "contribution": "Zero-shot rigging and text-guided motion for arbitrary non-humanoid characters end-to-end",
+   "primary_theme": "character animation",
+   "methods": [
+    "diffusion transformer",
+    "vision language model",
+    "geometry-guided decoder"
+   ]
+  },
+  {
+   "title": "Schr\u00f6dinger Bridges on Discretized Geometric Domains",
+   "problem": "Interpolating probability distributions on meshes requires high computational cost.",
+   "approach": "Discrete Schr\u00f6dinger bridge via entropy-regularized transport on mesh domains.",
+   "contribution": "Sharper, faster interpolation with exact endpoint marginals on high-resolution meshes.",
+   "primary_theme": "optimal transport",
+   "methods": [
+    "optimal transport",
+    "heat equation",
+    "sinkhorn algorithm"
+   ]
+  },
+  {
+   "title": "Skinned Motion Retargeting with Spatially Adaptive Interaction Guidance",
+   "problem": "Retargeting motion to exaggerated characters loses interaction semantics.",
+   "approach": "Transformer-based anchor refinement with spatial adaptation for interaction guidance.",
+   "contribution": "Geometry-aware retargeting preserving self-contact across varied body proportions.",
+   "primary_theme": "motion retargeting",
+   "methods": [
+    "transformer",
+    "graph neural network",
+    "spatial adaptation"
+   ]
+  },
+  {
+   "title": "Uniformly Deployable Kirigami on Arbitrary Planar Graphs",
+   "problem": "Designing deployable kirigami from arbitrary planar graphs lacks systematic framework",
+   "approach": "Analytical framework deriving geometric constraints for uniform rigid deployability",
+   "contribution": "Multiple distinct kirigami structures from same graph with full design space characterization",
+   "primary_theme": "kirigami design",
+   "methods": [
+    "computational geometry",
+    "mechanical design",
+    "graph theory"
+   ]
+  },
+  {
+   "title": "Stress-Aware Panelization of Freeform Surfaces",
+   "problem": "Panelizing freeform surfaces requires balancing geometric fidelity and structural robustness",
+   "approach": "Continuous surface flow coupled to stress analysis via creased elastic shells",
+   "contribution": "Joint optimization of geometry and panelization for both aesthetic and structural goals",
+   "primary_theme": "surface panelization",
+   "methods": [
+    "surface flow",
+    "stress analysis",
+    "elastic shells",
+    "shape optimization"
+   ]
+  },
+  {
+   "title": "Untangling Surfaces via Shape and Mesh Repulsion",
+   "problem": "Self-intersections in meshes break downstream simulation, fabrication, and learning pipelines",
+   "approach": "Energy-based framework enforcing embeddedness at both shape and mesh levels",
+   "contribution": "Reliable self-intersection removal via global shape and local mesh repulsion energies",
+   "primary_theme": "surface untangling",
+   "methods": [
+    "energy minimization",
+    "shape repulsion",
+    "mesh penalties",
+    "multi-level enforcement"
+   ]
+  },
+  {
+   "title": "Woodstock: Interactive Modeling of Fungal Wood Decay",
+   "problem": "Simulating complex fungal wood decay with biological and mechanical interactions",
+   "approach": "Volumetric tree representation with anisotropic diffusion, fungal colonization, and moisture dynamics",
+   "contribution": "Realistic simulation of cuboid fractures, trunk hollowing, and environmental moisture effects",
+   "primary_theme": "biological material simulation",
+   "methods": [
+    "volumetric simulation",
+    "anisotropic diffusion",
+    "grain-aligned meshes"
+   ]
+  },
+  {
+   "title": "Spatially Accelerated Winding Numbers for Curved Geometry",
+   "problem": "Fast winding number evaluation limited to discrete inputs; slow on curved geometry",
+   "approach": "Bounding volume hierarchy with precomputed moments for arbitrary NURBS curves and patches",
+   "contribution": "Sub-linear complexity winding numbers on curved geometry preserving feature accuracy",
+   "primary_theme": "winding number computation",
+   "methods": [
+    "bounding volume hierarchy",
+    "moment data",
+    "nurbs evaluation"
+   ]
+  },
+  {
+   "title": "Fiber-level Woven Fabric Capture from a Single Microscopic Image",
+   "problem": "Fiber-level fabric geometry and appearance capture requires special devices or manual design",
+   "approach": "Coarse-to-fine parameter estimation with differentiable procedural geometry and appearance models",
+   "contribution": "Single microscope image to fiber-level fabric geometry and realistic rendering",
+   "primary_theme": "fabric appearance capture",
+   "methods": [
+    "differentiable rendering",
+    "procedural models",
+    "microscopy imaging"
+   ]
+  },
+  {
+   "title": "SAND: Spatially Adaptive Network Depth for Fast Sampling of Neural Implicit Surfaces",
+   "problem": "High computational cost of neural implicit surface evaluations at all spatial locations",
+   "approach": "Spatially adaptive network depth map with tailed MLP for efficient query point evaluation",
+   "contribution": "Terminating network evaluation adaptively based on spatial geometry complexity reduces computation",
+   "primary_theme": "neural implicit surfaces",
+   "methods": [
+    "neural implicit representation",
+    "adaptive network depth",
+    "multi-layer perceptron"
+   ]
+  },
+  {
+   "title": "AtomSlicer: Constant-Thickness Field-Aligned Non-Planar Slicing and Continuous Toolpaths for FFF",
+   "problem": "Multi-axis 3D printing requires continuous collision-free toolpaths with constant bead geometry",
+   "approach": "Field-aligned phase fields partitioned into layers with 2-RoSy-aligned toolpath synthesis",
+   "contribution": "Reduces travel moves by 1-2 orders of magnitude while preserving field constraints and constant thickness",
+   "primary_theme": "3D printing toolpaths",
+   "methods": [
+    "field-aligned layers",
+    "phase fields",
+    "collision-free toolpaths"
+   ]
+  },
+  {
+   "title": "Structural MAT: Clean and Scalable Medial Axis Simplification via Explicit Surface Correspondence",
+   "problem": "Computing high-quality medial axis transform with structural features and robust reconstruction from discrete meshes",
+   "approach": "Explicit surface correspondence tracking during QEM-like Voronoi simplification with priority control strategies",
+   "contribution": "Produces MAT with strong structural alignment and regularity while achieving high runtime efficiency",
+   "primary_theme": "medial axis transform",
+   "methods": [
+    "voronoi diagram",
+    "qem simplification",
+    "surface correspondence"
+   ]
+  },
+  {
+   "title": "Generalized Aberrations for Processing-Aware Optical Design",
+   "problem": "Processing-aware optical design lacks effective second-order optimization due to rank-deficient Jacobians",
+   "approach": "Generalized transverse ray aberrations lifting scalar losses into high-dimensional ray-level residuals",
+   "contribution": "Enables robust Levenberg-Marquardt optimization for end-to-end imaging pipeline design",
+   "primary_theme": "optical design optimization",
+   "methods": [
+    "ray aberrations",
+    "levenberg-marquardt",
+    "end-to-end optimization"
+   ]
+  },
+  {
+   "title": "AniGen: Unified S3 Fields for Animatable 3D Asset Generation",
+   "problem": "3D generation models produce static geometry; auto-rigging produces inconsistent skeletons and skinning",
+   "approach": "Unified S3 Fields framework with confidence-decaying skeleton field and dual skin feature field",
+   "contribution": "Directly generates animate-ready 3D assets with consistent rigging from single-image conditioning",
+   "primary_theme": "animatable asset generation",
+   "methods": [
+    "s3 fields",
+    "flow-matching",
+    "confidence-decaying fields"
+   ]
+  },
+  {
+   "title": "Learned Universal Interoperable Virtual Try-ON",
+   "problem": "Virtual try-on requires garment-to-body transfer despite mismatched skeletons and dense correspondences",
+   "approach": "SMPL proxy with geometry-driven and diffusion-based correspondence models plus simulator-driven fitting",
+   "contribution": "Handles complex multi-layer garments on diverse humanoids while maintaining physical plausibility",
+   "primary_theme": "virtual try-on",
+   "methods": [
+    "diffusion correspondence",
+    "SMPL proxy",
+    "physics simulation"
+   ]
+  },
+  {
+   "title": "Lifting Lines and Tone: Image-Space Stylization in Path-Space",
+   "problem": "Path-space stylization lacks mechanism for enforcing image-space consistency from hand-drawn styles",
+   "approach": "Geometric lifting of image-space stylizations into path-space via parametrization and parallel transport",
+   "contribution": "Principled SRE-compatible framework enabling feature lines and tone while preserving image-space structure",
+   "primary_theme": "non-photorealistic rendering",
+   "methods": [
+    "path-space lifting",
+    "stylized rendering equation",
+    "geometry-driven mapping"
+   ]
+  },
+  {
+   "title": "MorphSkein: A Shape-Changing Afterimage Display Preserving Pixel Density During Surface-Area Changes Across Troposkein-Based Shapes",
+   "problem": "Shape-changing displays lose pixel density as surface area expands, limiting usability",
+   "approach": "Telescopic pole and LED-strip rewinders with troposkein geometry and angular velocity optimization",
+   "contribution": "Preserves pixel density across expanding axisymmetric shapes via mathematical modeling and interpolation",
+   "primary_theme": "shape-changing displays",
+   "methods": [
+    "persistence of vision",
+    "troposkein geometry",
+    "density preservation"
+   ]
+  },
+  {
+   "title": "GPU-accelerated Certified Hausdorff Distance Between Triangle Meshes",
+   "problem": "Hausdorff distance branch-and-bound becomes prohibitively expensive on large models under tight tolerances",
+   "approach": "GPU-accelerated certified branch-and-bound with sorted double-buffered wavefront and adaptive subdivision",
+   "contribution": "Robust deep-refinement handling via resource-aware deferral while maintaining efficient SIMT mapping",
+   "primary_theme": "hausdorff distance",
+   "methods": [
+    "branch-and-bound",
+    "gpu acceleration",
+    "adaptive subdivision"
+   ]
+  },
+  {
+   "title": "Tempo3D: Efficient Temporal-Aware Fine-Tuning and Multi-View Latent Aggregation for 3D Generation",
+   "problem": "Single-view 3D diffusion models produce inadequate geometry and incorrect topology from ambiguity",
+   "approach": "Temporal-aware TS-LoRA fine-tuning and multi-view latent aggregation with score-based velocity field",
+   "contribution": "High-fidelity VecSet-based 3D generation with structure-to-details learning and geometric refinement",
+   "primary_theme": "3D generation",
+   "methods": [
+    "temporal fine-tuning",
+    "lora",
+    "multi-view aggregation"
+   ]
+  },
+  {
+   "title": "Efficient Fur and Hair Multiple Scattering Using Volumetric Approximation",
+   "problem": "Multiple scattering in dense hair/fur expensive and prior approximations fail, appearing dry or blurred",
+   "approach": "Volumetric approximation as anisotropic participating medium with explicit fiber for direct lighting",
+   "contribution": "7-10x faster than path tracing, reproducing rich scattering appearance under varied lighting",
+   "primary_theme": "hair rendering",
+   "methods": [
+    "volumetric scattering",
+    "participating media",
+    "fiber geometry"
+   ]
+  },
+  {
+   "title": "A Precision Controlled Surface-Surface Intersection Algorithm for NURBS",
+   "problem": "Surface-surface intersection precision control impacts watertightness, meshing, and CAE accuracy for NURBS",
+   "approach": "A priori precision control via Lipschitz continuity, convex hulls, and Hausdorff distance constraints",
+   "contribution": "Superior precision and robustness over commercial/open-source kernels with categorized intersection processing",
+   "primary_theme": "surface intersection",
+   "methods": [
+    "nurbs",
+    "hausdorff distance",
+    "convex hulls",
+    "curve fitting"
+   ]
+  },
+  {
+   "title": "High-Fidelity 4D Cloth Capture Pipeline with a Two-Level Pattern",
+   "problem": "High-fidelity cloth capture requires resolving fine wrinkles, large deformation, and self-occlusion simultaneously",
+   "approach": "Two-level marker pattern with physics-based optimization deforming template to match captured geometry",
+   "contribution": "1 mm spatial resolution 4D cloth capture with temporal coherence via keypoint triangulation and mesh deformation",
+   "primary_theme": "cloth motion capture",
+   "methods": [
+    "marker tracking",
+    "photogrammetry",
+    "physics simulation",
+    "mesh optimization"
+   ]
+  },
+  {
+   "title": "Subgrid Marching Tetrahedra",
+   "problem": "Classic marching schemes cannot capture arbitrarily many surface patches per cell or thin sheet details",
+   "approach": "Generalize normal coordinates from topology to encode surface connectivity via integer intersection counts",
+   "contribution": "Manifold intersection-free meshes capturing fine features and thin sheets without geometric orientation requirements",
+   "primary_theme": "mesh reconstruction",
+   "methods": [
+    "marching tetrahedra",
+    "normal coordinates",
+    "topology",
+    "contouring"
+   ]
+  },
+  {
+   "title": "Constant Mean Curvature Surfaces from Discrete Harmonic Maps",
+   "problem": "Discretizing constant mean curvature surfaces lacks direct boundary control and handles closed cases poorly",
+   "approach": "Discretize via harmonic Gauss maps using Dirichlet energy minimization and novel M\u00f6bius-invariant formulation",
+   "contribution": "Direct boundary control and natural handling of closed/periodic CMC surfaces with robust Willmore energy",
+   "primary_theme": "differential geometry",
+   "methods": [
+    "harmonic maps",
+    "discrete differential geometry",
+    "willmore energy",
+    "optimization"
+   ]
+  }
+ ]
+}

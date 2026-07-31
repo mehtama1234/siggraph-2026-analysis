@@ -4,7 +4,8 @@ import json, os, glob, re
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "data", "concept_out")
 
-FIELD = re.compile(r'"(idea|why|dots|picture)"\s*:\s*"(.*?)"\s*(?=,\s*"(?:idea|why|dots|picture)"\s*:|\}\s*$)', re.DOTALL)
+FIELDS = ("idea", "why", "math", "family", "dots", "picture")
+FIELD = re.compile(r'"(idea|why|math|family|dots|picture)"\s*:\s*"(.*?)"\s*(?=,\s*"(?:idea|why|math|family|dots|picture)"\s*:|\}\s*$)', re.DOTALL)
 def clean(s):
     s = s.replace('\\"', '"').replace("\\n", " ")
     s = re.sub(r"\s*\(\s*papers?\s+\d+(?:\s*,\s*\d+)*\s*\)", "", s)  # drop "(paper 93)" refs
@@ -27,12 +28,12 @@ for f in sorted(glob.glob(os.path.join(OUT, "*.json"))):
         d = rescue(raw)
         if not d:
             bad.append(key); continue
-    rich[key] = {k: clean(d.get(k) or "") for k in ("idea", "why", "dots", "picture")}
+    rich[key] = {k: clean(d.get(k) or "") for k in FIELDS}
 
 json.dump(rich, open(os.path.join(HERE, "data", "concepts_rich.json"), "w"), indent=1)
 print(f"merged {len(rich)} rich concept essays -> data/concepts_rich.json")
 for k, v in rich.items():
-    miss = [f for f in ("idea", "why", "dots", "picture") if not v[f]]
-    print(f"  {k:14} idea:{len(v['idea']):4} why:{len(v['why']):4} dots:{len(v['dots']):4} pic:{len(v['picture']):3}" + (f"  MISSING {miss}" if miss else ""))
+    miss = [f for f in FIELDS if not v[f]]
+    print(f"  {k:14} idea:{len(v['idea']):4} why:{len(v['why']):4} math:{len(v['math']):4} family:{len(v['family']):4} dots:{len(v['dots']):4} pic:{len(v['picture']):3}" + (f"  MISSING {miss}" if miss else ""))
 if bad:
     print("BAD:", bad)

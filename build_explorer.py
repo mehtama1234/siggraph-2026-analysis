@@ -52,8 +52,9 @@ h1{{font-family:var(--serif);font-size:26px;margin:0 0 4px;color:#fff}}
 .story[open]>summary{{color:var(--dim)}}
 .sec{{margin:11px 0}}
 .sec .lbl{{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:3px}}
-.sec.bp .lbl{{color:var(--accent)}}.sec.wh .lbl{{color:var(--rose)}}.sec.ap .lbl{{color:var(--viol)}}
-.sec.ww .lbl{{color:var(--amber)}}.sec.po .lbl{{color:#6FCF97}}
+.sec.bp .lbl{{color:var(--accent)}}.sec.wh .lbl{{color:var(--rose)}}.sec.naive .lbl{{color:#D38D63}}.sec.ap .lbl{{color:var(--viol)}}
+.sec.mech .lbl{{color:#7EC7D8}}.sec.math .lbl{{color:#D8BE5F}}.sec.dots .lbl{{color:#B69CF0}}
+.sec.ww .lbl{{color:var(--amber)}}.sec.po .lbl{{color:#6FCF97}}.sec.limits .lbl{{color:#A7B0BF}}
 .sec p{{margin:0;color:var(--ink);font-size:14px;line-height:1.62}}
 .more{{text-align:center;margin:20px 0}}.more button{{font-family:var(--mono);font-size:13px;color:var(--accent);background:none;border:1px solid var(--line);border-radius:9px;padding:8px 20px;cursor:pointer}}
 </style>
@@ -80,9 +81,14 @@ function story(rc){{
   return `<details class="story"><summary>read the full first-principles story</summary>
     ${{sec("bp","the big picture",rc.bp)}}
     ${{sec("wh","why it's hard",rc.wh)}}
-    ${{sec("ap","what they do",rc.ap)}}
+    ${{sec("naive","the naive solution",rc.naive)}}
+    ${{sec("ap","the core idea",rc.ap)}}
+    ${{sec("mech","how the mechanism runs",rc.mech)}}
+    ${{sec("math","mathematical concepts",rc.math)}}
+    ${{sec("dots","connecting the dots",rc.dots)}}
     ${{sec("ww","why it works",rc.ww)}}
     ${{sec("po","the payoff",rc.po)}}
+    ${{sec("limits","limits and assumptions",rc.limits)}}
   </details>`;
 }}
 function card(r){{
@@ -100,7 +106,7 @@ function apply(){{
   const q = query.toLowerCase().split(/\\s+/).filter(Boolean);
   filtered = DATA.filter(r=>{{
     if(!q.length) return true;
-    const rc = r.rc?(r.rc.bp+" "+r.rc.wh+" "+r.rc.ap+" "+r.rc.ww+" "+r.rc.po):"";
+    const rc = r.rc?Object.values(r.rc).join(" "):"";
     const hay = (r.t+" "+r.th+" "+r.pr+" "+r.ap+" "+r.co+" "+(r.m||[]).join(" ")+" "+rc).toLowerCase();
     return q.every(w=>hay.includes(w));
   }});

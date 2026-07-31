@@ -1,0 +1,370 @@
+{
+ "key": "physical-simulation",
+ "theme": "Physical Simulation",
+ "n_papers": 54,
+ "pct": 35.3,
+ "theme_examples": [
+  "Volume-Preserving LBM-MPM Coupling for Air-Water-Sand Mixtures",
+  "Better Bending: Analysis, Construction and Verification of Discrete Bending Models for Kirchhoff-Love Shells",
+  "YASPS: A Symbolic Framework for Extensible, High-Performance IPC Simulation",
+  "GMT: A Geometric Multigrid Transformer Solver for Microstructure Homogenization",
+  "Heterogeneous Subspace Corrections for GPU Deformable Multibody Dynamics",
+  "Mat\u00e9rn Noise for Triangulation-Agnostic Flow Matching on Meshes"
+ ],
+ "representative_papers": [
+  {
+   "title": "Physics-Inspired Procedural Texturing of Extremely Deformable Surfaces",
+   "problem": "Dynamic deformable surfaces lose texture quality through extreme map distortion and shifting scales",
+   "approach": "Wave-based procedural texturing algorithms encoding physical processes without simulation",
+   "contribution": "Plausible animation of deforming objects with extreme texture distortion real-time efficient",
+   "primary_theme": "texture synthesis",
+   "methods": [
+    "procedural texturing",
+    "wave-based",
+    "gpu-parallel"
+   ]
+  },
+  {
+   "title": "ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting",
+   "problem": "Robot motion retargeting produces physical inconsistencies and dynamically infeasible motions",
+   "approach": "Bilevel optimization jointly adapting reference motions while training tracking policy via RL",
+   "contribution": "Physically plausible retargeted motions enabling robust imitation learning across morphologies",
+   "primary_theme": "motion retargeting robotics",
+   "methods": [
+    "reinforcement learning",
+    "bilevel optimization",
+    "physics simulation"
+   ]
+  },
+  {
+   "title": "Learned Universal Interoperable Virtual Try-ON",
+   "problem": "Virtual try-on requires garment-to-body transfer despite mismatched skeletons and dense correspondences",
+   "approach": "SMPL proxy with geometry-driven and diffusion-based correspondence models plus simulator-driven fitting",
+   "contribution": "Handles complex multi-layer garments on diverse humanoids while maintaining physical plausibility",
+   "primary_theme": "virtual try-on",
+   "methods": [
+    "diffusion correspondence",
+    "SMPL proxy",
+    "physics simulation"
+   ]
+  },
+  {
+   "title": "Volume-Preserving LBM-MPM Coupling for Air-Water-Sand Mixtures",
+   "problem": "Simulating coupled air-water-sand mixtures with multiscale interactions",
+   "approach": "Lattice Boltzmann for fluids coupled with Material Point Method for granular sand",
+   "contribution": "Volume-preserving simulation of sand mobilization, settling, erosion",
+   "primary_theme": "multiphase simulation",
+   "methods": [
+    "lbm",
+    "mpm",
+    "fluid-solid coupling"
+   ]
+  },
+  {
+   "title": "Better Bending: Analysis, Construction and Verification of Discrete Bending Models for Kirchhoff-Love Shells",
+   "problem": "Thin shell discretization lacks consensus on best bending models across scenarios",
+   "approach": "Systematic analysis of ten discrete Kirchhoff-Love bending models with variants",
+   "contribution": "Best practices identifying model tradeoffs in accuracy, performance, stability",
+   "primary_theme": "shell simulation",
+   "methods": [
+    "discrete bending",
+    "convergence analysis",
+    "numerical validation"
+   ]
+  },
+  {
+   "title": "YASPS: A Symbolic Framework for Extensible, High-Performance IPC Simulation",
+   "problem": "IPC contact simulation requires re-deriving derivatives for each energy variant",
+   "approach": "Symbolic framework with JOIN/UNION operators encoding connectivity and parameterizations",
+   "contribution": "Automatic derivative derivation enabling extensible contact simulation",
+   "primary_theme": "physics simulation",
+   "methods": [
+    "symbolic differentiation",
+    "incremental potential",
+    "automatic derivatives"
+   ]
+  },
+  {
+   "title": "Mixwell: Sharp 2D Fluid Brushes for Progressive Physics-Based Mixing",
+   "problem": "2D fluid brushes need resolution-independent sharp mixing without global solves or blurring",
+   "approach": "GPU-accelerated analytical methods from potential flow and Maxwell drift formulation",
+   "contribution": "Progressive real-time mixing via Reverse-Drift Functions without intermediate resampling",
+   "primary_theme": "fluid simulation",
+   "methods": [
+    "potential flow",
+    "reverse-drift functions",
+    "gpu acceleration"
+   ]
+  },
+  {
+   "title": "Stochastic geomorphological transport for terrain erosion simulation",
+   "problem": "Erosion simulation struggles with temporal scale differences between transport and erosive processes",
+   "approach": "Parallel stochastic particle-based method relaxing strong velocity assumptions for transport",
+   "contribution": "Simulates multiscale geomorphological features including braided rivers meanders and deltas",
+   "primary_theme": "terrain simulation",
+   "methods": [
+    "particle methods",
+    "stochastic transport",
+    "momentum conservation"
+   ]
+  },
+  {
+   "title": "Kinetic Predicted-Moment Flux Reconstruction for High-Order High-Performance Fluid Simulation",
+   "problem": "Fluid simulation must balance fidelity, performance, and memory efficiency.",
+   "approach": "Kinetic scheme solving Boltzmann-BGK equation in moment-space via high-order flux reconstruction.",
+   "contribution": "5x memory reduction vs LBM with high-order accuracy and minimal dissipation.",
+   "primary_theme": "fluid simulation",
+   "methods": [
+    "kinetic scheme",
+    "flux reconstruction",
+    "moment-based formulation"
+   ]
+  },
+  {
+   "title": "ToF ReSTIR: Time-of-Flight Rendering with Spatio-temporal Reservoir Resampling",
+   "problem": "Time-of-flight rendering is computationally expensive for interactive applications.",
+   "approach": "ReSTIR adaptation with path-length-aware shift mapping for temporal gating.",
+   "contribution": "Interactive-rate ToF simulation handling dynamic scenes with glossy materials.",
+   "primary_theme": "time-resolved rendering",
+   "methods": [
+    "reservoir resampling",
+    "path reuse",
+    "temporal gating"
+   ]
+  },
+  {
+   "title": "An Extended Full GKS Formulation for High-Efficiency and Low-Memory Two-Phase Flow Simulation",
+   "problem": "Two-phase flow simulation struggles to balance accuracy, efficiency, and memory.",
+   "approach": "Extended GKS formulation coupled with phase-field model on Navier-Stokes solver.",
+   "contribution": "Unified two-phase solver with high accuracy, efficiency, and low memory footprint.",
+   "primary_theme": "two-phase flow",
+   "methods": [
+    "gas-kinetic scheme",
+    "phase-field model",
+    "explicit solver"
+   ]
+  },
+  {
+   "title": "Photons \u00d7 Force: Differentiable Radiation Pressure Modeling",
+   "problem": "High computational cost limits radiation pressure modeling for spacecraft design optimization",
+   "approach": "Monte Carlo simulation with neural proxy model for fast differentiable force queries",
+   "contribution": "Orders of magnitude speedup enabling inverse design optimization of radiation pressure effects",
+   "primary_theme": "physics-based optimization",
+   "methods": [
+    "monte carlo simulation",
+    "neural networks",
+    "differentiable rendering"
+   ]
+  },
+  {
+   "title": "MPM Lite: Linear Kernels and Integration without Particles",
+   "problem": "Material Point Method implicit solve cost scales with particle count, limiting performance",
+   "approach": "Hybrid method using compact linear kernels with fixed quadrature points, eliminating particle quadrature",
+   "contribution": "Solver complexity independent of particle count via rotation-free deformation reference",
+   "primary_theme": "physics simulation",
+   "methods": [
+    "hybrid lagrangian eulerian",
+    "material point method",
+    "fem integration"
+   ]
+  },
+  {
+   "title": "HoloPathTracer: Fast and Accurate Wave Path Tracing for Holography",
+   "problem": "Existing CGH paradigms separate radiometric and wave-optical computation, limiting visual effects",
+   "approach": "Monte Carlo path tracing solving rendering and wave propagation equations simultaneously",
+   "contribution": "Physically accurate hologram generation with full 3D visual cues and material effects",
+   "primary_theme": "holographic rendering",
+   "methods": [
+    "wave optics",
+    "path tracing",
+    "monte carlo"
+   ]
+  },
+  {
+   "title": "A Unified Homogenization Framework for Straight- and Curved-Crease Origami Materials",
+   "problem": "Predicting macroscopic origami material properties from crease patterns remains challenging",
+   "approach": "Simulation-based folding with numerical homogenization and Classical Laminate Theory",
+   "contribution": "Unified framework for straight and curved crease materials revealing diverse behavior",
+   "primary_theme": "origami materials",
+   "methods": [
+    "homogenization",
+    "simulation",
+    "material modeling"
+   ]
+  },
+  {
+   "title": "M-ABD: Scalable, Efficient, and Robust Multi-Affine-Body Dynamics",
+   "problem": "Simulating large-scale articulated assemblies with numerical stiffness and high DOF",
+   "approach": "Linear kinematic mapping with affine body dynamics and corotational framework",
+   "contribution": "Interactive simulation of hundreds of thousands of bodies via pre-factorized matrices",
+   "primary_theme": "rigid body dynamics",
+   "methods": [
+    "affine body dynamics",
+    "corotational",
+    "constraint enforcement",
+    "specialized solvers"
+   ]
+  },
+  {
+   "title": "Spatiotemporal FLIP for Fast Free-Surface and Two-Phase Simulation With Very Large Time Steps",
+   "problem": "Large time steps in liquid simulation cause temporal aliasing and free-surface artifacts",
+   "approach": "4D space-time particle sampling with separable kernels and phase-field weighting",
+   "contribution": "Order-of-magnitude larger time steps in FLIP solvers preserving flow structures",
+   "primary_theme": "fluid simulation",
+   "methods": [
+    "flip",
+    "space-time sampling",
+    "phase-field",
+    "particle-grid methods"
+   ]
+  },
+  {
+   "title": "Untangling Surfaces via Shape and Mesh Repulsion",
+   "problem": "Self-intersections in meshes break downstream simulation, fabrication, and learning pipelines",
+   "approach": "Energy-based framework enforcing embeddedness at both shape and mesh levels",
+   "contribution": "Reliable self-intersection removal via global shape and local mesh repulsion energies",
+   "primary_theme": "surface untangling",
+   "methods": [
+    "energy minimization",
+    "shape repulsion",
+    "mesh penalties",
+    "multi-level enforcement"
+   ]
+  },
+  {
+   "title": "Interactive Yarn-level Knitwear with Nested Douglas-Rachford Splitting",
+   "problem": "Yarn-level knitwear simulation is prohibitively expensive due to high DOF and non-convex coupling",
+   "approach": "Nested Douglas-Rachford splitting decoupling non-convex variational energy subproblems",
+   "contribution": "Stable high-resolution knitwear simulation via convexification and theoretically grounded metrics",
+   "primary_theme": "cloth simulation",
+   "methods": [
+    "douglas-rachford splitting",
+    "nested decomposition",
+    "convexification",
+    "admm"
+   ]
+  },
+  {
+   "title": "Woodstock: Interactive Modeling of Fungal Wood Decay",
+   "problem": "Simulating complex fungal wood decay with biological and mechanical interactions",
+   "approach": "Volumetric tree representation with anisotropic diffusion, fungal colonization, and moisture dynamics",
+   "contribution": "Realistic simulation of cuboid fractures, trunk hollowing, and environmental moisture effects",
+   "primary_theme": "biological material simulation",
+   "methods": [
+    "volumetric simulation",
+    "anisotropic diffusion",
+    "grain-aligned meshes"
+   ]
+  },
+  {
+   "title": "Monte Carlo PDE Solvers for Nonlinear Radiative Boundary Conditions",
+   "problem": "Monte Carlo PDE solvers cannot handle nonlinear radiative boundary conditions",
+   "approach": "Picard-style fixed-point iteration with heteroscedastic regression denoising for on-boundary estimates",
+   "contribution": "Stable convergent solver for thermal radiation with higher accuracy than linearization",
+   "primary_theme": "physics-based simulation",
+   "methods": [
+    "monte carlo methods",
+    "pde solvers",
+    "fixed-point iteration"
+   ]
+  },
+  {
+   "title": "ProXeek: Seeking and Leveraging Real-World Objects and Environments as Haptic Proxies for Virtual Reality through Multimodal Reasoning",
+   "problem": "Providing realistic haptic feedback in VR without bulky hardware or pre-fabricated physical proxies",
+   "approach": "LLM-based multi-agent system using multimodal reasoning to match virtual objects with real-world proxies",
+   "contribution": "Leverages environmental snapshots to identify viable haptic proxies with higher fidelity than 3D-printed replicas",
+   "primary_theme": "haptic VR interaction",
+   "methods": [
+    "large language model",
+    "multimodal reasoning",
+    "proxy matching"
+   ]
+  },
+  {
+   "title": "A practical partitioner for distributed simulations on sparse dynamic domains using optimal transport",
+   "problem": "Physics simulations on rapidly evolving dynamic domains require even load distribution and minimal inter-node data exchange",
+   "approach": "Optimal transport power diagram partitioner with surface and temporal consistency metrics",
+   "contribution": "Outperforms state-of-the-art in film production distributed simulations via artist-friendly partitioning",
+   "primary_theme": "distributed simulation",
+   "methods": [
+    "optimal transport",
+    "power diagram",
+    "domain partitioning"
+   ]
+  },
+  {
+   "title": "Closed-Form Convolution for physically-accurate defocus in Gaussian Splatting",
+   "problem": "3D Gaussian Splatting assumes perfect focus but real captures contain lens defocus blur under large apertures",
+   "approach": "Closed-form convolution of projected Gaussians with Circle of Confusion kernel via error function",
+   "contribution": "Physically accurate depth-of-field in 3DGS enabling refocusing and aperture manipulation from blurry captures",
+   "primary_theme": "depth-of-field rendering",
+   "methods": [
+    "gaussian splatting",
+    "depth-of-field",
+    "closed-form convolution"
+   ]
+  },
+  {
+   "title": "JGS2-GQ: Training-free 2nd Jacobi with Gaussian Quadrature",
+   "problem": "JGS2 Cubature method degrades with high-resolution deformation lacking representative training data",
+   "approach": "Training-free Gaussian quadrature integration with adaptive region generation for subspace integration",
+   "contribution": "Stable volumetric simulation without data generation, handling large novel deformations and frictional contact",
+   "primary_theme": "volumetric simulation",
+   "methods": [
+    "gaussian quadrature",
+    "jacobi solver",
+    "perturbation subspace"
+   ]
+  },
+  {
+   "title": "Fast VEM Fluid Simulation",
+   "problem": "Cut-cell methods for boundary-conforming fluid simulation yield poorly conditioned pressure systems",
+   "approach": "Virtual Element Method on convexity-preserving cut-cell grids with geometric multi-grid solver",
+   "contribution": "High-fidelity flow-boundary interaction with substantially reduced computational cost",
+   "primary_theme": "fluid simulation",
+   "methods": [
+    "virtual element method",
+    "cut-cell",
+    "geometric multigrid"
+   ]
+  },
+  {
+   "title": "Differentiable Neutron Transport",
+   "problem": "Inverse problems in neutron transport remain extremely challenging despite shared foundation with rendering",
+   "approach": "Extend differentiable rendering to multi-energy neutron transport via automatic differentiation of Monte Carlo",
+   "contribution": "Gradient-based optimization for nuclear shielding design, sensitivity analysis, and sensor shape optimization",
+   "primary_theme": "differentiable simulation",
+   "methods": [
+    "differentiable rendering",
+    "monte carlo",
+    "automatic differentiation",
+    "inverse design"
+   ]
+  },
+  {
+   "title": "High-Fidelity 4D Cloth Capture Pipeline with a Two-Level Pattern",
+   "problem": "High-fidelity cloth capture requires resolving fine wrinkles, large deformation, and self-occlusion simultaneously",
+   "approach": "Two-level marker pattern with physics-based optimization deforming template to match captured geometry",
+   "contribution": "1 mm spatial resolution 4D cloth capture with temporal coherence via keypoint triangulation and mesh deformation",
+   "primary_theme": "cloth motion capture",
+   "methods": [
+    "marker tracking",
+    "photogrammetry",
+    "physics simulation",
+    "mesh optimization"
+   ]
+  },
+  {
+   "title": "Low-Rank Koopman Deformables with Log-Linear Time Integration",
+   "problem": "Deformable simulation is computationally slow; Koopman models limited to single shape/discretization",
+   "approach": "DMD-based Koopman operator with log-linear time integration generalizing across shapes/resolutions",
+   "contribution": "Fast deformable simulation and shape optimization via generalized low-rank Koopman learning",
+   "primary_theme": "deformable simulation",
+   "methods": [
+    "koopman operator",
+    "dynamic mode decomposition",
+    "reduced-order modeling"
+   ]
+  }
+ ]
+}

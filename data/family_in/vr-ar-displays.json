@@ -1,0 +1,64 @@
+{
+ "key": "vr-ar-displays",
+ "theme": "VR/AR & Displays",
+ "n_papers": 13,
+ "pct": 8.5,
+ "theme_examples": [
+  "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+  "Forget Superresolution, Sample Adaptively (when Path Tracing)",
+  "HoloPathTracer: Fast and Accurate Wave Path Tracing for Holography",
+  "PAColorHolo: A Perceptually-Aware Color Management Framework for Holographic Displays",
+  "Invisible Holographic Window: Full-color 3D Image Reconstruction from Transparent Surface-relief Computer-generated Holograms",
+  "Dual-Path Holographic Laser-Excited Volumetric Display"
+ ],
+ "representative_papers": [
+  {
+   "title": "PAColorHolo: A Perceptually-Aware Color Management Framework for Holographic Displays",
+   "problem": "Holographic displays struggle with perceptually accurate color reproduction due to system distortions",
+   "approach": "Color space transformation with adaptive illumination and neural perceptual color response modeling",
+   "contribution": "Perceptually-aware color management framework improving color fidelity in holographic displays",
+   "primary_theme": "holographic display",
+   "methods": [
+    "color management",
+    "neural networks",
+    "perceptual modeling"
+   ]
+  },
+  {
+   "title": "Invisible Holographic Window: Full-color 3D Image Reconstruction from Transparent Surface-relief Computer-generated Holograms",
+   "problem": "Limited wavelength selectivity in DOEs reduces transmittance, requiring separate CGHs for colors",
+   "approach": "Spatial frequency domain band-division multiplexing on shallow sinusoidal phase profiles",
+   "contribution": "Single transparent surface-relief CGH achieving full-color 3D reconstruction on glass",
+   "primary_theme": "holographic displays",
+   "methods": [
+    "computer generated holograms",
+    "diffractive optics",
+    "frequency multiplexing"
+   ]
+  },
+  {
+   "title": "Dual-Path Holographic Laser-Excited Volumetric Display",
+   "problem": "Volumetric displays require improved brightness and voxel density for practical applications",
+   "approach": "Dual optical paths with femtosecond lasers and synchronized spatial light modulators",
+   "contribution": "Centimeter-scale volumetric graphics with interactive performance under room lighting",
+   "primary_theme": "volumetric display",
+   "methods": [
+    "laser rendering",
+    "holography",
+    "volumetric graphics"
+   ]
+  },
+  {
+   "title": "MorphSkein: A Shape-Changing Afterimage Display Preserving Pixel Density During Surface-Area Changes Across Troposkein-Based Shapes",
+   "problem": "Shape-changing displays lose pixel density as surface area expands, limiting usability",
+   "approach": "Telescopic pole and LED-strip rewinders with troposkein geometry and angular velocity optimization",
+   "contribution": "Preserves pixel density across expanding axisymmetric shapes via mathematical modeling and interpolation",
+   "primary_theme": "shape-changing displays",
+   "methods": [
+    "persistence of vision",
+    "troposkein geometry",
+    "density preservation"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "key": "fluids-smoke-granular",
+ "theme": "Fluids, Smoke & Granular",
+ "n_papers": 14,
+ "pct": 9.2,
+ "theme_examples": [
+  "Volume-Preserving LBM-MPM Coupling for Air-Water-Sand Mixtures",
+  "Mixwell: Sharp 2D Fluid Brushes for Progressive Physics-Based Mixing",
+  "HairGPT: Strand-as-Language Autoregressive Modeling for Realistic 3D Hairstyle Synthesis",
+  "Kinetic Predicted-Moment Flux Reconstruction for High-Order High-Performance Fluid Simulation",
+  "An Extended Full GKS Formulation for High-Efficiency and Low-Memory Two-Phase Flow Simulation",
+  "Dual-Path Holographic Laser-Excited Volumetric Display"
+ ],
+ "representative_papers": [
+  {
+   "title": "Volume-Preserving LBM-MPM Coupling for Air-Water-Sand Mixtures",
+   "problem": "Simulating coupled air-water-sand mixtures with multiscale interactions",
+   "approach": "Lattice Boltzmann for fluids coupled with Material Point Method for granular sand",
+   "contribution": "Volume-preserving simulation of sand mobilization, settling, erosion",
+   "primary_theme": "multiphase simulation",
+   "methods": [
+    "lbm",
+    "mpm",
+    "fluid-solid coupling"
+   ]
+  },
+  {
+   "title": "DiffSurFlow: Efficient and Robust Differentiable Fluid Optimization via Surrogate Strategy on Flow Map",
+   "problem": "Full-gradient backpropagation in differentiable fluids is computationally expensive over long horizons",
+   "approach": "Surrogate gradient method leveraging flow map structure to retain critical gradient highways",
+   "contribution": "Significant speedups and memory reductions while maintaining near-identical gradients vs full backward pass",
+   "primary_theme": "differentiable fluids",
+   "methods": [
+    "adjoint method",
+    "flow map",
+    "surrogate gradient",
+    "physics-informed optimization"
+   ]
+  }
+ ]
+}

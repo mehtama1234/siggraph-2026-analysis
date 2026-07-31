@@ -1,0 +1,66 @@
+{
+ "key": "cloth-hair-fibers",
+ "theme": "Cloth, Hair & Fibers",
+ "n_papers": 10,
+ "pct": 6.5,
+ "theme_examples": [
+  "HairGPT: Strand-as-Language Autoregressive Modeling for Realistic 3D Hairstyle Synthesis",
+  "Surface Power Diagrams for Knit Singularity Placement",
+  "A Real-time, Multiscale and Procedural Feather Appearance Model",
+  "Interactive Yarn-level Knitwear with Nested Douglas-Rachford Splitting",
+  "Pixel Cube: Diffusion-based Portrait Video Relighting Through Realistic Lighting Reproduction",
+  "Fiber-level Woven Fabric Capture from a Single Microscopic Image"
+ ],
+ "representative_papers": [
+  {
+   "title": "HairGPT: Strand-as-Language Autoregressive Modeling for Realistic 3D Hairstyle Synthesis",
+   "problem": "Hair generation entangles global topology with local texture obscuring semantic organization",
+   "approach": "Strand-centric framework treating strands as primitives with spatial and structural decoupling",
+   "contribution": "Compositional hairstyle synthesis across rare complex and stylized domains with semantic control",
+   "primary_theme": "hair synthesis",
+   "methods": [
+    "autoregressive modeling",
+    "geometric tokenizer",
+    "semantic decoupling"
+   ]
+  },
+  {
+   "title": "Interactive Yarn-level Knitwear with Nested Douglas-Rachford Splitting",
+   "problem": "Yarn-level knitwear simulation is prohibitively expensive due to high DOF and non-convex coupling",
+   "approach": "Nested Douglas-Rachford splitting decoupling non-convex variational energy subproblems",
+   "contribution": "Stable high-resolution knitwear simulation via convexification and theoretically grounded metrics",
+   "primary_theme": "cloth simulation",
+   "methods": [
+    "douglas-rachford splitting",
+    "nested decomposition",
+    "convexification",
+    "admm"
+   ]
+  },
+  {
+   "title": "Efficient Fur and Hair Multiple Scattering Using Volumetric Approximation",
+   "problem": "Multiple scattering in dense hair/fur expensive and prior approximations fail, appearing dry or blurred",
+   "approach": "Volumetric approximation as anisotropic participating medium with explicit fiber for direct lighting",
+   "contribution": "7-10x faster than path tracing, reproducing rich scattering appearance under varied lighting",
+   "primary_theme": "hair rendering",
+   "methods": [
+    "volumetric scattering",
+    "participating media",
+    "fiber geometry"
+   ]
+  },
+  {
+   "title": "High-Fidelity 4D Cloth Capture Pipeline with a Two-Level Pattern",
+   "problem": "High-fidelity cloth capture requires resolving fine wrinkles, large deformation, and self-occlusion simultaneously",
+   "approach": "Two-level marker pattern with physics-based optimization deforming template to match captured geometry",
+   "contribution": "1 mm spatial resolution 4D cloth capture with temporal coherence via keypoint triangulation and mesh deformation",
+   "primary_theme": "cloth motion capture",
+   "methods": [
+    "marker tracking",
+    "photogrammetry",
+    "physics simulation",
+    "mesh optimization"
+   ]
+  }
+ ]
+}

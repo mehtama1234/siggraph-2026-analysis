@@ -19,7 +19,8 @@ Your job: the single-page SYNTHESIS that ties them all together into ONE story, 
 whole field as a few connected ideas rather than a pile of techniques.
 
 READ this file: ${j.dir}/data/synth_in.json — it has concepts[], each with title, n_papers, and the
-already-written rich essay parts (idea / why / dots). These ARE the sections. Read them all, then rise above.
+already-written rich essay parts (idea / why / math / family / dots). These ARE the sections.
+Also read the depth standard in ${j.dir}/FIRST_PRINCIPLES_GOAL.md. Read them all, then rise above.
 
 Write THREE parts. Rules that matter most:
 - NO JARGON (unpack any unavoidable term in plain words). NO CLICHE. Every sentence carries a real idea.
@@ -27,6 +28,10 @@ Write THREE parts. Rules that matter most:
   whole field's mathematics, not a list.
 - CONNECT THE DOTS: do not just summarize each idea — show how they DEPEND ON and FEED each other, in a
   natural order (what has to happen first, what builds on what). Name the ideas by their plain titles.
+- PAPER FAMILIES: explain why groups of papers are siblings: the shared problem shape, repeated failure
+  mode, and recurring mathematical principle beneath them.
+- MATHEMATICAL IMPORTANCE: explain why the math matters before naming it. What does it let the field
+  measure, compare, rank, predict, constrain, compress, sample, preserve, fill in, or trust?
 - Ground it: the overarching real-world goal of this field is roughly "${j.goal}". Tie the math back to that.
 
 The three parts:
@@ -34,10 +39,11 @@ The three parts:
              so a newcomer feels the stakes. 3-5 sentences.
   "arc"    = HOW THE IDEAS FIT: walk the reader through the handful of ideas AS ONE CONNECTED ARC — this
              idea turns X into something you can work with, which lets the next idea do Y, which the next
-             then Z. Name them by title; show the dependencies. 8-12 sentences.
+             then Z. Name them by title; show the dependencies. Tie themes and paper families into the arc.
+             10-14 sentences.
   "punchline" = THE PUNCHLINE: the deep takeaway — what the whole toolkit really is, and (if true) how the
              newer learning-from-examples layer sits ON TOP of the older, simpler ideas rather than
-             replacing them. 3-5 sentences.
+             replacing them. 4-6 sentences.
 
 Write OUTPUT as JSON to: ${j.dir}/data/synth_out.json
 A single object {"thread":"...","arc":"...","punchline":"..."}. Escape inner double-quotes as \\".

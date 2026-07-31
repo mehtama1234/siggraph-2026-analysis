@@ -1,0 +1,305 @@
+{
+ "key": "neural-fields-representations",
+ "theme": "Neural Fields & Representations",
+ "n_papers": 3,
+ "pct": 2.0,
+ "theme_examples": [
+  "GMT: A Geometric Multigrid Transformer Solver for Microstructure Homogenization",
+  "Co-Optimization of Structure and Manufacturable Semi-Continuous Layers for Laminated Composites",
+  "SAND: Spatially Adaptive Network Depth for Fast Sampling of Neural Implicit Surfaces"
+ ],
+ "representative_papers": [
+  {
+   "title": "Gabor Fields: Orientation-Selective Level-of-Detail for Volume Rendering",
+   "problem": "Gaussian-based volume representations lack efficient hierarchical level-of-detail strategies",
+   "approach": "Mixture of Gabor kernels enabling orientation-selective frequency filtering via primitive pruning",
+   "contribution": "Continuous smooth LOD transitions without refitting or extra storage; faster ray traversal",
+   "primary_theme": "neural volume rendering",
+   "methods": [
+    "gabor filters",
+    "gaussian splatting",
+    "frequency filtering"
+   ]
+  },
+  {
+   "title": "NeuBase: Spline Surfaces with Neural Basis Functions",
+   "problem": "Neural surface representations lack intuitive real-time deformation and geometric properties for manipulation",
+   "approach": "Catmull-Clark subdivision base surface with neural basis function offset fields via neural maps",
+   "contribution": "Enables direct real-time deformation preserving linearity, locality, smoothness, and affine equivariance",
+   "primary_theme": "neural surface representation",
+   "methods": [
+    "neural basis functions",
+    "subdivision surface",
+    "neural map"
+   ]
+  },
+  {
+   "title": "GMT: A Geometric Multigrid Transformer Solver for Microstructure Homogenization",
+   "problem": "Lattice homogenization surrogates sacrifice accuracy/stability for speed",
+   "approach": "Geometric Multigrid Transformer aligned with GMG hierarchies on sparse structures",
+   "contribution": "160x speedup at 10^-5 residual error matching engineering requirements",
+   "primary_theme": "neural solvers",
+   "methods": [
+    "transformer",
+    "multigrid",
+    "physics-informed learning"
+   ]
+  },
+  {
+   "title": "Bounding Stratified Bernoulli Impulses for Ray Marching Gaussian Process Implicit Surfaces",
+   "problem": "Ray marching Gaussian process surfaces requires full noise evaluations reducing efficiency",
+   "approach": "Stratified Bernoulli impulses and region-level bounds pruning marching points",
+   "contribution": "Accelerated GPIS rendering via two-level bounding strategies",
+   "primary_theme": "neural rendering",
+   "methods": [
+    "gaussian processes",
+    "ray marching",
+    "spatial acceleration"
+   ]
+  },
+  {
+   "title": "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+   "problem": "Egocentric telepresence requires simultaneous capture appearance lighting and environment estimation",
+   "approach": "Holistic framework with stereo depth cameras and neural appearance model separating shading",
+   "contribution": "Photorealistic relightable avatars from HMD with novel ray-sampling generalizing to unseen illumination",
+   "primary_theme": "neural rendering",
+   "methods": [
+    "egocentric perception",
+    "neural appearance",
+    "hdr estimation"
+   ]
+  },
+  {
+   "title": "Forget Superresolution, Sample Adaptively (when Path Tracing)",
+   "problem": "Sub-1-spp path tracing needs adaptive sampling avoiding uniform quality tradeoffs across image",
+   "approach": "Neural sampler with stochastic sample placement and tone-mapping-aware perceptual training",
+   "contribution": "End-to-end adaptive sampling and denoising for sparse rendering with improved efficiency",
+   "primary_theme": "path tracing",
+   "methods": [
+    "adaptive sampling",
+    "denoising",
+    "perceptual loss"
+   ]
+  },
+  {
+   "title": "TwinPose: Person-Specific Subspaces for Multi-View 3D Pose Estimation",
+   "problem": "Multi-view 3D pose estimation faces complexity in global optimization and detector coupling",
+   "approach": "Person-specific 3D pose subspaces optimizing with twin pose inheriting instance representations",
+   "contribution": "Supports diverse 2D detectors leveraging pose-instance cues for simplified multi-person inference",
+   "primary_theme": "pose estimation",
+   "methods": [
+    "pose subspaces",
+    "twin pose",
+    "multi-view reconstruction"
+   ]
+  },
+  {
+   "title": "SharpNet: Enhancing MLPs to Represent Functions with Controlled Non-differentiability",
+   "problem": "MLPs produce smooth outputs, struggling to represent sharp discontinuous features.",
+   "approach": "MLP augmented with auxiliary Poisson feature function encoding sharp edges.",
+   "contribution": "Precise C0 discontinuity control in neural function representation.",
+   "primary_theme": "neural shape representation",
+   "methods": [
+    "implicit neural fields",
+    "poisson equation",
+    "neural network"
+   ]
+  },
+  {
+   "title": "Co-Optimization of Structure and Manufacturable Semi-Continuous Layers for Laminated Composites",
+   "problem": "Optimizing composite structures with partial fabric layers is complex and unconventional.",
+   "approach": "Field-driven joint optimization of topology and semi-continuous fabric layers.",
+   "contribution": "Laminated composites achieving 43.8% higher stiffness via optimized partial layers.",
+   "primary_theme": "structure optimization",
+   "methods": [
+    "topology optimization",
+    "implicit neural field",
+    "semi-continuous design"
+   ]
+  },
+  {
+   "title": "Skinned Motion Retargeting with Spatially Adaptive Interaction Guidance",
+   "problem": "Retargeting motion to exaggerated characters loses interaction semantics.",
+   "approach": "Transformer-based anchor refinement with spatial adaptation for interaction guidance.",
+   "contribution": "Geometry-aware retargeting preserving self-contact across varied body proportions.",
+   "primary_theme": "motion retargeting",
+   "methods": [
+    "transformer",
+    "graph neural network",
+    "spatial adaptation"
+   ]
+  },
+  {
+   "title": "Photons \u00d7 Force: Differentiable Radiation Pressure Modeling",
+   "problem": "High computational cost limits radiation pressure modeling for spacecraft design optimization",
+   "approach": "Monte Carlo simulation with neural proxy model for fast differentiable force queries",
+   "contribution": "Orders of magnitude speedup enabling inverse design optimization of radiation pressure effects",
+   "primary_theme": "physics-based optimization",
+   "methods": [
+    "monte carlo simulation",
+    "neural networks",
+    "differentiable rendering"
+   ]
+  },
+  {
+   "title": "PAColorHolo: A Perceptually-Aware Color Management Framework for Holographic Displays",
+   "problem": "Holographic displays struggle with perceptually accurate color reproduction due to system distortions",
+   "approach": "Color space transformation with adaptive illumination and neural perceptual color response modeling",
+   "contribution": "Perceptually-aware color management framework improving color fidelity in holographic displays",
+   "primary_theme": "holographic display",
+   "methods": [
+    "color management",
+    "neural networks",
+    "perceptual modeling"
+   ]
+  },
+  {
+   "title": "Thermal Non-Line-of-Sight Imaging through Rough Surfaces",
+   "problem": "Reconstructing hidden scenes through rough surfaces suffers from severe spatial mixing",
+   "approach": "Physics-embedded neural network estimating convolution kernels for light transport",
+   "contribution": "Real-time thermal NLOS imaging through rough surfaces with relative depth estimation",
+   "primary_theme": "computational imaging",
+   "methods": [
+    "neural networks",
+    "non line of sight",
+    "thermal imaging"
+   ]
+  },
+  {
+   "title": "Tensor Decomposition-Based Four-dimensional Background-Oriented Schlieren Tomography for High-Speed, High-Fidelity Flow Field Reconstruction",
+   "problem": "Time-resolved flow field reconstruction from Schlieren tomography is memory and time expensive",
+   "approach": "Tensor decomposition with neural networks and distortion correction optimization",
+   "contribution": "Fast high-fidelity flow field reconstruction via tensor decomposition and ray tracing",
+   "primary_theme": "flow reconstruction",
+   "methods": [
+    "tensor decomposition",
+    "neural networks",
+    "ray tracing",
+    "mixed-precision computing"
+   ]
+  },
+  {
+   "title": "Fast and Accurate Gaussian Process Modelling of Real-World Materials",
+   "problem": "BRDF modeling requires both accuracy and computational efficiency for diverse materials",
+   "approach": "Gaussian process regression with generalized distance kernel and factorization",
+   "contribution": "Fast analytical BRDF representations with compact form and flexible accuracy",
+   "primary_theme": "BRDF modeling",
+   "methods": [
+    "gaussian process",
+    "bayesian regression",
+    "covariance kernels",
+    "spherical harmonics"
+   ]
+  },
+  {
+   "title": "Learning Sparse Singularities for Cross Field Design",
+   "problem": "Manual quad mesh design; neural networks struggle with cross field discontinuities",
+   "approach": "Learn sparse singularities and indices, then use smooth conventional methods to connect",
+   "contribution": "Smooth cross fields with varying topologies via learned singularities",
+   "primary_theme": "quad mesh generation",
+   "methods": [
+    "neural networks",
+    "singularity learning",
+    "geodesic distance fields"
+   ]
+  },
+  {
+   "title": "Pixel Cube: Diffusion-based Portrait Video Relighting Through Realistic Lighting Reproduction",
+   "problem": "Dynamic portrait video relighting lacks photorealism and temporal consistency",
+   "approach": "Video diffusion models trained on hybrid real+rendered data with HDR environment map control",
+   "contribution": "Temporally consistent realistic relighting preserving subject identity and facial details",
+   "primary_theme": "portrait video relighting",
+   "methods": [
+    "diffusion models",
+    "neural rendering",
+    "hdr environment maps"
+   ]
+  },
+  {
+   "title": "Uncertainty-aware geometry processing on Gaussian Process Implicit Surfaces",
+   "problem": "Geometry processing on uncertain/probabilistic surface representations",
+   "approach": "Kac-Rice formula to embed differential operators on Gaussian Process Implicit Surfaces",
+   "contribution": "Uncertainty-aware geometry processing with principled handling of noise and ambiguity",
+   "primary_theme": "probabilistic geometry processing",
+   "methods": [
+    "gaussian processes",
+    "differential operators",
+    "kac-rice formula"
+   ]
+  },
+  {
+   "title": "SAND: Spatially Adaptive Network Depth for Fast Sampling of Neural Implicit Surfaces",
+   "problem": "High computational cost of neural implicit surface evaluations at all spatial locations",
+   "approach": "Spatially adaptive network depth map with tailed MLP for efficient query point evaluation",
+   "contribution": "Terminating network evaluation adaptively based on spatial geometry complexity reduces computation",
+   "primary_theme": "neural implicit surfaces",
+   "methods": [
+    "neural implicit representation",
+    "adaptive network depth",
+    "multi-layer perceptron"
+   ]
+  },
+  {
+   "title": "Dual Contouring over Expanded Cubes (DCx) for Zero-Level Set Extraction from Neural Unsigned Distance Functions",
+   "problem": "Extracting manifold and non-manifold surfaces from unsigned distance functions loses topology",
+   "approach": "Extended Dual Contouring on expanded cubes with voxel-to-mesh lookup tables for arbitrary topology",
+   "contribution": "Efficiently extracts both manifold and non-manifold surfaces from neural UDFs via optimization-based active cube detection",
+   "primary_theme": "mesh extraction",
+   "methods": [
+    "dual contouring",
+    "signed distance fields",
+    "non-manifold handling"
+   ]
+  },
+  {
+   "title": "Soft Anisotropic Diagrams for Differentiable Image Representation",
+   "problem": "Gaussian splatting image representation lacks differentiability and efficient spatial representation",
+   "approach": "Soft anisotropic Apollonius diagrams with learnable per-site temperatures and top-K propagation rendering",
+   "contribution": "4-19x speedups over baselines with 46 dB PSNR on Kodak at matched bitrate via efficient GPU computation",
+   "primary_theme": "neural image representation",
+   "methods": [
+    "gaussian splatting",
+    "apollonius diagrams",
+    "differentiable rendering"
+   ]
+  },
+  {
+   "title": "Neural Quadrature Rule and Autoregressive Adaptive Sampling",
+   "problem": "Monte Carlo integration cannot effectively use auxiliary information or adapt sampling to informative regions",
+   "approach": "End-to-end neural network learning sampler and integrator jointly with learned priors over integrand structure",
+   "contribution": "Substantial improvements in equal-sample setting across diverse graphics applications via coupled sampling-integration",
+   "primary_theme": "monte carlo integration",
+   "methods": [
+    "neural networks",
+    "adaptive sampling",
+    "learned integration"
+   ]
+  },
+  {
+   "title": "Explicit flows for implicit surfaces",
+   "problem": "Shape deformation often requires intricate advection schemes without explicit evaluation at arbitrary times",
+   "approach": "Use invertible neural networks to parameterize implicit surface deformation as explicit flow",
+   "contribution": "Direct flow-based shape morphing, editing, and pairwise-to-any transformations via flow composition",
+   "primary_theme": "shape deformation flow",
+   "methods": [
+    "invertible neural networks",
+    "implicit surfaces",
+    "flow matching",
+    "shape morphing"
+   ]
+  },
+  {
+   "title": "Points as Tori: Fast Pointwise Signed Distance for Point Clouds",
+   "problem": "Computing signed distance to point clouds requires costly global optimization or spatial discretization",
+   "approach": "Locally fit point clouds with tori using pre-trained network for curvature and shift parameters",
+   "contribution": "Fast analytical signed distance parameterization enabling reconstruction, offsets, and Boolean operations on point clouds",
+   "primary_theme": "signed distance fields",
+   "methods": [
+    "implicit surfaces",
+    "tori fitting",
+    "neural networks",
+    "winding numbers"
+   ]
+  }
+ ]
+}

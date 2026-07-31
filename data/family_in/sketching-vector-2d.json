@@ -1,0 +1,77 @@
+{
+ "key": "sketching-vector-2d",
+ "theme": "Sketching & Vector / 2D",
+ "n_papers": 7,
+ "pct": 4.6,
+ "theme_examples": [
+  "Mixwell: Sharp 2D Fluid Brushes for Progressive Physics-Based Mixing",
+  "LayerInbetween: Occlusion-Aware Stroke Correspondence and Inbetweening with Automatic Layering",
+  "Learned Universal Interoperable Virtual Try-ON",
+  "Lifting Lines and Tone: Image-Space Stylization in Path-Space",
+  "StyleID: A Perception-Aware Dataset and Metric for Stylization-Agnostic Facial Identity Recognition",
+  "Monte Carlo Rendering of Biharmonic Diffusion Curves"
+ ],
+ "representative_papers": [
+  {
+   "title": "LayerInbetween: Occlusion-Aware Stroke Correspondence and Inbetweening with Automatic Layering",
+   "problem": "Vector animation inbetweening struggles with occluded strokes requiring tedious manual layering",
+   "approach": "Occlusion-aware framework with Global-Local Layer Transformation for automatic layering",
+   "contribution": "Automatic inbetweening resolving occlusions with layer prediction and flexible animation editing",
+   "primary_theme": "animation synthesis",
+   "methods": [
+    "stroke correspondence",
+    "automatic layering",
+    "spatial alignment"
+   ]
+  },
+  {
+   "title": "A Robust and Efficient Intersection Algorithm for NURBS Surfaces: Handling Small Loops and Tangent Intersections",
+   "problem": "NURBS surface intersection fails on complex topology with small loops and tangencies",
+   "approach": "Winding number theory combined with subdivision scheme for vector field detection",
+   "contribution": "Robust detection of all intersection branches including small loops and tangencies",
+   "primary_theme": "NURBS intersection",
+   "methods": [
+    "winding number theory",
+    "subdivision scheme",
+    "vector field analysis",
+    "topological detection"
+   ]
+  },
+  {
+   "title": "Robust Planar Maps for 3D Vectorization",
+   "problem": "Vectorizing 3D scenes with proper occlusion requires robust handling of curve intersections and numerical errors",
+   "approach": "Spatial hierarchy acceleration provides fundamental planar map representation with curve-line intersection",
+   "contribution": "Scalable, output-sensitive vectorization robust to curve soup with topologically valid results",
+   "primary_theme": "3D vectorization",
+   "methods": [
+    "planar partitioning",
+    "spatial hierarchy",
+    "curve-line intersection"
+   ]
+  },
+  {
+   "title": "Texture-Aware Remeshing for Texture-aware Geometry Processing",
+   "problem": "Standard geometry processing tools ignore textures when meshes use UV parameterization with texture maps",
+   "approach": "Remeshing hoists textures to vertex colors via per-triangle processing preserving appearance",
+   "contribution": "Enables texture-aware geometry processing on segmentation, parameterization, and vector field operations",
+   "primary_theme": "texture-aware processing",
+   "methods": [
+    "remeshing",
+    "vertex colors",
+    "texture hoisting"
+   ]
+  },
+  {
+   "title": "Monte Carlo Rendering of Biharmonic Diffusion Curves",
+   "problem": "No Monte Carlo solver exists for biharmonic diffusion curves with coupled boundary conditions",
+   "approach": "Variational inverse problem formulation treating Dirichlet data as unknown, stochastic gradient estimation",
+   "contribution": "Monte Carlo rendering of biharmonic diffusion curves with coupled Dirichlet-Neumann conditions",
+   "primary_theme": "vector graphics rendering",
+   "methods": [
+    "monte carlo",
+    "variational optimization",
+    "pde solving"
+   ]
+  }
+ ]
+}

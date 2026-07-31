@@ -1,0 +1,175 @@
+{
+ "key": "appearance-materials-brdf",
+ "theme": "Appearance, Materials & BRDF",
+ "n_papers": 35,
+ "pct": 22.9,
+ "theme_examples": [
+  "Volume-Preserving LBM-MPM Coupling for Air-Water-Sand Mixtures",
+  "GMT: A Geometric Multigrid Transformer Solver for Microstructure Homogenization",
+  "Heterogeneous Subspace Corrections for GPU Deformable Multibody Dynamics",
+  "The PhaseTree: Multiphase Signed Distance Fields",
+  "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+  "HairGPT: Strand-as-Language Autoregressive Modeling for Realistic 3D Hairstyle Synthesis"
+ ],
+ "representative_papers": [
+  {
+   "title": "Fast and Accurate Gaussian Process Modelling of Real-World Materials",
+   "problem": "BRDF modeling requires both accuracy and computational efficiency for diverse materials",
+   "approach": "Gaussian process regression with generalized distance kernel and factorization",
+   "contribution": "Fast analytical BRDF representations with compact form and flexible accuracy",
+   "primary_theme": "BRDF modeling",
+   "methods": [
+    "gaussian process",
+    "bayesian regression",
+    "covariance kernels",
+    "spherical harmonics"
+   ]
+  },
+  {
+   "title": "The PhaseTree: Multiphase Signed Distance Fields",
+   "problem": "Volumetric objects with multiple materials need compact representation supporting complex topologies",
+   "approach": "Hierarchical construction tree combining phase-aware primitives through composition operators",
+   "contribution": "Seamlessly integrates multiphase SDF into standard workflows with 25% overhead preservation",
+   "primary_theme": "implicit surfaces",
+   "methods": [
+    "signed distance fields",
+    "hierarchical trees",
+    "sphere tracing"
+   ]
+  },
+  {
+   "title": "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+   "problem": "Egocentric telepresence requires simultaneous capture appearance lighting and environment estimation",
+   "approach": "Holistic framework with stereo depth cameras and neural appearance model separating shading",
+   "contribution": "Photorealistic relightable avatars from HMD with novel ray-sampling generalizing to unseen illumination",
+   "primary_theme": "neural rendering",
+   "methods": [
+    "egocentric perception",
+    "neural appearance",
+    "hdr estimation"
+   ]
+  },
+  {
+   "title": "ToF ReSTIR: Time-of-Flight Rendering with Spatio-temporal Reservoir Resampling",
+   "problem": "Time-of-flight rendering is computationally expensive for interactive applications.",
+   "approach": "ReSTIR adaptation with path-length-aware shift mapping for temporal gating.",
+   "contribution": "Interactive-rate ToF simulation handling dynamic scenes with glossy materials.",
+   "primary_theme": "time-resolved rendering",
+   "methods": [
+    "reservoir resampling",
+    "path reuse",
+    "temporal gating"
+   ]
+  },
+  {
+   "title": "A Unified Homogenization Framework for Straight- and Curved-Crease Origami Materials",
+   "problem": "Predicting macroscopic origami material properties from crease patterns remains challenging",
+   "approach": "Simulation-based folding with numerical homogenization and Classical Laminate Theory",
+   "contribution": "Unified framework for straight and curved crease materials revealing diverse behavior",
+   "primary_theme": "origami materials",
+   "methods": [
+    "homogenization",
+    "simulation",
+    "material modeling"
+   ]
+  },
+  {
+   "title": "A Real-time, Multiscale and Procedural Feather Appearance Model",
+   "problem": "Realistic bird feather rendering requires high detail but impractical memory and computation",
+   "approach": "Hierarchical procedural representation in UV domain with novel scattering model",
+   "contribution": "Real-time feather rendering from single photo with minimal memory and high visual fidelity",
+   "primary_theme": "appearance modeling",
+   "methods": [
+    "procedural representation",
+    "hierarchical encoding",
+    "scattering model",
+    "multiscale rendering"
+   ]
+  },
+  {
+   "title": "Inverse Rendering for Discrete X-Ray Computed Tomography",
+   "problem": "Discrete tomography becomes ill-posed with sparse or limited-angle X-ray projections",
+   "approach": "Gradient-based volumetric optimization with probability distributions over materials",
+   "contribution": "Inverse rendering approach surpasses SIRT/DART in sparse and limited-angle scenarios",
+   "primary_theme": "computed tomography",
+   "methods": [
+    "inverse rendering",
+    "gradient optimization",
+    "volumetric loss",
+    "material distributions"
+   ]
+  },
+  {
+   "title": "Fiber-level Woven Fabric Capture from a Single Microscopic Image",
+   "problem": "Fiber-level fabric geometry and appearance capture requires special devices or manual design",
+   "approach": "Coarse-to-fine parameter estimation with differentiable procedural geometry and appearance models",
+   "contribution": "Single microscope image to fiber-level fabric geometry and realistic rendering",
+   "primary_theme": "fabric appearance capture",
+   "methods": [
+    "differentiable rendering",
+    "procedural models",
+    "microscopy imaging"
+   ]
+  },
+  {
+   "title": "Mixed Material Point Methods for Stiff Elastoplasticity",
+   "problem": "Simulating stiff elastoviscoplastic materials requires stable CFL-rate integration handling high-strain deformation",
+   "approach": "Mixed Material Point Methods with implicit integration producing well-posed symmetric optimization",
+   "contribution": "Extends mixed discretization to handle finite-strain viscoelasticity and general flow rules efficiently",
+   "primary_theme": "material point methods",
+   "methods": [
+    "material point method",
+    "implicit integration",
+    "mixed discretization"
+   ]
+  },
+  {
+   "title": "Learning a Delighting Prior for Facial Appearance Capture in the Wild",
+   "problem": "In-the-wild facial appearance capture struggles with complex disentanglement of reflectance from unknown illumination",
+   "approach": "Trains delighting prior network with dataset latent modulation integrating heterogeneous training data sources",
+   "contribution": "Achieves high-quality reflectance estimation from casual video, enabling relightable facial scan collections",
+   "primary_theme": "facial appearance capture",
+   "methods": [
+    "inverse rendering",
+    "delighting prior",
+    "dataset modulation"
+   ]
+  },
+  {
+   "title": "Texture-Aware Remeshing for Texture-aware Geometry Processing",
+   "problem": "Standard geometry processing tools ignore textures when meshes use UV parameterization with texture maps",
+   "approach": "Remeshing hoists textures to vertex colors via per-triangle processing preserving appearance",
+   "contribution": "Enables texture-aware geometry processing on segmentation, parameterization, and vector field operations",
+   "primary_theme": "texture-aware processing",
+   "methods": [
+    "remeshing",
+    "vertex colors",
+    "texture hoisting"
+   ]
+  },
+  {
+   "title": "Mechanical Cloaking of Halftoned Imagery",
+   "problem": "Metamaterial cloaking lacks mechanical domain application, visually encoding properties",
+   "approach": "Parametric porous structures halftoning images while maintaining near-isotropic mechanical properties",
+   "contribution": "Visually matches target image while appearing mechanically homogeneous and isotropic",
+   "primary_theme": "mechanical metamaterials",
+   "methods": [
+    "halftoning",
+    "porous structures",
+    "material design"
+   ]
+  },
+  {
+   "title": "Efficient Fur and Hair Multiple Scattering Using Volumetric Approximation",
+   "problem": "Multiple scattering in dense hair/fur expensive and prior approximations fail, appearing dry or blurred",
+   "approach": "Volumetric approximation as anisotropic participating medium with explicit fiber for direct lighting",
+   "contribution": "7-10x faster than path tracing, reproducing rich scattering appearance under varied lighting",
+   "primary_theme": "hair rendering",
+   "methods": [
+    "volumetric scattering",
+    "participating media",
+    "fiber geometry"
+   ]
+  }
+ ]
+}

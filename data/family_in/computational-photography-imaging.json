@@ -1,0 +1,223 @@
+{
+ "key": "computational-photography-imaging",
+ "theme": "Computational Photography & Imaging",
+ "n_papers": 14,
+ "pct": 9.2,
+ "theme_examples": [
+  "Lucky High Dynamic Range Smartphone Imaging",
+  "GenPIE: A Time-Resolved Plenoptic Imager",
+  "Pixels2Peaks: Converting Terrain Images to Heightmaps",
+  "Mat\u00e9rn Noise for Triangulation-Agnostic Flow Matching on Meshes",
+  "Mixwell: Sharp 2D Fluid Brushes for Progressive Physics-Based Mixing",
+  "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering"
+ ],
+ "representative_papers": [
+  {
+   "title": "GenPIE: A Time-Resolved Plenoptic Imager",
+   "problem": "Time-resolved plenoptic imaging combats high dimensionality and occlusion blind spots",
+   "approach": "Decoupled laser-detector hardware with generative inverse transient rendering",
+   "contribution": "Sparse observations bridged to full light transport via 3D foundation model priors",
+   "primary_theme": "computational imaging",
+   "methods": [
+    "time-resolved imaging",
+    "inverse rendering",
+    "foundation models"
+   ]
+  },
+  {
+   "title": "Thermal Non-Line-of-Sight Imaging through Rough Surfaces",
+   "problem": "Reconstructing hidden scenes through rough surfaces suffers from severe spatial mixing",
+   "approach": "Physics-embedded neural network estimating convolution kernels for light transport",
+   "contribution": "Real-time thermal NLOS imaging through rough surfaces with relative depth estimation",
+   "primary_theme": "computational imaging",
+   "methods": [
+    "neural networks",
+    "non line of sight",
+    "thermal imaging"
+   ]
+  },
+  {
+   "title": "Guidestar-Free Adaptive Optics with Asymmetric Apertures",
+   "problem": "Real-time wavefront sensing without guidestar or dedicated sensor in adaptive optics",
+   "approach": "Asymmetric apertures with phase retrieval and machine learning for computational wavefront sensing",
+   "contribution": "First guidestar-free closed-loop AO system with order of magnitude fewer measurements",
+   "primary_theme": "adaptive optics imaging",
+   "methods": [
+    "phase retrieval",
+    "machine learning",
+    "computational sensing"
+   ]
+  },
+  {
+   "title": "Lucky High Dynamic Range Smartphone Imaging",
+   "problem": "Smartphone cameras limited to 12 stops dynamic range vs 20 stops human perception",
+   "approach": "Lightweight network on linear raw bracketed exposures with convex pixel combinations",
+   "contribution": "Zero-shot mobile HDR from 3-9 exposures avoiding hallucination artifacts",
+   "primary_theme": "HDR image capture",
+   "methods": [
+    "deep learning",
+    "raw processing",
+    "multi-exposure fusion"
+   ]
+  },
+  {
+   "title": "Schr\u00f6dinger Bridges on Discretized Geometric Domains",
+   "problem": "Interpolating probability distributions on meshes requires high computational cost.",
+   "approach": "Discrete Schr\u00f6dinger bridge via entropy-regularized transport on mesh domains.",
+   "contribution": "Sharper, faster interpolation with exact endpoint marginals on high-resolution meshes.",
+   "primary_theme": "optimal transport",
+   "methods": [
+    "optimal transport",
+    "heat equation",
+    "sinkhorn algorithm"
+   ]
+  },
+  {
+   "title": "ToF ReSTIR: Time-of-Flight Rendering with Spatio-temporal Reservoir Resampling",
+   "problem": "Time-of-flight rendering is computationally expensive for interactive applications.",
+   "approach": "ReSTIR adaptation with path-length-aware shift mapping for temporal gating.",
+   "contribution": "Interactive-rate ToF simulation handling dynamic scenes with glossy materials.",
+   "primary_theme": "time-resolved rendering",
+   "methods": [
+    "reservoir resampling",
+    "path reuse",
+    "temporal gating"
+   ]
+  },
+  {
+   "title": "Photons \u00d7 Force: Differentiable Radiation Pressure Modeling",
+   "problem": "High computational cost limits radiation pressure modeling for spacecraft design optimization",
+   "approach": "Monte Carlo simulation with neural proxy model for fast differentiable force queries",
+   "contribution": "Orders of magnitude speedup enabling inverse design optimization of radiation pressure effects",
+   "primary_theme": "physics-based optimization",
+   "methods": [
+    "monte carlo simulation",
+    "neural networks",
+    "differentiable rendering"
+   ]
+  },
+  {
+   "title": "Uniformly Deployable Kirigami on Arbitrary Planar Graphs",
+   "problem": "Designing deployable kirigami from arbitrary planar graphs lacks systematic framework",
+   "approach": "Analytical framework deriving geometric constraints for uniform rigid deployability",
+   "contribution": "Multiple distinct kirigami structures from same graph with full design space characterization",
+   "primary_theme": "kirigami design",
+   "methods": [
+    "computational geometry",
+    "mechanical design",
+    "graph theory"
+   ]
+  },
+  {
+   "title": "Fast and Accurate Gaussian Process Modelling of Real-World Materials",
+   "problem": "BRDF modeling requires both accuracy and computational efficiency for diverse materials",
+   "approach": "Gaussian process regression with generalized distance kernel and factorization",
+   "contribution": "Fast analytical BRDF representations with compact form and flexible accuracy",
+   "primary_theme": "BRDF modeling",
+   "methods": [
+    "gaussian process",
+    "bayesian regression",
+    "covariance kernels",
+    "spherical harmonics"
+   ]
+  },
+  {
+   "title": "The Antipodal Method: Fast, Accurate, and Robust 3D Generalized Winding Numbers",
+   "problem": "Computing generalized winding numbers trades off accuracy versus computational efficiency",
+   "approach": "Ray-surface intersection plus boundary integral formulation with efficient discretization",
+   "contribution": "22X CPU speedup and 109 queries/second GPU throughput for precise winding numbers",
+   "primary_theme": "geometry processing",
+   "methods": [
+    "winding numbers",
+    "ray tracing",
+    "boundary integrals",
+    "spherical projection"
+   ]
+  },
+  {
+   "title": "Fiber-level Woven Fabric Capture from a Single Microscopic Image",
+   "problem": "Fiber-level fabric geometry and appearance capture requires special devices or manual design",
+   "approach": "Coarse-to-fine parameter estimation with differentiable procedural geometry and appearance models",
+   "contribution": "Single microscope image to fiber-level fabric geometry and realistic rendering",
+   "primary_theme": "fabric appearance capture",
+   "methods": [
+    "differentiable rendering",
+    "procedural models",
+    "microscopy imaging"
+   ]
+  },
+  {
+   "title": "SAND: Spatially Adaptive Network Depth for Fast Sampling of Neural Implicit Surfaces",
+   "problem": "High computational cost of neural implicit surface evaluations at all spatial locations",
+   "approach": "Spatially adaptive network depth map with tailed MLP for efficient query point evaluation",
+   "contribution": "Terminating network evaluation adaptively based on spatial geometry complexity reduces computation",
+   "primary_theme": "neural implicit surfaces",
+   "methods": [
+    "neural implicit representation",
+    "adaptive network depth",
+    "multi-layer perceptron"
+   ]
+  },
+  {
+   "title": "Hi-SPAD: Video-Rate Hyperspectral Imaging and Inference with Single-Photon Cameras",
+   "problem": "Hyperspectral imaging requires high spatial, spectral, temporal resolution under passive ambient lighting",
+   "approach": "Pushbroom architecture combining single-photon avalanche diode sensors for photon-counting spectral sensing",
+   "contribution": "Demonstrates 26fps hyperspectral video with 123 spectral channels under ambient illumination",
+   "primary_theme": "hyperspectral imaging",
+   "methods": [
+    "single-photon sensors",
+    "pushbroom configuration",
+    "spectrum reconstruction"
+   ]
+  },
+  {
+   "title": "Generalized Aberrations for Processing-Aware Optical Design",
+   "problem": "Processing-aware optical design lacks effective second-order optimization due to rank-deficient Jacobians",
+   "approach": "Generalized transverse ray aberrations lifting scalar losses into high-dimensional ray-level residuals",
+   "contribution": "Enables robust Levenberg-Marquardt optimization for end-to-end imaging pipeline design",
+   "primary_theme": "optical design optimization",
+   "methods": [
+    "ray aberrations",
+    "levenberg-marquardt",
+    "end-to-end optimization"
+   ]
+  },
+  {
+   "title": "Fast VEM Fluid Simulation",
+   "problem": "Cut-cell methods for boundary-conforming fluid simulation yield poorly conditioned pressure systems",
+   "approach": "Virtual Element Method on convexity-preserving cut-cell grids with geometric multi-grid solver",
+   "contribution": "High-fidelity flow-boundary interaction with substantially reduced computational cost",
+   "primary_theme": "fluid simulation",
+   "methods": [
+    "virtual element method",
+    "cut-cell",
+    "geometric multigrid"
+   ]
+  },
+  {
+   "title": "DiffSurFlow: Efficient and Robust Differentiable Fluid Optimization via Surrogate Strategy on Flow Map",
+   "problem": "Full-gradient backpropagation in differentiable fluids is computationally expensive over long horizons",
+   "approach": "Surrogate gradient method leveraging flow map structure to retain critical gradient highways",
+   "contribution": "Significant speedups and memory reductions while maintaining near-identical gradients vs full backward pass",
+   "primary_theme": "differentiable fluids",
+   "methods": [
+    "adjoint method",
+    "flow map",
+    "surrogate gradient",
+    "physics-informed optimization"
+   ]
+  },
+  {
+   "title": "Low-Rank Koopman Deformables with Log-Linear Time Integration",
+   "problem": "Deformable simulation is computationally slow; Koopman models limited to single shape/discretization",
+   "approach": "DMD-based Koopman operator with log-linear time integration generalizing across shapes/resolutions",
+   "contribution": "Fast deformable simulation and shape optimization via generalized low-rank Koopman learning",
+   "primary_theme": "deformable simulation",
+   "methods": [
+    "koopman operator",
+    "dynamic mode decomposition",
+    "reduced-order modeling"
+   ]
+  }
+ ]
+}

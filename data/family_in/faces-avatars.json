@@ -1,0 +1,263 @@
+{
+ "key": "faces-avatars",
+ "theme": "Faces & Avatars",
+ "n_papers": 15,
+ "pct": 9.8,
+ "theme_examples": [
+  "LayerInbetween: Occlusion-Aware Stroke Correspondence and Inbetweening with Automatic Layering",
+  "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+  "HairGPT: Strand-as-Language Autoregressive Modeling for Realistic 3D Hairstyle Synthesis",
+  "TwinPose: Person-Specific Subspaces for Multi-View 3D Pose Estimation",
+  "Loops2Roofs: Diffusion-based 3D Roof Generation using a Loop Representation",
+  "Generalized Spherical Harmonics Products using Spherical Grids"
+ ],
+ "representative_papers": [
+  {
+   "title": "Bounding Stratified Bernoulli Impulses for Ray Marching Gaussian Process Implicit Surfaces",
+   "problem": "Ray marching Gaussian process surfaces requires full noise evaluations reducing efficiency",
+   "approach": "Stratified Bernoulli impulses and region-level bounds pruning marching points",
+   "contribution": "Accelerated GPIS rendering via two-level bounding strategies",
+   "primary_theme": "neural rendering",
+   "methods": [
+    "gaussian processes",
+    "ray marching",
+    "spatial acceleration"
+   ]
+  },
+  {
+   "title": "The PhaseTree: Multiphase Signed Distance Fields",
+   "problem": "Volumetric objects with multiple materials need compact representation supporting complex topologies",
+   "approach": "Hierarchical construction tree combining phase-aware primitives through composition operators",
+   "contribution": "Seamlessly integrates multiphase SDF into standard workflows with 25% overhead preservation",
+   "primary_theme": "implicit surfaces",
+   "methods": [
+    "signed distance fields",
+    "hierarchical trees",
+    "sphere tracing"
+   ]
+  },
+  {
+   "title": "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+   "problem": "Egocentric telepresence requires simultaneous capture appearance lighting and environment estimation",
+   "approach": "Holistic framework with stereo depth cameras and neural appearance model separating shading",
+   "contribution": "Photorealistic relightable avatars from HMD with novel ray-sampling generalizing to unseen illumination",
+   "primary_theme": "neural rendering",
+   "methods": [
+    "egocentric perception",
+    "neural appearance",
+    "hdr estimation"
+   ]
+  },
+  {
+   "title": "TwinPose: Person-Specific Subspaces for Multi-View 3D Pose Estimation",
+   "problem": "Multi-view 3D pose estimation faces complexity in global optimization and detector coupling",
+   "approach": "Person-specific 3D pose subspaces optimizing with twin pose inheriting instance representations",
+   "contribution": "Supports diverse 2D detectors leveraging pose-instance cues for simplified multi-person inference",
+   "primary_theme": "pose estimation",
+   "methods": [
+    "pose subspaces",
+    "twin pose",
+    "multi-view reconstruction"
+   ]
+  },
+  {
+   "title": "Physics-Inspired Procedural Texturing of Extremely Deformable Surfaces",
+   "problem": "Dynamic deformable surfaces lose texture quality through extreme map distortion and shifting scales",
+   "approach": "Wave-based procedural texturing algorithms encoding physical processes without simulation",
+   "contribution": "Plausible animation of deforming objects with extreme texture distortion real-time efficient",
+   "primary_theme": "texture synthesis",
+   "methods": [
+    "procedural texturing",
+    "wave-based",
+    "gpu-parallel"
+   ]
+  },
+  {
+   "title": "Floating-Point Robustness in Parametric Surface Continuous Collision Detection: From Algorithm to Benchmarking",
+   "problem": "Ensuring floating-point robustness for parametric surface collision detection remains open",
+   "approach": "Time-dependent inclusion-based method with error decomposition and rational arithmetic benchmarking",
+   "contribution": "First floating-point robust CCD framework for parametric surfaces with rigorous validation",
+   "primary_theme": "collision detection",
+   "methods": [
+    "continuous collision detection",
+    "robustness analysis",
+    "benchmarking"
+   ]
+  },
+  {
+   "title": "Thermal Non-Line-of-Sight Imaging through Rough Surfaces",
+   "problem": "Reconstructing hidden scenes through rough surfaces suffers from severe spatial mixing",
+   "approach": "Physics-embedded neural network estimating convolution kernels for light transport",
+   "contribution": "Real-time thermal NLOS imaging through rough surfaces with relative depth estimation",
+   "primary_theme": "computational imaging",
+   "methods": [
+    "neural networks",
+    "non line of sight",
+    "thermal imaging"
+   ]
+  },
+  {
+   "title": "Stress-Aware Panelization of Freeform Surfaces",
+   "problem": "Panelizing freeform surfaces requires balancing geometric fidelity and structural robustness",
+   "approach": "Continuous surface flow coupled to stress analysis via creased elastic shells",
+   "contribution": "Joint optimization of geometry and panelization for both aesthetic and structural goals",
+   "primary_theme": "surface panelization",
+   "methods": [
+    "surface flow",
+    "stress analysis",
+    "elastic shells",
+    "shape optimization"
+   ]
+  },
+  {
+   "title": "Untangling Surfaces via Shape and Mesh Repulsion",
+   "problem": "Self-intersections in meshes break downstream simulation, fabrication, and learning pipelines",
+   "approach": "Energy-based framework enforcing embeddedness at both shape and mesh levels",
+   "contribution": "Reliable self-intersection removal via global shape and local mesh repulsion energies",
+   "primary_theme": "surface untangling",
+   "methods": [
+    "energy minimization",
+    "shape repulsion",
+    "mesh penalties",
+    "multi-level enforcement"
+   ]
+  },
+  {
+   "title": "A Robust and Efficient Intersection Algorithm for NURBS Surfaces: Handling Small Loops and Tangent Intersections",
+   "problem": "NURBS surface intersection fails on complex topology with small loops and tangencies",
+   "approach": "Winding number theory combined with subdivision scheme for vector field detection",
+   "contribution": "Robust detection of all intersection branches including small loops and tangencies",
+   "primary_theme": "NURBS intersection",
+   "methods": [
+    "winding number theory",
+    "subdivision scheme",
+    "vector field analysis",
+    "topological detection"
+   ]
+  },
+  {
+   "title": "Uncertainty-aware geometry processing on Gaussian Process Implicit Surfaces",
+   "problem": "Geometry processing on uncertain/probabilistic surface representations",
+   "approach": "Kac-Rice formula to embed differential operators on Gaussian Process Implicit Surfaces",
+   "contribution": "Uncertainty-aware geometry processing with principled handling of noise and ambiguity",
+   "primary_theme": "probabilistic geometry processing",
+   "methods": [
+    "gaussian processes",
+    "differential operators",
+    "kac-rice formula"
+   ]
+  },
+  {
+   "title": "MotionBricks: Scalable Real-Time Motions with Modular Latent Generative Model and Smart Primitives",
+   "problem": "Real-time generative motion control lacks scalability and multi-modal control interfaces",
+   "approach": "Modular latent generative backbone with smart primitives for navigation and interaction",
+   "contribution": "Real-time generation of 350k+ motions with unified control interface and zero-shot adaptation",
+   "primary_theme": "motion generation and synthesis",
+   "methods": [
+    "latent generative models",
+    "smart primitives",
+    "motion authoring"
+   ]
+  },
+  {
+   "title": "SAND: Spatially Adaptive Network Depth for Fast Sampling of Neural Implicit Surfaces",
+   "problem": "High computational cost of neural implicit surface evaluations at all spatial locations",
+   "approach": "Spatially adaptive network depth map with tailed MLP for efficient query point evaluation",
+   "contribution": "Terminating network evaluation adaptively based on spatial geometry complexity reduces computation",
+   "primary_theme": "neural implicit surfaces",
+   "methods": [
+    "neural implicit representation",
+    "adaptive network depth",
+    "multi-layer perceptron"
+   ]
+  },
+  {
+   "title": "Implicit Minimal Surfaces for Bijective Correspondences",
+   "problem": "Computing bijective surface correspondences requires complex combinatorial mesh modifications and barrier functions",
+   "approach": "Implicit 4D mapping surface using complex sections minimized via Ginzburg-Landau functional",
+   "contribution": "Robust correspondence computation without initialization requirement or mesh modifications needed",
+   "primary_theme": "surface correspondence",
+   "methods": [
+    "implicit representation",
+    "complex sections",
+    "ginzburg-landau functional"
+   ]
+  },
+  {
+   "title": "NeuBase: Spline Surfaces with Neural Basis Functions",
+   "problem": "Neural surface representations lack intuitive real-time deformation and geometric properties for manipulation",
+   "approach": "Catmull-Clark subdivision base surface with neural basis function offset fields via neural maps",
+   "contribution": "Enables direct real-time deformation preserving linearity, locality, smoothness, and affine equivariance",
+   "primary_theme": "neural surface representation",
+   "methods": [
+    "neural basis functions",
+    "subdivision surface",
+    "neural map"
+   ]
+  },
+  {
+   "title": "Dual Contouring over Expanded Cubes (DCx) for Zero-Level Set Extraction from Neural Unsigned Distance Functions",
+   "problem": "Extracting manifold and non-manifold surfaces from unsigned distance functions loses topology",
+   "approach": "Extended Dual Contouring on expanded cubes with voxel-to-mesh lookup tables for arbitrary topology",
+   "contribution": "Efficiently extracts both manifold and non-manifold surfaces from neural UDFs via optimization-based active cube detection",
+   "primary_theme": "mesh extraction",
+   "methods": [
+    "dual contouring",
+    "signed distance fields",
+    "non-manifold handling"
+   ]
+  },
+  {
+   "title": "Explicit flows for implicit surfaces",
+   "problem": "Shape deformation often requires intricate advection schemes without explicit evaluation at arbitrary times",
+   "approach": "Use invertible neural networks to parameterize implicit surface deformation as explicit flow",
+   "contribution": "Direct flow-based shape morphing, editing, and pairwise-to-any transformations via flow composition",
+   "primary_theme": "shape deformation flow",
+   "methods": [
+    "invertible neural networks",
+    "implicit surfaces",
+    "flow matching",
+    "shape morphing"
+   ]
+  },
+  {
+   "title": "Points as Tori: Fast Pointwise Signed Distance for Point Clouds",
+   "problem": "Computing signed distance to point clouds requires costly global optimization or spatial discretization",
+   "approach": "Locally fit point clouds with tori using pre-trained network for curvature and shift parameters",
+   "contribution": "Fast analytical signed distance parameterization enabling reconstruction, offsets, and Boolean operations on point clouds",
+   "primary_theme": "signed distance fields",
+   "methods": [
+    "implicit surfaces",
+    "tori fitting",
+    "neural networks",
+    "winding numbers"
+   ]
+  },
+  {
+   "title": "Feature-Preserving Offset Meshing",
+   "problem": "Existing offset meshing focuses on constant-radius offsets and lacks sharp feature preservation",
+   "approach": "Explicitly generate offset vertices and triangles with feature-capturing energy and mitered offset support",
+   "contribution": "First method supporting mitered offsets with sharp feature preservation on clean and dirty meshes",
+   "primary_theme": "offset mesh generation",
+   "methods": [
+    "mesh processing",
+    "feature preservation",
+    "geometric algorithms",
+    "offset surfaces"
+   ]
+  },
+  {
+   "title": "Constant Mean Curvature Surfaces from Discrete Harmonic Maps",
+   "problem": "Discretizing constant mean curvature surfaces lacks direct boundary control and handles closed cases poorly",
+   "approach": "Discretize via harmonic Gauss maps using Dirichlet energy minimization and novel M\u00f6bius-invariant formulation",
+   "contribution": "Direct boundary control and natural handling of closed/periodic CMC surfaces with robust Willmore energy",
+   "primary_theme": "differential geometry",
+   "methods": [
+    "harmonic maps",
+    "discrete differential geometry",
+    "willmore energy",
+    "optimization"
+   ]
+  }
+ ]
+}

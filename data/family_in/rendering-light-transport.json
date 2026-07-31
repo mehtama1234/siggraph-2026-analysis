@@ -1,0 +1,440 @@
+{
+ "key": "rendering-light-transport",
+ "theme": "Rendering & Light Transport",
+ "n_papers": 28,
+ "pct": 18.3,
+ "theme_examples": [
+  "GenPIE: A Time-Resolved Plenoptic Imager",
+  "Bounding Stratified Bernoulli Impulses for Ray Marching Gaussian Process Implicit Surfaces",
+  "Mat\u00e9rn Noise for Triangulation-Agnostic Flow Matching on Meshes",
+  "Forget Superresolution, Sample Adaptively (when Path Tracing)",
+  "Gradient Domain Reconstruction for Monte Carlo PDE Solvers",
+  "Loops2Roofs: Diffusion-based 3D Roof Generation using a Loop Representation"
+ ],
+ "representative_papers": [
+  {
+   "title": "GenPIE: A Time-Resolved Plenoptic Imager",
+   "problem": "Time-resolved plenoptic imaging combats high dimensionality and occlusion blind spots",
+   "approach": "Decoupled laser-detector hardware with generative inverse transient rendering",
+   "contribution": "Sparse observations bridged to full light transport via 3D foundation model priors",
+   "primary_theme": "computational imaging",
+   "methods": [
+    "time-resolved imaging",
+    "inverse rendering",
+    "foundation models"
+   ]
+  },
+  {
+   "title": "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+   "problem": "Egocentric telepresence requires simultaneous capture appearance lighting and environment estimation",
+   "approach": "Holistic framework with stereo depth cameras and neural appearance model separating shading",
+   "contribution": "Photorealistic relightable avatars from HMD with novel ray-sampling generalizing to unseen illumination",
+   "primary_theme": "neural rendering",
+   "methods": [
+    "egocentric perception",
+    "neural appearance",
+    "hdr estimation"
+   ]
+  },
+  {
+   "title": "ToF ReSTIR: Time-of-Flight Rendering with Spatio-temporal Reservoir Resampling",
+   "problem": "Time-of-flight rendering is computationally expensive for interactive applications.",
+   "approach": "ReSTIR adaptation with path-length-aware shift mapping for temporal gating.",
+   "contribution": "Interactive-rate ToF simulation handling dynamic scenes with glossy materials.",
+   "primary_theme": "time-resolved rendering",
+   "methods": [
+    "reservoir resampling",
+    "path reuse",
+    "temporal gating"
+   ]
+  },
+  {
+   "title": "Dual-Path Holographic Laser-Excited Volumetric Display",
+   "problem": "Volumetric displays require improved brightness and voxel density for practical applications",
+   "approach": "Dual optical paths with femtosecond lasers and synchronized spatial light modulators",
+   "contribution": "Centimeter-scale volumetric graphics with interactive performance under room lighting",
+   "primary_theme": "volumetric display",
+   "methods": [
+    "laser rendering",
+    "holography",
+    "volumetric graphics"
+   ]
+  },
+  {
+   "title": "Thermal Non-Line-of-Sight Imaging through Rough Surfaces",
+   "problem": "Reconstructing hidden scenes through rough surfaces suffers from severe spatial mixing",
+   "approach": "Physics-embedded neural network estimating convolution kernels for light transport",
+   "contribution": "Real-time thermal NLOS imaging through rough surfaces with relative depth estimation",
+   "primary_theme": "computational imaging",
+   "methods": [
+    "neural networks",
+    "non line of sight",
+    "thermal imaging"
+   ]
+  },
+  {
+   "title": "Pixel Cube: Diffusion-based Portrait Video Relighting Through Realistic Lighting Reproduction",
+   "problem": "Dynamic portrait video relighting lacks photorealism and temporal consistency",
+   "approach": "Video diffusion models trained on hybrid real+rendered data with HDR environment map control",
+   "contribution": "Temporally consistent realistic relighting preserving subject identity and facial details",
+   "primary_theme": "portrait video relighting",
+   "methods": [
+    "diffusion models",
+    "neural rendering",
+    "hdr environment maps"
+   ]
+  },
+  {
+   "title": "Learning a Delighting Prior for Facial Appearance Capture in the Wild",
+   "problem": "In-the-wild facial appearance capture struggles with complex disentanglement of reflectance from unknown illumination",
+   "approach": "Trains delighting prior network with dataset latent modulation integrating heterogeneous training data sources",
+   "contribution": "Achieves high-quality reflectance estimation from casual video, enabling relightable facial scan collections",
+   "primary_theme": "facial appearance capture",
+   "methods": [
+    "inverse rendering",
+    "delighting prior",
+    "dataset modulation"
+   ]
+  },
+  {
+   "title": "Lifting Lines and Tone: Image-Space Stylization in Path-Space",
+   "problem": "Path-space stylization lacks mechanism for enforcing image-space consistency from hand-drawn styles",
+   "approach": "Geometric lifting of image-space stylizations into path-space via parametrization and parallel transport",
+   "contribution": "Principled SRE-compatible framework enabling feature lines and tone while preserving image-space structure",
+   "primary_theme": "non-photorealistic rendering",
+   "methods": [
+    "path-space lifting",
+    "stylized rendering equation",
+    "geometry-driven mapping"
+   ]
+  },
+  {
+   "title": "Efficient Fur and Hair Multiple Scattering Using Volumetric Approximation",
+   "problem": "Multiple scattering in dense hair/fur expensive and prior approximations fail, appearing dry or blurred",
+   "approach": "Volumetric approximation as anisotropic participating medium with explicit fiber for direct lighting",
+   "contribution": "7-10x faster than path tracing, reproducing rich scattering appearance under varied lighting",
+   "primary_theme": "hair rendering",
+   "methods": [
+    "volumetric scattering",
+    "participating media",
+    "fiber geometry"
+   ]
+  },
+  {
+   "title": "Radiance Caching for Differentiable Path Tracing",
+   "problem": "Differentiable path tracing suffers high variance and poor conditioning for inverse rendering",
+   "approach": "Radiance cache with spatial blending field interpolating between cache and unbiased estimators",
+   "contribution": "Recover material parameters even with unidentifiable lighting, improved speed and robustness",
+   "primary_theme": "inverse rendering",
+   "methods": [
+    "radiance caching",
+    "differentiable rendering",
+    "variance reduction"
+   ]
+  },
+  {
+   "title": "Differentiable Neutron Transport",
+   "problem": "Inverse problems in neutron transport remain extremely challenging despite shared foundation with rendering",
+   "approach": "Extend differentiable rendering to multi-energy neutron transport via automatic differentiation of Monte Carlo",
+   "contribution": "Gradient-based optimization for nuclear shielding design, sensitivity analysis, and sensor shape optimization",
+   "primary_theme": "differentiable simulation",
+   "methods": [
+    "differentiable rendering",
+    "monte carlo",
+    "automatic differentiation",
+    "inverse design"
+   ]
+  },
+  {
+   "title": "Lucky High Dynamic Range Smartphone Imaging",
+   "problem": "Smartphone cameras limited to 12 stops dynamic range vs 20 stops human perception",
+   "approach": "Lightweight network on linear raw bracketed exposures with convex pixel combinations",
+   "contribution": "Zero-shot mobile HDR from 3-9 exposures avoiding hallucination artifacts",
+   "primary_theme": "HDR image capture",
+   "methods": [
+    "deep learning",
+    "raw processing",
+    "multi-exposure fusion"
+   ]
+  },
+  {
+   "title": "A Few-Step Generative Model on Cumulative Flow Maps",
+   "problem": "Generative models require many steps reducing inference efficiency for synthesis",
+   "approach": "Cumulative flow maps framework unifying local updates with finite-time transport",
+   "contribution": "Few-step or one-step generation with minimal training changes and quality preservation",
+   "primary_theme": "generative modeling",
+   "methods": [
+    "flow-based models",
+    "diffusion models",
+    "cumulative transport"
+   ]
+  },
+  {
+   "title": "Bounding Stratified Bernoulli Impulses for Ray Marching Gaussian Process Implicit Surfaces",
+   "problem": "Ray marching Gaussian process surfaces requires full noise evaluations reducing efficiency",
+   "approach": "Stratified Bernoulli impulses and region-level bounds pruning marching points",
+   "contribution": "Accelerated GPIS rendering via two-level bounding strategies",
+   "primary_theme": "neural rendering",
+   "methods": [
+    "gaussian processes",
+    "ray marching",
+    "spatial acceleration"
+   ]
+  },
+  {
+   "title": "Stochastic geomorphological transport for terrain erosion simulation",
+   "problem": "Erosion simulation struggles with temporal scale differences between transport and erosive processes",
+   "approach": "Parallel stochastic particle-based method relaxing strong velocity assumptions for transport",
+   "contribution": "Simulates multiscale geomorphological features including braided rivers meanders and deltas",
+   "primary_theme": "terrain simulation",
+   "methods": [
+    "particle methods",
+    "stochastic transport",
+    "momentum conservation"
+   ]
+  },
+  {
+   "title": "Forget Superresolution, Sample Adaptively (when Path Tracing)",
+   "problem": "Sub-1-spp path tracing needs adaptive sampling avoiding uniform quality tradeoffs across image",
+   "approach": "Neural sampler with stochastic sample placement and tone-mapping-aware perceptual training",
+   "contribution": "End-to-end adaptive sampling and denoising for sparse rendering with improved efficiency",
+   "primary_theme": "path tracing",
+   "methods": [
+    "adaptive sampling",
+    "denoising",
+    "perceptual loss"
+   ]
+  },
+  {
+   "title": "Schr\u00f6dinger Bridges on Discretized Geometric Domains",
+   "problem": "Interpolating probability distributions on meshes requires high computational cost.",
+   "approach": "Discrete Schr\u00f6dinger bridge via entropy-regularized transport on mesh domains.",
+   "contribution": "Sharper, faster interpolation with exact endpoint marginals on high-resolution meshes.",
+   "primary_theme": "optimal transport",
+   "methods": [
+    "optimal transport",
+    "heat equation",
+    "sinkhorn algorithm"
+   ]
+  },
+  {
+   "title": "Sample Matching for Joint Extinction Gradient Estimation in Differentiable Volume Rendering",
+   "problem": "Differentiable volume rendering suffers from high gradient variance.",
+   "approach": "Sample matching coupling scattering and transmittance components at shared locations.",
+   "contribution": "Up to 80% variance reduction in extinction gradients via coupled estimators.",
+   "primary_theme": "volume rendering",
+   "methods": [
+    "differentiable rendering",
+    "monte carlo",
+    "gradient estimation"
+   ]
+  },
+  {
+   "title": "Photons \u00d7 Force: Differentiable Radiation Pressure Modeling",
+   "problem": "High computational cost limits radiation pressure modeling for spacecraft design optimization",
+   "approach": "Monte Carlo simulation with neural proxy model for fast differentiable force queries",
+   "contribution": "Orders of magnitude speedup enabling inverse design optimization of radiation pressure effects",
+   "primary_theme": "physics-based optimization",
+   "methods": [
+    "monte carlo simulation",
+    "neural networks",
+    "differentiable rendering"
+   ]
+  },
+  {
+   "title": "Robust Computation of Boundary Path Integrals Using Kernel-Density Estimation",
+   "problem": "Robust numerical estimation of boundary path integrals for differentiable rendering remains challenging",
+   "approach": "Kernel density estimation to expand integration domain, avoiding direct delta-function sampling",
+   "contribution": "First kernel-density boundary integral formulation with consistent derivative estimates",
+   "primary_theme": "differentiable rendering",
+   "methods": [
+    "kernel density estimation",
+    "path integrals",
+    "inverse rendering"
+   ]
+  },
+  {
+   "title": "Generalized Spherical Harmonics Products using Spherical Grids",
+   "problem": "Spherical Harmonics product computation is inefficient and requires identical input orders",
+   "approach": "Spherical Grids as intermediate representation enabling point-wise multiplication",
+   "contribution": "Generalized SH products supporting different orders with superior performance",
+   "primary_theme": "rendering algorithms",
+   "methods": [
+    "spherical harmonics",
+    "grid representation",
+    "frequency domain"
+   ]
+  },
+  {
+   "title": "HoloPathTracer: Fast and Accurate Wave Path Tracing for Holography",
+   "problem": "Existing CGH paradigms separate radiometric and wave-optical computation, limiting visual effects",
+   "approach": "Monte Carlo path tracing solving rendering and wave propagation equations simultaneously",
+   "contribution": "Physically accurate hologram generation with full 3D visual cues and material effects",
+   "primary_theme": "holographic rendering",
+   "methods": [
+    "wave optics",
+    "path tracing",
+    "monte carlo"
+   ]
+  },
+  {
+   "title": "BodyReLux: Temporally Consistent Full-Body Video Relighting",
+   "problem": "Relighting full-body video while maintaining temporal consistency and photorealism",
+   "approach": "Video diffusion with token-based lighting conditioning and masked attention control",
+   "contribution": "Photorealistic temporally consistent human relighting from hybrid OLAT and dynamic capture",
+   "primary_theme": "video relighting",
+   "methods": [
+    "video diffusion",
+    "token conditioning",
+    "masked attention",
+    "dynamic capture"
+   ]
+  },
+  {
+   "title": "A Real-time, Multiscale and Procedural Feather Appearance Model",
+   "problem": "Realistic bird feather rendering requires high detail but impractical memory and computation",
+   "approach": "Hierarchical procedural representation in UV domain with novel scattering model",
+   "contribution": "Real-time feather rendering from single photo with minimal memory and high visual fidelity",
+   "primary_theme": "appearance modeling",
+   "methods": [
+    "procedural representation",
+    "hierarchical encoding",
+    "scattering model",
+    "multiscale rendering"
+   ]
+  },
+  {
+   "title": "Inverse Rendering for Discrete X-Ray Computed Tomography",
+   "problem": "Discrete tomography becomes ill-posed with sparse or limited-angle X-ray projections",
+   "approach": "Gradient-based volumetric optimization with probability distributions over materials",
+   "contribution": "Inverse rendering approach surpasses SIRT/DART in sparse and limited-angle scenarios",
+   "primary_theme": "computed tomography",
+   "methods": [
+    "inverse rendering",
+    "gradient optimization",
+    "volumetric loss",
+    "material distributions"
+   ]
+  },
+  {
+   "title": "A Two-Millisecond Passthrough Headset for Perceptual Studies",
+   "problem": "HMD end-to-end latency 12-60ms prevents perceptual studies of lower latencies",
+   "approach": "Video passthrough HMD with catadioptric design achieving 2ms e2e latency",
+   "contribution": "First passthrough HMD platform for studying sub-10ms latency effects on user experience",
+   "primary_theme": "virtual reality headsets",
+   "methods": [
+    "catadioptric optics",
+    "low-latency rendering",
+    "passthrough display"
+   ]
+  },
+  {
+   "title": "Gabor Fields: Orientation-Selective Level-of-Detail for Volume Rendering",
+   "problem": "Gaussian-based volume representations lack efficient hierarchical level-of-detail strategies",
+   "approach": "Mixture of Gabor kernels enabling orientation-selective frequency filtering via primitive pruning",
+   "contribution": "Continuous smooth LOD transitions without refitting or extra storage; faster ray traversal",
+   "primary_theme": "neural volume rendering",
+   "methods": [
+    "gabor filters",
+    "gaussian splatting",
+    "frequency filtering"
+   ]
+  },
+  {
+   "title": "Fiber-level Woven Fabric Capture from a Single Microscopic Image",
+   "problem": "Fiber-level fabric geometry and appearance capture requires special devices or manual design",
+   "approach": "Coarse-to-fine parameter estimation with differentiable procedural geometry and appearance models",
+   "contribution": "Single microscope image to fiber-level fabric geometry and realistic rendering",
+   "primary_theme": "fabric appearance capture",
+   "methods": [
+    "differentiable rendering",
+    "procedural models",
+    "microscopy imaging"
+   ]
+  },
+  {
+   "title": "Hi-SPAD: Video-Rate Hyperspectral Imaging and Inference with Single-Photon Cameras",
+   "problem": "Hyperspectral imaging requires high spatial, spectral, temporal resolution under passive ambient lighting",
+   "approach": "Pushbroom architecture combining single-photon avalanche diode sensors for photon-counting spectral sensing",
+   "contribution": "Demonstrates 26fps hyperspectral video with 123 spectral channels under ambient illumination",
+   "primary_theme": "hyperspectral imaging",
+   "methods": [
+    "single-photon sensors",
+    "pushbroom configuration",
+    "spectrum reconstruction"
+   ]
+  },
+  {
+   "title": "Soft Anisotropic Diagrams for Differentiable Image Representation",
+   "problem": "Gaussian splatting image representation lacks differentiability and efficient spatial representation",
+   "approach": "Soft anisotropic Apollonius diagrams with learnable per-site temperatures and top-K propagation rendering",
+   "contribution": "4-19x speedups over baselines with 46 dB PSNR on Kodak at matched bitrate via efficient GPU computation",
+   "primary_theme": "neural image representation",
+   "methods": [
+    "gaussian splatting",
+    "apollonius diagrams",
+    "differentiable rendering"
+   ]
+  },
+  {
+   "title": "A practical partitioner for distributed simulations on sparse dynamic domains using optimal transport",
+   "problem": "Physics simulations on rapidly evolving dynamic domains require even load distribution and minimal inter-node data exchange",
+   "approach": "Optimal transport power diagram partitioner with surface and temporal consistency metrics",
+   "contribution": "Outperforms state-of-the-art in film production distributed simulations via artist-friendly partitioning",
+   "primary_theme": "distributed simulation",
+   "methods": [
+    "optimal transport",
+    "power diagram",
+    "domain partitioning"
+   ]
+  },
+  {
+   "title": "Gaussian Point Splatting",
+   "problem": "Gaussian splatting rendering scales poorly to scenes with millions of Gaussians",
+   "approach": "Stochastic sampling of pixel-sized opaque points with 64-bit atomic splatting and hierarchical culling",
+   "contribution": "Renders hundreds of millions of Gaussians in real time with minimal perceptual difference from original",
+   "primary_theme": "gaussian splatting",
+   "methods": [
+    "stochastic sampling",
+    "atomic operations",
+    "frustum culling"
+   ]
+  },
+  {
+   "title": "Closed-Form Convolution for physically-accurate defocus in Gaussian Splatting",
+   "problem": "3D Gaussian Splatting assumes perfect focus but real captures contain lens defocus blur under large apertures",
+   "approach": "Closed-form convolution of projected Gaussians with Circle of Confusion kernel via error function",
+   "contribution": "Physically accurate depth-of-field in 3DGS enabling refocusing and aperture manipulation from blurry captures",
+   "primary_theme": "depth-of-field rendering",
+   "methods": [
+    "gaussian splatting",
+    "depth-of-field",
+    "closed-form convolution"
+   ]
+  },
+  {
+   "title": "SCom DAG: compact representation of spatial data for real-time rendering",
+   "problem": "Volumetric data representation lacks compact encoding balancing fidelity and compression across dimensions",
+   "approach": "Similarity Compressed DAG with octree subdivision, spatial/data transformations, hyper-octahedral groups",
+   "contribution": "Compact lossy representation for 2D/3D/4D data with controlled quality, efficient browser rendering",
+   "primary_theme": "spatial data compression",
+   "methods": [
+    "directed acyclic graph",
+    "octree",
+    "transformation encoding"
+   ]
+  },
+  {
+   "title": "Monte Carlo Rendering of Biharmonic Diffusion Curves",
+   "problem": "No Monte Carlo solver exists for biharmonic diffusion curves with coupled boundary conditions",
+   "approach": "Variational inverse problem formulation treating Dirichlet data as unknown, stochastic gradient estimation",
+   "contribution": "Monte Carlo rendering of biharmonic diffusion curves with coupled Dirichlet-Neumann conditions",
+   "primary_theme": "vector graphics rendering",
+   "methods": [
+    "monte carlo",
+    "variational optimization",
+    "pde solving"
+   ]
+  }
+ ]
+}

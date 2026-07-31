@@ -1,0 +1,371 @@
+{
+ "key": "generative-3d-diffusion",
+ "theme": "Generative 3D & Diffusion",
+ "n_papers": 33,
+ "pct": 21.6,
+ "theme_examples": [
+  "A Few-Step Generative Model on Cumulative Flow Maps",
+  "GenPIE: A Time-Resolved Plenoptic Imager",
+  "Pixels2Peaks: Converting Terrain Images to Heightmaps",
+  "SQuadGen: Generating Simple Quad Layouts via Chart Distance Fields",
+  "Mat\u00e9rn Noise for Triangulation-Agnostic Flow Matching on Meshes",
+  "ACT: A Unified Framework for Rigging and Animating Characters with Arbitrary Topologies"
+ ],
+ "representative_papers": [
+  {
+   "title": "A Few-Step Generative Model on Cumulative Flow Maps",
+   "problem": "Generative models require many steps reducing inference efficiency for synthesis",
+   "approach": "Cumulative flow maps framework unifying local updates with finite-time transport",
+   "contribution": "Few-step or one-step generation with minimal training changes and quality preservation",
+   "primary_theme": "generative modeling",
+   "methods": [
+    "flow-based models",
+    "diffusion models",
+    "cumulative transport"
+   ]
+  },
+  {
+   "title": "SQuadGen: Generating Simple Quad Layouts via Chart Distance Fields",
+   "problem": "3D shapes lack simple quad mesh layouts for efficient editing and modeling",
+   "approach": "Diffusion-based generative framework leveraging Chart Distance Fields continuous representation",
+   "contribution": "Synthesizes artist-friendly simple quad layouts with robust automated recovery pipeline",
+   "primary_theme": "mesh generation",
+   "methods": [
+    "diffusion",
+    "continuous representation",
+    "generative model"
+   ]
+  },
+  {
+   "title": "ACT: A Unified Framework for Rigging and Animating Characters with Arbitrary Topologies",
+   "problem": "Character animation pipelines fracture into sequential rigging and motion stages ignoring morphology coupling",
+   "approach": "Unified generative framework modeling joint skeletal topology and motion in shared latent space",
+   "contribution": "Zero-shot rigging and text-guided motion for arbitrary non-humanoid characters end-to-end",
+   "primary_theme": "character animation",
+   "methods": [
+    "diffusion transformer",
+    "vision language model",
+    "geometry-guided decoder"
+   ]
+  },
+  {
+   "title": "GimmBO: Interactive Generative Image Model Merging via Bayesian Optimization",
+   "problem": "Manual tuning of diffusion adapter merging scales poorly with many adapters.",
+   "approach": "Preferential Bayesian optimization for interactive exploration of adapter coefficients.",
+   "contribution": "Efficient two-stage BO enabling practical high-dimensional adapter merging.",
+   "primary_theme": "image generation",
+   "methods": [
+    "bayesian optimization",
+    "diffusion model",
+    "adapter merging"
+   ]
+  },
+  {
+   "title": "Semantic-Structural Alignment for Generative Pictorial Charts",
+   "problem": "Traditional statistical graphics lack visual appeal, memorability, and engagement compared to pictorial charts",
+   "approach": "Multi-modal diffusion transformer with dual structural and semantic alignment guided by text and chart image",
+   "contribution": "Generates artistically compelling pictorial charts maintaining structural consistency across visual channels",
+   "primary_theme": "generative visualization",
+   "methods": [
+    "diffusion transformer",
+    "semantic alignment",
+    "structural guidance"
+   ]
+  },
+  {
+   "title": "GenPIE: A Time-Resolved Plenoptic Imager",
+   "problem": "Time-resolved plenoptic imaging combats high dimensionality and occlusion blind spots",
+   "approach": "Decoupled laser-detector hardware with generative inverse transient rendering",
+   "contribution": "Sparse observations bridged to full light transport via 3D foundation model priors",
+   "primary_theme": "computational imaging",
+   "methods": [
+    "time-resolved imaging",
+    "inverse rendering",
+    "foundation models"
+   ]
+  },
+  {
+   "title": "Pixels2Peaks: Converting Terrain Images to Heightmaps",
+   "problem": "Inferring terrain heightmaps from single images requires unoccluded and occluded regions",
+   "approach": "Camera extraction and diffusion model for occluded regions with consistency constraints",
+   "contribution": "Complete detailed heightmaps obeying geomorphological, hydrological, view consistency",
+   "primary_theme": "terrain reconstruction",
+   "methods": [
+    "3d reconstruction",
+    "diffusion models",
+    "inverse graphics"
+   ]
+  },
+  {
+   "title": "Loops2Roofs: Diffusion-based 3D Roof Generation using a Loop Representation",
+   "problem": "Representing and generating complex 3D roof structures is difficult.",
+   "approach": "Diffusion model directly denoising roof vertices, conditioned on structural priors.",
+   "contribution": "Flexible loop-based representation enabling realistic roof generation across styles.",
+   "primary_theme": "roof generation",
+   "methods": [
+    "diffusion model",
+    "transformer",
+    "mesh generation"
+   ]
+  },
+  {
+   "title": "Generative Modeling with Orbit-Space Particle Flow Matching",
+   "problem": "Particle flow matching has high per-index variance and curved learning flows.",
+   "approach": "Orbit-space canonicalization with geometric probability paths and arc-length awareness.",
+   "contribution": "Particle generation with 2-100x error reduction and competitive surface normal quality.",
+   "primary_theme": "generative modeling",
+   "methods": [
+    "flow matching",
+    "particle systems",
+    "geometric probability paths"
+   ]
+  },
+  {
+   "title": "DMP: Directable Motion Retargeting through Motion Paraphrasing",
+   "problem": "Motion retargeting limits diversity, realism, and artistic control across character morphologies",
+   "approach": "Diffusion-based motion paraphrasing with spatio-temporal constraints and masked inpainting",
+   "contribution": "Diverse, controllable motion retargeting via diffusion priors and flexible constraint specification",
+   "primary_theme": "motion retargeting",
+   "methods": [
+    "diffusion",
+    "motion paraphrasing",
+    "masked inpainting",
+    "loss guidance"
+   ]
+  },
+  {
+   "title": "BodyReLux: Temporally Consistent Full-Body Video Relighting",
+   "problem": "Relighting full-body video while maintaining temporal consistency and photorealism",
+   "approach": "Video diffusion with token-based lighting conditioning and masked attention control",
+   "contribution": "Photorealistic temporally consistent human relighting from hybrid OLAT and dynamic capture",
+   "primary_theme": "video relighting",
+   "methods": [
+    "video diffusion",
+    "token conditioning",
+    "masked attention",
+    "dynamic capture"
+   ]
+  },
+  {
+   "title": "Grow3D: Hierarchical Next-Scale Octree Prediction for Fast and High-Fidelity 3D Shape Generation",
+   "problem": "3D shape generation via diffusion or auto-regressive models requires dozens of slow steps",
+   "approach": "Next-scale prediction auto-regressive framework with VQ-VAE and octree attention",
+   "contribution": "Fast high-quality 3D shape generation via coarse-to-fine octree structure prediction",
+   "primary_theme": "3D shape generation",
+   "methods": [
+    "auto-regressive",
+    "next-scale prediction",
+    "vq-vae",
+    "octree attention"
+   ]
+  },
+  {
+   "title": "Pixel Cube: Diffusion-based Portrait Video Relighting Through Realistic Lighting Reproduction",
+   "problem": "Dynamic portrait video relighting lacks photorealism and temporal consistency",
+   "approach": "Video diffusion models trained on hybrid real+rendered data with HDR environment map control",
+   "contribution": "Temporally consistent realistic relighting preserving subject identity and facial details",
+   "primary_theme": "portrait video relighting",
+   "methods": [
+    "diffusion models",
+    "neural rendering",
+    "hdr environment maps"
+   ]
+  },
+  {
+   "title": "Woodstock: Interactive Modeling of Fungal Wood Decay",
+   "problem": "Simulating complex fungal wood decay with biological and mechanical interactions",
+   "approach": "Volumetric tree representation with anisotropic diffusion, fungal colonization, and moisture dynamics",
+   "contribution": "Realistic simulation of cuboid fractures, trunk hollowing, and environmental moisture effects",
+   "primary_theme": "biological material simulation",
+   "methods": [
+    "volumetric simulation",
+    "anisotropic diffusion",
+    "grain-aligned meshes"
+   ]
+  },
+  {
+   "title": "MotionBricks: Scalable Real-Time Motions with Modular Latent Generative Model and Smart Primitives",
+   "problem": "Real-time generative motion control lacks scalability and multi-modal control interfaces",
+   "approach": "Modular latent generative backbone with smart primitives for navigation and interaction",
+   "contribution": "Real-time generation of 350k+ motions with unified control interface and zero-shot adaptation",
+   "primary_theme": "motion generation and synthesis",
+   "methods": [
+    "latent generative models",
+    "smart primitives",
+    "motion authoring"
+   ]
+  },
+  {
+   "title": "Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+   "problem": "Motion generation requires offline computation or sacrifices controllability for real-time",
+   "approach": "Autoregressive hybrid representation combining explicit root features with latent body embedding",
+   "contribution": "Real-time streaming motion generation with text and kinematic constraint control",
+   "primary_theme": "human motion generation",
+   "methods": [
+    "autoregressive diffusion",
+    "hybrid representation",
+    "text conditioning"
+   ]
+  },
+  {
+   "title": "CasLayout: Cascaded 3D Layout Diffusion for Indoor Scene Synthesis with Implicit Relation Modeling",
+   "problem": "3D indoor scene synthesis lacks global architectural constraints and struggles with local semantic consistency",
+   "approach": "Cascaded diffusion framework with sparse relation graphs and building elements as constraints",
+   "contribution": "Reduces data requirements and enables zero-shot image-to-scene generation via LLM/VLM integration",
+   "primary_theme": "3D scene generation",
+   "methods": [
+    "cascaded diffusion",
+    "sparse relation graphs",
+    "conditional constraints"
+   ]
+  },
+  {
+   "title": "Nexus: Native Mesh Generation with Diffusion",
+   "problem": "Autoregressive mesh methods suffer from error accumulation and inefficient inference",
+   "approach": "Diffusion-based decoupled generation of vertices via octree and topologies via embeddings",
+   "contribution": "Outperforms autoregressive baselines via holistic, parallelizable mesh generation avoiding sequential bottlenecks",
+   "primary_theme": "mesh generation",
+   "methods": [
+    "diffusion",
+    "octree",
+    "topology modeling",
+    "space-time interval"
+   ]
+  },
+  {
+   "title": "Learned Universal Interoperable Virtual Try-ON",
+   "problem": "Virtual try-on requires garment-to-body transfer despite mismatched skeletons and dense correspondences",
+   "approach": "SMPL proxy with geometry-driven and diffusion-based correspondence models plus simulator-driven fitting",
+   "contribution": "Handles complex multi-layer garments on diverse humanoids while maintaining physical plausibility",
+   "primary_theme": "virtual try-on",
+   "methods": [
+    "diffusion correspondence",
+    "SMPL proxy",
+    "physics simulation"
+   ]
+  },
+  {
+   "title": "StyleID: A Perception-Aware Dataset and Metric for Stylization-Agnostic Facial Identity Recognition",
+   "problem": "Identity encoders brittle under face stylization, confusing texture/color changes with identity drift",
+   "approach": "Perception-aware benchmark with 2AFC psychometric experiments and fine-tuned semantic encoders",
+   "contribution": "StyleID dataset and calibrated models achieving human-aligned perception of stylized face identity",
+   "primary_theme": "face stylization",
+   "methods": [
+    "psychometric calibration",
+    "diffusion stylization",
+    "semantic encoding"
+   ]
+  },
+  {
+   "title": "Monte Carlo Rendering of Biharmonic Diffusion Curves",
+   "problem": "No Monte Carlo solver exists for biharmonic diffusion curves with coupled boundary conditions",
+   "approach": "Variational inverse problem formulation treating Dirichlet data as unknown, stochastic gradient estimation",
+   "contribution": "Monte Carlo rendering of biharmonic diffusion curves with coupled Dirichlet-Neumann conditions",
+   "primary_theme": "vector graphics rendering",
+   "methods": [
+    "monte carlo",
+    "variational optimization",
+    "pde solving"
+   ]
+  },
+  {
+   "title": "Tempo3D: Efficient Temporal-Aware Fine-Tuning and Multi-View Latent Aggregation for 3D Generation",
+   "problem": "Single-view 3D diffusion models produce inadequate geometry and incorrect topology from ambiguity",
+   "approach": "Temporal-aware TS-LoRA fine-tuning and multi-view latent aggregation with score-based velocity field",
+   "contribution": "High-fidelity VecSet-based 3D generation with structure-to-details learning and geometric refinement",
+   "primary_theme": "3D generation",
+   "methods": [
+    "temporal fine-tuning",
+    "lora",
+    "multi-view aggregation"
+   ]
+  },
+  {
+   "title": "HeadRouter: A Training-free Image Editing Framework for MM-DiTs by Adaptively Routing Attention Heads",
+   "problem": "MM-DiTs lack semantic text guidance consistency in image editing unlike UNet-based structures",
+   "approach": "Training-free attention head routing with dual-token refinement for text/image semantic alignment",
+   "contribution": "Accurate text-guided editing on multimodal Transformers through adaptive head routing mechanism",
+   "primary_theme": "image editing",
+   "methods": [
+    "attention routing",
+    "diffusion transformers",
+    "token refinement"
+   ]
+  },
+  {
+   "title": "MOCHI: Motion Enhancement of Collaborative Human-object Interactions",
+   "problem": "Multi-human object interaction capture contains contact misalignment, jitter, and missing finger articulation",
+   "approach": "Two-stage framework: physics-aware grasp optimization then diffusion-based full-body motion refinement",
+   "contribution": "Enhanced MHOI data with plausible hand grasps, temporal consistency, and complete articulation details",
+   "primary_theme": "motion capture enhancement",
+   "methods": [
+    "grasp optimization",
+    "diffusion refinement",
+    "physics constraints"
+   ]
+  },
+  {
+   "title": "SegviGen: Repurposing 3D Generative Model for Part Segmentation",
+   "problem": "3D part segmentation requires large annotated data or suffers from cross-view inconsistency blurs",
+   "approach": "Repurpose pretrained 3D generative models with part-indicative colorization on active voxels",
+   "contribution": "40% improvement on interactive segmentation with only 0.32% training data via generative priors",
+   "primary_theme": "part segmentation",
+   "methods": [
+    "generative model",
+    "voxel colorization",
+    "interactive segmentation"
+   ]
+  },
+  {
+   "title": "Single-View Holographic Volumetric 3D Printing with Coupled Differentiable Wave-Optical and Photochemical Optimization",
+   "problem": "Volumetric 3D printing micro-scale fidelity challenged by complex optical diffraction and chemical effects",
+   "approach": "Couple differentiable wave-optical forward model with photochemical model capturing inhibitor diffusion",
+   "contribution": "Hologram synthesis achieving ~10 micron lateral resolution via pre-compensating for chemical blur",
+   "primary_theme": "holographic fabrication",
+   "methods": [
+    "wave optics",
+    "photochemistry",
+    "differentiable optimization",
+    "phase holograms"
+   ]
+  },
+  {
+   "title": "HumanFlow: Controllable Human Image Generation via Flow Matching",
+   "problem": "Balancing high visual fidelity with strict human-centric control in controllable image generation remains challenging",
+   "approach": "Unified flow-matching framework with Control Encoder, Token-ControlNet, and Human Topology Consistency Loss",
+   "contribution": "High-fidelity controllable full-body human image generation with structural topology constraints",
+   "primary_theme": "human image synthesis",
+   "methods": [
+    "flow matching",
+    "diffusion models",
+    "control networks",
+    "topology constraints"
+   ]
+  },
+  {
+   "title": "UniVidX: A Unified Multimodal Framework for Versatile Video Generation via Diffusion Priors",
+   "problem": "Existing video diffusion approaches train separate models per task, ignoring joint multimodal correlations",
+   "approach": "Unified framework with Stochastic Condition Masking, Decoupled Gated LoRA, and Cross-Modal Self-Attention",
+   "contribution": "Versatile multimodal video generation with preserved VDM priors and cross-modal consistency",
+   "primary_theme": "video diffusion generation",
+   "methods": [
+    "diffusion models",
+    "lora",
+    "multimodal",
+    "conditional generation"
+   ]
+  },
+  {
+   "title": "DealMaTe: Multi-Dimensional Material Transfer via Diffusion Transformer",
+   "problem": "Material transfer methods rely on text guidance and auxiliary networks with feature misalignment",
+   "approach": "Diffusion framework with Multi-Dim 3D Shader LoRA and Shader Causal Mutual Attention",
+   "contribution": "Text-free material transfer achieving high-fidelity results with low architectural complexity",
+   "primary_theme": "material transfer",
+   "methods": [
+    "diffusion",
+    "lora",
+    "attention optimization"
+   ]
+  }
+ ]
+}

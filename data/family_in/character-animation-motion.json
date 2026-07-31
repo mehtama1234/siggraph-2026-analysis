@@ -1,0 +1,248 @@
+{
+ "key": "character-animation-motion",
+ "theme": "Character Animation & Motion",
+ "n_papers": 37,
+ "pct": 24.2,
+ "theme_examples": [
+  "Strips as Tokens: Artist Mesh Generation with Native UV Segmentation",
+  "Implicit Surface Compression -- with Good Old Discrete Cosine Transform and Motion Compensation",
+  "Mixwell: Sharp 2D Fluid Brushes for Progressive Physics-Based Mixing",
+  "LayerInbetween: Occlusion-Aware Stroke Correspondence and Inbetweening with Automatic Layering",
+  "ACT: A Unified Framework for Rigging and Animating Characters with Arbitrary Topologies",
+  "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering"
+ ],
+ "representative_papers": [
+  {
+   "title": "ACT: A Unified Framework for Rigging and Animating Characters with Arbitrary Topologies",
+   "problem": "Character animation pipelines fracture into sequential rigging and motion stages ignoring morphology coupling",
+   "approach": "Unified generative framework modeling joint skeletal topology and motion in shared latent space",
+   "contribution": "Zero-shot rigging and text-guided motion for arbitrary non-humanoid characters end-to-end",
+   "primary_theme": "character animation",
+   "methods": [
+    "diffusion transformer",
+    "vision language model",
+    "geometry-guided decoder"
+   ]
+  },
+  {
+   "title": "HIL: Hybrid Imitation Learning for Dynamic Athletic Control",
+   "problem": "Data-driven character controllers struggle with novel environments and skill composition",
+   "approach": "Hybrid framework combining motion tracking with adversarial imitation learning via multi-task learning",
+   "contribution": "Athletic controller preserving motion naturalness while generalizing to challenging environments",
+   "primary_theme": "character animation",
+   "methods": [
+    "imitation learning",
+    "reinforcement learning",
+    "motion control"
+   ]
+  },
+  {
+   "title": "STyMo: Fast and Controllable Few-Shot Motion Style Transfer",
+   "problem": "Motion style transfer typically requires large stylized datasets or pre-trained models with limited generalization",
+   "approach": "Decompose style into static posture and temporal dynamics components trainable from seconds of paired data",
+   "contribution": "Few-shot motion style transfer with interpretable runtime control over posture, exaggeration, and per-region style",
+   "primary_theme": "motion style transfer",
+   "methods": [
+    "motion synthesis",
+    "style decomposition",
+    "few-shot learning",
+    "character animation"
+   ]
+  },
+  {
+   "title": "MUSIC: Learning Muscle-Driven Dexterous Hand Control",
+   "problem": "Muscle-driven hand control for complex tasks like piano playing lacks generalization.",
+   "approach": "Hierarchical RL combining muscle-level tracking with VAE latent-space coordination.",
+   "contribution": "Dexterous musculoskeletal hands performing novel piano pieces beyond training data.",
+   "primary_theme": "character animation",
+   "methods": [
+    "reinforcement learning",
+    "variational autoencoder",
+    "musculoskeletal model"
+   ]
+  },
+  {
+   "title": "Skinned Motion Retargeting with Spatially Adaptive Interaction Guidance",
+   "problem": "Retargeting motion to exaggerated characters loses interaction semantics.",
+   "approach": "Transformer-based anchor refinement with spatial adaptation for interaction guidance.",
+   "contribution": "Geometry-aware retargeting preserving self-contact across varied body proportions.",
+   "primary_theme": "motion retargeting",
+   "methods": [
+    "transformer",
+    "graph neural network",
+    "spatial adaptation"
+   ]
+  },
+  {
+   "title": "DMP: Directable Motion Retargeting through Motion Paraphrasing",
+   "problem": "Motion retargeting limits diversity, realism, and artistic control across character morphologies",
+   "approach": "Diffusion-based motion paraphrasing with spatio-temporal constraints and masked inpainting",
+   "contribution": "Diverse, controllable motion retargeting via diffusion priors and flexible constraint specification",
+   "primary_theme": "motion retargeting",
+   "methods": [
+    "diffusion",
+    "motion paraphrasing",
+    "masked inpainting",
+    "loss guidance"
+   ]
+  },
+  {
+   "title": "Implicit Surface Compression -- with Good Old Discrete Cosine Transform and Motion Compensation",
+   "problem": "Dynamic 3D content compression requires real-time encoding for volumetric capture streaming",
+   "approach": "Adapts 2D video coding paradigms DCT and motion compensation to TSDF volumes",
+   "contribution": "Achieves 35% bitrate savings and 12\u00d7 reduction with real-time 30 FPS encoding",
+   "primary_theme": "volumetric compression",
+   "methods": [
+    "discrete cosine transform",
+    "motion compensation",
+    "temporal coding"
+   ]
+  },
+  {
+   "title": "LayerInbetween: Occlusion-Aware Stroke Correspondence and Inbetweening with Automatic Layering",
+   "problem": "Vector animation inbetweening struggles with occluded strokes requiring tedious manual layering",
+   "approach": "Occlusion-aware framework with Global-Local Layer Transformation for automatic layering",
+   "contribution": "Automatic inbetweening resolving occlusions with layer prediction and flexible animation editing",
+   "primary_theme": "animation synthesis",
+   "methods": [
+    "stroke correspondence",
+    "automatic layering",
+    "spatial alignment"
+   ]
+  },
+  {
+   "title": "Physics-Inspired Procedural Texturing of Extremely Deformable Surfaces",
+   "problem": "Dynamic deformable surfaces lose texture quality through extreme map distortion and shifting scales",
+   "approach": "Wave-based procedural texturing algorithms encoding physical processes without simulation",
+   "contribution": "Plausible animation of deforming objects with extreme texture distortion real-time efficient",
+   "primary_theme": "texture synthesis",
+   "methods": [
+    "procedural texturing",
+    "wave-based",
+    "gpu-parallel"
+   ]
+  },
+  {
+   "title": "Uniformly Deployable Kirigami on Arbitrary Planar Graphs",
+   "problem": "Designing deployable kirigami from arbitrary planar graphs lacks systematic framework",
+   "approach": "Analytical framework deriving geometric constraints for uniform rigid deployability",
+   "contribution": "Multiple distinct kirigami structures from same graph with full design space characterization",
+   "primary_theme": "kirigami design",
+   "methods": [
+    "computational geometry",
+    "mechanical design",
+    "graph theory"
+   ]
+  },
+  {
+   "title": "ATGS: Anchored Temporal Gaussian Splatting for Long Volumetric Video Representation",
+   "problem": "Long volumetric videos suffer from temporal instability and motion complexity artifacts",
+   "approach": "Time-conditioned anchors organizing Gaussians with temporal windowing strategy",
+   "contribution": "Stable volumetric video reconstruction for long sequences with complex motions",
+   "primary_theme": "volumetric video",
+   "methods": [
+    "gaussian splatting",
+    "time-conditioned anchors",
+    "temporal windowing",
+    "multi-level features"
+   ]
+  },
+  {
+   "title": "MotionBricks: Scalable Real-Time Motions with Modular Latent Generative Model and Smart Primitives",
+   "problem": "Real-time generative motion control lacks scalability and multi-modal control interfaces",
+   "approach": "Modular latent generative backbone with smart primitives for navigation and interaction",
+   "contribution": "Real-time generation of 350k+ motions with unified control interface and zero-shot adaptation",
+   "primary_theme": "motion generation and synthesis",
+   "methods": [
+    "latent generative models",
+    "smart primitives",
+    "motion authoring"
+   ]
+  },
+  {
+   "title": "ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting",
+   "problem": "Robot motion retargeting produces physical inconsistencies and dynamically infeasible motions",
+   "approach": "Bilevel optimization jointly adapting reference motions while training tracking policy via RL",
+   "contribution": "Physically plausible retargeted motions enabling robust imitation learning across morphologies",
+   "primary_theme": "motion retargeting robotics",
+   "methods": [
+    "reinforcement learning",
+    "bilevel optimization",
+    "physics simulation"
+   ]
+  },
+  {
+   "title": "Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+   "problem": "Motion generation requires offline computation or sacrifices controllability for real-time",
+   "approach": "Autoregressive hybrid representation combining explicit root features with latent body embedding",
+   "contribution": "Real-time streaming motion generation with text and kinematic constraint control",
+   "primary_theme": "human motion generation",
+   "methods": [
+    "autoregressive diffusion",
+    "hybrid representation",
+    "text conditioning"
+   ]
+  },
+  {
+   "title": "Progressing Level-of-Detail Animation for Volumetric Elastodynamics",
+   "problem": "LOD animation design requires slow high-resolution preview iteration for volumetric elastodynamics",
+   "approach": "VelPro Splitter integrator with velocity splitting and cross-level consistency in progressive dynamics",
+   "contribution": "Decoupled finest-level enrichment from LOD levels, enabling efficient multi-resolution volumetric animation",
+   "primary_theme": "level-of-detail animation",
+   "methods": [
+    "progressive dynamics",
+    "velocity splitting",
+    "finite elements"
+   ]
+  },
+  {
+   "title": "MOCHI: Motion Enhancement of Collaborative Human-object Interactions",
+   "problem": "Multi-human object interaction capture contains contact misalignment, jitter, and missing finger articulation",
+   "approach": "Two-stage framework: physics-aware grasp optimization then diffusion-based full-body motion refinement",
+   "contribution": "Enhanced MHOI data with plausible hand grasps, temporal consistency, and complete articulation details",
+   "primary_theme": "motion capture enhancement",
+   "methods": [
+    "grasp optimization",
+    "diffusion refinement",
+    "physics constraints"
+   ]
+  },
+  {
+   "title": "Sketch2Arti: Sketch-based Articulation Modeling of CAD Objects",
+   "problem": "Articulation modeling from CAD requires manual translation of designer sketches to rigged 3D models",
+   "approach": "Sketch-based discovery of movable parts and motion parameters, category-agnostic training",
+   "contribution": "First sketch-to-CAD articulation system with controllable internal completion generalization",
+   "primary_theme": "articulation modeling",
+   "methods": [
+    "sketch-based modeling",
+    "part discovery",
+    "motion inference"
+   ]
+  },
+  {
+   "title": "High-Fidelity 4D Cloth Capture Pipeline with a Two-Level Pattern",
+   "problem": "High-fidelity cloth capture requires resolving fine wrinkles, large deformation, and self-occlusion simultaneously",
+   "approach": "Two-level marker pattern with physics-based optimization deforming template to match captured geometry",
+   "contribution": "1 mm spatial resolution 4D cloth capture with temporal coherence via keypoint triangulation and mesh deformation",
+   "primary_theme": "cloth motion capture",
+   "methods": [
+    "marker tracking",
+    "photogrammetry",
+    "physics simulation",
+    "mesh optimization"
+   ]
+  },
+  {
+   "title": "OmniHands: Robust Motion Capture of Interactive Hands via A Versatile Transformer",
+   "problem": "Hand motion capture lacks unified approach for single/interactive hands and real-world robustness",
+   "approach": "Transformer with Relation-aware Two-Hand Tokenization and 4D Interaction Reasoning fusion",
+   "contribution": "Universal hand capture from monocular/multi-view supporting both single and interactive hands",
+   "primary_theme": "hand motion capture",
+   "methods": [
+    "transformer",
+    "tokenization",
+    "attention"
+   ]
+  }
+ ]
+}

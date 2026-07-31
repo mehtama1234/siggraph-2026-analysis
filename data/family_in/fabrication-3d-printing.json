@@ -1,0 +1,54 @@
+{
+ "key": "fabrication-3d-printing",
+ "theme": "Fabrication & 3D Printing",
+ "n_papers": 6,
+ "pct": 3.9,
+ "theme_examples": [
+  "Co-Optimization of Structure and Manufacturable Semi-Continuous Layers for Laminated Composites",
+  "Stress-Aware Panelization of Freeform Surfaces",
+  "Untangling Surfaces via Shape and Mesh Repulsion",
+  "AtomSlicer: Constant-Thickness Field-Aligned Non-Planar Slicing and Continuous Toolpaths for FFF",
+  "ProXeek: Seeking and Leveraging Real-World Objects and Environments as Haptic Proxies for Virtual Reality through Multimodal Reasoning",
+  "Single-View Holographic Volumetric 3D Printing with Coupled Differentiable Wave-Optical and Photochemical Optimization"
+ ],
+ "representative_papers": [
+  {
+   "title": "Single-View Holographic Volumetric 3D Printing with Coupled Differentiable Wave-Optical and Photochemical Optimization",
+   "problem": "Volumetric 3D printing micro-scale fidelity challenged by complex optical diffraction and chemical effects",
+   "approach": "Couple differentiable wave-optical forward model with photochemical model capturing inhibitor diffusion",
+   "contribution": "Hologram synthesis achieving ~10 micron lateral resolution via pre-compensating for chemical blur",
+   "primary_theme": "holographic fabrication",
+   "methods": [
+    "wave optics",
+    "photochemistry",
+    "differentiable optimization",
+    "phase holograms"
+   ]
+  },
+  {
+   "title": "Untangling Surfaces via Shape and Mesh Repulsion",
+   "problem": "Self-intersections in meshes break downstream simulation, fabrication, and learning pipelines",
+   "approach": "Energy-based framework enforcing embeddedness at both shape and mesh levels",
+   "contribution": "Reliable self-intersection removal via global shape and local mesh repulsion energies",
+   "primary_theme": "surface untangling",
+   "methods": [
+    "energy minimization",
+    "shape repulsion",
+    "mesh penalties",
+    "multi-level enforcement"
+   ]
+  },
+  {
+   "title": "AtomSlicer: Constant-Thickness Field-Aligned Non-Planar Slicing and Continuous Toolpaths for FFF",
+   "problem": "Multi-axis 3D printing requires continuous collision-free toolpaths with constant bead geometry",
+   "approach": "Field-aligned phase fields partitioned into layers with 2-RoSy-aligned toolpath synthesis",
+   "contribution": "Reduces travel moves by 1-2 orders of magnitude while preserving field constraints and constant thickness",
+   "primary_theme": "3D printing toolpaths",
+   "methods": [
+    "field-aligned layers",
+    "phase fields",
+    "collision-free toolpaths"
+   ]
+  }
+ ]
+}

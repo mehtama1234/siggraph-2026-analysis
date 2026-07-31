@@ -9,6 +9,8 @@ for c in CG:
         continue
     r = C.get(c["key"], {})
     out.append({"title": c["title"], "n_papers": len(groups[c["key"]]),
-                "idea": r.get("idea", ""), "why": r.get("why", ""), "dots": r.get("dots", "")})
+                "idea": r.get("idea", ""), "why": r.get("why", ""),
+                "math": r.get("math", ""), "family": r.get("family", ""),
+                "dots": r.get("dots", "")})
 json.dump({"concepts": out}, open(os.path.join(HERE, "data", "synth_in.json"), "w"), indent=1)
 print(f"wrote synth_in.json with {len(out)} concepts")
