@@ -9,8 +9,19 @@ _wm = os.path.join(HERE, "data", "whymath.json")
 WHYMATH = json.load(open(_wm)) if os.path.exists(_wm) else {}
 _dw = os.path.join(HERE, "data", "deepwhy.json")
 DEEPWHY = json.load(open(_dw)) if os.path.exists(_dw) else {}
+_rc = os.path.join(HERE, "data", "rich.json")
+RICH = json.load(open(_rc)) if os.path.exists(_rc) else {}
 analysis = json.load(open(os.path.join(HERE, "data", "analysis.json")))["papers"]
 def esc(s): return html.escape(str(s or ""))
+
+def story_html(gid):
+    r = RICH.get(str(gid))
+    if not r: return ""
+    parts = [("bp","the big picture"),("wh","why it's hard"),("ap","what they do"),
+             ("ww","why it works"),("po","the payoff")]
+    secs = "".join(f"<div class='sec {k}'><span class='lbl'>{lbl}</span><p>{esc(r.get(k))}</p></div>"
+                   for k,lbl in parts if r.get(k))
+    return f"<details class='story'><summary>the full first-principles story</summary>{secs}</details>"
 
 # concept-level "why it works" — the underlying mathematical principle, first-principles.
 WHY = {
@@ -75,6 +86,7 @@ def concept_html(c):
                  f"<div class='mp'><span class='pk'>uses</span> {esc(mv['plain'])}</div>"
                  + (f"<div class='mp wy'><span class='pk wk'>why it works</span> {esc(why)}</div>" if why else "")
                  + (f"<details class='dw'><summary>the deeper reason</summary><div class='dwb'>{esc(DEEPWHY.get(gid,''))}</div></details>" if DEEPWHY.get(gid) else "")
+                 + story_html(gid)
                  + "</div>")
     whybox = (f"<div class='whybox'><div class='wt'>Why it works — the principle</div><p>{esc(WHY[c['key']])}</p></div>"
               if c["key"] in WHY else "")
@@ -109,6 +121,11 @@ h2{{font-family:var(--serif);font-size:29px;margin:0 0 12px;color:#fff}}
 .pk{{display:inline-block;width:74px;font-family:var(--mono);font-size:9px;letter-spacing:.04em;text-transform:uppercase;color:var(--faint);text-align:right;margin-right:8px}}.pk.wk{{color:var(--accent)}}
 .dw{{margin:5px 0 0 82px}}.dw summary{{font-family:var(--mono);font-size:10.5px;color:var(--accent);cursor:pointer;list-style:none}}.dw summary::-webkit-details-marker{{display:none}}.dw summary::before{{content:'▸ ';color:var(--faint)}}.dw[open] summary::before{{content:'▾ '}}
 .dwb{{font-size:13.5px;color:var(--soft);margin-top:6px;padding:10px 14px;background:rgba(79,168,184,.05);border-left:2px solid var(--line);border-radius:0 8px 8px 0;line-height:1.6}}
+.story{{margin:5px 0 0 82px}}.story>summary{{font-family:var(--mono);font-size:10.5px;color:var(--accent);cursor:pointer;list-style:none}}.story>summary::-webkit-details-marker{{display:none}}.story>summary::before{{content:'▸ ';color:var(--faint)}}.story[open]>summary::before{{content:'▾ '}}
+.story .sec{{margin:8px 0;padding-left:12px;border-left:1px solid var(--line)}}
+.story .sec .lbl{{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:2px}}
+.story .sec.bp .lbl{{color:var(--accent)}}.story .sec.wh .lbl{{color:var(--rose)}}.story .sec.ap .lbl{{color:var(--viol)}}.story .sec.ww .lbl{{color:var(--amber)}}.story .sec.po .lbl{{color:#6FCF97}}
+.story .sec p{{margin:0;color:var(--ink);font-size:13.5px;line-height:1.6}}
 .whybox{{background:var(--bg2);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:12px;padding:14px 18px;margin:6px 0 4px}}
 .whybox .wt{{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:6px}}.whybox p{{margin:0;font-size:15.5px;color:var(--ink)}}
 .bars{{margin-top:14px}}

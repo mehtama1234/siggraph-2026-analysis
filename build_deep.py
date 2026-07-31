@@ -11,7 +11,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 papers_raw = json.load(open(os.path.join(HERE, "data", "papers.json")))["papers"]
 analysis = json.load(open(os.path.join(HERE, "data", "analysis.json")))["papers"]
 PLAIN = json.load(open(os.path.join(HERE, "data", "plain.json"))) if os.path.exists(os.path.join(HERE, "data", "plain.json")) else {}
+RICH = json.load(open(os.path.join(HERE, "data", "rich.json"))) if os.path.exists(os.path.join(HERE, "data", "rich.json")) else {}
 def esc(s): return html.escape(str(s or ""))
+
+def story_html(gid):
+    r = RICH.get(str(gid))
+    if not r: return ""
+    parts = [("bp","the big picture"),("wh","why it's hard"),("ap","what they do"),
+             ("ww","why it works"),("po","the payoff")]
+    secs = "".join(f"<div class='sec {k}'><span class='lbl'>{lbl}</span><p>{esc(r.get(k))}</p></div>"
+                   for k,lbl in parts if r.get(k))
+    return f"<details class='story'><summary>read the full first-principles story</summary>{secs}</details>"
 
 # join analysis (problem/approach/contribution) with abstract by title
 abst = {p["title"].lower(): (p.get("abstract") or "") for p in papers_raw}
@@ -92,7 +102,7 @@ def paper_row(a):
                 f"<div class='ppa'><span class='pk ap'>approach</span> {esc(pl['a'])}</div>")
     else:
         body = f"<div class='pc'>{esc(a.get('contribution') or a.get('problem') or '')}</div>"
-    return f"<div class='pr'><div class='pt'>{esc(a['title'])}</div>{body}</div>"
+    return f"<div class='pr'><div class='pt'>{esc(a['title'])}</div>{body}{story_html(a.get('gid'))}</div>"
 
 placed = set()
 def act_papers(themes):
@@ -158,6 +168,14 @@ h2{{font-family:var(--serif);font-size:30px;margin:0 0 14px;color:#fff}}
 .ppa{{font-size:13.5px;color:var(--soft);margin-top:3px;padding-left:70px;text-indent:-70px;line-height:1.5}}
 .pk{{display:inline-block;width:62px;font-family:var(--mono);font-size:9.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--rose);text-align:right;margin-right:8px}}.pk.ap{{color:var(--accent)}}
 .pm{{font-family:var(--mono);font-size:11px;color:var(--faint);margin-top:3px}}
+.story{{margin-top:5px}}
+.story>summary{{font-family:var(--mono);font-size:10.5px;letter-spacing:.04em;color:var(--accent);cursor:pointer;list-style:none;padding:2px 0}}
+.story>summary::-webkit-details-marker{{display:none}}
+.story>summary::before{{content:"▸ ";color:var(--accent)}}.story[open]>summary::before{{content:"▾ "}}.story[open]>summary{{color:var(--dim)}}
+.story .sec{{margin:9px 0 9px 8px;padding-left:12px;border-left:1px solid var(--line)}}
+.story .sec .lbl{{font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:2px}}
+.story .sec.bp .lbl{{color:var(--accent)}}.story .sec.wh .lbl{{color:var(--rose)}}.story .sec.ap .lbl{{color:var(--viol)}}.story .sec.ww .lbl{{color:var(--amber)}}.story .sec.po .lbl{{color:#6FCF97}}
+.story .sec p{{margin:0;color:var(--ink);font-size:13.5px;line-height:1.6}}
 .aha{{font-family:var(--serif);font-size:23px;line-height:1.45;color:#fff;border-left:3px solid var(--accent);padding-left:20px;margin:14px 0}}
 .src{{font-family:var(--mono);font-size:12px;color:var(--faint);margin-top:28px;padding-top:16px;border-top:1px solid var(--line)}}
 </style>
