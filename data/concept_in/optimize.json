@@ -1,0 +1,133 @@
+{
+ "key": "optimize",
+ "title": "Finding the least-bad arrangement",
+ "intro": "A remarkable share of graphics reduces to one move: invent a single number that measures how wrong a configuration is \u2014 how stretched the cloth, how far a shape sits from its target, how ugly a layout \u2014 then search for the arrangement that makes that number as small as possible, often while certain conditions must stay exactly satisfied. The usual way to search is to feel which small change lowers the number and keep stepping downhill until you can't do better. Score it, then minimise: this runs quietly under fitting, shaping, and much of learning.",
+ "why": "It works because the slope of how-wrong always points the way that makes things worse, so stepping the opposite way can only improve \u2014 and you halt exactly where no small change helps, a resting point. When the how-wrong score is shaped like a single bowl, that resting point is the one best answer; even when it is bumpier you reliably fall into a good one. Physics leans on the same truth: real things settle into their lowest-energy state.",
+ "n_total": 31,
+ "papers": [
+  {
+   "title": "YASPS: A Symbolic Framework for Extensible, High-Performance IPC Simulation",
+   "uses": "Contact and deformation both minimize the same total energy; the method automatically computes the exact slopes and curvatures of this energy landscape needed to solve for equilibrium, turning high-level problem descriptions into efficient methods."
+  },
+  {
+   "title": "RCGP: Resource Contracts for Graphics Programming",
+   "uses": "GPU programs pass data through many stages; contracts specify what types and layouts each stage expects. The method verifies these agreements match before runtime, catching mismatches the same way type systems catch programming errors."
+  },
+  {
+   "title": "Pixels2Peaks: Converting Terrain Images to Heightmaps",
+   "uses": "From a single terrain photo, the method infers height values for visible ground and fills hidden regions using a learned model, enforcing that rivers flow downhill and rendered terrain matches the input image."
+  },
+  {
+   "title": "Heterogeneous Subspace Corrections for GPU Deformable Multibody Dynamics",
+   "uses": "Soft and stiff objects push each other; the method solves their coupled dynamics by splitting into subproblems that reuse low-rank approximations, allowing GPU parallelism without the ill-conditioning that normally plagues mixed-stiffness systems."
+  },
+  {
+   "title": "Surface chamfering for robust tetrahedral meshing",
+   "uses": "Building a tetrahedral 3D model requires satisfying many geometric constraints (angles bounded, faces aligned); the algorithm uses Delaunay refinement\u2014a technique that grows the 3D model by solving these constraints together without getting stuck."
+  },
+  {
+   "title": "Mixwell: Sharp 2D Fluid Brushes for Progressive Physics-Based Mixing",
+   "uses": "Mixing flows are built from analytical formulas (potential flow solutions), and the algorithm traces particles through displacement fields by adjusting their paths downhill toward the fluid's preferred state without global solving."
+  },
+  {
+   "title": "Co-Optimization of Structure and Manufacturable Semi-Continuous Layers for Laminated Composites",
+   "uses": "Composite strength depends on how fabric layers are oriented and partially placed. Optimize which regions get material and how those layers angle to maximize stiffness while respecting manufacturing limits\u2014many constraints pulling at once."
+  },
+  {
+   "title": "MPM Lite: Linear Kernels and Integration without Particles",
+   "uses": "As material deforms under gravity and collisions, it settles into the shape where energy is lowest\u2014this is a minimization problem. The algorithm solves one giant set of coupled equations (one per grid point) to find that shape, using clever resampling so the methods doesn't bog down when there are many particles."
+  },
+  {
+   "title": "Robust Constrained Tetrahedralization with Steiner-point-free Boundaries",
+   "uses": "A tetrahedral 3D model must fit a 3D shape AND satisfy many geometric constraints (faces must not intersect, boundaries must be exact). The algorithm uses edge flips and point repositioning to recover the boundary while respecting all constraints simultaneously, with careful handling of numerical rounding errors."
+  },
+  {
+   "title": "Uniformly Deployable Kirigami on Arbitrary Planar Graphs",
+   "uses": "A kirigami is a hinged origami where rigid panels rotate freely without stretching. Geometric constraints (angles, edge lengths) must lock the structure into a unique folded shape while respecting graph topology; the paper derives which constraints allow rigid deployment from any planar graph, not just special cases."
+  },
+  {
+   "title": "M-ABD: Scalable, Efficient, and Robust Multi-Affine-Body Dynamics",
+   "uses": "Large assemblies of jointed bodies get solved using huge systems of equations that enforce exact constraints at each joint. By keeping the system matrices constant, these equations can be pre-solved once and reused, making simulations interactive even with hundreds of thousands of bodies."
+  },
+  {
+   "title": "Stress-Aware Panelization of Freeform Surfaces",
+   "uses": "Panelization is cast as a continuous surface flow coupled to stress analysis; the method computes slope of total stress with respect to the surface shape and uses optimization to balance geometric fit against structural performance."
+  },
+  {
+   "title": "Untangling Surfaces via Shape and Mesh Repulsion",
+   "uses": "An energy-based framework enforces embeddedness (no self-intersections) by combining a global shape-level energy that captures entanglement and a local 3D model-level penalty. Minimizing these energies together reliably removes self-intersections across complex geometries."
+  },
+  {
+   "title": "Interactive Yarn-level Knitwear with Nested Douglas-Rachford Splitting",
+   "uses": "A generalized Douglas-Rachford splitting scheme decouples the coupled yarn constraints (stretching, bending, contact) into independent convex sub-problems at each iteration. Metric selection derived from convergence theory achieves near-optimal solution speed without ad-hoc tuning."
+  },
+  {
+   "title": "Learning Sparse Singularities for Cross Field Design",
+   "uses": "A quad 3D model must have singular points (where lines cross awkwardly); rather than predict the whole 3D model, learn only where singularities belong, then use smooth classical rules to connect them while respecting 3D model topology."
+  },
+  {
+   "title": "ReActor: Reinforcement Learning for Physics-Aware Motion Retargeting",
+   "uses": "Retargeting human motion to a robot must satisfy physics (no sliding, no collisions); optimize motion parameters and a tracking policy together, where the physics simulator answers whether each motion candidate is feasible."
+  },
+  {
+   "title": "Fiber-level Woven Fabric Capture from a Single Microscopic Image",
+   "uses": "Capture woven fabric structure from one microscope image by matching rendered output to the photo; use differentiable geometry and shading models to optimize fiber parameters (position, angle, thickness) via image error."
+  },
+  {
+   "title": "SAND: Spatially Adaptive Network Depth for Fast Sampling of Neural Implicit Surfaces",
+   "uses": "A a system that learns from examples learns to predict surface distance at any point in space, but only needs high precision near the surface and low precision far away. The method assigns different network sizes to different regions, using only the computational depth needed for each location."
+  },
+  {
+   "title": "AtomSlicer: Constant-Thickness Field-Aligned Non-Planar Slicing and Continuous Toolpaths for FFF",
+   "uses": "The printer must follow specified direction fields (like a compass at every point) while keeping extrusion width constant and avoiding collisions. The algorithm breaks this into layered slices that satisfy all these constraints simultaneously without changing the specified fields."
+  },
+  {
+   "title": "Implicit Minimal Surfaces for Bijective Correspondences",
+   "uses": "Maps between shapes live in a high-dimensional space; the method finds the one with minimum stretching energy by optimizing a physics-inspired model. This treats distortion-minimization as a minimal-area surface problem, solvable without 3D model combinatorics."
+  },
+  {
+   "title": "Structural MAT: Clean and Scalable Medial Axis Simplification via Explicit Surface Correspondence",
+   "uses": "The medial axis (skeleton of equidistant points) is simplified by collapsing edges, but the algorithm tracks which surface regions each skeletal point corresponds to. This preserves structural symmetries\u2014the intrinsic balance of shape features."
+  },
+  {
+   "title": "ProXeek: Seeking and Leveraging Real-World Objects and Environments as Haptic Proxies for Virtual Reality through Multimodal Reasoning",
+   "uses": "Virtual objects must match physical proxies by finding closest real-world items that satisfy multiple criteria: texture, geometry, safety. The system combines language understanding with multi-objective optimization to rank physical matches."
+  },
+  {
+   "title": "Generalized Aberrations for Processing-Aware Optical Design",
+   "uses": "Designing camera optics for AI processing means fitting lens parameters to match ideal image outputs. Traditional methods fail because one scalar loss gives too few constraints; the method lifts it to ray-level residuals, enabling robust pseudo-second-order optimization."
+  },
+  {
+   "title": "PR-Cage: Progressive Feasibility Relaxation for Tight Bounding Cage Generation",
+   "uses": "A cage is a simplified proxy 3D model that controls deformation of a denser model. The method minimizes face count while staying close to the original shape by progressively relaxing a tightness threshold and enforcing constraints against triangle collapse."
+  },
+  {
+   "title": "A practical partitioner for distributed simulations on sparse dynamic domains using optimal transport",
+   "uses": "A simulation domain splits into pieces for parallel computing; optimal transport finds a split that balances load, minimizes communication, and stays stable as the domain deforms and changes shape over time."
+  },
+  {
+   "title": "MeshFEM: A Block-accelerated Solver for Nonlinear Finite Elements",
+   "uses": "High-resolution shape-optimization problems are solved by building Newton's method atop a block-accelerated sparse linear methods that exploits the fact that unknowns cluster naturally into dense d-by-d blocks. This structure speeds up every phase: assembly, factorization, and back-solve."
+  },
+  {
+   "title": "Fast VEM Fluid Simulation",
+   "uses": "Fluid flow around complex boundaries requires solving for pressure that keeps fluid incompressible; the method uses a special discretization (Virtual Element Method) that robustly handles irregular grids and accelerates the pressure solve with multigrid iteration that avoids densifying coarse-level equations."
+  },
+  {
+   "title": "Sketch2Arti: Sketch-based Articulation Modeling of CAD Objects",
+   "uses": "Users sketch how articulated parts should move (arrows, strokes), and the system infers movable parts and their motion parameters by learning to map 2D sketch intention to 3D part discovery and motion constraints, without needing object category labels."
+  },
+  {
+   "title": "HumanFlow: Controllable Human Image Generation via Flow Matching",
+   "uses": "Human image generation learns a smooth path from noise to images while obeying topological constraints that enforce anatomically plausible bone ratios and joint angles, so the body always stays structurally valid."
+  },
+  {
+   "title": "High-Fidelity 4D Cloth Capture Pipeline with a Two-Level Pattern",
+   "uses": "Cloth geometry is reconstructed by deforming a template 3D model into the shape where elastic strain plus contact constraints are minimized, solved by balancing forces at every point simultaneously."
+  },
+  {
+   "title": "Feature-Preserving Offset Meshing",
+   "uses": "Offset surfaces that preserve sharp features are computed by generating offset vertices and triangles via energy minimization that balances distance accuracy with sharp corner preservation, supporting variable offset distances."
+  }
+ ]
+}

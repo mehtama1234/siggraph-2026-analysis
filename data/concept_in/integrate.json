@@ -1,0 +1,73 @@
+{
+ "key": "integrate",
+ "title": "Adding up an infinity of tiny contributions",
+ "intro": "The color of a single pixel is really the total of all the light arriving there from every direction \u2014 a continuous infinity of contributions. The mass of a blob, the total force on a surface: the same shape of problem, a sum over something continuous. You can never add up infinitely many things exactly, so the whole game is approximating these totals accurately and cheaply \u2014 the quiet math behind turning light into a picture.",
+ "why": "It works because although the total is a sum over infinitely many contributions, they are not equally important \u2014 most of the light, most of the mass, is concentrated. And a continuous total can always be trapped between an under-estimate and an over-estimate that both tighten as you chop it into finer pieces. So a finite sum of small pieces is guaranteed to close in on the true infinite total: you never reach infinity, you just get as close as you like.",
+ "n_total": 16,
+ "papers": [
+  {
+   "title": "GenPIE: A Time-Resolved Plenoptic Imager",
+   "uses": "Light bounces off surfaces and through the scene in complex paths; the method uses a generative model to predict missing light paths when sensors cannot directly observe them, then refines these guesses by tracking how light actually flows."
+  },
+  {
+   "title": "Gradient Domain Reconstruction for Monte Carlo PDE Solvers",
+   "uses": "Solving Poisson equations with random rays is slow because the answer wiggles wildly. Instead of estimating the solution itself, estimate how it changes locally (its slope), then reconstruct the answer more stably from those differences."
+  },
+  {
+   "title": "Schr\u00f6dinger Bridges on Discretized Geometric Domains",
+   "uses": "Interpolate between two probability distributions by finding the smoothest path between them via entropy-regularized transport. The heat equation reveals this path; apply Sinkhorn iterations (alternating local averaging and scaling) to enforce boundary constraints."
+  },
+  {
+   "title": "Sample Matching for Joint Extinction Gradient Estimation in Differentiable Volume Rendering",
+   "uses": "Rendering smoke requires summing light arriving along rays, but computing how that sum changes with smoke density is noisy. Evaluate both scattering and transmission effects at matching sample points along the same ray segment to cancel out their wild swings."
+  },
+  {
+   "title": "ToF ReSTIR: Time-of-Flight Rendering with Spatio-temporal Reservoir Resampling",
+   "uses": "Time-gated imaging traces light bounces that arrive within a narrow time window; simulating all bounces is expensive. Reuse previously computed bounces by warping them (via Newton's method) to satisfy the time constraints, then resample intelligently."
+  },
+  {
+   "title": "HoloPathTracer: Fast and Accurate Wave Path Tracing for Holography",
+   "uses": "Holography encodes wavefronts (which waves go where) into a phase pattern\u2014this is an integral over all light paths, analogous to rendering. Monte Carlo path tracing randomly samples paths and weights them to estimate this integral; path reuse (recycling samples) dramatically cuts the number of simulations needed."
+  },
+  {
+   "title": "Thermal Non-Line-of-Sight Imaging through Rough Surfaces",
+   "uses": "Hidden scenes emit thermal radiation that bounces through rough walls to a camera\u2014reconstructing what's hidden requires reversing this complex light transport. The a system that learns from examples learns the convolution kernel that describes how light scatters, then inverts it to recover the hidden scene from measurements."
+  },
+  {
+   "title": "Tensor Decomposition-Based Four-dimensional Background-Oriented Schlieren Tomography for High-Speed, High-Fidelity Flow Field Reconstruction",
+   "uses": "A 4D tensor (space and time) is decomposed into simpler components, then a system that learns from examples refine the solution by tracing how light rays bend through the flow field. Back-propagation updates both the tensor factors and network weights iteratively."
+  },
+  {
+   "title": "The Antipodal Method: Fast, Accurate, and Robust 3D Generalized Winding Numbers",
+   "uses": "Winding numbers (counting ray-surface intersections) are expressed as a boundary integral over the surface projected onto a sphere. This geometric insight avoids expensive surface integrals and enables fast, precise queries on both 3D models and parametric surfaces."
+  },
+  {
+   "title": "Hi-SPAD: Video-Rate Hyperspectral Imaging and Inference with Single-Photon Cameras",
+   "uses": "Single-photon detectors count random arrival times; the method reconstructs full spectra and materials by treating each detection event as a probabilistic sample. Error bounds decrease exponentially as more photon counts accumulate."
+  },
+  {
+   "title": "Lifting Lines and Tone: Image-Space Stylization in Path-Space",
+   "uses": "Light bounces and bends as it travels through a scene; the method adds up all those paths and their effects to decide where to draw stylized lines and shading that look hand-drawn yet follow real physics."
+  },
+  {
+   "title": "Gaussian Point Splatting",
+   "uses": "Many tiny opaque points sample from each large Gaussian blur, splatting to pixels in parallel. The method solves how many points to use so their random hits blend to match the original sharp rendering."
+  },
+  {
+   "title": "Closed-Form Convolution for physically-accurate defocus in Gaussian Splatting",
+   "uses": "Lens blur spreads light according to aperture shape; the method convolves each 3D Gaussian with a blur kernel using a closed mathematical formula, enabling sharp reconstruction from blurry photos."
+  },
+  {
+   "title": "Monte Carlo Rendering of Biharmonic Diffusion Curves",
+   "uses": "Rendering smooth vector graphics with a fourth-order equation (biharmonic) by treating it as a randomized inverse problem: formulate unknown boundary conditions as an energy to minimize, then estimate slope stochastically by sampling random walks on two coupled second-order equations."
+  },
+  {
+   "title": "Efficient Fur and Hair Multiple Scattering Using Volumetric Approximation",
+   "uses": "Light bouncing many times through dense hair is expensive to track; instead, treat the hair as a participating medium that scatters light, and stochastically sample one scattering event to approximate higher-order bounces while using explicit fiber geometry for direct lighting detail."
+  },
+  {
+   "title": "Differentiable Neutron Transport",
+   "uses": "Neutron transport is computed by summing light arriving from all possible paths through matter; the paper uses random sampling to estimate how each path changes with respect to design choices, then follows the slope downhill to optimize shielding and material layouts."
+  }
+ ]
+}

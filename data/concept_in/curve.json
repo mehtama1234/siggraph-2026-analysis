@@ -1,0 +1,77 @@
+{
+ "key": "curve",
+ "title": "Measuring the shape of a shape",
+ "intro": "Before you can smooth, bend, or decorate a surface, you have to measure its local geometry \u2014 how sharply it curves here, how it stretches there, which way it faces. This is the mathematics of curvature: treating a surface not as a bag of points but as something with real, measurable geometric properties at every spot. Almost everything you'd do to a shape begins by measuring how it curves.",
+ "why": "It works because how a surface curves is an intrinsic fact about it \u2014 it does not depend on where you place it, how you rotate it, or how finely you chop it into pieces. That makes curvature a true, stable property you can measure and then preserve. Deform a shape while keeping its curvature story intact and it still reads as the same material; smooth by evening out curvature and you remove bumps without inventing new features.",
+ "n_total": 17,
+ "papers": [
+  {
+   "title": "Better Bending: Analysis, Construction and Verification of Discrete Bending Models for Kirchhoff-Love Shells",
+   "uses": "Thin shells bend and stretch; the method measures bending by comparing how surfaces curve at neighboring points. Finding a realistic shape means minimizing the strain energy where bending is captured as discrete angle changes across the 3D model."
+  },
+  {
+   "title": "Persistence-guided Prescribed Topological Simplification",
+   "uses": "Topological features like holes persist across different scales; the method removes only weak features by cutting or filling while preserving those marked as important, using persistence to rank which features matter most."
+  },
+  {
+   "title": "The PhaseTree: Multiphase Signed Distance Fields",
+   "uses": "Multi-material objects are represented as signed distance fields\u2014numbers encoding how far any point is from the nearest surface\u2014combined through geometric transformations; the system extends ray tracing to handle these layered distance measurements."
+  },
+  {
+   "title": "Surface Power Diagrams for Knit Singularity Placement",
+   "uses": "Knit structures need singularities positioned to avoid helical twists. Use power diagrams (regions of equal generalized distance) on 3D model surfaces to optimally place singularities by iteratively moving each toward the curl center of its region."
+  },
+  {
+   "title": "Robust Computation of Boundary Path Integrals Using Kernel-Density Estimation",
+   "uses": "When light interacts with object boundaries during rendering, you must add up infinitely many light paths bouncing at the edge\u2014a mathematical integral. By smearing the razor-thin boundary slightly with a smooth kernel (like photon mapping does), this integral becomes easier to estimate accurately without sampling exactly on the edge."
+  },
+  {
+   "title": "A Unified Homogenization Framework for Straight- and Curved-Crease Origami Materials",
+   "uses": "Origami materials (folded sheets) have unusual stiffness and bending because creases redirect strain. Classical Laminate Theory calculates effective stiffness from fold angles and surface curvature; simulation folds the crease pattern, then homogenization averages the behavior to predict macroscopic properties from microscopic fold geometry."
+  },
+  {
+   "title": "Guidestar-Free Adaptive Optics with Asymmetric Apertures",
+   "uses": "Light aberrations bend unpredictably through an asymmetric aperture, and the resulting patterns encode the distortions; machine learning decodes these patterns to infer what the aberrations are, then optics corrects them."
+  },
+  {
+   "title": "A Two-Millisecond Passthrough Headset for Perceptual Studies",
+   "uses": "End-to-end latency measures the delay between real head motion and display update; perceptual studies measure how human perception changes as this delay shrinks, revealing threshold sensitivities in real tasks."
+  },
+  {
+   "title": "Woodstock: Interactive Modeling of Fungal Wood Decay",
+   "uses": "Wood decay spreads via fungal colonization and moisture image-generating; simulate how fungi consume material (changing local stiffness), how water flows anisotropically through grain, and how cracks grow when stress exceeds weakened tissue."
+  },
+  {
+   "title": "Uncertainty-aware geometry processing on Gaussian Process Implicit Surfaces",
+   "uses": "A probabilistic surface model (Gaussian Process) represents uncertain geometry as a cloud of plausible shapes; compute surface operators (slope, curl, curvature) by averaging over that cloud, weighting by how likely each shape is."
+  },
+  {
+   "title": "Spatially Accelerated Winding Numbers for Curved Geometry",
+   "uses": "Winding numbers tell if a point is inside curved geometry by measuring rotation around it; precompute moment summaries in a spatial tree, then use Taylor approximations for distant curves and exact integration for nearby ones."
+  },
+  {
+   "title": "Fast and Exact Winding Numbers for Triangle Meshes",
+   "uses": "Winding numbers measure net rotation around a point to test if it's inside; reduce the surface integral analytically to a single ray-3D model test plus a sum over boundary edges, orders of magnitude faster than prior methods."
+  },
+  {
+   "title": "MorphSkein: A Shape-Changing Afterimage Display Preserving Pixel Density During Surface-Area Changes Across Troposkein-Based Shapes",
+   "uses": "Spinning cables form natural axisymmetric shapes governed by physics. The display maps pixels to those mathematical shapes, preserving density by adjusting how many pixels render per revolution as the shape expands."
+  },
+  {
+   "title": "Mechanical Cloaking of Halftoned Imagery",
+   "uses": "A porous material's internal structure is designed so its effective mechanical properties (how it bends and stretches as a whole) are uniform in all directions, while its visual appearance halftones a target image. Balancing visual appearance against uniform stiffness is the core constraint."
+  },
+  {
+   "title": "A Precision Controlled Surface-Surface Intersection Algorithm for NURBS",
+   "uses": "Finding where two complex surfaces intersect and controlling precision means bounding how far the true curve strays from our approximation using curvature measures and geometric hulls that must all satisfy distance limits at once."
+  },
+  {
+   "title": "Points as Tori: Fast Pointwise Signed Distance for Point Clouds",
+   "uses": "Signed distance to point clouds is computed by fitting each point with a torus (which has a closed-form distance formula), using a a system that learns from examples to predict local curvature, enabling fast queries without global optimization."
+  },
+  {
+   "title": "Constant Mean Curvature Surfaces from Discrete Harmonic Maps",
+   "uses": "Constant mean curvature surfaces (elegant shapes with balanced bending) are built by discretizing the classical fact that their normal maps are harmonic\u2014i.e., as smooth as possible\u2014solved via energy minimization and Poisson equations."
+  }
+ ]
+}

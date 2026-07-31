@@ -1,0 +1,49 @@
+{
+ "key": "solve",
+ "title": "Making everything balance at once",
+ "intro": "Graphics is full of situations where thousands of little pieces each pull on their neighbours \u2014 every point of a cloth, every corner of a shape, every cell of a fluid \u2014 and you need the single overall state where all those local demands are satisfied at the same time. You can't settle one piece at a time; you have to solve them all together, as one enormous set of equations that must all hold at once. Much of the field's craft is making these giant balancing acts solvable fast enough to use.",
+ "why": "It works because a genuine physical balance \u2014 a hanging cloth, a shape at rest \u2014 has exactly one state where every little force cancels against its neighbours at the same time. Writing that forces-cancel-here condition at every point gives a web of equations whose single joint solution IS that balanced state. There is no guessing involved: the equations pin down the one arrangement that satisfies everyone at once, and solving them finds it exactly.",
+ "n_total": 10,
+ "papers": [
+  {
+   "title": "PQ-Free HD: Priority-Queue-Free Hausdorff Distance for Triangle Meshes on GPU",
+   "uses": "Finding the maximum distance between two 3D models requires exploring many candidate point pairs and eliminating unlikely ones. The method replaces a sequential bottleneck with parallel batch processing, allowing thousands of candidates to be pruned together rather than one at a time."
+  },
+  {
+   "title": "GMT: A Geometric Multigrid Transformer Solver for Microstructure Homogenization",
+   "uses": "Lattice materials require solving huge systems of equations to predict their strength; a a system that learns from examples learns to propose accurate starting guesses that need only one refinement step, cutting computation dramatically while staying precise."
+  },
+  {
+   "title": "Iskra: A System for Inverse Geometry Processing",
+   "uses": "Existing geometry methods find shape properties by iteratively refining; the method automatically reverses this process so slope flow backward through the iterations, enabling learning-based geometry optimization without rewriting the methods."
+  },
+  {
+   "title": "SharpNet: Enhancing MLPs to Represent Functions with Controlled Non-differentiability",
+   "uses": "a system that learns from examples make everything smooth, but some shapes need sharp corners. SharpNet solves Poisson's equation (the same way fluids diffuse heat) on prescribed edges to inject prescribed sharp features, keeping smooth curves everywhere else."
+  },
+  {
+   "title": "Floating-Point Robustness in Parametric Surface Continuous Collision Detection: From Algorithm to Benchmarking",
+   "uses": "Collision detection checks whether a moving curve on a curved surface will hit an obstacle\u2014this requires solving equations to find the closest approach distance over time. The paper separates numerical errors (rounding, arithmetic imprecision) from model errors and benchmarks against exact rational-arithmetic ground truth."
+  },
+  {
+   "title": "A Robust and Efficient Intersection Algorithm for NURBS Surfaces: Handling Small Loops and Tangent Intersections",
+   "uses": "Intersection curves are found by detecting their starting points robustly using winding number theory combined with subdivision to locate points on tangential intersections. This hybrid approach handles complex topologies, small loops, and degenerate cases that confound standard methods."
+  },
+  {
+   "title": "Dual Contouring over Expanded Cubes (DCx) for Zero-Level Set Extraction from Neural Unsigned Distance Functions",
+   "uses": "A surface emerges from a distance field by finding the locations where that field equals zero. The method organizes space into blocks and uses lookup patterns to build the correct triangles without guessing sign."
+  },
+  {
+   "title": "Robust Planar Maps for 3D Vectorization",
+   "uses": "Curves from 3D geometry must be organized into regions without crossing incorrectly. The method builds a spatial structure that finds all intersections robustly, using it to build a planar map that partitions the image."
+  },
+  {
+   "title": "GPU-accelerated Certified Hausdorff Distance Between Triangle Meshes",
+   "uses": "The farthest point between two 3D models is found by searching branches of possibilities, pruning those that can't beat the current best. The method runs this search on a GPU in parallel, maintaining tight bounds."
+  },
+  {
+   "title": "Single-View Holographic Volumetric 3D Printing with Coupled Differentiable Wave-Optical and Photochemical Optimization",
+   "uses": "Hologram patterns are designed by solving one enormous system balancing wave physics (how light bends through space) and chemistry (how material hardens or dissolves) at once, optimizing the phase pattern to pre-correct for blurring."
+  }
+ ]
+}

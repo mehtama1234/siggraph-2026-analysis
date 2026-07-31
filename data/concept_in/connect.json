@@ -1,0 +1,125 @@
+{
+ "key": "connect",
+ "title": "The connective tissue: between, across, and nearby",
+ "intro": "A great deal of graphics is quieter bookkeeping between the samples you have: given values at a few points, produce a smooth field everywhere in between; carry a shape from one frame to the next; find what's nearest, or how things connect. Filling-in, coordinate changes, nearest-matches, connectivity \u2014 these are the connective tissue that ties the flashier machinery together, and they turn up in almost every paper somewhere.",
+ "why": "It works because smooth things do not jump: between two nearby known values the truth stays close to their blend, so filling the gaps with a gentle blend is rarely far off. And the relationships that matter \u2014 who is nearest, how things connect, how one shape maps onto another \u2014 survive the honest coordinate changes graphics uses, so you can carry a problem into a convenient frame, solve it there, and carry the answer back unharmed.",
+ "n_total": 29,
+ "papers": [
+  {
+   "title": "Lucky High Dynamic Range Smartphone Imaging",
+   "uses": "The method learns to blend bracketed photos into one high-quality image by training on synthetic data and learning which input pixels to mix. It's trained once on computer-generated examples, then applies that learned pattern to real photos it has never seen."
+  },
+  {
+   "title": "Strips as Tokens: Artist Mesh Generation with Native UV Segmentation",
+   "uses": "A a system that learns from examples learns to build 3D 3D models one face at a time by treating each face as a pieces in a sequence, mimicking how artists draw connected strips that naturally preserve the 3D model's flow and surface-layout layout."
+  },
+  {
+   "title": "SQuadGen: Generating Simple Quad Layouts via Chart Distance Fields",
+   "uses": "The system learns to generate quad layouts by training on examples; it uses Chart Distance Fields\u2014a continuous smooth representation\u2014so the learning algorithm can adjust every part of the solution incrementally."
+  },
+  {
+   "title": "LLM-enhanced Scene Graph Learning for Household Rearrangement",
+   "uses": "The system models objects and their relationships as a graph, then trains a learned function to predict which objects can go where by reasoning over these connections and learned object functionalities."
+  },
+  {
+   "title": "LayerInbetween: Occlusion-Aware Stroke Correspondence and Inbetweening with Automatic Layering",
+   "uses": "Animation frames are connected by learning stroke correspondences; the system predicts hidden strokes using learned spatial transformations applied progressively across layers, smoothly interpolating missing motion."
+  },
+  {
+   "title": "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+   "uses": "The system learns to predict how light bounces off surfaces in different ways (shiny versus matte) by training on examples; specialized ray sampling identifies which nearby lit samples matter most for each viewing angle."
+  },
+  {
+   "title": "HairGPT: Strand-as-Language Autoregressive Modeling for Realistic 3D Hairstyle Synthesis",
+   "uses": "Hair is modeled as a sequence of strand primitives arranged hierarchically from scalp region to fine detail; the system learns to predict each strand type autoregressively, composing complex hairstyles by chaining learned strand predictions."
+  },
+  {
+   "title": "TwinPose: Person-Specific Subspaces for Multi-View 3D Pose Estimation",
+   "uses": "Multiple 2D pose detections from different camera views are reconstructed into 3D by finding poses close to all views simultaneously; the system learns person-specific subspaces so each body stays within its natural movement patterns."
+  },
+  {
+   "title": "Loops2Roofs: Diffusion-based 3D Roof Generation using a Loop Representation",
+   "uses": "Generate 3D roof geometry by iteratively denoising random vertex coordinates using a image-generating model (like reverse image-generating in image generation), guided by predicted face counts, then enforce topological consistency."
+  },
+  {
+   "title": "Skinned Motion Retargeting with Spatially Adaptive Interaction Guidance",
+   "uses": "Moving one character's motion to another requires matching spatial relationships (like hand-to-face proximity). Adaptively reposition anchor points on the target body via learned prediction, then retarget motion to preserve those adaptive relationships."
+  },
+  {
+   "title": "Generative Modeling with Orbit-Space Particle Flow Matching",
+   "uses": "Generating point clouds means learning curved paths in high-dimensional space. Exploit particle permutation symmetry and embed geometric structure in the flow's final velocity so the model learns simpler, straighter paths that produce normals as a byproduct."
+  },
+  {
+   "title": "PAColorHolo: A Perceptually-Aware Color Management Framework for Holographic Displays",
+   "uses": "Holographic displays distort colors due to laser light, optical imperfections, and hardware biases. The system maps input color to output color via learned neural functions; adaptive illumination adjusts light intensity, and coordinate changes (color space transformations) straighten out systematic distortions."
+  },
+  {
+   "title": "Fast and Accurate Gaussian Process Modelling of Real-World Materials",
+   "uses": "A Bayesian regression with Gaussian processes fits material reflectance properties by learning distances between observed and modeled reflectance. A custom kernel better captures reflectance features than standard kernels, enabling compact analytical representations."
+  },
+  {
+   "title": "MotionBricks: Scalable Real-Time Motions with Modular Latent Generative Model and Smart Primitives",
+   "uses": "Model 350k motion clips as points in a learned hidden space where similar poses cluster; at runtime, pick motion from the cluster matching current velocity and style commands, interpolating smoothly between primitives."
+  },
+  {
+   "title": "NeuBase: Spline Surfaces with Neural Basis Functions",
+   "uses": "A control 3D model defines a smooth surface; neural basis functions augment classical subdivision with learned local deformations. The design preserves four key properties\u2014linearity, locality, smoothness, and affine invariance\u2014ensuring direct manipulation without retraining."
+  },
+  {
+   "title": "Role-Aware Virtual Agents for Navigational Interaction guided by a Multimodal Large Language Model",
+   "uses": "A language model processes multimodal scene context (visual, spatial, narrative) to emit navigation decisions that fit an agent's role. The network learns to generate movement behaviors consistent with character goals and responsive to dynamic user actions."
+  },
+  {
+   "title": "AniGen: Unified S3 Fields for Animatable 3D Asset Generation",
+   "uses": "Shape, skeleton, and skin are represented as continuous fields in shared space, learned from images so all three stay mutually consistent. Special techniques handle the geometric ambiguity where bones meet and allow rigging of variable complexity."
+  },
+  {
+   "title": "Learned Universal Interoperable Virtual Try-ON",
+   "uses": "Garments wrap onto bodies through two alignment puzzles: matching the cloth to a standard skeleton, then warping that skeleton to fit the target pose. Physics then settles the cloth into natural-looking folds."
+  },
+  {
+   "title": "Soft Anisotropic Diagrams for Differentiable Image Representation",
+   "uses": "Each pixel's color is a soft blend of nearby seed points, weighted by distance and a learnable shape metric. The system learns where to place seeds and how to weight them by training on image data."
+  },
+  {
+   "title": "Texture-Aware Remeshing for Texture-aware Geometry Processing",
+   "uses": "Surface patterns are lifted from flat texture images into vertex colors by remeshing triangles finely. This lets geometry algorithms incorporate texture naturally without wrestling with surface-layout coordinates."
+  },
+  {
+   "title": "SCom DAG: compact representation of spatial data for real-time rendering",
+   "uses": "3D spatial data (3D models, volumes, light fields) is compressed by recognizing that many regions are similar up to a geometric transformation; store only one copy of each unique piece plus the transformations between copies, using octree subdivision and rotation groups for compactness."
+  },
+  {
+   "title": "Tempo3D: Efficient Temporal-Aware Fine-Tuning and Multi-View Latent Aggregation for 3D Generation",
+   "uses": "A image-generating model for 3D shapes is fine-tuned efficiently by recognizing the natural temporal structure of detail-generation in flow-based models: learn coarse structure first, then details, and combine predictions from multiple viewing angles to resolve the ambiguity that single views introduce."
+  },
+  {
+   "title": "HeadRouter: A Training-free Image Editing Framework for MM-DiTs by Adaptively Routing Attention Heads",
+   "uses": "Text-guided image editing in image-generating transformers works by discovering which attention heads respond to which visual semantics, then routing text pieces selectively to the heads that control the regions you want to edit. The system learns head sensitivity without retraining."
+  },
+  {
+   "title": "SegviGen: Repurposing 3D Generative Model for Part Segmentation",
+   "uses": "A pretrained 3D generative model encodes an object and predicts colored labels on its reconstructed surface; these colors act as part indicators. The system learns part segmentation by repurposing the model's internal structure knowledge without annotated training data for the segmentation task itself."
+  },
+  {
+   "title": "Manifold k-NN: Accelerated k-NN Queries for Manifold Point Clouds",
+   "uses": "Finding nearest neighbors in point clouds is sped up by building a recursive network of neighborhoods, where each point remembers which others it's close to; the method exploits this structure to skip far-away points without checking them."
+  },
+  {
+   "title": "Explicit flows for implicit surfaces",
+   "uses": "Shape deformation is expressed as a smooth flow (like water moving through space) using an invertible a system that learns from examples that learns how every point transforms continuously over time without tangling or tearing."
+  },
+  {
+   "title": "Subgrid Marching Tetrahedra",
+   "uses": "Meshing a smooth surface on a fixed grid captures thin features by encoding surface connectivity via integer intersection counts on edges\u2014a topological trick that bypasses the usual frequency limits of grids."
+  },
+  {
+   "title": "STyMo: Fast and Controllable Few-Shot Motion Style Transfer",
+   "uses": "Motion style transfer decomposes pose changes into static posture and frame-by-frame temporal dynamics, learning each component from seconds of paired data via a system that learns from examples that generalize to new motions under style control."
+  },
+  {
+   "title": "OmniHands: Robust Motion Capture of Interactive Hands via A Versatile Transformer",
+   "uses": "The system learns to predict hand pose and motion by identifying patterns in image data, using relationships between the two hands to reason about their interaction. It builds these relationships through attention\u2014finding which hand parts matter most for predicting each other's position."
+  }
+ ]
+}

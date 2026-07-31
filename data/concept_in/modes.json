@@ -1,0 +1,65 @@
+{
+ "key": "modes",
+ "title": "Finding a thing's natural patterns",
+ "intro": "Every shape and every image is secretly built from a set of natural patterns \u2014 the basic ways a bell likes to ring, the coarse-to-fine layers of detail in a picture. Uncover those few underlying patterns and you can smooth, shrink, or animate a thing by working with its handful of important modes instead of all its raw data. The big-picture problem: raw data is bulky and noisy; its natural patterns are few and clean.",
+ "why": "It works because real shapes and images are not random static \u2014 they pour almost all of their content into a few smooth, large-scale patterns and leave only a little in the fine, jagged ones. So keeping the handful of dominant patterns and dropping the rest changes almost nothing you would ever notice. The deeper truth: the world is mostly smooth, and smoothness means the information lives in the coarse patterns.",
+ "n_total": 14,
+ "papers": [
+  {
+   "title": "Implicit Surface Compression -- with Good Old Discrete Cosine Transform and Motion Compensation",
+   "uses": "Video compression breaks the signal into basic frequency building blocks (like a musical scale), then uses motion prediction to match the same scene across time; solving which frequencies change frame-to-frame saves storage."
+  },
+  {
+   "title": "Mat\u00e9rn Noise for Triangulation-Agnostic Flow Matching on Meshes",
+   "uses": "The model learns signals on 3D models by using carefully chosen noise from a Mat\u00e9rn process\u2014a random field whose frequency content stays the same no matter how the triangle 3D model is reshaped\u2014ensuring the learned patterns transfer across different 3D model forms."
+  },
+  {
+   "title": "ACT: A Unified Framework for Rigging and Animating Characters with Arbitrary Topologies",
+   "uses": "Character motion and skeleton structure are modeled as coupled degrees of freedom in a shared learned space; the system treats all possible pose deformations as natural oscillation modes of a single unified kinematic system."
+  },
+  {
+   "title": "Physics-Inspired Procedural Texturing of Extremely Deformable Surfaces",
+   "uses": "Texture on deforming surfaces is generated procedurally by measuring how the surface stretches and shrinks, then adjusting the wave frequencies in the texture based on that deformation history\u2014making details physically respond to motion."
+  },
+  {
+   "title": "Generalized Spherical Harmonics Products using Spherical Grids",
+   "uses": "Spherical harmonics decompose functions on a sphere into frequencies\u2014low frequencies capture the broad shape, high frequencies add fine detail. Multiplying two such functions is expensive; the paper converts to an intermediate grid, multiplies pointwise (cheap), then converts back, controlling detail level by grid resolution."
+  },
+  {
+   "title": "Invisible Holographic Window: Full-color 3D Image Reconstruction from Transparent Surface-relief Computer-generated Holograms",
+   "uses": "A hologram encodes a 3D image as an interference pattern; light and dark stripes represent phase and amplitude. By carefully splitting the design across different frequency bands (low, mid, high) and using surface-relief structures with shallower phase wraps, a single transparent layer delivers full-color 3D without crosstalk."
+  },
+  {
+   "title": "Dual-Path Holographic Laser-Excited Volumetric Display",
+   "uses": "Two synchronized laser paths with spatial light modulators (phase/amplitude masks) steer beams through 3D space to paint voxels in a gas chamber. The system combines two independent wavefronts; careful timing and coordinate transforms align both beams, boosting brightness and voxel density beyond single-path limits."
+  },
+  {
+   "title": "BodyReLux: Temporally Consistent Full-Body Video Relighting",
+   "uses": "A video generation model learns to predict how light bounces onto skin and cloth from captured relighting examples. It conditions on lighting parameters (represented as pieces) and uses attention masks to handle changing lighting over time."
+  },
+  {
+   "title": "A Real-time, Multiscale and Procedural Feather Appearance Model",
+   "uses": "Feathers are represented hierarchically in surface-layout space, encoding their fine details procedurally at multiple scales. A custom scattering model captures how light interacts with the feather's micro-structure, balancing realism with real-time performance."
+  },
+  {
+   "title": "Pixel Cube: Diffusion-based Portrait Video Relighting Through Realistic Lighting Reproduction",
+   "uses": "Relight a face by learning how lights at different angles and colors interact with skin and features; a neural model trained on real and rendered footage learns to predict what light arriving from any direction does to pixels."
+  },
+  {
+   "title": "Gabor Fields: Orientation-Selective Level-of-Detail for Volume Rendering",
+   "uses": "Gaussian radiance volumes encode fine geometric detail; use Gabor functions (sine waves tuned to specific orientations and scales) to filter out detail selectively, pruning high-frequency components to speed rendering without refitting."
+  },
+  {
+   "title": "Component Modes Synthesis Method with Multiple Partitions for Large-scale Eigenvalue Problem",
+   "uses": "When a structure vibrates, it prefers certain patterns over others\u2014like how a drum head resonates. The method finds those favorite patterns efficiently by breaking the big structure into smaller pieces and combining their vibrations."
+  },
+  {
+   "title": "Efficient Multiscale Lanczos Eigenpair Extraction",
+   "uses": "Finding a shape's natural vibration modes\u2014the ways it likes to wiggle\u2014requires solving enormous natural-mode equations; the paper accelerates this by borrowing multigrid methods that solve problems at coarse and fine scales together."
+  },
+  {
+   "title": "Low-Rank Koopman Deformables with Log-Linear Time Integration",
+   "uses": "The method discovers how a deformable object naturally evolves over time by finding its fundamental vibration patterns, then uses those patterns to skip ahead through time instead of solving step-by-step equations. This trades slow sequential solving for fast repeated multiplications."
+  }
+ ]
+}

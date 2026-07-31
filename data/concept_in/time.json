@@ -1,0 +1,53 @@
+{
+ "key": "time",
+ "title": "Stepping the world forward in time",
+ "intro": "To animate matter you rarely have a formula for where everything ends up. What you have is the rule for how things change from one instant to the next \u2014 this push, this flow, this collision. So you march forward in tiny time-steps, applying the rule again and again, and watch the motion emerge. The whole craft of simulation is taking the largest steps you can without the march spiralling into nonsense.",
+ "why": "It works because over a short enough moment almost anything changes nearly in a straight line \u2014 its rate of change right now is a good guide to where it will be an instant later. So one tiny step forward using the current rate is accurate, and repeating it traces the true motion. Keep the steps small and the small errors stay small instead of piling up into nonsense \u2014 which is the entire discipline of simulation.",
+ "n_total": 11,
+ "papers": [
+  {
+   "title": "Volume-Preserving LBM-MPM Coupling for Air-Water-Sand Mixtures",
+   "uses": "Sand, water, and air interact as they flow and settle; the method splits this into two coupled methods\u2014one that updates fluid motion at each moment, one that tracks how sand grains deform and move. Both proceed in lockstep, exchanging forces at each time step."
+  },
+  {
+   "title": "Kinetic Predicted-Moment Flux Reconstruction for High-Order High-Performance Fluid Simulation",
+   "uses": "Fluids evolve as billions of jostling gas molecules; simulating each is impossible. Track instead the aggregate statistics (momentum, energy) at each point via kinetic theory, advancing those aggregates forward in time via the Boltzmann equation."
+  },
+  {
+   "title": "An Extended Full GKS Formulation for High-Efficiency and Low-Memory Two-Phase Flow Simulation",
+   "uses": "Two-phase flows (oil-water) require tracking both fluid momentum and phase boundary motion simultaneously. Couple gas-kinetic moment evolution with a phase-field equation that diffuses the interface, advancing both forward stably over time."
+  },
+  {
+   "title": "Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation",
+   "uses": "Generate motion one frame at a time, conditioning on text prompts and future poses; a hybrid representation splits the problem (root trajectory separately from body pose) so text and keyframes guide generation together."
+  },
+  {
+   "title": "Mixed Material Point Methods for Stiff Elastoplasticity",
+   "uses": "Stiff elastic materials resist deformation; the methods must advance time accurately without requiring impossibly small steps. It reformulates the problem as a saddle-point equation where forces and deformations are solved together implicitly."
+  },
+  {
+   "title": "Nexus: Native Mesh Generation with Diffusion",
+   "uses": "A 3D model starts noisy and gradually becomes clearer, step by step, like a photograph developing. At each step, the model predicts which shapes fit the data better, then refines the guess."
+  },
+  {
+   "title": "Semantic-Structural Alignment for Generative Pictorial Charts",
+   "uses": "The system generates a chart by repeatedly refining noisy colors, nudged by two signals: what words say it should show, and the structure it must follow. Each refinement step brings it closer to both goals at once."
+  },
+  {
+   "title": "Progressing Level-of-Detail Animation for Volumetric Elastodynamics",
+   "uses": "Simulating jiggly volumetric materials at multiple detail levels simultaneously: coarse motion captures bulk deformation, while high-frequency detail is split and recombined with finer resolutions to add bouncy wrinkles without multiplying the number of time-steps needed."
+  },
+  {
+   "title": "MOCHI: Motion Enhancement of Collaborative Human-object Interactions",
+   "uses": "Noisy multi-human hand-object interaction captures are refined in two stages: first solve an optimization to find hand grasps that are both physically valid and match the body pose, then evolve the full-body motion forward in time using a image-generating model guided by single-person motion priors."
+  },
+  {
+   "title": "DiffSurFlow: Efficient and Robust Differentiable Fluid Optimization via Surrogate Strategy on Flow Map",
+   "uses": "Fluid motion is optimized by following the slope that lowers error, but the paper shortcuts the backward pass by noticing that the flow map's cross-step connections carry slope information far more efficiently than computing every intermediate step's contribution."
+  },
+  {
+   "title": "DealMaTe: Multi-Dimensional Material Transfer via Diffusion Transformer",
+   "uses": "The method evolves an image step-by-step from noise toward a realistic material by learning patterns from training examples. It uses depth and lighting information as constraints that guide the transformation, ensuring the output matches the target material's appearance under different conditions."
+  }
+ ]
+}

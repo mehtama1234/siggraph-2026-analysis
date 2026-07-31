@@ -1,0 +1,105 @@
+{
+ "key": "random",
+ "title": "Smart randomness",
+ "intro": "When there are far too many possibilities to check them all \u2014 every path a ray of light might take, every plausible arrangement \u2014 you sample a well-chosen few at random and average the results, trusting the average to land near the true answer. The art is aiming your limited samples where they matter most, so the estimate sharpens quickly instead of staying speckled with noise. It's how graphics tames problems that are, strictly, infinite.",
+ "why": "It works because of one quiet guarantee: the average of many independent random samples equals, on average, exactly the true total you are chasing \u2014 the randomness cancels itself out. And the leftover error shrinks in a predictable way as you add samples, so a noisy guess sharpens into a reliable one just by taking more. Aim the samples where the answer varies most and that error shrinks faster still.",
+ "n_total": 24,
+ "papers": [
+  {
+   "title": "A Few-Step Generative Model on Cumulative Flow Maps",
+   "uses": "Instead of many refinement steps, this method transports probability distributions in a few giant jumps. It learns cumulative paths that carry a starting distribution toward final images in one or two leaps, reducing computation while keeping quality."
+  },
+  {
+   "title": "Bounding Stratified Bernoulli Impulses for Ray Marching Gaussian Process Implicit Surfaces",
+   "uses": "Rendering probabilistic implicit surfaces requires many noisy evaluations; the method computes upper and lower bounds to skip evaluations in empty regions and skip noisy samples when bounds prove no intersection, accelerating rendering."
+  },
+  {
+   "title": "Stochastic geomorphological transport for terrain erosion simulation",
+   "uses": "Terrain erosion is simulated by tracking particles (water, sediment) flowing downhill over time; randomness in particle motion captures the chaotic transport that larger deterministic forces miss, producing natural river and delta patterns."
+  },
+  {
+   "title": "Forget Superresolution, Sample Adaptively (when Path Tracing)",
+   "uses": "Ray tracing with very few samples per pixel uses a learned sampling strategy that decides where to trace rays based on image importance; the system trains by following the slope of a perceptual loss to avoid wasting rays on invisible details."
+  },
+  {
+   "title": "NILE: Nested Interleaving of Low-Dimensional Elements",
+   "uses": "Ray tracing needs sample points scattered strategically across pixel coordinates so light integrates accurately without aliasing. NILE interleaves local low-dimensional samplers (clustered within pixels) with global high-dimensional sequences (uniform across many pixels), letting you control both."
+  },
+  {
+   "title": "MUSIC: Learning Muscle-Driven Dexterous Hand Control",
+   "uses": "Piano hands need low-level muscle precision and high-level musical timing. Train muscle-control policies, compress their learned behaviors into a smooth hidden space (VAE), then learn note-driven coordination policies that work in that condensed space."
+  },
+  {
+   "title": "GimmBO: Interactive Generative Image Model Merging via Bayesian Optimization",
+   "uses": "Merging tens of image model adapters creates a huge parameter space. Use Bayesian optimization\u2014predict which coefficient settings will please a user based on past preference feedback, then strategically sample promising regions."
+  },
+  {
+   "title": "Photons \u00d7 Force: Differentiable Radiation Pressure Modeling",
+   "uses": "Light bounces off a spacecraft surface, pushing it slightly\u2014this radiation pressure effect drives what direction and speed the craft moves. The team uses random sampling to estimate this effect cheaply, then trains a a system that learns from examples to predict forces so fast optimization can find the best shape without running millions of light simulations."
+  },
+  {
+   "title": "HIL: Hybrid Imitation Learning for Dynamic Athletic Control",
+   "uses": "A physics-simulated character learns to copy human motion (imitation) while also learning to adapt to new environments via trial-and-error (reinforcement learning). The hybrid approach balances likelihood that the motion matches reference data against likelihood of success in novel settings, sharing learned patterns across both objectives."
+  },
+  {
+   "title": "DMP: Directable Motion Retargeting through Motion Paraphrasing",
+   "uses": "A image-generating model learns the space of human motions by slowly adding and removing noise from motion examples, learning how to generate new realistic motions. During inference, masked positions guide the generation to satisfy user-specified constraints like joint positions."
+  },
+  {
+   "title": "ATGS: Anchored Temporal Gaussian Splatting for Long Volumetric Video Representation",
+   "uses": "Gaussian splatting primitives are anchored to time-conditioned points that move through the scene, reducing the need to track complex long-term motion. Only relevant anchors activate at each time step, providing both temporal stability and scalability."
+  },
+  {
+   "title": "Spatiotemporal FLIP for Fast Free-Surface and Two-Phase Simulation With Very Large Time Steps",
+   "uses": "Particles are jittered randomly in both space and time, then deposited onto a 4D space-time grid using a separable kernel. This Monte Carlo sampling approach lets the methods take time steps an order of magnitude larger without temporal aliasing."
+  },
+  {
+   "title": "Inverse Rendering for Discrete X-Ray Computed Tomography",
+   "uses": "Each voxel holds a probability distribution over known materials; the method descends the slope of a loss that encourages consistency with measured X-ray projections. Nonlinear effects like scattering are naturally incorporated into this probabilistic framework."
+  },
+  {
+   "title": "Grow3D: Hierarchical Next-Scale Octree Prediction for Fast and High-Fidelity 3D Shape Generation",
+   "uses": "An auto-regressive model generates 3D shapes in coarse-to-fine layers via octree structure prediction, with a quantized variational autoencoder encoding shapes into a multiscale sparse representation. Octree-aware attention selectively focuses on relevant features at each scale."
+  },
+  {
+   "title": "Monte Carlo PDE Solvers for Nonlinear Radiative Boundary Conditions",
+   "uses": "Heat radiation obeys a nonlinear boundary rule (temperature to the fourth power); solve the heat equation using random walks, iteratively refining boundary estimates using a fixed-point loop until the solution stabilizes."
+  },
+  {
+   "title": "Probe-based Walk on Spheres for Efficient Path Reusing",
+   "uses": "Walk on Spheres solves PDEs using random walks; reuse intermediate points visited along each walk as independent samples using the Poisson integral formula, drastically reducing variance without slowing convergence."
+  },
+  {
+   "title": "CasLayout: Cascaded 3D Layout Diffusion for Indoor Scene Synthesis with Implicit Relation Modeling",
+   "uses": "A image-generating model gradually adds and removes noise from scene configurations, refining object placement in stages. Each stage solves a simpler problem, reducing uncertainty until realistic room layouts emerge that obey walls, doors, and semantic relationships."
+  },
+  {
+   "title": "Walk on Decomposed Subdomains: A Hybrid Monte Carlo\u2013Deterministic Solver for Elliptic PDEs",
+   "uses": "Solving steady-state physics equations (Poisson problems) on complex shapes combines random walks (for geometry flexibility) with direct linear solving (for stability). Local random walks on sub-regions estimate local boundary-response operators, assembled into one sparse global system."
+  },
+  {
+   "title": "Learning a Delighting Prior for Facial Appearance Capture in the Wild",
+   "uses": "A network learns to remove lighting from facial photos, revealing true surface colors and material properties. Training on mixed data sources is unified by learning source-aware modulation, so the learned delighting model transfers to casual smartphone video."
+  },
+  {
+   "title": "Neural Quadrature Rule and Autoregressive Adaptive Sampling",
+   "uses": "Rather than averaging random samples blindly, a a system that learns from examples learns where to sample and how to weave that sample's extra information (position, geometry) into the estimate, improving accuracy on similar problems."
+  },
+  {
+   "title": "JGS2-GQ: Training-free 2nd Jacobi with Gaussian Quadrature",
+   "uses": "The algorithm breaks a huge deformation problem into smaller pieces and uses smart point-placement (Gaussian quadrature) to integrate their effects without needing expensive training data. Each local piece's shape-change is predicted analytically by reading it as a smooth polynomial."
+  },
+  {
+   "title": "StyleID: A Perception-Aware Dataset and Metric for Stylization-Agnostic Facial Identity Recognition",
+   "uses": "The system learns to recognize face identity in stylized portraits by matching human perception: it observes human same-different judgments on diverse art styles and trains encoders to rank face similarities the same way humans do, learning which features truly signal the same person."
+  },
+  {
+   "title": "Radiance Caching for Differentiable Path Tracing",
+   "uses": "Recovering material and lighting from images is a high-variance, brittle optimization problem; a spatial blending field interpolates locally between cached radiance estimates and standard unbiased samplers, reducing variance while keeping slope well-behaved for reliable parameter recovery."
+  },
+  {
+   "title": "UniVidX: A Unified Multimodal Framework for Versatile Video Generation via Diffusion Priors",
+   "uses": "Video generation learns to conditionally denoise many modalities at once by randomly masking some as clean guidance and others as targets during training, so the model learns bidirectional mappings between any modalities."
+  }
+ ]
+}
