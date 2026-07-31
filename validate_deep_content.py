@@ -39,7 +39,19 @@ FAMILY_FIELDS = {
 }
 SYNTH_FIELDS = {"thread": 45, "arc": 140, "punchline": 70}
 
-BAD_MARKERS = ("**", "SOTA", "state-of-the-art", "leverage", "novel framework", "paradigm")
+BAD_MARKERS = (
+    "**",
+    "SOTA",
+    "state-of-the-art",
+    "leverage",
+    "novel framework",
+    "paradigm",
+    "The mathematical core can be described without hiding behind labels",
+    "The useful mental model is careful accounting",
+    "The abstract makes this math necessary because it names a concrete mismatch",
+    "In practical terms, the paper buys a more dependable version of the task named by its theme",
+    "The step-by-step pattern is that the input is first converted into a form",
+)
 
 def load(name, required=True):
     path = os.path.join(HERE, "data", name)
