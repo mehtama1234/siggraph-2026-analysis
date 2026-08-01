@@ -119,6 +119,26 @@
       font-size: 14px;
       margin: 0 0 14px;
     }
+    .proof-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--panel);
+      padding: 10px 11px;
+      margin: 10px 0 14px;
+    }
+    .proof-panel h3 {
+      margin: 0 0 4px;
+      font-size: 13px;
+      letter-spacing: 0;
+      color: var(--ink);
+    }
+    .proof-panel p {
+      margin: 0 0 9px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.38;
+    }
+    .proof-panel p:last-child { margin-bottom: 0; }
     .readout {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -210,6 +230,16 @@
         <h2 id="demoTitle"></h2>
         <div id="demoTheme" class="theme"></div>
         <p id="demoExplain" class="explain"></p>
+        <div class="proof-panel">
+          <h3>Concept</h3>
+          <p id="demoConcept"></p>
+          <h3>What This Proves</h3>
+          <p id="demoProof"></p>
+          <h3>Try This</h3>
+          <p id="demoTry"></p>
+          <h3>Paper-Family Link</h3>
+          <p id="demoPaperLink"></p>
+        </div>
         <div id="metrics" class="readout"></div>
         <div id="controls"></div>
         <div id="buttons" class="buttons"></div>
@@ -220,4 +250,3 @@
   <script src="shared/siggraph-code-lab.js"></script>
 </body>
 </html>
-

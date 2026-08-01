@@ -4,6 +4,10 @@ const tabs = document.getElementById("demoTabs");
 const titleEl = document.getElementById("demoTitle");
 const themeEl = document.getElementById("demoTheme");
 const explainEl = document.getElementById("demoExplain");
+const conceptEl = document.getElementById("demoConcept");
+const proofEl = document.getElementById("demoProof");
+const tryEl = document.getElementById("demoTry");
+const paperLinkEl = document.getElementById("demoPaperLink");
 const metricsEl = document.getElementById("metrics");
 const controlsEl = document.getElementById("controls");
 const buttonsEl = document.getElementById("buttons");
@@ -25,6 +29,10 @@ const demos = [
     theme: "Rendering & Light Transport",
     folder: "themes/rendering-light-transport/ray-marching/",
     explain: "A ray moves through space by asking a distance field how far it can safely step. Small steps near the surface reveal the hit point, then a light direction turns the surface normal into shading.",
+    concept: "Distance as a safe step rule. Instead of testing every possible point, the renderer uses the nearest-surface distance to skip empty space.",
+    proof: "When the sphere radius grows, more rays hit. When softness grows, rays take smaller safer steps. The readout shows the core cost of the method: more caution means more steps.",
+    tryThis: "Increase radius, then increase softness. Watch hit pixels rise first, then average steps rise. That is the rendering tradeoff: reliable surface finding costs more marching.",
+    paperLink: "This supports the rendering/light-transport family: many papers differ in machinery, but the shared question is how to turn geometry, visibility, and light into pixels without wasting work.",
     controls: { radius: [0.18, 0.38, 0.26, 0.01], light: [-1, 1, 0.35, 0.01], softness: [0, 1, 0.35, 0.01] },
     metrics: () => ({ "hit pixels": state.rayHits || 0, "avg steps": (state.raySteps || 0).toFixed(1) }),
     draw: drawRayMarch
@@ -35,6 +43,10 @@ const demos = [
     theme: "Geometry Processing & Meshes",
     folder: "themes/geometry-processing-meshes/laplacian-smoothing/",
     explain: "Each vertex asks its neighbors where the local average is, then moves partway toward it. Noise disappears because local spikes disagree with their neighbors, but the whole shape shrinks unless boundary or volume constraints push back.",
+    concept: "The discrete Laplacian is neighbor disagreement. A vertex far from the local average looks like high-frequency shape noise.",
+    proof: "Roughness drops as iterations increase, showing that neighbor averaging removes jagged detail. Shrink drops below one, showing the failure mode: pure smoothing also pulls the whole shape inward.",
+    tryThis: "Raise iterations and amount, then raise preserve. You should see the green shape become smoother while the shrink metric shows why real mesh papers add constraints.",
+    paperLink: "This grounds the geometry-processing family: mesh papers repeatedly balance local cleanup, global shape preservation, and numerical stability.",
     controls: { amount: [0, 1, 0.45, 0.01], iterations: [0, 40, 14, 1], preserve: [0, 1, 0.45, 0.01] },
     metrics: () => ({ roughness: state.meshRough.toFixed(2), shrink: state.meshShrink.toFixed(2) }),
     init: initMesh,
@@ -46,6 +58,10 @@ const demos = [
     theme: "Neural Fields & Representations",
     folder: "themes/neural-fields-representations/signed-distance-fields/",
     explain: "A shape can be stored as a question: how far am I from the surface, and am I inside or outside? Union, intersection, and subtraction are simple min/max rules over those distances.",
+    concept: "A field stores a value everywhere, not just on a surface. The zero contour is the visible boundary; negative means inside.",
+    proof: "Changing operation swaps union, intersection, and subtraction without changing the drawing code. The same distance values become different shapes through simple rules.",
+    tryThis: "Move operation from 0 to 2. Watch inside and edge counts change. The point is that shape editing can become arithmetic on fields.",
+    paperLink: "This ties to neural fields and implicit-surface papers: they often learn or manipulate a continuous field, then extract geometry from the zero boundary.",
     controls: { blend: [0, 1, 0.2, 0.01], box: [0.12, 0.38, 0.24, 0.01], operation: [0, 2, 0, 1] },
     metrics: () => ({ inside: state.sdfInside || 0, edge: state.sdfEdge || 0 }),
     draw: drawSdf
@@ -56,6 +72,10 @@ const demos = [
     theme: "Computational Photography & Imaging",
     folder: "themes/computational-photography-imaging/differentiable-rendering/",
     explain: "Render a guess, compare it with a target image, then nudge the hidden parameters in the direction that makes the image error smaller. The picture becomes the measuring instrument.",
+    concept: "Image error can guide hidden scene parameters. A small parameter change is kept when it makes rendered pixels closer to target pixels.",
+    proof: "Press Optimize and the loss falls as the green guess moves toward the red target. That visible loop is the first-principles version of inverse rendering.",
+    tryThis: "Raise speed until optimization becomes unstable, then lower it. This shows why graphics optimization papers care about step size and smooth losses.",
+    paperLink: "This supports computational photography and inverse-rendering subthemes: estimate unknown scene, camera, material, or lighting variables by comparing rendered output to observations.",
     controls: { speed: [0.1, 2.5, 0.9, 0.1], blur: [0.01, 0.08, 0.035, 0.005] },
     metrics: () => ({ loss: state.diffLoss.toFixed(3), steps: state.diffSteps }),
     init: initDiff,
@@ -68,6 +88,10 @@ const demos = [
     theme: "Neural Rendering & Radiance Fields",
     folder: "themes/neural-rendering-radiance-fields/gaussian-splatting/",
     explain: "A scene is painted by many soft colored blobs. Each blob contributes most near its center and fades with distance; depth order decides which translucent color has more say.",
+    concept: "Soft basis functions. A complex image is built from many simple weighted blobs whose influence fades smoothly.",
+    proof: "More splats increase coverage and detail. Larger splats fill gaps but blur structure. Depth ordering changes which translucent colors dominate.",
+    tryThis: "Lower splats, raise size, then flip depth. You should see the image move between sparse points, smooth blobs, and different visibility layers.",
+    paperLink: "This maps to neural rendering and radiance-field families: the scene is represented by many local contributors, and rendering is weighted accumulation into the camera.",
     controls: { splats: [8, 80, 38, 1], size: [8, 52, 26, 1], depth: [0, 1, 0.55, 0.01] },
     metrics: () => ({ splats: controls.splats, coverage: `${state.splatCoverage || 0}%` }),
     init: initSplats,
@@ -80,6 +104,10 @@ const demos = [
     theme: "Cloth, Hair & Fibers",
     folder: "themes/cloth-hair-fibers/mass-spring-cloth/",
     explain: "Cloth is a grid of points connected by springs. Gravity pulls down, springs resist stretching, damping removes jitter, and collision stops the sheet from passing through an obstacle.",
+    concept: "Material behavior from constraints. A cloth-like surface appears when local distances are repeatedly pulled back toward rest lengths.",
+    proof: "Higher stiffness lowers stretch but can make motion sharper. Higher damping quiets jitter. Collisions show why simulation needs constraint handling, not just forces.",
+    tryThis: "Lower stiffness, then raise gravity. The cloth stretches more. Reset, raise stiffness, and watch the sheet hold together better.",
+    paperLink: "This anchors cloth, hair, and deformable simulation papers: visual realism comes from local physical rules plus robust constraint enforcement.",
     controls: { stiffness: [0.05, 0.35, 0.18, 0.01], damping: [0.94, 0.995, 0.975, 0.001], gravity: [0, 1.2, 0.55, 0.01] },
     metrics: () => ({ stretch: state.clothStretch.toFixed(2), collisions: state.clothCollisions }),
     init: initCloth,
@@ -92,6 +120,10 @@ const demos = [
     theme: "Fluids, Smoke & Granular",
     folder: "themes/fluids-smoke-granular/particle-fluids/",
     explain: "Each particle pushes neighbors away when crowded and borrows velocity from neighbors when viscous. The visible behavior comes from many local corrections, not from one global water rule.",
+    concept: "Continuum behavior from neighbor rules. Pressure resists crowding; viscosity shares motion between nearby particles.",
+    proof: "Raising pressure makes particles separate more forcefully. Raising viscosity makes motion less splashy and more syrup-like.",
+    tryThis: "Set viscosity low and pressure high, then pour again. Then raise viscosity. The same particles switch from splash to thick flow.",
+    paperLink: "This supports fluid, smoke, and granular papers: large-scale material motion is built from local conservation, pressure, and dissipation rules.",
     controls: { pressure: [0.1, 1.8, 0.85, 0.01], viscosity: [0, 0.16, 0.045, 0.005], flow: [0, 1, 0.5, 0.01] },
     metrics: () => ({ particles: state.fluid.length, crowding: state.fluidCrowd.toFixed(2) }),
     init: initFluid,
@@ -104,6 +136,10 @@ const demos = [
     theme: "VR/AR & Displays",
     folder: "themes/vr-ar-displays/camera-projection/",
     explain: "A camera turns a 3D point into a 2D screen point by dividing by depth. Move the camera and nearby points slide more than far points; that parallax is the clue used to recover depth.",
+    concept: "Perspective projection. Screen position is not just x and y; it is x and y divided by distance from the camera.",
+    proof: "Increasing baseline raises parallax: the two camera views disagree more. That disagreement is exactly the depth clue used by multi-view systems.",
+    tryThis: "Raise baseline and yaw. The cube shifts differently in the two views, showing why calibration and camera pose matter.",
+    paperLink: "This ties to VR/AR, capture, and display papers: aligning virtual and real worlds starts with projecting 3D structure into measured 2D views.",
     controls: { yaw: [-0.8, 0.8, 0.25, 0.01], baseline: [0, 1.2, 0.55, 0.01], focal: [0.8, 2.0, 1.25, 0.01] },
     metrics: () => ({ parallax: state.parallax.toFixed(2), points: 8 }),
     draw: drawCamera
@@ -114,6 +150,10 @@ const demos = [
     theme: "Appearance, Materials & BRDF",
     folder: "themes/appearance-materials-brdf/texture-optimization/",
     explain: "A texture is a grid of parameters. The optimizer compares the rendered pattern with a target and updates each cell toward the color that would reduce the image residual.",
+    concept: "Appearance as adjustable parameters. A material or texture can be solved by reducing the mismatch between what it renders and what we want to see.",
+    proof: "Press Optimize and the loss falls as the current texture approaches the target. Smoothing reveals the tradeoff: cleaner texture versus loss of sharp detail.",
+    tryThis: "Change target, press Reset, then Optimize. Increase smooth to see details get averaged away even when the result looks cleaner.",
+    paperLink: "This grounds appearance/material papers: many methods estimate textures, reflectance, or material fields by balancing image match against regularity.",
     controls: { rate: [0.02, 0.35, 0.12, 0.01], smooth: [0, 0.35, 0.08, 0.01], target: [0, 2, 0, 1] },
     metrics: () => ({ loss: state.texLoss.toFixed(3), cells: 64 }),
     init: initTexture,
@@ -126,6 +166,10 @@ const demos = [
     theme: "Character Animation & Motion",
     folder: "themes/character-animation-motion/motion-interpolation-retargeting/",
     explain: "A pose is a chain of joint angles and bone lengths. Interpolation blends angles over time; retargeting keeps the angles but changes the bone lengths so the motion fits another body.",
+    concept: "Motion as structured constraints. A character is not a cloud of points; joints inherit motion through a hierarchy, and bone lengths must stay coherent.",
+    proof: "Changing blend moves between poses. Changing scale retargets the same angles to a different body. Constraint reduces foot sliding, showing why motion transfer needs more than angle copying.",
+    tryThis: "Raise scale, then lower constraint. The retargeted body keeps the motion style but the foot-slide metric exposes the artifact.",
+    paperLink: "This supports character-animation papers: believable motion requires blending, retargeting, and constraint correction across different bodies and topologies.",
     controls: { blend: [0, 1, 0.5, 0.01], scale: [0.65, 1.45, 1.1, 0.01], constraint: [0, 1, 0.7, 0.01] },
     metrics: () => ({ footSlide: state.footSlide.toFixed(2), bones: 5 }),
     draw: drawMotion
@@ -159,6 +203,10 @@ function selectDemo(i) {
   titleEl.textContent = demo.title;
   themeEl.textContent = `${demo.theme} / ${demo.id}`;
   explainEl.textContent = demo.explain;
+  conceptEl.textContent = demo.concept;
+  proofEl.textContent = demo.proof;
+  tryEl.textContent = demo.tryThis;
+  paperLinkEl.textContent = demo.paperLink;
   folderLink.href = demo.folder;
   renderControls(demo);
   if (demo.init) demo.init();
