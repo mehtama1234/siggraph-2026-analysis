@@ -1,0 +1,15 @@
+{
+  "id": "differentiable-rendering",
+  "theme": "Computational Photography & Imaging",
+  "subtheme": "Differentiable image fitting",
+  "client_problem": "Estimate hidden scene or image parameters by matching rendered output to observed pixels.",
+  "paper_family_claim": "Inverse-rendering papers convert visual mismatch into parameter updates.",
+  "inputs": ["target samples", "initial parameters", "renderer"],
+  "outputs": ["fitted parameters", "loss history", "final image loss"],
+  "core_algorithm": "finite-difference gradient descent over renderer parameters",
+  "demo_proves": "Pixel loss gives a measurable direction for improving hidden shape parameters.",
+  "failure_modes": ["bad starting point", "ambiguous target", "step size too large", "non-smooth renderer"],
+  "reuse_level": "starter-module",
+  "license": "original"
+}
+

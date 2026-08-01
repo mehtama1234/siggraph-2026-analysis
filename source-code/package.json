@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "scripts": {
+    "test": "node themes/geometry-processing-meshes/laplacian-smoothing/tests/core.test.js && node themes/vr-ar-displays/camera-projection/tests/core.test.js && node themes/computational-photography-imaging/differentiable-rendering/tests/core.test.js"
+  }
+}
+

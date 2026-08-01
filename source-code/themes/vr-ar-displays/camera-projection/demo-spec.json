@@ -1,0 +1,15 @@
+{
+  "id": "camera-projection",
+  "theme": "VR/AR & Displays",
+  "subtheme": "Camera projection and calibration",
+  "client_problem": "Align measured 2D image points with known 3D landmarks for AR, capture, or inspection.",
+  "paper_family_claim": "Capture and display papers depend on projecting 3D structure into 2D views and minimizing alignment error.",
+  "inputs": ["3D landmarks", "observed 2D points", "initial camera parameters"],
+  "outputs": ["projected 2D points", "reprojection RMSE", "calibrated camera parameters"],
+  "core_algorithm": "perspective projection plus finite-difference calibration",
+  "demo_proves": "Wrong camera parameters create visible reprojection error; optimizing them reduces alignment error.",
+  "failure_modes": ["bad landmarks", "too few points", "wrong camera model", "local minima"],
+  "reuse_level": "starter-module",
+  "license": "original"
+}
+

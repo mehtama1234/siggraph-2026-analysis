@@ -2,9 +2,9 @@
 
 Theme: VR/AR & Displays
 
-This demo shows how 3D points become 2D screen points. The camera divides by
-depth, so near points move more than far points when the view changes. That
-parallax is the core clue used in multi-view geometry.
+This demo shows how 3D points become 2D screen points and how camera parameters
+can be adjusted to reduce reprojection error. It is now backed by a reusable
+starter module for AR, capture, or inspection alignment.
 
 Run it from:
 
@@ -12,9 +12,16 @@ Run it from:
 ../../../../index.html
 ```
 
-Source:
+Reusable API:
 
 ```text
-../../../../shared/siggraph-code-lab.js
+src/core.js
+projectPoints(points3d, camera) -> points2d
+calibrateCamera(points3d, observed2d, initial, options) -> result
 ```
 
+Test:
+
+```text
+node tests/core.test.js
+```

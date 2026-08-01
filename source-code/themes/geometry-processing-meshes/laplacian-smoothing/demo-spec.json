@@ -1,0 +1,15 @@
+{
+  "id": "laplacian-smoothing",
+  "theme": "Geometry Processing & Meshes",
+  "subtheme": "Mesh denoising and fairing",
+  "client_problem": "Clean scanned or generated geometry without erasing the object's silhouette.",
+  "paper_family_claim": "Geometry papers preserve local shape relationships while removing noise or reducing cost.",
+  "inputs": ["mesh vertices", "mesh edges", "locked vertices"],
+  "outputs": ["smoothed vertices", "roughness score", "area ratio", "max vertex movement"],
+  "core_algorithm": "neighbor averaging with optional area preservation",
+  "demo_proves": "Local averaging removes high-frequency noise, but unconstrained smoothing shrinks the asset.",
+  "failure_modes": ["thin features collapse", "boundaries drift", "important sharp edges blur"],
+  "reuse_level": "starter-module",
+  "license": "original"
+}
+

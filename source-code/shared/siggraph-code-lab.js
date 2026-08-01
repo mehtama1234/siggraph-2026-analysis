@@ -1,3 +1,10 @@
+import { defaultMeshFixture } from "../themes/geometry-processing-meshes/laplacian-smoothing/src/fixtures.js";
+import { smoothMesh } from "../themes/geometry-processing-meshes/laplacian-smoothing/src/core.js";
+import { calibrationFixture } from "../themes/vr-ar-displays/camera-projection/src/fixtures.js";
+import { calibrateCamera, projectPoints, reprojectionError } from "../themes/vr-ar-displays/camera-projection/src/core.js";
+import { fittingFixture } from "../themes/computational-photography-imaging/differentiable-rendering/src/fixtures.js";
+import { fitParameters, imageLoss, softCircle } from "../themes/computational-photography-imaging/differentiable-rendering/src/core.js";
+
 const canvas = document.getElementById("labCanvas");
 const ctx = canvas.getContext("2d");
 const tabs = document.getElementById("demoTabs");
@@ -22,6 +29,15 @@ let running = true;
 function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
 function lerp(a, b, t) { return a + (b - a) * t; }
 function hypot(x, y) { return Math.sqrt(x * x + y * y); }
+function downloadJson(filename, value) {
+  const blob = new Blob([JSON.stringify(value, null, 2)], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(url);
+}
 
 const demos = [
   {
@@ -57,9 +73,10 @@ const demos = [
       ["Math concept", "../math.html#concept-curve"]
     ],
     controls: { amount: [0, 1, 0.45, 0.01], iterations: [0, 40, 14, 1], preserve: [0, 1, 0.45, 0.01] },
-    metrics: () => ({ roughness: state.meshRough.toFixed(2), shrink: state.meshShrink.toFixed(2) }),
+    metrics: () => ({ roughness: state.meshRough.toFixed(3), "area ratio": state.meshShrink.toFixed(3) }),
     init: initMesh,
-    draw: drawMesh
+    draw: drawMesh,
+    buttons: [{ label: "Export mesh JSON", action: () => downloadJson("smoothed-mesh.json", state.meshExport || {}) }]
   },
   {
     id: "signed-distance-fields",
@@ -94,10 +111,10 @@ const demos = [
       ["Math concept", "../math.html#concept-optimize"]
     ],
     controls: { speed: [0.1, 2.5, 0.9, 0.1], blur: [0.01, 0.08, 0.035, 0.005] },
-    metrics: () => ({ loss: state.diffLoss.toFixed(3), steps: state.diffSteps }),
+    metrics: () => ({ loss: state.diffLoss.toFixed(4), steps: state.diffSteps }),
     init: initDiff,
     draw: drawDiff,
-    buttons: [{ label: "Optimize", primary: true, action: () => state.diffRun = !state.diffRun }, { label: "Reset", action: initDiff }]
+    buttons: [{ label: "Optimize", primary: true, action: () => state.diffRun = !state.diffRun }, { label: "Reset", action: initDiff }, { label: "Export fit JSON", action: () => downloadJson("fitted-parameters.json", state.diffExport || {}) }]
   },
   {
     id: "gaussian-splatting",
@@ -174,8 +191,10 @@ const demos = [
       ["Math concept", "../math.html#concept-connect"]
     ],
     controls: { yaw: [-0.8, 0.8, 0.25, 0.01], baseline: [0, 1.2, 0.55, 0.01], focal: [0.8, 2.0, 1.25, 0.01] },
-    metrics: () => ({ parallax: state.parallax.toFixed(2), points: 8 }),
-    draw: drawCamera
+    metrics: () => ({ rmse: state.cameraRmse.toFixed(3), parallax: state.parallax.toFixed(2) }),
+    init: initCamera,
+    draw: drawCamera,
+    buttons: [{ label: "Calibrate", primary: true, action: () => { runCalibration(); draw(); } }, { label: "Reset camera", action: initCamera }, { label: "Export camera JSON", action: () => downloadJson("calibrated-camera.json", state.cameraExport || {}) }]
   },
   {
     id: "texture-optimization",
@@ -364,32 +383,32 @@ function drawRayMarch() {
 }
 
 function initMesh() {
-  state.mesh = [];
-  for (let i = 0; i < 34; i++) {
-    const a = i / 34 * TAU;
-    const r = 205 + Math.sin(i * 2.1) * 40 + Math.cos(i * 4.7) * 18;
-    state.mesh.push({ x: 480 + Math.cos(a) * r, y: 360 + Math.sin(a) * r, bx: 480 + Math.cos(a) * r, by: 360 + Math.sin(a) * r });
-  }
+  state.meshFixture = defaultMeshFixture();
 }
 
 function drawMesh() {
-  if (!state.mesh) initMesh();
-  let pts = state.mesh.map(p => ({ x: p.bx, y: p.by }));
-  const originalArea = polyArea(pts);
-  for (let it = 0; it < controls.iterations; it++) {
-    const next = pts.map((p, i) => {
-      const a = pts[(i + pts.length - 1) % pts.length], b = pts[(i + 1) % pts.length];
-      const ax = (a.x + b.x) / 2, ay = (a.y + b.y) / 2;
-      const cx = 480 + (p.x - 480) * (1 + controls.preserve * 0.018);
-      const cy = 360 + (p.y - 360) * (1 + controls.preserve * 0.018);
-      return { x: lerp(cx, ax, controls.amount), y: lerp(cy, ay, controls.amount) };
-    });
-    pts = next;
-  }
-  polygon(state.mesh.map(p => ({ x: p.bx, y: p.by })), "#9a3412", 2, "rgba(154,52,18,0.08)");
-  polygon(pts, "#0f766e", 4, "rgba(15,118,110,0.15)");
-  state.meshRough = roughness(pts);
-  state.meshShrink = polyArea(pts) / originalArea;
+  if (!state.meshFixture) initMesh();
+  const fixture = state.meshFixture;
+  const result = smoothMesh(fixture.vertices, fixture.edges, {
+    iterations: Math.round(controls.iterations),
+    amount: controls.amount,
+    preserveArea: controls.preserve
+  });
+  const toScreen = (p) => ({ x: 480 + p.x * 215, y: 360 + p.y * 215 });
+  polygon(fixture.vertices.map(toScreen), "#9a3412", 2, "rgba(154,52,18,0.08)");
+  polygon(result.vertices.map(toScreen), "#0f766e", 4, "rgba(15,118,110,0.15)");
+  state.meshRough = result.metrics.roughness;
+  state.meshShrink = result.metrics.areaRatio;
+  state.meshExport = {
+    vertices: result.vertices,
+    edges: fixture.edges,
+    metrics: result.metrics,
+    options: {
+      iterations: Math.round(controls.iterations),
+      amount: controls.amount,
+      preserveArea: controls.preserve
+    }
+  };
   drawLabel("orange: original noisy mesh   green: neighbor-averaged mesh", 26, 34);
 }
 
@@ -421,50 +440,41 @@ function drawSdf() {
 }
 
 function initDiff() {
-  state.diff = { x: 0.28, y: -0.16, r: 0.20, c: 0.25 };
+  const fixture = fittingFixture();
+  state.diffFixture = fixture;
+  state.diff = { ...fixture.initial };
   state.diffRun = false;
   state.diffSteps = 0;
-  state.diffLoss = 1;
-}
-
-function targetCircle(x, y) {
-  return smoothCircle(x + 0.04, y - 0.02, 0.27, 0.035);
-}
-
-function guessCircle(x, y, p) {
-  return p.c * smoothCircle(x - p.x, y - p.y, p.r, controls.blur);
-}
-
-function lossDiff(p) {
-  let loss = 0, n = 0;
-  for (let yy = -0.65; yy <= 0.65; yy += 0.08) for (let xx = -0.9; xx <= 0.9; xx += 0.08) {
-    const e = guessCircle(xx, yy, p) - targetCircle(xx, yy);
-    loss += e * e; n++;
-  }
-  return loss / n;
+  state.diffLoss = imageLoss(fixture.samples, state.diff);
 }
 
 function drawDiff() {
   if (!state.diff) initDiff();
+  state.diff.blur = controls.blur;
   if (state.diffRun) {
-    const p = state.diff, base = lossDiff(p), eps = 0.01;
-    for (const k of ["x", "y", "r", "c"]) {
-      const q = { ...p }; q[k] += eps;
-      const g = (lossDiff(q) - base) / eps;
-      p[k] -= controls.speed * 0.12 * g;
-    }
-    p.r = clamp(p.r, 0.08, 0.42); p.c = clamp(p.c, 0.05, 1.2);
+    const result = fitParameters(state.diffFixture.samples, state.diff, {
+      iterations: 1,
+      step: controls.speed * 0.18,
+      keys: ["x", "y", "radius", "intensity"]
+    });
+    state.diff = { ...result.params, blur: controls.blur };
     state.diffSteps++;
   }
   const w = canvas.width, h = canvas.height, img = ctx.createImageData(w, h);
   for (let y = 0; y < h; y += 2) for (let x = 0; x < w; x += 2) {
     const px = (x / w) * 2 - 1, py = (y / h) * 1.5 - 0.75;
-    const t = targetCircle(px, py), g = guessCircle(px, py, state.diff);
+    const t = softCircle(px, py, state.diffFixture.target);
+    const g = softCircle(px, py, state.diff);
     const r = 245 - t * 120 + g * 40, gr = 245 - g * 120, b = 245 - t * 120;
     fillBlock(img, w, x, y, 2, r, gr, b);
   }
   ctx.putImageData(img, 0, 0);
-  state.diffLoss = lossDiff(state.diff);
+  state.diffLoss = imageLoss(state.diffFixture.samples, state.diff);
+  state.diffExport = {
+    params: state.diff,
+    target: state.diffFixture.target,
+    metrics: { loss: state.diffLoss, steps: state.diffSteps }
+  };
   drawLabel("red target + green guess; optimize lowers pixel error", 26, 34);
 }
 
@@ -569,18 +579,51 @@ function drawFluid() {
   drawLabel("pressure separates crowded particles; viscosity shares velocity", 26, 34);
 }
 
+function initCamera() {
+  state.cameraFixture = calibrationFixture();
+  state.camera = { ...state.cameraFixture.initialCamera };
+}
+
+function runCalibration() {
+  if (!state.cameraFixture) initCamera();
+  const result = calibrateCamera(state.cameraFixture.points3d, state.cameraFixture.observed2d, state.camera, {
+    iterations: 60,
+    step: 0.06,
+    keys: ["yaw", "focal", "x"]
+  });
+  state.camera = result.camera;
+  state.cameraExport = result;
+}
+
 function drawCamera() {
-  const pts = [[-1,-1,2], [1,-1,2], [1,1,2], [-1,1,2], [-1,-1,4], [1,-1,4], [1,1,4], [-1,1,4]];
+  if (!state.cameraFixture) initCamera();
+  const pts = state.cameraFixture.points3d;
   const edges = [[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];
-  const yaw = controls.yaw, f = controls.focal, b = controls.baseline;
-  const left = pts.map(p => project(p, -b / 2, yaw, f, 260, 360));
-  const right = pts.map(p => project(p, b / 2, yaw, f, 700, 360));
+  const camera = {
+    ...state.camera,
+    x: state.camera.x + controls.baseline * 0.1,
+    yaw: state.camera.yaw + controls.yaw * 0.25,
+    focal: state.camera.focal * controls.focal
+  };
+  const predicted = projectPoints(pts, camera);
+  const observed = state.cameraFixture.observed2d;
+  const toLeft = (p) => ({ x: 255 + p.x * 220, y: 340 + p.y * 220 });
+  const toRight = (p) => ({ x: 700 + p.x * 220, y: 340 + p.y * 220 });
+  const left = predicted.map(toLeft);
+  const right = observed.map(toRight);
   ctx.fillStyle = "#fff"; ctx.fillRect(75, 90, 360, 500); ctx.fillRect(525, 90, 360, 500);
   ctx.strokeStyle = "#cbd5e1"; ctx.strokeRect(75, 90, 360, 500); ctx.strokeRect(525, 90, 360, 500);
   drawEdges(left, edges, "#0f766e"); drawEdges(right, edges, "#9a3412");
-  let par = 0; for (let i = 0; i < pts.length; i++) par += Math.abs(left[i].x - (right[i].x - 440));
-  state.parallax = par / pts.length;
-  drawLabel("left and right views disagree more when baseline grows", 26, 34);
+  for (let i = 0; i < left.length; i++) {
+    ctx.strokeStyle = "rgba(15,23,42,0.25)";
+    ctx.beginPath(); ctx.moveTo(left[i].x, left[i].y); ctx.lineTo(right[i].x, right[i].y); ctx.stroke();
+  }
+  const err = reprojectionError(observed, predicted);
+  let par = 0; for (let i = 0; i < observed.length; i++) par += Math.abs(predicted[i].x - observed[i].x);
+  state.parallax = par / observed.length * 220;
+  state.cameraRmse = err.rmse;
+  state.cameraExport = { camera, predicted, observed, metrics: err };
+  drawLabel("green: current projection   orange: observed points   calibrate lowers RMSE", 26, 34);
 }
 
 function initTexture() {

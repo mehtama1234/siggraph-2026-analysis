@@ -2,10 +2,9 @@
 
 Theme: Geometry Processing & Meshes
 
-This demo shows the neighbor-average idea behind many mesh cleanup methods. Each
-point moves toward the average of nearby points. Local spikes fade because they
-disagree with their neighbors. The tradeoff is visible: unconstrained smoothing
-also shrinks the shape.
+This demo shows the neighbor-average idea behind many mesh cleanup methods. It
+is now backed by a reusable starter module for client-style scan or generated
+asset cleanup.
 
 Run it from:
 
@@ -13,9 +12,15 @@ Run it from:
 ../../../../index.html
 ```
 
-Source:
+Reusable API:
 
 ```text
-../../../../shared/siggraph-code-lab.js
+src/core.js
+smoothMesh(vertices, edges, options) -> { vertices, metrics }
 ```
 
+Test:
+
+```text
+node tests/core.test.js
+```

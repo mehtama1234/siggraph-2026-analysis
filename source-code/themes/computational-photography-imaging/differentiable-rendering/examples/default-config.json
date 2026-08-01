@@ -1,0 +1,6 @@
+{
+  "iterations": 120,
+  "step": 0.18,
+  "keys": ["x", "y", "radius", "intensity"]
+}
+

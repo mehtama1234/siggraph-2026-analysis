@@ -1,0 +1,6 @@
+{
+  "iterations": 80,
+  "step": 0.08,
+  "keys": ["yaw", "focal", "x"]
+}
+
