@@ -4,6 +4,9 @@ This folder adds runnable examples for the SIGGRAPH first-principles writeups.
 The goal is not to reproduce full papers. Each demo is a small, readable proof
 of the mathematical idea behind a theme or subtheme.
 
+For the next step toward client-ready reusable modules, see
+[PRODUCTION_DEMO_STRATEGY.md](PRODUCTION_DEMO_STRATEGY.md).
+
 Open the lab:
 
 ```text
@@ -65,4 +68,3 @@ source-code/
     appearance-materials-brdf/texture-optimization/
     character-animation-motion/motion-interpolation-retargeting/
 ```
-
