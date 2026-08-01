@@ -106,7 +106,7 @@ def concept_html(c):
         whybox = (f"<div class='whybox'><div class='wt'>Why it works — the principle</div><p>{esc(WHY[c['key']])}</p></div>"
                   if c["key"] in WHY else "")
         head = f"<p class='intro'>{c['intro']}</p>{whybox}"
-    return (f"<section><div class='anum'>{len(ps)} papers</div><h2>{esc(c['title'])}</h2>"
+    return (f"<section id='concept-{esc(c['key'])}'><div class='anum'>{len(ps)} papers</div><h2>{esc(c['title'])}</h2>"
             f"{head}<div class='papers'>{rows}</div></section>")
 
 concepts_html = "".join(concept_html(c) for c in CG if groups[c["key"]])

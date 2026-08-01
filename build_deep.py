@@ -142,12 +142,14 @@ def act_html(act):
     ncount = sum(len(g) for _, g in groups)
     inner = ""
     for t, group in groups:
+        inner += f"<div class='theme-block' id='theme-{slug(t)}'>"
         inner += f"<div class='sub'>{esc(t)} <span class='sn'>{len(group)}</span></div>"
         fr = FRAMING.get(t)
         if fr:
             inner += f"<p class='subframe'><b>Problem.</b> {fr[0]} <b>Approach.</b> {fr[1]}</p>"
         inner += family_html(t)
         inner += "".join(paper_row(a) for a in group)
+        inner += "</div>"
     return f"""<section id="act{act['n']}">
   <div class="anum">Stage {act['n']} · {ncount} papers</div>
   <h2>{esc(act['title'])}</h2>

@@ -8,6 +8,7 @@ const conceptEl = document.getElementById("demoConcept");
 const proofEl = document.getElementById("demoProof");
 const tryEl = document.getElementById("demoTry");
 const paperLinkEl = document.getElementById("demoPaperLink");
+const linksEl = document.getElementById("demoLinks");
 const metricsEl = document.getElementById("metrics");
 const controlsEl = document.getElementById("controls");
 const buttonsEl = document.getElementById("buttons");
@@ -33,6 +34,10 @@ const demos = [
     proof: "When the sphere radius grows, more rays hit. When softness grows, rays take smaller safer steps. The readout shows the core cost of the method: more caution means more steps.",
     tryThis: "Increase radius, then increase softness. Watch hit pixels rise first, then average steps rise. That is the rendering tradeoff: reliable surface finding costs more marching.",
     paperLink: "This supports the rendering/light-transport family: many papers differ in machinery, but the shared question is how to turn geometry, visibility, and light into pixels without wasting work.",
+    links: [
+      ["Deep family writeup", "../deep.html#theme-rendering-light-transport"],
+      ["Math concept", "../math.html#concept-integrate"]
+    ],
     controls: { radius: [0.18, 0.38, 0.26, 0.01], light: [-1, 1, 0.35, 0.01], softness: [0, 1, 0.35, 0.01] },
     metrics: () => ({ "hit pixels": state.rayHits || 0, "avg steps": (state.raySteps || 0).toFixed(1) }),
     draw: drawRayMarch
@@ -47,6 +52,10 @@ const demos = [
     proof: "Roughness drops as iterations increase, showing that neighbor averaging removes jagged detail. Shrink drops below one, showing the failure mode: pure smoothing also pulls the whole shape inward.",
     tryThis: "Raise iterations and amount, then raise preserve. You should see the green shape become smoother while the shrink metric shows why real mesh papers add constraints.",
     paperLink: "This grounds the geometry-processing family: mesh papers repeatedly balance local cleanup, global shape preservation, and numerical stability.",
+    links: [
+      ["Deep family writeup", "../deep.html#theme-geometry-processing-meshes"],
+      ["Math concept", "../math.html#concept-curve"]
+    ],
     controls: { amount: [0, 1, 0.45, 0.01], iterations: [0, 40, 14, 1], preserve: [0, 1, 0.45, 0.01] },
     metrics: () => ({ roughness: state.meshRough.toFixed(2), shrink: state.meshShrink.toFixed(2) }),
     init: initMesh,
@@ -62,6 +71,10 @@ const demos = [
     proof: "Changing operation swaps union, intersection, and subtraction without changing the drawing code. The same distance values become different shapes through simple rules.",
     tryThis: "Move operation from 0 to 2. Watch inside and edge counts change. The point is that shape editing can become arithmetic on fields.",
     paperLink: "This ties to neural fields and implicit-surface papers: they often learn or manipulate a continuous field, then extract geometry from the zero boundary.",
+    links: [
+      ["Deep stage writeup", "../deep.html#actI"],
+      ["Math concept", "../math.html#concept-connect"]
+    ],
     controls: { blend: [0, 1, 0.2, 0.01], box: [0.12, 0.38, 0.24, 0.01], operation: [0, 2, 0, 1] },
     metrics: () => ({ inside: state.sdfInside || 0, edge: state.sdfEdge || 0 }),
     draw: drawSdf
@@ -76,6 +89,10 @@ const demos = [
     proof: "Press Optimize and the loss falls as the green guess moves toward the red target. That visible loop is the first-principles version of inverse rendering.",
     tryThis: "Raise speed until optimization becomes unstable, then lower it. This shows why graphics optimization papers care about step size and smooth losses.",
     paperLink: "This supports computational photography and inverse-rendering subthemes: estimate unknown scene, camera, material, or lighting variables by comparing rendered output to observations.",
+    links: [
+      ["Deep family writeup", "../deep.html#theme-computational-photography-imaging"],
+      ["Math concept", "../math.html#concept-optimize"]
+    ],
     controls: { speed: [0.1, 2.5, 0.9, 0.1], blur: [0.01, 0.08, 0.035, 0.005] },
     metrics: () => ({ loss: state.diffLoss.toFixed(3), steps: state.diffSteps }),
     init: initDiff,
@@ -92,6 +109,10 @@ const demos = [
     proof: "More splats increase coverage and detail. Larger splats fill gaps but blur structure. Depth ordering changes which translucent colors dominate.",
     tryThis: "Lower splats, raise size, then flip depth. You should see the image move between sparse points, smooth blobs, and different visibility layers.",
     paperLink: "This maps to neural rendering and radiance-field families: the scene is represented by many local contributors, and rendering is weighted accumulation into the camera.",
+    links: [
+      ["Deep family writeup", "../deep.html#theme-neural-rendering-radiance-fields"],
+      ["Math concept", "../math.html#concept-integrate"]
+    ],
     controls: { splats: [8, 80, 38, 1], size: [8, 52, 26, 1], depth: [0, 1, 0.55, 0.01] },
     metrics: () => ({ splats: controls.splats, coverage: `${state.splatCoverage || 0}%` }),
     init: initSplats,
@@ -108,6 +129,10 @@ const demos = [
     proof: "Higher stiffness lowers stretch but can make motion sharper. Higher damping quiets jitter. Collisions show why simulation needs constraint handling, not just forces.",
     tryThis: "Lower stiffness, then raise gravity. The cloth stretches more. Reset, raise stiffness, and watch the sheet hold together better.",
     paperLink: "This anchors cloth, hair, and deformable simulation papers: visual realism comes from local physical rules plus robust constraint enforcement.",
+    links: [
+      ["Deep family writeup", "../deep.html#theme-cloth-hair-fibers"],
+      ["Math concept", "../math.html#concept-solve"]
+    ],
     controls: { stiffness: [0.05, 0.35, 0.18, 0.01], damping: [0.94, 0.995, 0.975, 0.001], gravity: [0, 1.2, 0.55, 0.01] },
     metrics: () => ({ stretch: state.clothStretch.toFixed(2), collisions: state.clothCollisions }),
     init: initCloth,
@@ -124,6 +149,10 @@ const demos = [
     proof: "Raising pressure makes particles separate more forcefully. Raising viscosity makes motion less splashy and more syrup-like.",
     tryThis: "Set viscosity low and pressure high, then pour again. Then raise viscosity. The same particles switch from splash to thick flow.",
     paperLink: "This supports fluid, smoke, and granular papers: large-scale material motion is built from local conservation, pressure, and dissipation rules.",
+    links: [
+      ["Deep family writeup", "../deep.html#theme-fluids-smoke-granular"],
+      ["Math concept", "../math.html#concept-time"]
+    ],
     controls: { pressure: [0.1, 1.8, 0.85, 0.01], viscosity: [0, 0.16, 0.045, 0.005], flow: [0, 1, 0.5, 0.01] },
     metrics: () => ({ particles: state.fluid.length, crowding: state.fluidCrowd.toFixed(2) }),
     init: initFluid,
@@ -140,6 +169,10 @@ const demos = [
     proof: "Increasing baseline raises parallax: the two camera views disagree more. That disagreement is exactly the depth clue used by multi-view systems.",
     tryThis: "Raise baseline and yaw. The cube shifts differently in the two views, showing why calibration and camera pose matter.",
     paperLink: "This ties to VR/AR, capture, and display papers: aligning virtual and real worlds starts with projecting 3D structure into measured 2D views.",
+    links: [
+      ["Deep family writeup", "../deep.html#theme-vr-ar-displays"],
+      ["Math concept", "../math.html#concept-connect"]
+    ],
     controls: { yaw: [-0.8, 0.8, 0.25, 0.01], baseline: [0, 1.2, 0.55, 0.01], focal: [0.8, 2.0, 1.25, 0.01] },
     metrics: () => ({ parallax: state.parallax.toFixed(2), points: 8 }),
     draw: drawCamera
@@ -154,6 +187,10 @@ const demos = [
     proof: "Press Optimize and the loss falls as the current texture approaches the target. Smoothing reveals the tradeoff: cleaner texture versus loss of sharp detail.",
     tryThis: "Change target, press Reset, then Optimize. Increase smooth to see details get averaged away even when the result looks cleaner.",
     paperLink: "This grounds appearance/material papers: many methods estimate textures, reflectance, or material fields by balancing image match against regularity.",
+    links: [
+      ["Deep family writeup", "../deep.html#theme-appearance-materials-brdf"],
+      ["Math concept", "../math.html#concept-optimize"]
+    ],
     controls: { rate: [0.02, 0.35, 0.12, 0.01], smooth: [0, 0.35, 0.08, 0.01], target: [0, 2, 0, 1] },
     metrics: () => ({ loss: state.texLoss.toFixed(3), cells: 64 }),
     init: initTexture,
@@ -170,6 +207,10 @@ const demos = [
     proof: "Changing blend moves between poses. Changing scale retargets the same angles to a different body. Constraint reduces foot sliding, showing why motion transfer needs more than angle copying.",
     tryThis: "Raise scale, then lower constraint. The retargeted body keeps the motion style but the foot-slide metric exposes the artifact.",
     paperLink: "This supports character-animation papers: believable motion requires blending, retargeting, and constraint correction across different bodies and topologies.",
+    links: [
+      ["Deep family writeup", "../deep.html#theme-character-animation-motion"],
+      ["Math concept", "../math.html#concept-time"]
+    ],
     controls: { blend: [0, 1, 0.5, 0.01], scale: [0.65, 1.45, 1.1, 0.01], constraint: [0, 1, 0.7, 0.01] },
     metrics: () => ({ footSlide: state.footSlide.toFixed(2), bones: 5 }),
     draw: drawMotion
@@ -207,6 +248,7 @@ function selectDemo(i) {
   proofEl.textContent = demo.proof;
   tryEl.textContent = demo.tryThis;
   paperLinkEl.textContent = demo.paperLink;
+  linksEl.innerHTML = (demo.links || []).map(([label, href]) => `<a href="${href}">${label}</a>`).join(" · ");
   folderLink.href = demo.folder;
   renderControls(demo);
   if (demo.init) demo.init();
