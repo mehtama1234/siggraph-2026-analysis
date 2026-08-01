@@ -3,13 +3,19 @@
   "theme": "VR/AR & Displays",
   "subtheme": "Camera projection and calibration",
   "client_problem": "Align measured 2D image points with known 3D landmarks for AR, capture, or inspection.",
+  "client_scenario": "A client needs an AR overlay, capture rig, or inspection camera to line up projected 3D landmarks with measured 2D points.",
   "paper_family_claim": "Capture and display papers depend on projecting 3D structure into 2D views and minimizing alignment error.",
+  "related_siggraph_papers": [
+    "EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering",
+    "Hi-SPAD: Video-Rate Hyperspectral Imaging and Inference with Single-Photon Cameras",
+    "Invisible Holographic Window: Full-color 3D Image Reconstruction from Transparent Surface-relief Computer-generated Holograms"
+  ],
   "inputs": ["3D landmarks", "observed 2D points", "initial camera parameters"],
   "outputs": ["projected 2D points", "reprojection RMSE", "calibrated camera parameters"],
   "core_algorithm": "perspective projection plus finite-difference calibration",
   "demo_proves": "Wrong camera parameters create visible reprojection error; optimizing them reduces alignment error.",
+  "integration_snippet": "import { calibrateCamera } from './src/core.js';\nconst result = calibrateCamera(points3d, observed2d, initialCamera, { iterations: 80, step: 0.08 });",
   "failure_modes": ["bad landmarks", "too few points", "wrong camera model", "local minima"],
   "reuse_level": "starter-module",
   "license": "original"
 }
-

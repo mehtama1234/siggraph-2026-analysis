@@ -3,13 +3,19 @@
   "theme": "Computational Photography & Imaging",
   "subtheme": "Differentiable image fitting",
   "client_problem": "Estimate hidden scene or image parameters by matching rendered output to observed pixels.",
+  "client_scenario": "A client has an observed target image and wants to recover compact visual parameters that reproduce it closely enough for inspection or calibration.",
   "paper_family_claim": "Inverse-rendering papers convert visual mismatch into parameter updates.",
+  "related_siggraph_papers": [
+    "Lucky High Dynamic Range Smartphone Imaging",
+    "Inverse Rendering for Discrete X-Ray Computed Tomography",
+    "Fiber-level Woven Fabric Capture from a Single Microscopic Image"
+  ],
   "inputs": ["target samples", "initial parameters", "renderer"],
   "outputs": ["fitted parameters", "loss history", "final image loss"],
   "core_algorithm": "finite-difference gradient descent over renderer parameters",
   "demo_proves": "Pixel loss gives a measurable direction for improving hidden shape parameters.",
+  "integration_snippet": "import { fitParameters } from './src/core.js';\nconst fit = fitParameters(samples, initialParams, { iterations: 120, step: 0.18 });",
   "failure_modes": ["bad starting point", "ambiguous target", "step size too large", "non-smooth renderer"],
   "reuse_level": "starter-module",
   "license": "original"
 }
-

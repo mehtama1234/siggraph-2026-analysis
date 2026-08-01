@@ -1,4 +1,4 @@
-import { defaultMeshFixture } from "../themes/geometry-processing-meshes/laplacian-smoothing/src/fixtures.js";
+import { defaultMeshFixture, productOutlineFixture } from "../themes/geometry-processing-meshes/laplacian-smoothing/src/fixtures.js";
 import { smoothMesh } from "../themes/geometry-processing-meshes/laplacian-smoothing/src/core.js";
 import { calibrationFixture } from "../themes/vr-ar-displays/camera-projection/src/fixtures.js";
 import { calibrateCamera, projectPoints, reprojectionError } from "../themes/vr-ar-displays/camera-projection/src/core.js";
@@ -16,6 +16,10 @@ const proofEl = document.getElementById("demoProof");
 const tryEl = document.getElementById("demoTry");
 const paperLinkEl = document.getElementById("demoPaperLink");
 const linksEl = document.getElementById("demoLinks");
+const scenarioEl = document.getElementById("demoScenario");
+const workflowEl = document.getElementById("demoWorkflow");
+const papersEl = document.getElementById("demoPapers");
+const snippetEl = document.getElementById("demoSnippet");
 const metricsEl = document.getElementById("metrics");
 const controlsEl = document.getElementById("controls");
 const buttonsEl = document.getElementById("buttons");
@@ -37,6 +41,13 @@ function downloadJson(filename, value) {
   a.download = filename;
   a.click();
   URL.revokeObjectURL(url);
+}
+async function copySnippet() {
+  const text = demos[active].snippet || "";
+  if (!text) return;
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(text);
+  }
 }
 
 const demos = [
@@ -68,15 +79,19 @@ const demos = [
     proof: "Roughness drops as iterations increase, showing that neighbor averaging removes jagged detail. Shrink drops below one, showing the failure mode: pure smoothing also pulls the whole shape inward.",
     tryThis: "Raise iterations and amount, then raise preserve. You should see the green shape become smoother while the shrink metric shows why real mesh papers add constraints.",
     paperLink: "This grounds the geometry-processing family: mesh papers repeatedly balance local cleanup, global shape preservation, and numerical stability.",
+    scenario: "Client has noisy scanned or generated product geometry and needs a cleaner asset before rendering, collision proxy generation, or review.",
+    workflow: "Input mesh vertices and edges -> smooth with area preservation -> compare roughness and area ratio -> export cleaned mesh JSON.",
+    relatedPapers: ["PQ-Free HD: Priority-Queue-Free Hausdorff Distance for Triangle Meshes on GPU", "Surface chamfering for robust tetrahedral meshing", "Untangling Surfaces via Shape and Mesh Repulsion"],
+    snippet: "import { smoothMesh } from './src/core.js';\nconst result = smoothMesh(vertices, edges, { iterations: 16, amount: 0.42, preserveArea: 0.55 });",
     links: [
       ["Deep family writeup", "../deep.html#theme-geometry-processing-meshes"],
       ["Math concept", "../math.html#concept-curve"]
     ],
-    controls: { amount: [0, 1, 0.45, 0.01], iterations: [0, 40, 14, 1], preserve: [0, 1, 0.45, 0.01] },
+    controls: { fixture: [0, 1, 0, 1], amount: [0, 1, 0.45, 0.01], iterations: [0, 40, 14, 1], preserve: [0, 1, 0.45, 0.01] },
     metrics: () => ({ roughness: state.meshRough.toFixed(3), "area ratio": state.meshShrink.toFixed(3) }),
     init: initMesh,
     draw: drawMesh,
-    buttons: [{ label: "Export mesh JSON", action: () => downloadJson("smoothed-mesh.json", state.meshExport || {}) }]
+    buttons: [{ label: "Export mesh JSON", action: () => downloadJson("smoothed-mesh.json", state.meshExport || {}) }, { label: "Copy API", action: copySnippet }]
   },
   {
     id: "signed-distance-fields",
@@ -106,15 +121,19 @@ const demos = [
     proof: "Press Optimize and the loss falls as the green guess moves toward the red target. That visible loop is the first-principles version of inverse rendering.",
     tryThis: "Raise speed until optimization becomes unstable, then lower it. This shows why graphics optimization papers care about step size and smooth losses.",
     paperLink: "This supports computational photography and inverse-rendering subthemes: estimate unknown scene, camera, material, or lighting variables by comparing rendered output to observations.",
+    scenario: "Client has an observed target image and wants to recover compact visual parameters that reproduce it closely enough for inspection or calibration.",
+    workflow: "Sample target image -> render current parameters -> measure pixel loss -> optimize parameters -> export fitted parameter JSON.",
+    relatedPapers: ["Lucky High Dynamic Range Smartphone Imaging", "Inverse Rendering for Discrete X-Ray Computed Tomography", "Fiber-level Woven Fabric Capture from a Single Microscopic Image"],
+    snippet: "import { fitParameters } from './src/core.js';\nconst fit = fitParameters(samples, initialParams, { iterations: 120, step: 0.18 });",
     links: [
       ["Deep family writeup", "../deep.html#theme-computational-photography-imaging"],
       ["Math concept", "../math.html#concept-optimize"]
     ],
-    controls: { speed: [0.1, 2.5, 0.9, 0.1], blur: [0.01, 0.08, 0.035, 0.005] },
+    controls: { target: [0, 2, 0, 1], speed: [0.1, 2.5, 0.9, 0.1], blur: [0.01, 0.08, 0.035, 0.005] },
     metrics: () => ({ loss: state.diffLoss.toFixed(4), steps: state.diffSteps }),
     init: initDiff,
     draw: drawDiff,
-    buttons: [{ label: "Optimize", primary: true, action: () => state.diffRun = !state.diffRun }, { label: "Reset", action: initDiff }, { label: "Export fit JSON", action: () => downloadJson("fitted-parameters.json", state.diffExport || {}) }]
+    buttons: [{ label: "Optimize", primary: true, action: () => state.diffRun = !state.diffRun }, { label: "Reset", action: initDiff }, { label: "Export fit JSON", action: () => downloadJson("fitted-parameters.json", state.diffExport || {}) }, { label: "Copy API", action: copySnippet }]
   },
   {
     id: "gaussian-splatting",
@@ -186,6 +205,10 @@ const demos = [
     proof: "Increasing baseline raises parallax: the two camera views disagree more. That disagreement is exactly the depth clue used by multi-view systems.",
     tryThis: "Raise baseline and yaw. The cube shifts differently in the two views, showing why calibration and camera pose matter.",
     paperLink: "This ties to VR/AR, capture, and display papers: aligning virtual and real worlds starts with projecting 3D structure into measured 2D views.",
+    scenario: "Client needs an AR overlay, capture rig, or inspection camera to line up projected 3D landmarks with measured 2D points.",
+    workflow: "Load 3D landmarks and observed image points -> project with current camera -> measure RMSE -> calibrate yaw/focal/offset -> export camera JSON.",
+    relatedPapers: ["EgoRelight: Egocentric Human Capture and Illumination Recovery for Relightable and Photoreal Avatar Rendering", "Hi-SPAD: Video-Rate Hyperspectral Imaging and Inference with Single-Photon Cameras", "Invisible Holographic Window: Full-color 3D Image Reconstruction from Transparent Surface-relief Computer-generated Holograms"],
+    snippet: "import { calibrateCamera } from './src/core.js';\nconst result = calibrateCamera(points3d, observed2d, initialCamera, { iterations: 80, step: 0.08 });",
     links: [
       ["Deep family writeup", "../deep.html#theme-vr-ar-displays"],
       ["Math concept", "../math.html#concept-connect"]
@@ -194,7 +217,7 @@ const demos = [
     metrics: () => ({ rmse: state.cameraRmse.toFixed(3), parallax: state.parallax.toFixed(2) }),
     init: initCamera,
     draw: drawCamera,
-    buttons: [{ label: "Calibrate", primary: true, action: () => { runCalibration(); draw(); } }, { label: "Reset camera", action: initCamera }, { label: "Export camera JSON", action: () => downloadJson("calibrated-camera.json", state.cameraExport || {}) }]
+    buttons: [{ label: "Calibrate", primary: true, action: () => { runCalibration(); draw(); } }, { label: "Reset camera", action: initCamera }, { label: "Export camera JSON", action: () => downloadJson("calibrated-camera.json", state.cameraExport || {}) }, { label: "Copy API", action: copySnippet }]
   },
   {
     id: "texture-optimization",
@@ -268,6 +291,10 @@ function selectDemo(i) {
   tryEl.textContent = demo.tryThis;
   paperLinkEl.textContent = demo.paperLink;
   linksEl.innerHTML = (demo.links || []).map(([label, href]) => `<a href="${href}">${label}</a>`).join(" · ");
+  scenarioEl.textContent = demo.scenario || "This is currently a teaching demo. The production module pattern is being rolled out theme by theme.";
+  workflowEl.textContent = demo.workflow || "Change controls -> observe the metric -> connect the visual result to the linked writeup.";
+  papersEl.textContent = (demo.relatedPapers || []).join("; ") || "Related paper mapping is pending for this demo.";
+  snippetEl.textContent = demo.snippet || "Reusable module pending for this demo.";
   folderLink.href = demo.folder;
   renderControls(demo);
   if (demo.init) demo.init();
@@ -295,6 +322,8 @@ function renderControls(demo) {
     input.addEventListener("input", () => {
       controls[name] = Number(input.value);
       val.textContent = input.value;
+      if (demos[active].id === "laplacian-smoothing" && name === "fixture") initMesh();
+      if (demos[active].id === "differentiable-rendering" && name === "target") initDiff();
       draw();
     });
     wrap.appendChild(label);
@@ -383,7 +412,7 @@ function drawRayMarch() {
 }
 
 function initMesh() {
-  state.meshFixture = defaultMeshFixture();
+  state.meshFixture = Math.round(controls.fixture || 0) === 1 ? productOutlineFixture() : defaultMeshFixture();
 }
 
 function drawMesh() {
@@ -440,7 +469,7 @@ function drawSdf() {
 }
 
 function initDiff() {
-  const fixture = fittingFixture();
+  const fixture = fittingFixture(Math.round(controls.target || 0));
   state.diffFixture = fixture;
   state.diff = { ...fixture.initial };
   state.diffRun = false;
