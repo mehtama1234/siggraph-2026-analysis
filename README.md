@@ -10,6 +10,8 @@ A first-principles analysis of the **153 technical papers** of SIGGRAPH 2026
 - **deep.html** — a first-principles "deep read": the field as the life of a virtual object
   (describe → behave → look → capture → invent → present), with every stage, sub-theme, and
   paper explained in plain, no-jargon language.
+- **source-code/index.html** — runnable toy demos that make the math behind selected
+  theme/subtheme families visible in the browser.
 
 Data: Semantic Scholar (ACM TOG 2026, 100% abstracts). Per-paper analysis + plain-language
 rewrites by an LLM (Haiku).

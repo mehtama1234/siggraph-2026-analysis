@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "purpose": "Runnable first-principles code demos for SIGGRAPH 2026 theme and subtheme families.",
+  "lab": "index.html",
+  "demos": [
+    {
+      "id": "ray-marching",
+      "theme": "Rendering & Light Transport",
+      "theme_key": "rendering-light-transport",
+      "subtheme": "Ray tracing / ray marching",
+      "folder": "themes/rendering-light-transport/ray-marching",
+      "code": "shared/siggraph-code-lab.js",
+      "math": ["rays", "signed distance", "surface normals", "lighting"]
+    },
+    {
+      "id": "laplacian-smoothing",
+      "theme": "Geometry Processing & Meshes",
+      "theme_key": "geometry-processing-meshes",
+      "subtheme": "Mesh Laplacian smoothing",
+      "folder": "themes/geometry-processing-meshes/laplacian-smoothing",
+      "code": "shared/siggraph-code-lab.js",
+      "math": ["averaging over neighbors", "discrete Laplacian", "constraints"]
+    },
+    {
+      "id": "signed-distance-fields",
+      "theme": "Neural Fields & Representations",
+      "theme_key": "neural-fields-representations",
+      "subtheme": "Signed distance fields",
+      "folder": "themes/neural-fields-representations/signed-distance-fields",
+      "code": "shared/siggraph-code-lab.js",
+      "math": ["distance functions", "set union", "set subtraction", "level sets"]
+    },
+    {
+      "id": "differentiable-rendering",
+      "theme": "Computational Photography & Imaging",
+      "theme_key": "computational-photography-imaging",
+      "subtheme": "Differentiable rendering",
+      "folder": "themes/computational-photography-imaging/differentiable-rendering",
+      "code": "shared/siggraph-code-lab.js",
+      "math": ["image loss", "finite differences", "gradient descent"]
+    },
+    {
+      "id": "gaussian-splatting",
+      "theme": "Neural Rendering & Radiance Fields",
+      "theme_key": "neural-rendering-radiance-fields",
+      "subtheme": "Gaussian splatting",
+      "folder": "themes/neural-rendering-radiance-fields/gaussian-splatting",
+      "code": "shared/siggraph-code-lab.js",
+      "math": ["weighted blending", "soft kernels", "depth ordering"]
+    },
+    {
+      "id": "mass-spring-cloth",
+      "theme": "Cloth, Hair & Fibers",
+      "theme_key": "cloth-hair-fibers",
+      "subtheme": "Mass-spring cloth",
+      "folder": "themes/cloth-hair-fibers/mass-spring-cloth",
+      "code": "shared/siggraph-code-lab.js",
+      "math": ["forces", "constraints", "damping", "collision"]
+    },
+    {
+      "id": "particle-fluids",
+      "theme": "Fluids, Smoke & Granular",
+      "theme_key": "fluids-smoke-granular",
+      "subtheme": "Particle fluids",
+      "folder": "themes/fluids-smoke-granular/particle-fluids",
+      "code": "shared/siggraph-code-lab.js",
+      "math": ["pressure", "viscosity", "neighbor interaction"]
+    },
+    {
+      "id": "camera-projection",
+      "theme": "VR/AR & Displays",
+      "theme_key": "vr-ar-displays",
+      "subtheme": "Camera projection / multi-view geometry",
+      "folder": "themes/vr-ar-displays/camera-projection",
+      "code": "shared/siggraph-code-lab.js",
+      "math": ["perspective divide", "camera pose", "parallax"]
+    },
+    {
+      "id": "texture-optimization",
+      "theme": "Appearance, Materials & BRDF",
+      "theme_key": "appearance-materials-brdf",
+      "subtheme": "Texture optimization",
+      "folder": "themes/appearance-materials-brdf/texture-optimization",
+      "code": "shared/siggraph-code-lab.js",
+      "math": ["image residuals", "parameter update", "regularity"]
+    },
+    {
+      "id": "motion-retargeting",
+      "theme": "Character Animation & Motion",
+      "theme_key": "character-animation-motion",
+      "subtheme": "Motion interpolation / retargeting",
+      "folder": "themes/character-animation-motion/motion-interpolation-retargeting",
+      "code": "shared/siggraph-code-lab.js",
+      "math": ["pose interpolation", "joint hierarchy", "bone-length constraints"]
+    }
+  ]
+}
+

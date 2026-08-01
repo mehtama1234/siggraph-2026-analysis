@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIGGRAPH 2026 Code Companion</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17202a;
+      --muted: #5b6570;
+      --line: #d6dde5;
+      --panel: #f7f9fb;
+      --accent: #0f766e;
+      --accent-2: #9a3412;
+      --bg: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    header {
+      padding: 24px 28px 18px;
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfd;
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    header p {
+      margin: 0;
+      max-width: 920px;
+      color: var(--muted);
+      line-height: 1.5;
+      font-size: 15px;
+    }
+    main {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      min-height: calc(100vh - 95px);
+    }
+    nav {
+      border-right: 1px solid var(--line);
+      background: var(--panel);
+      padding: 14px;
+      overflow: auto;
+    }
+    .demo-tab {
+      width: 100%;
+      border: 1px solid transparent;
+      background: transparent;
+      color: var(--ink);
+      display: block;
+      text-align: left;
+      padding: 10px 11px;
+      margin: 2px 0;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 1.25;
+    }
+    .demo-tab span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 3px;
+    }
+    .demo-tab[aria-selected="true"] {
+      background: #ffffff;
+      border-color: var(--line);
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+    .stage {
+      padding: 18px;
+      display: grid;
+      grid-template-columns: minmax(360px, 1fr) 360px;
+      gap: 18px;
+      align-items: start;
+    }
+    .canvas-wrap {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: #eef3f7;
+    }
+    canvas {
+      display: block;
+      width: 100%;
+      height: min(66vh, 620px);
+      min-height: 420px;
+    }
+    aside {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+      background: #ffffff;
+    }
+    h2 {
+      margin: 0 0 6px;
+      font-size: 21px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+    .theme {
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: 12px;
+    }
+    .explain {
+      color: var(--muted);
+      line-height: 1.45;
+      font-size: 14px;
+      margin: 0 0 14px;
+    }
+    .readout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin: 12px 0;
+    }
+    .metric {
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 8px;
+      background: var(--panel);
+    }
+    .metric b {
+      display: block;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+    .metric span {
+      font-variant-numeric: tabular-nums;
+      font-size: 18px;
+    }
+    .control {
+      margin: 12px 0;
+    }
+    label {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 5px;
+    }
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--accent);
+    }
+    .buttons {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    button.action {
+      border: 1px solid var(--line);
+      background: #ffffff;
+      color: var(--ink);
+      border-radius: 6px;
+      padding: 8px 10px;
+      cursor: pointer;
+      font-weight: 650;
+    }
+    button.primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
+    }
+    .code-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--accent-2);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      nav {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .stage { grid-template-columns: 1fr; }
+      canvas { min-height: 360px; height: 54vh; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>SIGGRAPH 2026 Code Companion</h1>
+    <p>Ten small interactive demos for the math behind the paper families. These are teaching examples: readable, toy-scale, and built to show the central mechanism before the full paper machinery.</p>
+  </header>
+  <main>
+    <nav id="demoTabs" aria-label="Code demos"></nav>
+    <section class="stage">
+      <div class="canvas-wrap"><canvas id="labCanvas" width="960" height="720"></canvas></div>
+      <aside>
+        <h2 id="demoTitle"></h2>
+        <div id="demoTheme" class="theme"></div>
+        <p id="demoExplain" class="explain"></p>
+        <div id="metrics" class="readout"></div>
+        <div id="controls"></div>
+        <div id="buttons" class="buttons"></div>
+        <a id="folderLink" class="code-link" href="#">Open subtheme folder</a>
+      </aside>
+    </section>
+  </main>
+  <script src="shared/siggraph-code-lab.js"></script>
+</body>
+</html>
+
