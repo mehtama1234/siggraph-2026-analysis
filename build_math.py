@@ -188,6 +188,7 @@ h2{{font-family:var(--serif);font-size:29px;margin:0 0 12px;color:#fff}}
   <p class="dek">Computer graphics looks like many different crafts — cloth, light, faces, fluids, shapes. Underneath, nearly all of it runs on the same short list of mathematical ideas. This is that list — and for each one, not just <em>what</em> it is but <b>why it actually works</b>: the underlying principle that makes the trick valid. Every 2026 paper is placed under the idea it leans on, with a plain note on the math it uses and why that math is sound.</p>
   <p class="lead">How do you turn the messy, continuous, physical world into numbers a computer can balance, minimise, add up, and predict?</p>
   <p>That is what all of this math is for. A shape, a splash of water, a lit scene — each has to become a problem of a familiar mathematical shape before a computer can touch it. Read the ideas below in order and you'll see the same handful of moves recur across wildly different papers: balance everything at once, find the least-bad arrangement, step forward in time, add up an infinity of small things, sample cleverly, measure how things curve, find their natural patterns, and — increasingly — learn the rule from examples. A whole field, on one small toolkit.</p>
+  <p><a href="course.html">Start with the plain course spine</a> for a slower essay on why these ideas matter across graphics, topology, capture, simulation, manufacturing, robotics, and other fields.</p>
   <div class="bars"><div style="font-family:var(--mono);font-size:11px;color:var(--faint);margin-bottom:8px">HOW OFTEN EACH IDEA APPEARS (across {NA} papers, a paper can use several)</div>
   {''.join(f"<div class='bar'><span class='bl'>{esc(t)}</span><span class='bt'><span class='bf' style='width:{n/tc.most_common(1)[0][1]*100:.0f}%'></span></span><span class='bv'>{n}</span></div>" for t,n in tc.most_common())}</div>
 </header>
@@ -203,5 +204,8 @@ h2{{font-family:var(--serif);font-size:29px;margin:0 0 12px;color:#fff}}
 </section>
 </div>
 """
-open(os.path.join(HERE, "site", "math.html"), "w", encoding="utf-8").write(P)
-print("wrote site/math.html ·", len(P)//1024, "KB · placed:", len(placed), "of", NA, "· FFFD:", P.count("�"))
+for rel in ("math.html", os.path.join("site", "math.html")):
+    path = os.path.join(HERE, rel)
+    os.makedirs(os.path.dirname(path), exist_ok=True) if os.path.dirname(path) else None
+    open(path, "w", encoding="utf-8").write(P)
+print("wrote math.html and site/math.html ·", len(P)//1024, "KB · placed:", len(placed), "of", NA, "· FFFD:", P.count("�"))

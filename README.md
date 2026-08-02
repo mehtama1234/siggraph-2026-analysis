@@ -6,6 +6,8 @@ A first-principles analysis of the **153 technical papers** of SIGGRAPH 2026
 **Live:** https://mehtama1234.github.io/siggraph-2026-analysis/
 
 - **index.html** — the theme landscape + LLM-tagged technique bars
+- **course.html** — a long, plain-language course spine that explains the whole field from
+  first principles, including why topology and the same core ideas matter in other fields
 - **explorer.html** — searchable explorer of all 153 papers (problem/approach/contribution)
 - **deep.html** — a first-principles "deep read": the field as the life of a virtual object
   (describe → behave → look → capture → invent → present), with every stage, sub-theme, and

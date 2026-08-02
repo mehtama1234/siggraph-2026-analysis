@@ -216,6 +216,7 @@ h2{{font-family:var(--serif);font-size:30px;margin:0 0 14px;color:#fff}}
   <p class="dek">All {len(analysis)} technical papers of SIGGRAPH 2026, arranged not as a list of topics but as one story — the journey every made-up thing takes inside a computer, from a bare shape to something you can see, wear, or build. Read straight through, the whole field turns out to be answering a single question in six stages.</p>
   <p class="lead">How do you teach a computer to make and move a believable world — one that looks and behaves like reality, but that a person can create and control?</p>
   <p>That's the whole of computer graphics on one line. Everything below is a piece of the answer. A virtual object has to be <em>described</em> as a shape, made to <em>behave</em> like real matter, <em>lit</em> so a camera can see it; often it's <em>captured</em> from the real world, increasingly <em>invented</em> by the machine itself, and finally <em>delivered</em> back to a human or a workshop. Six stages, one lifecycle — and this year, a single new thread (machine learning, and especially the kind that generates) running through every one of them.</p>
+  <p><a href="course.html">Start with the plain course spine</a> if you want the whole thing as one slower everyday essay before reading paper by paper.</p>
   <div class="toc">{toc}</div>
 </header>
 {acts_rendered}
@@ -229,6 +230,9 @@ h2{{font-family:var(--serif);font-size:30px;margin:0 0 14px;color:#fff}}
 </section>
 </div>
 """
-open(os.path.join(HERE, "site", "deep.html"), "w", encoding="utf-8").write(P)
+for rel in ("deep.html", os.path.join("site", "deep.html")):
+    path = os.path.join(HERE, rel)
+    os.makedirs(os.path.dirname(path), exist_ok=True) if os.path.dirname(path) else None
+    open(path, "w", encoding="utf-8").write(P)
 placed_n = len(placed) + len(leftover)
-print("wrote site/deep.html ·", len(P)//1024, "KB · papers placed:", placed_n, "· FFFD:", P.count("�"))
+print("wrote deep.html and site/deep.html ·", len(P)//1024, "KB · papers placed:", placed_n, "· FFFD:", P.count("�"))

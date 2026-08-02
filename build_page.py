@@ -66,7 +66,7 @@ a{{color:var(--accent)}}
   <div class="eye">Go deeper</div>
   <h2>Explore all {S['n_analyzed']} papers by what they contribute</h2>
   <p>Every paper read for its problem, approach and contribution. Search and filter the full set.</p>
-  <p><a href="explorer.html" style="display:inline-block;font-family:var(--mono);font-size:14px;color:#0E1420;background:var(--accent);border-radius:9px;padding:10px 22px;text-decoration:none;font-weight:600">→ open the paper explorer</a>  <a href="deep.html" style="display:inline-block;font-family:var(--mono);font-size:14px;color:var(--accent);border:1px solid var(--line);border-radius:9px;padding:10px 22px;text-decoration:none;margin-left:8px">→ the deep read: the field as one story</a>  <a href="math.html" style="display:inline-block;font-family:var(--mono);font-size:14px;color:var(--accent);border:1px solid var(--line);border-radius:9px;padding:10px 22px;text-decoration:none;margin-left:8px">→ the mathematics of graphics</a></p>
+  <p><a href="course.html" style="display:inline-block;font-family:var(--mono);font-size:14px;color:#0E1420;background:var(--accent);border-radius:9px;padding:10px 22px;text-decoration:none;font-weight:600">→ start with the plain course spine</a>  <a href="explorer.html" style="display:inline-block;font-family:var(--mono);font-size:14px;color:var(--accent);border:1px solid var(--line);border-radius:9px;padding:10px 22px;text-decoration:none;margin-left:8px">→ open the paper explorer</a>  <a href="deep.html" style="display:inline-block;font-family:var(--mono);font-size:14px;color:var(--accent);border:1px solid var(--line);border-radius:9px;padding:10px 22px;text-decoration:none;margin-left:8px">→ the deep read</a>  <a href="math.html" style="display:inline-block;font-family:var(--mono);font-size:14px;color:var(--accent);border:1px solid var(--line);border-radius:9px;padding:10px 22px;text-decoration:none;margin-left:8px">→ the mathematics map</a></p>
 </section>
 <section>
   <div class="eye">The one-line read</div>
@@ -75,5 +75,8 @@ a{{color:var(--accent)}}
 </section>
 </div>
 """
-open(os.path.join(HERE,"site","index.html"),"w",encoding="utf-8").write(P)
-print("wrote site/index.html ·", len(P)//1024,"KB · FFFD:", P.count("�"))
+for rel in ("index.html", os.path.join("site", "index.html")):
+    path = os.path.join(HERE, rel)
+    os.makedirs(os.path.dirname(path), exist_ok=True) if os.path.dirname(path) else None
+    open(path, "w", encoding="utf-8").write(P)
+print("wrote index.html and site/index.html ·", len(P)//1024,"KB · FFFD:", P.count("�"))
