@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SIGGRAPH First-Principles Review Guide</title>
+<style>
+:root{--bg:#0E1420;--panel:#141D2C;--ink:#EAEEF4;--soft:#B4BFD0;--dim:#8493A8;--line:rgba(150,170,205,.18);--accent:#4FA8B8;--amber:#E3A63A;--serif:Georgia,Charter,serif;--sans:-apple-system,system-ui,Segoe UI,sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,monospace}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 var(--sans)}a{color:var(--accent);font-weight:700;text-decoration:none}header,main{max-width:1080px;margin:0 auto;padding:34px 24px}header{padding-top:48px}.k{font:700 .72rem/1 var(--mono);letter-spacing:.17em;text-transform:uppercase;color:var(--amber)}h1{font:700 clamp(2.2rem,5vw,4rem)/1.05 var(--serif);margin:12px 0}h2{font:700 1.6rem/1.16 var(--serif);margin:0 0 10px}h3{font-size:1rem;margin:0 0 6px}p,li{color:var(--soft);margin:0 0 10px}nav{position:sticky;top:0;background:rgba(14,20,32,.96);border-block:1px solid var(--line);padding:10px max(24px,calc((100vw - 1080px)/2));display:flex;gap:8px;overflow:auto}nav a{white-space:nowrap;color:var(--soft);border:1px solid var(--line);border-radius:6px;padding:6px 9px;font:12px var(--mono)}section{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:18px;margin:14px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}.card{border-left:3px solid var(--accent);padding-left:14px}.rule{border-left:3px solid var(--amber);padding-left:14px}ul{margin:8px 0 0 18px;padding:0}.small{font:12px/1.4 var(--mono);color:var(--dim)}
+</style>
+</head>
+<body>
+<header>
+  <div class="k">SIGGRAPH 2026 · editorial review</div>
+  <h1>First-Principles Review Guide</h1>
+  <p>This page makes the deep layer easier to audit. It names what each article is trying to teach, what a reviewer should check, and where the article should send the reader next.</p>
+</header>
+<nav>
+  <a href="index.html">home</a>
+  <a href="siggraph-first-principles-articles.html">articles</a>
+  <a href="siggraph-reader-paths.html">reader paths</a>
+  <a href="siggraph-concept-paper-index.html">paper index</a>
+  <a href="siggraph-theme-audit.html">theme audit</a>
+</nav>
+<main>
+  <section class="rule">
+    <h2>Review Rule</h2>
+    <p>Each article should explain one hidden quantity in ordinary terms before naming techniques. For graphics, the hidden quantity is usually connection, conservation, light transport, material response, time continuity, perception, manufacturability, control, or failure boundary.</p>
+  </section>
+  <section>
+    <h2>Primary Claims To Inspect</h2>
+    <div class="grid">
+      <div class="card"><h3>Shape</h3><p><a href="siggraph-first-principles-articles.html#surface-truth">Surface truth</a> should teach why a visible surface needs preserved connections, inside-out tests, distances, and correspondence.</p></div>
+      <div class="card"><h3>Physics</h3><p><a href="siggraph-first-principles-articles.html#simulation-balance">Simulation balance</a> should teach why time stepping is bookkeeping for mass, contact, momentum, and constraints.</p></div>
+      <div class="card"><h3>Motion</h3><p><a href="siggraph-first-principles-articles.html#motion-state">Motion state</a> should teach why animation is state carried through time, not independent poses.</p></div>
+      <div class="card"><h3>Materials</h3><p><a href="siggraph-first-principles-articles.html#material-response">Material response</a> should connect appearance, force, fibers, scattering, and deformation.</p></div>
+      <div class="card"><h3>Light</h3><p><a href="siggraph-first-principles-articles.html#light-accounting">Light accounting</a> should make rendering feel like adding possible paths, not drawing pixels.</p></div>
+      <div class="card"><h3>Generation</h3><p><a href="siggraph-first-principles-articles.html#generative-constraints">Generative constraints</a> should explain why invention must preserve shape, view, identity, and editability.</p></div>
+      <div class="card"><h3>Display</h3><p><a href="siggraph-first-principles-articles.html#display-eye">Display and eye</a> should distinguish hardware limits from perceptual tolerance.</p></div>
+      <div class="card"><h3>Trust</h3><p><a href="siggraph-first-principles-articles.html#graphics-trust">Failure boundary</a> should say what the result does not prove.</p></div>
+    </div>
+  </section>
+  <section>
+    <h2>Polish Notes</h2>
+    <ul>
+      <li>The existing article page is intentionally substantial. Use this guide as the quick entry point before reading long sections.</li>
+      <li>The repeated generic openings have been replaced with article-specific core ideas. Future edits should now focus on choosing the strongest paper examples for each family.</li>
+      <li>The strongest pages already name concrete paper families and failure boundaries; preserve those when tightening prose.</li>
+    </ul>
+    <p class="small">Updated after regenerating the 16-article page with article-specific openings.</p>
+  </section>
+  <section>
+    <h2>Example Strength Audit</h2>
+    <div class="grid">
+      <div class="card"><h3>Display</h3><p>The display examples should prove a limit of hardware, eye response, latency, color, focus, brightness, or holographic reconstruction. Avoid examples that are only about identity or relighting.</p></div>
+      <div class="card"><h3>Fabrication</h3><p>The fabrication examples should prove that geometry must pass through material, toolpath, deployability, stress, thickness, or manufacturing limits. Avoid examples that only describe visual appearance.</p></div>
+      <div class="card"><h3>Sound And Touch</h3><p>The sound-contact examples should keep the event cause visible: contact, deformation, vibration, haptic proxy, cloth motion, or mechanical response.</p></div>
+      <div class="card"><h3>Learning</h3><p>The learning examples should show a learned shortcut preserving the rule it replaces: a solver, field, controller, material model, or physical force.</p></div>
+    </div>
+    <p class="small">First example-strength pass completed for display-eye, fabrication, sound-contact, and graphics-learning.</p>
+  </section>
+</main>
+</body>
+</html>
